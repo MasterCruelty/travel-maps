@@ -133,7 +133,7 @@ Le curiosità di fine partita sono in `data/facts/<mappa>.json`, una voce per ar
 { "FI": { "facts": ["...", "..."], "sources": ["https://..."] } }
 ```
 
-Sono scritte a mano, una o due per area, verificate su fonti indicate in `sources` (Wikipedia, siti istituzionali, cataloghi dei beni culturali). Le regole: al massimo 220 caratteri, solo fatti duraturi (niente popolazione, sindaci o cronaca), tradizioni e ipotesi presentate come tali. Oggi coprono tutte le 110 province, 186 dei 187 comuni di Milano e Brianza, 82 degli 88 quartieri di Milano, i 16 Länder, 397 dei 400 distretti tedeschi e tutte le 199 nazioni; le regioni del mondo non ne hanno ancora. Per le aree senza curiosità il gioco mostra solo l'altra località. Un test controlla che ogni voce corrisponda a un'area della mappa, abbia una fonte valida e rispetti la lunghezza massima.
+Sono scritte a mano, una o due per area, verificate su fonti indicate in `sources` (Wikipedia, siti istituzionali, cataloghi dei beni culturali). Le regole: al massimo 220 caratteri, solo fatti duraturi (niente popolazione, sindaci o cronaca), tradizioni e ipotesi presentate come tali. Oggi coprono tutte le 110 province, 186 dei 187 comuni di Milano e Brianza, 82 degli 88 quartieri di Milano, i 16 Länder, 397 dei 400 distretti tedeschi tutte le 199 nazioni e 192 delle 2980 regioni del mondo (Italia, Germania, Spagna, Francia, Regno Unito, Svizzera, Austria, Stati Uniti, Canada e Australia). Per le aree senza curiosità il gioco mostra solo l'altra località. Un test controlla che ogni voce corrisponda a un'area della mappa, abbia una fonte valida e rispetti la lunghezza massima.
 
 ### Aggiungere una mappa
 

@@ -1,1 +1,1786 @@
-{}
+{
+ "AUS-2650": {
+  "facts": [
+   "Ospita due parchi nazionali Patrimonio dell'umanità: Kakadu, il più grande parco nazionale australiano, e Uluṟu-Kata Tjuṯa, iscritto nel 1987 e di proprietà tradizionale del popolo aborigeno Anangu."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ulu%E1%B9%9Fu-Kata_Tju%E1%B9%AFa_National_Park",
+   "https://northernterritory.com/it/it/things-to-do/nature-and-wildlife/national-parks"
+  ]
+ },
+ "AUS-2651": {
+  "facts": [
+   "Nel 1616 l'olandese Dirk Hartog sbarcò sull'isola che porta il suo nome, nella Shark Bay, e vi lasciò un piatto di peltro inciso: è il più antico manufatto europeo noto rimasto dell'esplorazione dell'Australia."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hartog_Plate",
+   "https://museum.wa.gov.au/explore/dirk-hartog/dirk-hartogs-pewter-plate"
+  ]
+ },
+ "AUS-2653": {
+  "facts": [
+   "Canberra fu progettata da Walter Burley Griffin, architetto di Chicago vincitore nel 1912 del concorso per la nuova capitale federale; i disegni del progetto sono attribuiti alla moglie Marion Mahony Griffin."
+  ],
+  "sources": [
+   "https://www.naa.gov.au/help-your-research/fact-sheets/walter-burley-griffin-and-design-canberra",
+   "https://www.nca.gov.au/walter-burley-griffin"
+  ]
+ },
+ "AUS-2654": {
+  "facts": [
+   "Il 26 gennaio 1788 la First Fleet del capitano Arthur Phillip approdò a Sydney Cove fondando una colonia penale, primo insediamento europeo in Australia; la data è oggi la festa nazionale."
+  ],
+  "sources": [
+   "https://www2.sl.nsw.gov.au/archive/discover_collections/history_nation/terra_australis/firstfleet.html",
+   "https://wikipedia.com/wiki/Sydney_Cove"
+  ]
+ },
+ "AUS-2655": {
+  "facts": [
+   "Con una legge del 1894 l'Australia Meridionale fu il primo luogo al mondo a concedere alle donne il diritto di candidarsi al parlamento, grazie a un emendamento presentato da un oppositore per far fallire la riforma."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Constitutional_Amendment_(Adult_Suffrage)_Act_1894",
+   "https://parliament.sa.gov.au/en/About-Parliament/Women-in-Politics"
+  ]
+ },
+ "AUS-2656": {
+  "facts": [
+   "Nel 1854 a Ballarat, durante la corsa all'oro, i minatori si ribellarono contro le licenze di scavo erigendo la palizzata di Eureka: la rivolta è spesso considerata la culla della democrazia australiana."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ballarat",
+   "https://wikipedia.com/wiki/Eureka_Stockade"
+  ]
+ },
+ "AUS-2657": {
+  "facts": [
+   "La foresta pluviale del Daintree, parte dei Tropici umidi del Queensland, Patrimonio dell'umanità dal 1988, è ritenuta tra le più antiche foreste tropicali esistenti e confina con la Grande barriera corallina."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Daintree_Rainforest",
+   "https://www.guinnessworldrecords.com/world-records/404530-oldest-tropical-rainforest"
+  ]
+ },
+ "AUS-2659": {
+  "facts": [
+   "A circa 20 km dall'isola si erge la Piramide di Ball, alta 562 metri, considerata il più alto faraglione vulcanico del mondo.",
+   "Sulla Piramide di Ball è stata ritrovata nel 2001 l'ultima popolazione selvatica dell'insetto stecco di Lord Howe, che si riteneva estinto dopo un ultimo avvistamento nel 1920."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ball%27s_Pyramid",
+   "https://australian.museum/about/organisation/media-centre/australian-museum-expedition-to-save-rare-insect-from-extinction/"
+  ]
+ },
+ "AUS-2660": {
+  "facts": [
+   "Abel Tasman la avvistò nel 1642 e la chiamò Terra di Van Diemen, in onore del suo finanziatore; dal 1º gennaio 1856 prese il nome di Tasmania, anche per prendere le distanze dal passato di colonia penale."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Van_Diemen%27s_Land",
+   "https://www.utas.edu.au/library/companion_to_tasmanian_history/T/Tasmania%20name.htm"
+  ]
+ },
+ "AUT-2320": {
+  "facts": [
+   "Il Festival di Bregenz porta in scena l'opera sulla Seebühne, un palco costruito nel Lago di Costanza, davanti a una tribuna di circa 7000 posti; nel 1946 la prima edizione si tenne su due chiatte ormeggiate nel lago."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bregenzer_Festspiele",
+   "https://www.festspielhausbregenz.com/en/r/seebuehne"
+  ]
+ },
+ "AUT-2322": {
+  "facts": [
+   "Il Lago di Neusiedl, lago di steppa condiviso con l'Ungheria, è dal 2001 patrimonio dell'umanità UNESCO insieme al paesaggio culturale che lo circonda.",
+   "A Eisenstadt, nella Bergkirche, si trova la tomba di Joseph Haydn, che per decenni lavorò al servizio dei principi Esterházy."
+  ],
+  "sources": [
+   "https://whc.unesco.org/en/list/772",
+   "https://en.wikipedia.org/wiki/Lake_Neusiedl",
+   "https://en.wikipedia.org/wiki/Bergkirche_(Eisenstadt)",
+   "https://burgenland.info/en/dc/detail/POI/haydn-church-with-haydn-mausoleum-and-calvary"
+  ]
+ },
+ "AUT-2323": {
+  "facts": [
+   "La Stiria è la patria dello Steirisches Kürbiskernöl, olio verde scuro di semi di zucca tostati, tutelato come indicazione geografica protetta: per un litro servono semi di circa 35 zucche."
+  ],
+  "sources": [
+   "https://www.patentamt.at/en/steirischeskuerbiskernoel",
+   "https://www.bmluk.gv.at/themen/lebensmittel/trad-lebensmittel/oel/steir_kuerbiskernoel.html"
+  ]
+ },
+ "AUT-2325": {
+  "facts": [
+   "Simbolo di Klagenfurt è la fontana del Lindwurm, un drago scolpito alla fine del Cinquecento: secondo la leggenda il mostro infestava le paludi dove poi sorse la città."
+  ],
+  "sources": [
+   "https://www.austria.org/wahrzeichen/klagenfurt",
+   "https://www.lonelyplanet.com/austria/the-south/klagenfurt/attractions/dragon-fountain/a/poi-sig/1336459/358639"
+  ]
+ },
+ "AUT-2326": {
+  "facts": [
+   "A Hallstatt si estrae sale da circa 7000 anni: la sua miniera è considerata la più antica del mondo e il paesaggio di Hallstatt-Dachstein/Salzkammergut è patrimonio UNESCO dal 1997."
+  ],
+  "sources": [
+   "https://explore.com/1399714/discover-oldest-salt-mine-in-world-hallstatt-austria",
+   "https://www.austriadirect.com/hallstatt-unesco/"
+  ]
+ },
+ "AUT-2327": {
+  "facts": [
+   "Il canto natalizio «Stille Nacht» fu eseguito per la prima volta la notte di Natale del 1818 nella chiesa di San Nicola a Oberndorf, su testo di Joseph Mohr e musica di Franz Xaver Gruber."
+  ],
+  "sources": [
+   "https://www.salzburgerland.com/de/magazin/stille-nacht-ort-oberndorf-die-urauffuehrung/"
+  ]
+ },
+ "AUT-2329": {
+  "facts": [
+   "Innsbruck ha ospitato due volte le Olimpiadi invernali, nel 1964 e nel 1976; la seconda volta subentrò a Denver, che aveva rinunciato per motivi finanziari."
+  ],
+  "sources": [
+   "https://www.innsbruck.gv.at/en/freizeit/sport/olympiastadt-innsbruck/olympia-1976-innsbruck-die-zweite",
+   "https://www.olympics.com/ioc/news/innsbruck-1964-olympic-venues-overview"
+  ]
+ },
+ "AUT-2330": {
+  "facts": [
+   "La Wachau, tratto della valle del Danubio tra Melk e Krems con vigneti terrazzati, è patrimonio UNESCO dal 2000; ne fa parte l'abbazia benedettina di Melk, fondata nel 1089."
+  ],
+  "sources": [
+   "https://lower-austria.info/city-melk-an-der-donau",
+   "https://simple.wikipedia.com/wiki/Melk_Abbey"
+  ]
+ },
+ "AUT-2331": {
+  "facts": [
+   "La tradizione dei caffè viennesi è iscritta dal 2011 nel patrimonio culturale immateriale UNESCO dell'Austria."
+  ],
+  "sources": [
+   "https://en.wikipedia.com/wiki/Kaffeehaus",
+   "https://www.austria.info/it/ispirazione/cultura-caffe/"
+  ]
+ },
+ "CAN-630": {
+  "facts": [
+   "Il nome Manitoba deriva probabilmente dal cree manitou-wapow, «stretto dello spirito»: il rumore delle onde contro le rocce degli stretti del lago Manitoba era ritenuto la voce del Grande Spirito."
+  ],
+  "sources": [
+   "https://www.gov.mb.ca/chc//ourdept/origin_name_manitoba.html",
+   "https://mhs.mb.ca/docs/pageant/01/manitobaname.shtml"
+  ]
+ },
+ "CAN-631": {
+  "facts": [
+   "Il nome Saskatchewan viene dal fiume omonimo, che i Cree chiamavano kisiskâciwani-sîpiy, «fiume dalla corrente veloce»; la grafia attuale fu adottata ufficialmente nel 1882."
+  ],
+  "sources": [
+   "https://www.esask.uregina.ca/entry/place_names.html",
+   "https://Www.Wikipedia.org/wiki/Saskatchewan"
+  ]
+ },
+ "CAN-632": {
+  "facts": [
+   "Il Dinosaur Provincial Park, nel sud-est dell'Alberta, è sito UNESCO dal 1979 per una delle maggiori concentrazioni al mondo di fossili di dinosauri del Cretaceo superiore."
+  ],
+  "sources": [
+   "https://www.albertaparks.ca/parks/south/dinosaur-pp/information-facilities",
+   "https://EN.wikipedia.com/wiki/Dinosaur_Provincial_Park"
+  ]
+ },
+ "CAN-633": {
+  "facts": [
+   "Nel parco nazionale di Yoho si trovano gli scisti di Burgess, scoperti da Charles Walcott nel 1909: conservano fossili di organismi a corpo molle del Cambriano, vecchi di oltre 500 milioni di anni."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Burgess_Shale",
+   "https://www.thecanadianencyclopedia.ca/en/article/burgess-shale-fossils"
+  ]
+ },
+ "CAN-634": {
+  "facts": [
+   "Il Nunavut, il cui nome in inuktitut significa «la nostra terra», è nato il 1º aprile 1999 dalla divisione dei Territori del Nord-Ovest, in seguito all'accordo sulle rivendicazioni territoriali degli Inuit."
+  ],
+  "sources": [
+   "https://assembly.nu.ca/faq/how-was-nunavut-created",
+   "https://thecanadianencyclopedia.ca/en/article/nunavut-and-confederation"
+  ]
+ },
+ "CAN-635": {
+  "facts": [
+   "Il Grande lago degli Orsi, con circa 31.000 km², è il più grande lago interamente compreso nel territorio canadese, dato che il Superiore e l'Huron sono condivisi con gli Stati Uniti."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Great_Bear_Lake"
+  ]
+ },
+ "CAN-636": {
+  "facts": [
+   "Il 16 agosto 1896 la scoperta dell'oro sul Bonanza Creek, affluente del Klondike, scatenò la corsa all'oro: Dawson City passò in due anni da circa 500 a 17.000 abitanti e nel 1898 nacque il territorio dello Yukon."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Klondike_Gold_Rush",
+   "https://www.thecanadianencyclopedia.ca/en/article/klondike-gold-rush"
+  ]
+ },
+ "CAN-682": {
+  "facts": [
+   "La provincia prende il nome dal lago Ontario, da una parola irochese il cui significato è discusso: le interpretazioni più diffuse sono «grande lago», «bel lago» o «acque scintillanti»."
+  ],
+  "sources": [
+   "https://www.wordorigins.org/big-list-entries/ontario",
+   "https://www.canada.ca/en/canadian-heritage/services/provincial-territorial-symbols-canada/ontario.html"
+  ]
+ },
+ "CAN-683": {
+  "facts": [
+   "Il nome Québec deriva, secondo l'interpretazione più diffusa, dalla parola algonchina kébec, «dove il fiume si restringe», riferita al San Lorenzo; Champlain lo adottò fondando l'insediamento nel 1608."
+  ],
+  "sources": [
+   "https://wordorigins.org/big-list-entries/quebec",
+   "https://qahn.org/taxonomy/term/789"
+  ]
+ },
+ "CAN-684": {
+  "facts": [
+   "La baia di Fundy, tra Nuovo Brunswick e Nuova Scozia, ha le maree più alte del mondo, con escursioni medie di circa 16 metri; a Hopewell Rocks l'erosione ha scolpito faraglioni alti fino a 20 metri."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bay_of_Fundy",
+   "https://Www.Wikipedia.org/wiki/Hopewell_Rocks"
+  ]
+ },
+ "CAN-685": {
+  "facts": [
+   "La goletta Bluenose, simbolo della Nuova Scozia, compare sulla moneta canadese da dieci centesimi dal 1937; Lunenburg, porto di cantieri navali, è patrimonio UNESCO dal 1995."
+  ],
+  "sources": [
+   "https://novascotia.com/blog/discover-nova-scotias-bluenose-ii/",
+   "https://www.britannica.com/print/article/351452"
+  ]
+ },
+ "CAN-686": {
+  "facts": [
+   "A L'Anse aux Meadows, sulla punta settentrionale di Terranova, si trovano i resti di un insediamento vichingo dell'XI secolo, la più antica presenza europea nota in America; nel 1978 fu il primo sito UNESCO canadese."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/L%27Anse_aux_Meadows",
+   "https://whc.unesco.org/en/list/4"
+  ]
+ },
+ "CAN-687": {
+  "facts": [
+   "A Charlottetown si tenne nel settembre 1864 la conferenza da cui nacque il progetto di Confederazione canadese, ma l'isola vi aderì solo nel 1873, come settima provincia."
+  ],
+  "sources": [
+   "https://tourismpei.com/birthplace-of-canada",
+   "https://gatewaygazette.ca/?p=71732"
+  ]
+ },
+ "CHE-159": {
+  "facts": [
+   "Ogni anno a dicembre la Fête de l'Escalade ricorda il fallito assalto notturno dei Savoia a Ginevra del 1602; secondo la tradizione Mère Royaume rovesciò una pentola di zuppa sugli assalitori.",
+   "Simbolo della festa è la marmite in cioccolato ripiena di marzapane, che viene rotta dal più giovane e dal più anziano dei presenti dopo una formula rituale."
+  ],
+  "sources": [
+   "https://www.alimentarium.org/en/fact-sheet/escalade",
+   "https://geneve.com/fr/que-faire/histoire-culture/fete-de-lescalade",
+   "https://www.myswitzerland.com/en/experiences/food-wine/marmite-de-lescalade-choc-pot/"
+  ]
+ },
+ "CHE-160": {
+  "facts": [
+   "È il più giovane cantone svizzero: nato dalla separazione di tre distretti francofoni dal Canton Berna, approvata dal voto federale del 1978, esiste dal 1º gennaio 1979."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Jura_separatism",
+   "https://lenews.ch/2016/11/18/swiss-fact-switzerlands-newest-canton-was-created-as-recently-as-1979/"
+  ]
+ },
+ "CHE-161": {
+  "facts": [
+   "Dal 1707 fu un principato del re di Prussia e al tempo stesso cantone svizzero; la rivoluzione repubblicana del 1º marzo 1848 pose fine al dominio prussiano, a cui il re rinunciò formalmente solo nel 1857."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/fr/articles/017372/",
+   "https://fr.vikidia.org/wiki/Canton_de_Neuch%C3%A2tel"
+  ]
+ },
+ "CHE-162": {
+  "facts": [
+   "Nel comune di Habsburg sorge il castello d'origine degli Asburgo, citato dal 1108; a Königsfelden la regina Elisabetta fondò un monastero dove nel 1308 era stato ucciso il marito, re Alberto I."
+  ],
+  "sources": [
+   "https://www.ag.ch/de/themen/kultur-sport/kultur/museum-aargau/kloster-koenigsfelden",
+   "https://www.ag.ch/media/kanton-aargau/bks/kultur/erinnerungskultur/bksak-habsburger-gedenkakt.pdf"
+  ]
+ },
+ "CHE-163": {
+  "facts": [
+   "Il Kapellbrücke di Lucerna, costruito attorno al 1360, è considerato il più antico ponte coperto in legno d'Europa; nell'incendio del 18 agosto 1993 andò in gran parte distrutto e fu riaperto nell'aprile 1994."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kapellbr%C3%BCcke",
+   "https://www.luzern.com/de/poi/kapellbruecke"
+  ]
+ },
+ "CHE-164": {
+  "facts": [
+   "Secondo una leggenda del XVI secolo Arnold Winkelried di Stans decise la battaglia di Sempach del 1386 gettandosi sulle picche nemiche; molti storici dubitano che sia esistito.",
+   "Sullo Stanserhorn sale la CabriO, presentata come la prima funivia al mondo con il piano superiore della cabina scoperto."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Arnold_von_Winkelried",
+   "https://hls-dhs-dss.ch/fr/articles/024437",
+   "https://www.tour-switzerland.ch/guides/stanserhorn/"
+  ]
+ },
+ "CHE-165": {
+  "facts": [
+   "Nel massiccio del Monte Rosa si trova la Punta Dufour, 4634 m, la vetta più alta della Svizzera, intitolata nel 1863 al generale Guillaume-Henri Dufour.",
+   "Il Grande ghiacciaio dell'Aletsch, lungo circa 20 km, è il più esteso delle Alpi e fa parte del sito Patrimonio dell'umanità Jungfrau-Aletsch."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Dufourspitze",
+   "https://www.valais.ch/de/erleben/aktivitaeten/naturschauplaetze/gletscher/der-grosse-aletschgletscher",
+   "https://www.bergwelten.com/a/der-grosse-aletschgletscher"
+  ]
+ },
+ "CHE-166": {
+  "facts": [
+   "Fu il penultimo cantone a introdurre il voto alle donne: lo decise la Landsgemeinde di Hundwil il 30 aprile 1989, dopo cinque bocciature tra il 1970 e il 1984."
+  ],
+  "sources": [
+   "https://www.srf.ch/news/frauenstimmrecht-ar-es-war-ein-grossartiger-moment",
+   "https://www.nau.ch/ort/waldstatt/vor-30-jahren-wurden-frauen-politisch-mundig-65513278"
+  ]
+ },
+ "CHE-167": {
+  "facts": [
+   "Il distretto dell'abbazia di San Gallo, con la celebre biblioteca, è Patrimonio dell'umanità dal 1983; vi è conservata la Pianta di San Gallo, unico progetto architettonico altomedievale giunto fino a noi."
+  ],
+  "sources": [
+   "https://www.bak.admin.ch/dam/bak/rm/dokumente/baukultur/archaelogie-denkmalpflege/stiftsbezirk-st-gallen.pdf.download.pdf/stiftsbezirk-st-gallen.pdf",
+   "https://wikipedia.com/wiki/Abbey_Library_of_St_Gall"
+  ]
+ },
+ "CHE-168": {
+  "facts": [
+   "I tre castelli di Bellinzona (Castelgrande, Montebello e Sasso Corbaro) sono Patrimonio dell'umanità dal 2000.",
+   "Il Monte San Giorgio, Patrimonio dell'umanità dal 2003, è noto per i fossili di pesci e rettili marini del Triassico medio, risalenti a circa 240 milioni di anni fa."
+  ],
+  "sources": [
+   "https://www.ticino.ch/it/explore/unesco-world-heritage",
+   "https://www.ticino.ch/en/arricchimenti/common/127521.html"
+  ]
+ },
+ "CHE-169": {
+  "facts": [
+   "Lo Schabziger, formaggio alle erbe a forma di cono, è considerato il più antico prodotto di marca svizzero: già nel 1463 la Landsgemeinde ne fissò regole di qualità e marchio d'origine.",
+   "Lo stemma cantonale raffigura san Fridolino, missionario irlandese: è l'unico santo presente su una bandiera cantonale svizzera."
+  ],
+  "sources": [
+   "https://www.srf.ch/news/glarner-schabziger-das-aelteste-markenprodukt-der-schweiz",
+   "https://www.suedostschweiz.ch/schweiz-und-welt/neue-maerkte-fuer-altes-produkt-finden-1118629",
+   "https://flagspot.net/Flags/ch-gl.html"
+  ]
+ },
+ "CHE-170": {
+  "facts": [
+   "È l'unico cantone svizzero trilingue, con tedesco, romancio e italiano come lingue ufficiali.",
+   "A Zernez ha sede il Parco nazionale svizzero, fondato nel 1914: è il più antico parco nazionale delle Alpi."
+  ],
+  "sources": [
+   "https://www.gr.ch/DE/kanton/Seiten/Ueberblick.aspx",
+   "https://hls-dhs-dss.ch/de/articles/024594",
+   "https://en.wikipedia.org/wiki/Swiss_National_Park"
+  ]
+ },
+ "CHE-171": {
+  "facts": [
+   "Nel cantone, a Neuhausen am Rheinfall, si trovano le cascate del Reno: larghe circa 150 metri e alte circa 23, sono considerate le più grandi d'Europa per portata d'acqua."
+  ],
+  "sources": [
+   "https://www.zuerich.com/en/visit/nature/rhine-falls-europes-biggest-waterfall"
+  ]
+ },
+ "CHE-173": {
+  "facts": [
+   "Dal nome di Svitto deriva quello dell'intera Svizzera: già nel Trecento il nome del cantone veniva esteso a tutta la Confederazione.",
+   "La bandiera svizzera, croce bianca su fondo rosso, deriva dallo stemma del Canton Svitto."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/it/articles/007385/2017-05-11/",
+   "https://en.wikipedia.com/wiki/Name_of_Switzerland",
+   "https://en.wikipedia.com/wiki/Canton_Schwyz"
+  ]
+ },
+ "CHE-174": {
+  "facts": [
+   "In Svizzera la Turgovia è soprannominata scherzosamente «Mostindien»: «Most» per il sidro dei suoi frutteti di mele, «Indien» perché la forma del cantone ricorderebbe quella dell'India."
+  ],
+  "sources": [
+   "https://en.thurgau-bodensee.ch/blog/medienmitteilung/mostindien-ruft-herbstzeit-im-thurgau-27e50cc3-6f20-4170-a4a6-f06814688804.html"
+  ]
+ },
+ "CHE-175": {
+  "facts": [
+   "Secondo la leggenda Guglielmo Tell nacque a Bürglen e ad Altdorf, capoluogo di Uri, sfidò il balivo Gessler colpendo con la balestra la mela posta sul capo del figlio.",
+   "La gola della Schöllenen, a lungo quasi impraticabile, fu aperta tra XII e XIII secolo grazie al Ponte del Diavolo; secondo la leggenda fu costruito dal diavolo in cambio della prima anima che l'avesse attraversato."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/it/articles/008796/",
+   "https://www.myswitzerland.com/it-it/scoprire-la-svizzera/gola-di-schoellenen/"
+  ]
+ },
+ "CHE-176": {
+  "facts": [
+   "Dal 1519 Ulrico Zwingli predicò al Grossmünster di Zurigo, dando avvio alla Riforma protestante in Svizzera."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/it/articles/010447/",
+   "https://www.zuerich.com/it/visitare/ulrico-zwingli"
+  ]
+ },
+ "CHE-177": {
+  "facts": [
+   "La Zuger Kirschtorte, torta imbevuta di kirsch, fu creata nel 1915 dal pasticciere Heinrich Höhn; dal 2015 il nome è riservato alle torte prodotte nel cantone."
+  ],
+  "sources": [
+   "https://www.srf.ch/radio-srf-musikwelle/zuger-spezialitaet-warum-das-kirschtorten-rezept-der-nussbaumers-nicht-geheim-ist",
+   "https://en.wikipedia.org/wiki/Zuger_Kirschtorte"
+  ]
+ },
+ "CHE-3421": {
+  "facts": [
+   "Friburgo è uno dei tre cantoni ufficialmente bilingui: il fiume Sarine, che lo attraversa, segna in parte il confine tra francese e tedesco, il cosiddetto Röstigraben.",
+   "Il formaggio Gruyère prende il nome dal distretto friburghese della Gruyère."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/R%C3%B6stigraben",
+   "https://fribourg.ch/en/inspiration/linguistic-diversity/"
+  ]
+ },
+ "CHE-3422": {
+  "facts": [
+   "I vigneti terrazzati del Lavaux, sulle rive del Lago di Ginevra, sono patrimonio dell'umanità UNESCO dal 2007; le terrazze risalgono in gran parte ai monaci benedettini e cistercensi dell'XI secolo."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lavaux"
+  ]
+ },
+ "CHE-3423": {
+  "facts": [
+   "Ad Augst si trovano i resti della città romana di Augusta Raurica, il più grande parco archeologico della Svizzera, con un teatro considerato il meglio conservato a nord delle Alpi."
+  ],
+  "sources": [
+   "https://www.myswitzerland.com/de/erlebnisse/augusta-raurica-die-roemerstadt/",
+   "https://www.basel.com/de/attraktionen/augusta-raurica-augst-6599f6325c"
+  ]
+ },
+ "CHE-3424": {
+  "facts": [
+   "Al confine con il Vallese, lo Jungfraujoch ospita a 3454 metri la stazione ferroviaria più alta d'Europa, inaugurata nel 1912."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Top_of_Europe",
+   "https://it.wikivoyage.org/wiki/Ferrovia_della_Jungfrau"
+  ]
+ },
+ "CHE-3426": {
+  "facts": [
+   "A Soletta il numero 11 ha un valore simbolico: secondo la tradizione locale la città conta 11 chiese, 11 fontane e 11 torri, e la cattedrale di Sant'Orso ha scalinate a gruppi di 11 gradini."
+  ],
+  "sources": [
+   "https://switzerlanding.com/de/solothurn/"
+  ]
+ },
+ "CHE-3427": {
+  "facts": [
+   "A Flüeli-Ranft visse da eremita Nicolao della Flüe (Bruder Klaus), canonizzato nel 1947 e patrono della Svizzera e della Guardia Svizzera Pontificia."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Nicholas_of_Fl%C3%BCe",
+   "https://vaticanstate.va/en/state-and-government/general-informations/saint-of-the-day/1653-21-march-saint-nicholas-of-fluee-patron-saint-of-switzerland-and-the-pontifical-swiss-guard.html"
+  ]
+ },
+ "CHE-3473": {
+  "facts": [
+   "Appenzello Interno fu l'ultimo cantone svizzero a concedere il voto alle donne: lo impose il Tribunale federale nel novembre 1990, dopo che la Landsgemeinde maschile lo aveva respinto per la terza volta."
+  ],
+  "sources": [
+   "https://swissinfo.ch/eng/a-visit-to-appenzell-inner-rhodes--the-last-canton-to-grant-women-the-right-to-vote-in-switzerland-/46328984",
+   "https://en.wikipedia.com/wiki/Women%27s_suffrage_in_Switzerland"
+  ]
+ },
+ "DEU-1572": {
+  "facts": [
+   "Carlo Magno fece di Aquisgrana la sua capitale; nella sua cattedrale, attorno alla Cappella Palatina, furono incoronati 30 re tedeschi tra il 936 e il 1531.",
+   "Bonn, dove Beethoven nacque nel 1770, fu capitale della Germania Ovest dal 1949 al 1990."
+  ],
+  "sources": [
+   "https://www.britannica.com/summary/Aachen",
+   "https://www.roughguides.com/destinations/europe/germany/north-rhine-westphalia/aachen",
+   "https://www.roughguides.com/destinations/europe/germany/north-rhine-westphalia/bonn"
+  ]
+ },
+ "DEU-1573": {
+  "facts": [
+   "Carl Benz, nato nel 1844 a Mühlburg, oggi quartiere di Karlsruhe, brevettò nel 1886 la Patent-Motorwagen, considerata la prima automobile moderna.",
+   "Nel 1888 Bertha Benz percorse con l'auto del marito circa 106 km, il primo viaggio a lunga distanza in automobile della storia."
+  ],
+  "sources": [
+   "https://en.wikipedia.com/wiki/Karl_Benz"
+  ]
+ },
+ "DEU-1574": {
+  "facts": [
+   "I fratelli Jacob e Wilhelm Grimm nacquero a Hanau, in Assia, nel 1785 e 1786; da lì parte la Strada delle Fiabe tedesca.",
+   "Fu a Kassel, dove vissero per molti anni, che i fratelli Grimm raccolsero gran parte delle fiabe popolari della regione."
+  ],
+  "sources": [
+   "https://www.roughguides.com/germany/hesse/",
+   "https://www.roughguides.com/destinations/europe/germany/hesse/kassel",
+   "https://rheawessel.com/clips/on-germanys-fairy-tale-trail/"
+  ]
+ },
+ "DEU-1575": {
+  "facts": [
+   "Il Land di Brema, il più piccolo della Germania, è formato da due città separate: Brema e Bremerhaven, sul Mare del Nord a circa 60 km di distanza.",
+   "La statua di Rolando del 1404, simbolo delle libertà cittadine, è patrimonio UNESCO insieme al municipio; secondo la tradizione Brema resterà libera finché Rolando sarà in piedi."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bremen",
+   "https://julian-alps.com/en/travel-guide/germany/bremen/1022096/"
+  ]
+ },
+ "DEU-1576": {
+  "facts": [
+   "Nel 1714 l'elettore Giorgio Ludovico di Hannover divenne re di Gran Bretagna come Giorgio I: per oltre un secolo i sovrani britannici furono anche principi di Hannover.",
+   "La Bassa Sassonia è nata solo nel 1946, su iniziativa delle forze di occupazione britanniche, unendo Hannover, Oldenburg, Brunswick e Schaumburg-Lippe."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hanover",
+   "https://www.britannica.com/place/Hanover-historical-state-Germany"
+  ]
+ },
+ "DEU-1577": {
+  "facts": [
+   "Nel castello della Wartburg, presso Eisenach, Lutero nel 1521-1522 tradusse in tedesco il Nuovo Testamento in circa dieci settimane.",
+   "Il Bauhaus fu fondato da Walter Gropius a Weimar nel 1919, prima di trasferirsi a Dessau; nella stessa Turingia, a Eisenach, nacque Johann Sebastian Bach."
+  ],
+  "sources": [
+   "https://Www.Wikipedia.org/wiki/Wartburg",
+   "https://www.britannica.com/print/article/639015"
+  ]
+ },
+ "DEU-1578": {
+  "facts": [
+   "La Speicherstadt di Amburgo, costruita tra il 1883 e il 1927 come parte del porto franco, è il più grande complesso di magazzini al mondo: edifici in mattoni rossi poggiati su pali di quercia.",
+   "Per far posto alla Speicherstadt, nel 1883 la città demolì un intero quartiere abitato, i cui residenti furono costretti a trasferirsi altrove."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Speicherstadt",
+   "https://worldheritage.hamburg/speicherstadt/",
+   "https://www.historyhit.com/locations/speicherstadt-warehouse-complex/"
+  ]
+ },
+ "DEU-1579": {
+  "facts": [
+   "Il Canale di Kiel, che collega il Mare del Nord al Baltico, è il canale artificiale più trafficato del mondo.",
+   "Nello Schleswig-Holstein vive una minoranza danese riconosciuta: il suo partito, il SSW, è esentato dalla soglia di sbarramento del 5%."
+  ],
+  "sources": [
+   "https://www.britannica.com/place/Schleswig-Holstein",
+   "https://www.iamexpat.nl/lifestyle/german-federal-states/schleswig-holstein"
+  ]
+ },
+ "DEU-1580": {
+  "facts": [
+   "A Magonza, oggi capoluogo del Land, Johannes Gutenberg sviluppò verso la metà del Quattrocento la stampa a caratteri mobili.",
+   "Treviri, fondata dai Romani come Augusta Treverorum, fu una delle capitali dell'Impero romano d'Occidente; la Porta Nigra è la più grande porta romana a nord delle Alpi."
+  ],
+  "sources": [
+   "https://Www.Wikipedia.org/wiki/Mainz",
+   "https://en.wikivoyage.org/wiki/Rhineland-Palatinate"
+  ]
+ },
+ "DEU-1581": {
+  "facts": [
+   "Dopo la Seconda guerra mondiale la Saar fu un protettorato francese; nel 1955 gli abitanti respinsero con il 67,7% lo statuto europeo e dal 1957 entrarono nella Germania Ovest.",
+   "Le acciaierie di Völklingen, attive dal 1882 al 1986, sono patrimonio UNESCO dal 1994 come unico impianto siderurgico dell'epoca rimasto completamente intatto."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Saar_Protectorate",
+   "https://en.wikipedia.org/wiki/Saarland",
+   "https://www.erih.net/i-want-to-go-there/world-heritage-site-voelklingen-iron-works"
+  ]
+ },
+ "DEU-1591": {
+  "facts": [
+   "L'Oktoberfest nasce dalle feste per le nozze del principe ereditario Ludovico di Baviera con Teresa di Sassonia-Hildburghausen, nell'ottobre 1810, celebrate con una corsa di cavalli.",
+   "Il prato dove si tiene l'Oktoberfest, la Theresienwiese, prende il nome dalla principessa Teresa; la festa fu poi anticipata a settembre per il clima più mite."
+  ],
+  "sources": [
+   "https://tg24.sky.it/mondo/approfondimenti/oktoberfest-settembre-storia",
+   "https://www.geopop.it/oktoberfest-cose-la-storia-vera-della-festa-della-birra-di-monaco-di-baviera-e-quando-si-tiene/"
+  ]
+ },
+ "DEU-1599": {
+  "facts": [
+   "La Porta di Brandeburgo, voluta da Federico Guglielmo II e costruita tra il 1788 e il 1791, si ispira ai Propilei dell'Acropoli di Atene.",
+   "Rimasta chiusa dal Muro durante la Guerra fredda, la Porta di Brandeburgo fu riaperta il 22 dicembre 1989 davanti a oltre 100.000 persone."
+  ],
+  "sources": [
+   "https://theculturetrip.com/europe/germany/articles/12-historical-events-that-shaped-berlin"
+  ]
+ },
+ "DEU-1600": {
+  "facts": [
+   "Il disco di Nebra, trovato in Sassonia-Anhalt e datato a circa 4.000 anni fa, è la più antica rappresentazione concreta della volta celeste conosciuta.",
+   "A Wittenberg Martin Lutero scrisse le 95 tesi del 1517; a Dessau si trova il maggior numero di edifici originali del Bauhaus al mondo."
+  ],
+  "sources": [
+   "https://entdecke-deutschland.de/en/bundeslaender/sachsen-anhalt/travel-to-the-stars/",
+   "https://www.himmelswege.de/en/himmelswege-regionen/6-staunenswerte-unesco-welterbe-in-sachsen-anhalt"
+  ]
+ },
+ "DEU-1601": {
+  "facts": [
+   "A Meissen, dal 1710, ha sede la prima manifattura europea di porcellana, fondata da Augusto il Forte dopo che l'alchimista Böttger ne scoprì il segreto.",
+   "La Frauenkirche di Dresda, distrutta nel 1945, è stata ricostruita e riaperta nel 2005."
+  ],
+  "sources": [
+   "https://www.theculturetrip.com/europe/germany/articles/7-reasons-why-you-should-visit-meissen-at-least-once-in-your-lifetime",
+   "https://en.wikipedia.org/wiki/Dresden"
+  ]
+ },
+ "DEU-3487": {
+  "facts": [
+   "Sanssouci, la residenza estiva di Federico il Grande a Potsdam completata nel 1747, ha un nome francese che significa \"senza preoccupazioni\".",
+   "Nel 1945 i vincitori della Seconda guerra mondiale si riunirono nel palazzo Cecilienhof di Potsdam per la Conferenza che decise l'assetto della Germania."
+  ],
+  "sources": [
+   "https://theculturetrip.com/europe/germany/articles/10-things-you-didnt-know-about-potsdam",
+   "https://www.mycityhunt.co.uk/explorer-blog/10-facts-about-potsdam-you-didnt-know-840"
+  ]
+ },
+ "DEU-3488": {
+  "facts": [
+   "Le scogliere di gesso dell'isola di Rügen, la più grande della Germania, furono rese celebri dal dipinto di Caspar David Friedrich (1818), nato nella vicina Greifswald.",
+   "Heiligendamm, fondata nel 1793 sulla costa del Baltico, è considerata la prima località balneare della Germania."
+  ],
+  "sources": [
+   "https://www.germany.travel/media/redaktion/trade_relaunch/salesguidegermany/_lmo/meckvopo_0516/2026_26/Factsheet_MV_english.pdf",
+   "https://theculturetrip.com/europe/germany/articles/the-top-10-things-to-see-and-do-in-mecklenburg-vorpommern-germany"
+  ]
+ },
+ "ESP-R01": {
+  "facts": [
+   "Secondo l'interpretazione tradizionale, risalente al Duecento e ripresa da Ibn Khaldun, il nome deriva dall'arabo al-Andalus, a sua volta legato ai Vandali; l'etimologia è però molto discussa."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Etymology_of_Andalusia",
+   "https://en.wikipedia.org/wiki/Andalusia"
+  ]
+ },
+ "ESP-R02": {
+  "facts": [
+   "L'architettura mudéjar di Teruel, con le torri di San Martín ed El Salvador e la cattedrale, è patrimonio UNESCO dal 1986; nel 2001 il riconoscimento è stato esteso al mudéjar di tutto l'Aragona."
+  ],
+  "sources": [
+   "https://www.turismodearagon.com/ficha/arquitectura-religiosa-mudejar-patrimonio-mundial/",
+   "https://teruelmudejar.com/patrimonio_en.html"
+  ]
+ },
+ "ESP-R03": {
+  "facts": [
+   "Nella battaglia di Covadonga, combattuta secondo la tradizione nel 722, il nobile visigoto Pelagio sconfisse un esercito omayyade: è considerata l'atto di nascita del regno delle Asturie e della Reconquista."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Battle_of_Covadonga",
+   "https://en.wikipedia.org/wiki/722"
+  ]
+ },
+ "ESP-R04": {
+  "facts": [
+   "Nell'antichità i frombolieri delle Baleari erano celebri e servirono negli eserciti cartaginesi e romani; secondo un'etimologia antica il nome stesso delle isole deriverebbe dal greco ballein, \"lanciare\"."
+  ],
+  "sources": [
+   "https://jimclifford.ca/early_encyclopedia_britannica/articles/1815/eb_5th_1815_003037.html",
+   "https://imperiumromanum.pl/en/?p=56538"
+  ]
+ },
+ "ESP-R05": {
+  "facts": [
+   "Il nome viene probabilmente dal latino Canariae Insulae, \"isole dei cani\": Plinio il Vecchio riferiva che sull'isola di Canaria vivevano cani di grande taglia.",
+   "Il Teide, vulcano di Tenerife alto circa 3715 metri, è la vetta più alta della Spagna e di tutte le isole dell'Atlantico."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Canary_Islands",
+   "https://en.wikipedia.org/wiki/Teide"
+  ]
+ },
+ "ESP-R06": {
+  "facts": [
+   "Le pitture della grotta di Altamira, con i celebri bisonti, furono notate nel 1879 dalla piccola María, figlia di Marcelino Sanz de Sautuola; per anni molti studiosi le ritennero un falso."
+  ],
+  "sources": [
+   "https://www.ecured.cu/Cuevas_de_Altamira",
+   "https://centrodeestudiosmontaneses.com/wp-content/uploads/2023/05/1979-Semblanza-Santuola.pdf"
+  ]
+ },
+ "ESP-R07": {
+  "facts": [
+   "Nella Sierra de Atapuerca, vicino a Burgos, nel 1994 furono scoperti resti umani di circa 800.000 anni fa attribuiti a una nuova specie, Homo antecessor; i siti sono patrimonio UNESCO dal 2000."
+  ],
+  "sources": [
+   "https://www.atapuerca.org/en/atapuerca/Yacimientos-de-Atapuerca",
+   "https://www.terranostrum.es/turismo/burgos-complejo-de-la-evolucion-humana"
+  ]
+ },
+ "ESP-R08": {
+  "facts": [
+   "Secondo gli studiosi di Cervantes, i mulini a vento di Campo de Criptana, costruiti tra il Cinquecento e l'Ottocento, sarebbero i \"giganti\" contro cui combatte Don Chisciotte."
+  ],
+  "sources": [
+   "https://ngenespanol.com/traveler/los-molinos-del-quijote-campo-de-criptana-espana",
+   "https://toledodiario.es/los-gigantes-del-quijote-conoces-el-origen-de-los-molinos-de-viento-y-como-se-mantienen-en-la-actualidad"
+  ]
+ },
+ "ESP-R09": {
+  "facts": [
+   "I castells, le torri umane catalane, sono patrimonio immateriale UNESCO dal 2010; la tradizione è documentata per la prima volta a Valls, vicino a Tarragona, nel 1712."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Castell",
+   "https://patrimoni.gencat.cat/en/node/1414"
+  ]
+ },
+ "ESP-R10": {
+  "facts": [
+   "Il Monte Hacho di Ceuta è indicato da alcuni come la colonna d'Ercole meridionale, in alternativa al Jebel Musa marocchino.",
+   "Ceuta fu conquistata il 21 agosto 1415 dal re Giovanni I del Portogallo e solo più tardi, nel Seicento, passò definitivamente alla Spagna."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Monte_Hacho",
+   "https://www.britannica.com/place/Ceuta"
+  ]
+ },
+ "ESP-R11": {
+  "facts": [
+   "Ogni giovedì, davanti alla Porta degli Apostoli della cattedrale di Valencia, il Tribunale delle Acque giudica a voce le liti sull'irrigazione della huerta; è ritenuto la più antica istituzione giudiziaria d'Europa."
+  ],
+  "sources": [
+   "https://www.visitvalencia.com/it/cosa-fare-valencia/cultura-valenciana/monumenti-a-valencia/tribunal-aguas-tribunale-delle-acque",
+   "https://www.uv.es/catedra-horta-valencia/es/catalogo-patrimonio/tribunal-aguas/tribunal-aguas.html"
+  ]
+ },
+ "ESP-R12": {
+  "facts": [
+   "Il monastero di San Lorenzo de El Escorial, fatto costruire da Filippo II tra il 1563 e il 1584, ospita il Pantheon dei Re, dove riposa la maggior parte dei sovrani spagnoli da Carlo V in poi."
+  ],
+  "sources": [
+   "https://www.visitmadrid.es/it/cosa-fare-madrid/hacer-madrid-planes-experiencias-imperdibles/cultura-madrid-arte-storia-e-3",
+   "https://www.aciprensa.com/noticias/95133/11-datos-sobre-el-monasterio-de-san-lorenzo-de-el-escorial-fundado-por-un-emperador"
+  ]
+ },
+ "ESP-R13": {
+  "facts": [
+   "L'Estremadura è la terra dei conquistadores: Francisco Pizarro, conquistatore del Perù, nacque a Trujillo, ed Hernán Cortés, conquistatore del Messico, a Medellín."
+  ],
+  "sources": [
+   "https://www.spanish-fiestas.com/trujillo-spain-birthplace-of-conquistadors/",
+   "https://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/conquistador"
+  ]
+ },
+ "ESP-R14": {
+  "facts": [
+   "La Torre di Ercole di A Coruña, costruita dai Romani tra il I e il II secolo, è il più antico faro romano ancora in funzione; dal 2009 è patrimonio UNESCO."
+  ],
+  "sources": [
+   "https://en.wikipedia.com/wiki/Tower_of_Hercules",
+   "https://www.xataka.com/magnet/faro-antiguo-mundo-activo-roza-2-000-anos-esta-espana-leyenda-dice-que-levanto-hercules"
+  ]
+ },
+ "ESP-R15": {
+  "facts": [
+   "Nel monastero di San Millán de la Cogolla nacquero le Glosas Emilianenses, annotazioni dei secoli X-XI considerate le prime parole scritte in lingua romanza castigliana, accanto ad alcune in basco."
+  ],
+  "sources": [
+   "https://wikipedia.com/wiki/Glosas_Emilianenses",
+   "https://www.educacionfpydeportes.gob.es/china/publicaciones-materiales/buenas-practicas/como-comenzo-todo-las-glosas-emilianenses.html"
+  ]
+ },
+ "ESP-R16": {
+  "facts": [
+   "Melilla fu occupata nel settembre 1497 da Pedro de Estopiñán, contabile del duca di Medina Sidonia che finanziò la spedizione: la città fu presa quasi senza combattere."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Conquest_of_Melilla",
+   "https://www.eldebate.com/historia/20220917/conquista-melilla_60100.html"
+  ]
+ },
+ "ESP-R17": {
+  "facts": [
+   "Il Consiglio degli Uomini Buoni della huerta di Murcia, tribunale consuetudinario che risolve oralmente le liti sull'irrigazione, è patrimonio immateriale UNESCO dal 2009 insieme al Tribunale delle Acque di Valencia."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Council_of_Wise_Men_of_the_plain_of_Murcia",
+   "https://ich.unesco.org/es/RL/el-tribunal-de-las-aguas-de-la-vega-de-valencia-y-el-consejo-de-hombres-buenos-de-murcia-00171"
+  ]
+ },
+ "ESP-R18": {
+  "facts": [
+   "Il regno di Navarra, fondato all'inizio del IX secolo a cavallo dei Pirenei occidentali, sotto Sancho III divenne lo Stato cristiano più potente della penisola iberica.",
+   "Durante le feste di San Firmino a Pamplona, ogni mattina dell'encierro i corridori precedono sei tori e sei manzi lungo circa 825 metri di strade strette del centro storico."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Navarre",
+   "https://en.wikipedia.org/wiki/History_of_Pamplona",
+   "https://www.spain.info/es/que-quieres/agenda/fiestas/navarra/fiestas_de_san_fermin.html"
+  ]
+ },
+ "ESP-R19": {
+  "facts": [
+   "Il basco (euskara) è considerato una lingua isolata: non ne è stata dimostrata alcuna parentela con altre lingue viventi.",
+   "Il 26 aprile 1937 la cittadina basca di Guernica fu bombardata dalla Legione Condor tedesca con l'appoggio dell'aviazione italiana; l'evento ispirò il celebre dipinto di Picasso."
+  ],
+  "sources": [
+   "https://dbpedia.org/page/Basque_language",
+   "https://wikipedia.com/wiki/Bombing_of_Guernica"
+  ]
+ },
+ "FRA-R01": {
+  "facts": [
+   "La cattedrale di Notre-Dame di Amiens, del XIII secolo, è la più vasta di Francia: la sua navata, alta circa 42 metri, potrebbe contenere due volte Notre-Dame di Parigi. È patrimonio UNESCO dal 1981."
+  ],
+  "sources": [
+   "https://it.wikivoyage.org/wiki/Amiens",
+   "https://www.franciaturismo.net/francia-nord-piccardia/amiens/"
+  ]
+ },
+ "FRA-R02": {
+  "facts": [
+   "Nel 1924 Chamonix, ai piedi del Monte Bianco, ospitò la prima edizione dei Giochi olimpici invernali, con 258 atleti di 16 nazioni.",
+   "Il Monte Bianco, sul confine con l'Italia, è la vetta più alta delle Alpi, con circa 4.807 metri di altitudine."
+  ],
+  "sources": [
+   "https://it.wikivoyage.org/wiki/Chamonix-Mont-Blanc",
+   "https://www.lovevda.it/it/scoprire/grandi-montagne/monte-bianco"
+  ]
+ },
+ "FRA-R03": {
+  "facts": [
+   "Louis Pasteur nacque a Dole, nel Giura, il 27 dicembre 1822; la sua casa natale, nel quartiere dei conciatori, è oggi un museo.",
+   "Dole fu capitale della Franca Contea fino al 1676."
+  ],
+  "sources": [
+   "https://www.terredelouispasteur.fr/en/?p=12167",
+   "https://www.britannica.com/place/Dole-France"
+  ]
+ },
+ "FRA-R04": {
+  "facts": [
+   "Gli allineamenti di Carnac, nel Morbihan, comprendono circa 3.000 menhir disposti in lunghe file, eretti nel Neolitico; la loro funzione resta ancora oggi incerta."
+  ],
+  "sources": [
+   "https://www.france.fr/it/articolo/giocare-a-nascondino-con-i-megaliti-in-bretagna/",
+   "https://www.franciaturismo.net/bretagna/itinerari-bretagna/menhir-bretagna/"
+  ]
+ },
+ "FRA-R05": {
+  "facts": [
+   "Dal 2000 circa 280 km della Valle della Loira, da Sully-sur-Loire a Chalonnes-sur-Loire, sono patrimonio mondiale UNESCO.",
+   "Leonardo da Vinci trascorse gli ultimi anni al Clos Lucé, ad Amboise, su invito di Francesco I; è sepolto nella cappella di Saint-Hubert del castello reale."
+  ],
+  "sources": [
+   "https://www.valdeloire-france.com/?p=622001",
+   "https://www.chateau-amboise.com/wp-content/uploads/2026/09/AMBOISE-PRO_EN_26-27_WEB_compressed-1.pdf"
+  ]
+ },
+ "FRA-R06": {
+  "facts": [
+   "Nel 1768 la Repubblica di Genova cedette alla Francia i propri diritti sulla Corsica; l'anno dopo, il 15 agosto 1769, ad Ajaccio nacque Napoleone Bonaparte."
+  ],
+  "sources": [
+   "https://www.visit-corsica.com/it/Scoprire-la-Corsica/Le-nostre-ispirazioni/Esperienze-culturale/Napoleon-l-evento-cinematografico-tanto-atteso"
+  ]
+ },
+ "FRA-R07": {
+  "facts": [
+   "Nella cattedrale di Reims venivano incoronati i re di Francia; la città è oggi uno dei centri della produzione dello champagne."
+  ],
+  "sources": [
+   "https://it.wikivoyage.org/wiki/Reims",
+   "https://kiwix.lema.org/wikipedia_en_all_mini_2024-02/A/Reims"
+  ]
+ },
+ "FRA-R08": {
+  "facts": [
+   "Vista dall'alto la Guadalupa ha la forma di una farfalla: le due ali sono Basse-Terre, montuosa e vulcanica, e Grande-Terre, calcarea, separate dallo stretto canale della Rivière Salée.",
+   "Il vulcano La Grande Soufrière, 1.467 metri, è la cima più alta delle Piccole Antille; l'attività del 1976 portò all'evacuazione del sud di Basse-Terre."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Geography_of_Guadeloupe"
+  ]
+ },
+ "FRA-R09": {
+  "facts": [
+   "Vicino a Kourou sorge il Centro spaziale guyanese, base di lancio europea operativa dal 1968: la vicinanza all'equatore sfrutta la spinta della rotazione terrestre. Il primo razzo Ariane partì da qui il 24 dicembre 1979."
+  ],
+  "sources": [
+   "https://www.france.fr/it/articolo/centre-spatial-guyanais/",
+   "https://fr.vikidia.org/wiki/Centre_spatial_guyanais",
+   "https://www.esa.int/ESA_Multimedia/Images/2010/10/IL_PORTO_SPAZIALE_DELL_EUROPA"
+  ]
+ },
+ "FRA-R10": {
+  "facts": [
+   "L'8 maggio 1902 l'eruzione della Montagne Pelée distrusse in pochi minuti la città di Saint-Pierre, causando circa 28.000 vittime; i sopravvissuti furono poche decine.",
+   "Da quell'evento prende il nome il tipo di eruzione detto peléeano, caratterizzato da violente nubi ardenti."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/1902_eruption_of_Mount_Pel%C3%A9e",
+   "https://www.volcanodiscovery.com/it/pelee.html"
+  ]
+ },
+ "FRA-R11": {
+  "facts": [
+   "Mayotte è circondata da una laguna di circa 1.400 km² racchiusa da una doppia barriera corallina, caso raro al mondo.",
+   "Il Parco naturale marino di Mayotte, istituito nel 2010, è stato il primo creato dalla Francia nei suoi territori d'oltremare."
+  ],
+  "sources": [
+   "https://www.france.fr/it/articolo/sette-esperienze-da-non-mancare-nella-laguna-di-mayotte/",
+   "https://www.france.fr/it/destinazione/mayotte/"
+  ]
+ },
+ "FRA-R12": {
+  "facts": [
+   "L'arazzo di Bayeux, conservato in Normandia, racconta la conquista normanna dell'Inghilterra; in una scena l'esercito si impantana nelle sabbie mobili presso il Mont-Saint-Michel e Aroldo salva due soldati normanni."
+  ],
+  "sources": [
+   "https://webarchive.library.unt.edu/web/20161119151022/https://en.wikipedia.org/wiki/Bayeux_Tapestry",
+   "https://www.worldhistory.org/trans/it/1-16892/arazzo-di-bayeux/"
+  ]
+ },
+ "FRA-R13": {
+  "facts": [
+   "La grotta di Lascaux, presso Montignac in Dordogna, fu scoperta nel settembre 1940 da alcuni ragazzi che seguivano il loro cane; le sue pitture paleolitiche raffigurano soprattutto cavalli, uri, cervi e bisonti.",
+   "Per proteggere i dipinti originali la grotta fu chiusa al pubblico nel 1963; i visitatori vedono delle repliche, la prima delle quali, Lascaux II, aperta nel 1983."
+  ],
+  "sources": [
+   "https://www.worldhistory.org/trans/it/1-15133/grotta-di-lascaux/"
+  ]
+ },
+ "FRA-R14": {
+  "facts": [
+   "Il Canal du Midi, progettato da Pierre-Paul Riquet per Luigi XIV e inaugurato nel 1681, collega Tolosa a Sète sul Mediterraneo; è patrimonio UNESCO dal 1996.",
+   "La città fortificata medievale di Carcassonne, la Cité, è patrimonio mondiale UNESCO dal 1997."
+  ],
+  "sources": [
+   "https://visit-occitanie.com/en/discovering/unesco-classified-sites/canal-du-midi",
+   "https://www.france.fr/fr/article/que-faire-que-voir-canal-du-midi/"
+  ]
+ },
+ "FRA-R15": {
+  "facts": [
+   "La 24 Ore di Le Mans, la più celebre corsa automobilistica di durata, si corse per la prima volta nel maggio 1923 sul circuito della Sarthe, su iniziativa dell'Automobile Club de l'Ouest."
+  ],
+  "sources": [
+   "https://www.ilpost.it/2023/05/27/24-ore-le-mans-1923/",
+   "https://gallica.bnf.fr/blog/26052023/1923-2023-100-years-legendary-race-1-6"
+  ]
+ },
+ "FRA-R16": {
+  "facts": [
+   "Nel 2018 l'UNESCO ha iscritto i saperi della profumeria del territorio di Grasse, dalla coltivazione delle piante da profumo alla composizione delle fragranze, nel patrimonio culturale immateriale dell'umanità."
+  ],
+  "sources": [
+   "https://www.mane.com/media/perfumery-savoir-faire-in-the-grasse-area-listed-as-intangible-cultural-heritage-of-humanity-by-unesco",
+   "https://carrementbelle.com/blog/en/2019/10/16/grasse-perfume/"
+  ]
+ },
+ "FRA-R17": {
+  "facts": [
+   "Il Piton de la Fournaise, vulcano a scudo alto circa 2.630 metri, è uno dei vulcani più attivi del pianeta.",
+   "Dal 2010 i picchi, i circhi e le pareti rocciose del cuore dell'isola sono patrimonio mondiale UNESCO."
+  ],
+  "sources": [
+   "https://www.france.fr/it/articolo/il-piton-de-la-fournaise-in-5-cifre/",
+   "https://cnes.fr/geoimage/piton-de-fournaise-un-volcan-tres-actif-haut-lieu-patrimoine-reunionnais",
+   "https://www.worldheritagesite.org/list/id/1317"
+  ]
+ },
+ "FRA-R18": {
+  "facts": [
+   "Nel 1682 Luigi XIV trasferì la corte e il governo a Versailles, che restò residenza reale fino all'ottobre 1789.",
+   "Nella Galleria degli Specchi della reggia di Versailles fu firmato, il 28 giugno 1919, il trattato di pace che chiuse la prima guerra mondiale con la Germania."
+  ],
+  "sources": [
+   "https://britannica.com/topic/Palace-of-Versailles/History",
+   "https://simple.wikipedia.com/wiki/Hall_of_Mirrors_(Versailles)"
+  ]
+ },
+ "GBR-R01": {
+  "facts": [
+   "Il villaggio di Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch, sull'isola di Anglesey, ha il toponimo più lungo d'Europa, 58 lettere; il nome fu allungato nell'Ottocento come richiamo turistico."
+  ],
+  "sources": [
+   "https://www.ilpost.it/2023/10/04/nome-lungo-europa-galles/",
+   "https://www.routard.com/fr/guide/europe/pays-de-galles/north-of-wales/ile-d-anglesey-ynys-mon/llanfairpwllgwyngyll-gogerychwyrndrobwllllantysiliogogogoch"
+  ]
+ },
+ "GBR-R02": {
+  "facts": [
+   "Al Cavern Club di Mathew Street, a Liverpool, i Beatles si esibirono 292 volte tra il 1961 e il 1963, negli anni della loro ascesa."
+  ],
+  "sources": [
+   "https://www.cavernclub.com/wp-content/uploads/2019/11/BEATLES-LIVERPOOL-FINAL-PDF-.pdf"
+  ]
+ },
+ "GBR-R03": {
+  "facts": [
+   "L'isola di Lindisfarne, o Holy Island, nel Northumberland, è un'isola tidale raggiungibile a piedi solo con la bassa marea; il suo monastero, fondato nel 634, fu un centro del cristianesimo celtico."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lindisfarne"
+  ]
+ },
+ "GBR-R04": {
+  "facts": [
+   "A Sutton Hoo, nel Suffolk, nel 1939 fu scavata una sepoltura anglosassone in nave del VII secolo rimasta intatta, una delle scoperte archeologiche più importanti d'Inghilterra.",
+   "L'Università di Cambridge fu fondata nel 1209 da studiosi giunti in quella che era già una vivace città di commercio."
+  ],
+  "sources": [
+   "https://Www.Wikipedia.org/wiki/Sutton_Hoo",
+   "https://cam.ac.uk/node/24233"
+  ]
+ },
+ "GBR-R05": {
+  "facts": [
+   "La Jurassic Coast, tra Dorset e Devon orientale, è dal 2001 il primo sito interamente naturale del Regno Unito iscritto nel Patrimonio UNESCO: le sue rocce attraversano Triassico, Giurassico e Cretaceo."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Jurassic_Coast",
+   "https://www.dorsetcouncil.gov.uk/w/world-heritage-sites"
+  ]
+ },
+ "GBR-R06": {
+  "facts": [
+   "La battaglia di Hastings del 14 ottobre 1066 si combatté presso l'odierna cittadina di Battle, nel Sussex orientale, dove Guglielmo il Conquistatore fondò poi un'abbazia sul luogo dello scontro."
+  ],
+  "sources": [
+   "https://Www.Wikipedia.org/wiki/Battle_Abbey",
+   "https://EN.wikipedia.com/wiki/Battle_of_Hastings"
+  ]
+ },
+ "GBR-R07": {
+  "facts": [
+   "Il Selciato del Gigante (Giant's Causeway) è formato da circa 40.000 colonne di basalto nate da eruzioni di circa 60 milioni di anni fa; nel 1986 è stato il primo sito UNESCO dell'Irlanda del Nord."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Giant%27s_Causeway",
+   "https://unesco.org.uk/our-sites/world-heritage-sites/giants-causeway-and-causeway-coast"
+  ]
+ },
+ "GBR-R08": {
+  "facts": [
+   "Il 10 gennaio 1863 a Londra aprì la Metropolitan Railway, tra Paddington e Farringdon: la prima ferrovia sotterranea del mondo, con carrozze in legno illuminate a gas e trainate da locomotive a vapore."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Metropolitan_Railway",
+   "https://www.guinnessworldrecords.com/world-records/first-underground-railway-system"
+  ]
+ },
+ "GBR-R09": {
+  "facts": [
+   "L'Iron Bridge sul fiume Severn, nello Shropshire, eretto nel 1779 con la ghisa di Abraham Darby III, è il primo grande ponte in ghisa del mondo e simbolo della rivoluzione industriale."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/The_Iron_Bridge"
+  ]
+ },
+ "GBR-R10": {
+  "facts": [
+   "Nella foresta di Sherwood, nel Nottinghamshire, la Major Oak deve il nome al maggiore Hayman Rooke, che la descrisse nel 1790; secondo la leggenda vi si nascondevano Robin Hood e i suoi compagni."
+  ],
+  "sources": [
+   "https://www.worldatlas.com/articles/what-and-where-is-major-oak.html"
+  ]
+ },
+ "GBR-R11": {
+  "facts": [
+   "L'animale nazionale della Scozia è l'unicorno: due unicorni sostenevano lo stemma reale scozzese finché, con l'unione delle corone del 1603, uno fu sostituito dal leone inglese."
+  ],
+  "sources": [
+   "https://www.nts.org.uk/stories/the-unicorn-scotlands-national-animal",
+   "https://historic-uk.com/HistoryUK/HistoryofScotland/The-Unicorn-Scotlands-National-Animal"
+  ]
+ },
+ "GBR-R12": {
+  "facts": [
+   "Le sorelle Brontë vissero nella canonica di Haworth, nel West Yorkshire, dove scrissero Jane Eyre e Cime tempestose; la fattoria di Top Withens, nella brughiera vicina, è indicata come modello di Wuthering Heights."
+  ],
+  "sources": [
+   "https://www.historyhit.com/locations/bronte-parsonage-museum/",
+   "https://kwx.liehendr.com/content/wikivoyage_en_all_maxi_2025-02/A/Bronte_Country"
+  ]
+ },
+ "ITA-R01": {
+  "facts": [
+   "Con tre parchi nazionali, un parco regionale e numerose riserve, le aree protette coprono circa un terzo del territorio: per questo l'Abruzzo è detto \"regione verde d'Europa\"."
+  ],
+  "sources": [
+   "https://www.esa.int/Space_in_Member_States/Italy/L_Abruzzo_regione_verde_d_Europa",
+   "https://www.enit.it/storage/202510/20251008125223_cs abruzzo_it.pdf"
+  ]
+ },
+ "ITA-R02": {
+  "facts": [
+   "Il nome Basilicata deriva dal greco basilikós; secondo un'ipotesi richiama i funzionari bizantini che governavano la zona, secondo un'altra la basilica di Acerenza. In età romana la regione si chiamava Lucania."
+  ],
+  "sources": [
+   "https://it.wikivoyage.org/wiki/Basilicata",
+   "https://www.linkiesta.it/2018/02/ci-sono-solo-lucani-in-basilicata-risponde-la-crusca/"
+  ]
+ },
+ "ITA-R03": {
+  "facts": [
+   "I Bronzi di Riace, due statue greche di guerrieri del V secolo a.C., furono scoperti per caso da un sub il 16 agosto 1972 nel mare Ionio, a circa 300 metri dalla costa di Riace Marina."
+  ],
+  "sources": [
+   "https://www.ilpost.it/2022/08/16/bronzi-di-riace-16-agosto-1972-mistero/",
+   "https://www.finestresullarte.info/focus/gli-intricati-50-anni-contemporanei-dei-bronzi-di-riace"
+  ]
+ },
+ "ITA-R04": {
+  "facts": [
+   "I Romani chiamavano Campania felix la fertile pianura attorno a Capua; il nome indicava in origine il territorio di quella città, l'Ager Campanus, e solo in seguito si estese alla regione."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ancient_Campania",
+   "https://www.visititaly.eu/it/storie-e-tradizioni/perche-campania-felix-le-origini-del-nome"
+  ]
+ },
+ "ITA-R05": {
+  "facts": [
+   "L'Emilia prende nome dalla via Emilia, aperta nel 187 a.C. dal console Marco Emilio Lepido tra Rimini e Piacenza; Romagna deriva da Romània, il nome delle terre rimaste ai Bizantini."
+  ],
+  "sources": [
+   "https://www.tourer.it/webgis/docs/0_INTRO_VIAEMILIA.pdf",
+   "https://fesr.regione.emilia-romagna.it/por-fesr/programmazione-precedente/risultati/progetti/allegati/storiaecultura_web.pdf"
+  ]
+ },
+ "ITA-R06": {
+  "facts": [
+   "La basilica di Aquileia conserva un mosaico pavimentale del IV secolo di circa 750 metri quadrati, riportato alla luce nel 1909; l'area archeologica e la basilica sono patrimonio UNESCO dal 1998."
+  ],
+  "sources": [
+   "https://www.visititaly.eu/it/unesco/siti-unesco-in-friuli-venezia-giulia-zona-archeologica-e-basilica-patriarcale-di-aquileia",
+   "https://www.italia.it/it/friuli-venezia-giulia/cosa-fare/aquileia-rovine-basilica"
+  ]
+ },
+ "ITA-R07": {
+  "facts": [
+   "Il nome Lazio viene dal latino Latium, terra dei Latini; l'ipotesi più diffusa lo lega a latus, \"largo\", nel senso di pianura. Gli antichi lo collegavano invece al mito di Saturno che vi si sarebbe nascosto (latere)."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Latium",
+   "https://en.wikipedia.org/wiki/Lazio"
+  ]
+ },
+ "ITA-R08": {
+  "facts": [
+   "Portovenere, le Cinque Terre e le isole Palmaria, Tino e Tinetto sono patrimonio UNESCO dal 1997 come paesaggio culturale, per i terrazzamenti costruiti dall'uomo sulla costa ripida."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Cinque_Terre"
+  ]
+ },
+ "ITA-R09": {
+  "facts": [
+   "La Lombardia prende nome dai Longobardi, popolo germanico giunto in Italia nel 568 che fece di Pavia la capitale del suo regno; Langobardi è tradizionalmente interpretato come \"dalle lunghe barbe\"."
+  ],
+  "sources": [
+   "https://www.etymonline.com/it/word/Lombardy",
+   "https://www.etymonline.com/it/word/Langobard"
+  ]
+ },
+ "ITA-R10": {
+  "facts": [
+   "Le Marche sono l'unica regione italiana con nome al plurale: deriva dalle \"marche\", terre di confine di origine germanica (Ancona, Camerino, Fermo), unite e chiamate ufficialmente Marche dal 1808."
+  ],
+  "sources": [
+   "https://www.esa.int/Space_in_Member_States/Italy/Le_Marche_una_regione_al_plurale"
+  ]
+ },
+ "ITA-R11": {
+  "facts": [
+   "Il Molise è la regione più giovane d'Italia: fu separato dagli Abruzzi e Molise con legge costituzionale del 1963 ed è l'unico caso di regione nata staccandosi da un'altra."
+  ],
+  "sources": [
+   "https://www.ilpost.it/2024/12/27/isernia-molise-accorpamento-abruzzo/",
+   "https://kiwix.lema.org/wikipedia_en_all_mini_2024-02/A/Molise"
+  ]
+ },
+ "ITA-R12": {
+  "facts": [
+   "Il nome Piemonte viene dal latino medievale Pedemontium, da ad pedem montium, \"ai piedi dei monti\", cioè delle Alpi.",
+   "Torino fu la prima capitale del Regno d'Italia, proclamato il 17 marzo 1861, fino al trasferimento a Firenze nel 1865."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Piedmont",
+   "https://www.geopop.it/10-curiosita-sul-piemonte-dalla-prima-capitale-ditalia-alla-nascita-del-gianduia/"
+  ]
+ },
+ "ITA-R13": {
+  "facts": [
+   "Castel del Monte, vicino ad Andria, fu voluto da Federico II di Svevia attorno al 1240: ha pianta ottagonale con otto torri ottagonali agli angoli ed è patrimonio UNESCO dal 1996."
+  ],
+  "sources": [
+   "https://cultura.gov.it/luogo/castel-del-monte",
+   "https://www.italia.it/it/puglia/barletta-andria-trani/cosa-fare/castel-del-monte"
+  ]
+ },
+ "ITA-R14": {
+  "facts": [
+   "Il complesso nuragico di Su Nuraxi a Barumini, con una torre dell'età del bronzo circondata da un villaggio, è patrimonio UNESCO dal 1997; fu riportato alla luce dall'archeologo Giovanni Lilliu negli anni Cinquanta."
+  ],
+  "sources": [
+   "https://www.sardegnaturismo.it/en/explore/su-nuraxi",
+   "https://whc.unesco.org/ru/list/833"
+  ]
+ },
+ "ITA-R15": {
+  "facts": [
+   "L'Etna, il vulcano attivo più alto d'Europa con oltre 3.300 metri, è patrimonio UNESCO dal 2013; le sue eruzioni sono documentate da circa 2.700 anni."
+  ],
+  "sources": [
+   "https://www.focus.it/ambiente/natura/l-etna-e-ufficialmente-patrimonio-mondiale-dell-unesco",
+   "https://www.italia.it/it/sicilia/catania/cosa-fare/monte-etna",
+   "https://www.visititaly.eu/it/dove-andare/sicilia"
+  ]
+ },
+ "ITA-R16": {
+  "facts": [
+   "Carlo Lorenzini, autore di Pinocchio, firmò come Collodi in omaggio al paese della madre, oggi frazione di Pescia, dove trascorse parte dell'infanzia.",
+   "Il marmo del David di Michelangelo proveniva probabilmente dalle cave delle Alpi Apuane sopra Carrara."
+  ],
+  "sources": [
+   "https://libreriamo.it/societa/carlo-collodi-itinerario-pinocchio/",
+   "https://www.italia.it/it/toscana/collodi-pescia",
+   "https://italoamericano.org/massa-carrara-marble/"
+  ]
+ },
+ "ITA-R17": {
+  "facts": [
+   "Ötzi, la mummia dell'età del rame trovata il 19 settembre 1991 sul ghiacciaio del Similaun a circa 3.210 metri, è conservata nel Museo archeologico dell'Alto Adige a Bolzano."
+  ],
+  "sources": [
+   "https://www.suedtirol.info/it/questo-e-l-alto-adige/gente/personaggi-e-personalita/otzi",
+   "https://www.focus.it/scienza/salute/ricerca-l-uomo-dei-ghiacci-compie-25-anni-oetzi-svela-i-suoi-segreti"
+  ]
+ },
+ "ITA-R18": {
+  "facts": [
+   "L'Umbria è l'unica regione dell'Italia peninsulare senza sbocco sul mare.",
+   "La Cascata delle Marmore, alta 165 metri in tre salti, è artificiale: nacque nel 271 a.C. da un canale scavato dai Romani per far defluire le acque del Velino nel Nera."
+  ],
+  "sources": [
+   "https://it.wikivoyage.org/wiki/Umbria",
+   "https://www.geopop.it/la-cascata-delle-marmore-e-la-cascata-artificiale-piu-alta-del-mondo-dove-si-trova-e-quanto-e-alta/"
+  ]
+ },
+ "ITA-R19": {
+  "facts": [
+   "In Valle d'Aosta il francese è lingua ufficiale accanto all'italiano.",
+   "Nel 1800 il forte di Bard, difeso da circa 400 soldati austro-piemontesi, riuscì a trattenere a lungo un esercito francese di 40.000 uomini diretto in Italia."
+  ],
+  "sources": [
+   "https://it.wikivoyage.org/wiki/Valle_d'Aosta",
+   "https://italoamericano.org/valle-daosta-ancient-rome/"
+  ]
+ },
+ "ITA-R20": {
+  "facts": [
+   "Le colline del Prosecco di Conegliano e Valdobbiadene, con i vigneti su stretti terrazzamenti erbosi detti ciglioni, sono patrimonio UNESCO dal 2019 come paesaggio culturale."
+  ],
+  "sources": [
+   "https://www.ansa.it/english/news/2019/07/08/prosecco-hills-become-unesco-site_eaf8f2f3-f55a-4607-a365-c39fb15428fe.html",
+   "https://www.worldheritagesite.org/list/id/1571"
+  ]
+ },
+ "USA-3513": {
+  "facts": [
+   "Il nome Massachusetts deriva dal popolo nativo dei Massachusett e significa \"presso la grande collina\", con riferimento alla Great Blue Hill a sud di Boston."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Massachusett",
+   "https://www.sec.state.ma.us/divisions/cis/ciskid/kid-facts/mf1a.htm"
+  ]
+ },
+ "USA-3514": {
+  "facts": [
+   "Il nome Minnesota viene dal dakota Mni Sota, riferito al fiume Minnesota: mni significa \"acqua\" e il tutto è spesso reso come acqua così limpida da riflettere il cielo.",
+   "Il lago Itasca, nel Minnesota, è considerato la sorgente del Mississippi: il nome fu coniato nel 1832 da Henry Schoolcraft dal latino veritas caput."
+  ],
+  "sources": [
+   "https://www.startribune.com/mnista-mni-sota-dakota-language-minnesota-river-state-name/600114154/",
+   "https://www.etymonline.com/word/minnesota",
+   "https://britannica.com/print/article/297905"
+  ]
+ },
+ "USA-3515": {
+  "facts": [
+   "Nel sud-est del Montana, lungo il fiume Little Bighorn, il 25 e 26 giugno 1876 Lakota, Cheyenne e Arapaho sconfissero il 7° Cavalleria: vi morì il tenente colonnello George Armstrong Custer."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Battle_of_the_Little_Bighorn"
+  ]
+ },
+ "USA-3516": {
+  "facts": [
+   "Nel 1931 la cittadina di Rugby eresse un obelisco di pietra come \"centro geografico del Nord America\", sulla base di una stima del 1928; il primato non ha però alcun riconoscimento ufficiale."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Rugby,_North_Dakota"
+  ]
+ },
+ "USA-3517": {
+  "facts": [
+   "A Honolulu sorge il palazzo ʻIolani, completato nel 1882 e residenza degli ultimi sovrani hawaiani: è l'unico palazzo reale degli Stati Uniti."
+  ],
+  "sources": [
+   "https://www.nps.gov/places/iolanipalace.htm"
+  ]
+ },
+ "USA-3518": {
+  "facts": [
+   "Al confine con l'Oregon il fiume Snake ha scavato lo Hells Canyon, profondo circa 2.400 metri: è la gola fluviale più profonda del Nord America, più del Grand Canyon."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hells_Canyon"
+  ]
+ },
+ "USA-3519": {
+  "facts": [
+   "È l'unico stato americano che porta il nome di un presidente, George Washington. Nel 1853 il territorio doveva chiamarsi Columbia, ma il nome fu cambiato per non confonderlo con il Distretto di Columbia."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Outline_of_Washington_(state)"
+  ]
+ },
+ "USA-3520": {
+  "facts": [
+   "Il Meteor Crater, largo circa 1,2 km e profondo 170 metri, fu scavato circa 50.000 anni fa dall'impatto di un meteorite ferroso di una cinquantina di metri."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Meteor_Crater",
+   "https://science.nasa.gov/resource/meteor-crater-arizona-usa/"
+  ]
+ },
+ "USA-3521": {
+  "facts": [
+   "Nel Sequoia National Park cresce il General Sherman, una sequoia gigante alta circa 84 metri: per volume è il più grande albero vivente a fusto singolo conosciuto."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/General_Sherman_Tree"
+  ]
+ },
+ "USA-3522": {
+  "facts": [
+   "Nell'estate del 1893 la poetessa Katharine Lee Bates salì sul Pikes Peak: il panorama dalla vetta le ispirò la poesia \"America the Beautiful\", diventata uno dei canti patriottici più noti del paese."
+  ],
+  "sources": [
+   "https://www.pikespeak.us.com/learn/america-the-beautiful/"
+  ]
+ },
+ "USA-3523": {
+  "facts": [
+   "Il motto \"Battle Born\" sulla bandiera ricorda che il Nevada divenne il 36° stato il 31 ottobre 1864, in piena guerra civile; la sua costituzione fu trasmessa a Washington per telegrafo."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Nevada_in_the_American_Civil_War"
+  ]
+ },
+ "USA-3524": {
+  "facts": [
+   "Il 16 luglio 1945 nel deserto della Jornada del Muerto, nel Nuovo Messico, fu fatta esplodere la prima bomba atomica della storia, nel test chiamato Trinity."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Trinity_(nuclear_test)",
+   "https://www.energy.gov/management/trinity-site-worlds-first-nuclear-explosion"
+  ]
+ },
+ "USA-3525": {
+  "facts": [
+   "Il Crater Lake, profondo circa 590 metri, è il lago più profondo degli Stati Uniti: occupa la caldera nata dal collasso del vulcano Mazama dopo un'eruzione di circa 7.700 anni fa."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Crater_Lake"
+  ]
+ },
+ "USA-3526": {
+  "facts": [
+   "A Promontory Summit il 10 maggio 1869 fu piantato il \"chiodo d'oro\" che univa le linee della Central Pacific e della Union Pacific, completando la prima ferrovia transcontinentale americana."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Promontory,_Utah"
+  ]
+ },
+ "USA-3527": {
+  "facts": [
+   "Il 10 dicembre 1869 il territorio del Wyoming concesse per primo il voto alle donne, e nel 1890 chiese di entrare nell'Unione solo a patto di mantenerlo: da qui il soprannome di \"Equality State\"."
+  ],
+  "sources": [
+   "https://www.travelwyoming.com/wyoming-womens-suffrage"
+  ]
+ },
+ "USA-3528": {
+  "facts": [
+   "Nel Crater of Diamonds State Park, presso Murfreesboro, chiunque può cercare diamanti in un antico condotto vulcanico e tenere ciò che trova. Qui è stato trovato il più grande diamante degli Stati Uniti, di 40,23 carati."
+  ],
+  "sources": [
+   "https://www.arkansas.com/experiences/discover/all-experiences/diamond-digging",
+   "https://www.americasstateparks.org/state-park/crater-of-diamonds/"
+  ]
+ },
+ "USA-3529": {
+  "facts": [
+   "La casa di Eldon con la caratteristica finestra gotica sotto il tetto ispirò a Grant Wood il celebre dipinto \"American Gothic\" del 1930, oggi all'Art Institute di Chicago."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/American_Gothic_House",
+   "https://en.wikipedia.org/wiki/American_Gothic"
+  ]
+ },
+ "USA-3530": {
+  "facts": [
+   "Ad Atchison, nella casa del nonno materno, nacque il 24 luglio 1897 Amelia Earhart, pioniera dell'aviazione."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Amelia_Earhart_Birthplace",
+   "https://www.kansashistory.gov/kansapedia/amelia-earhart/12041"
+  ]
+ },
+ "USA-3531": {
+  "facts": [
+   "A St. Louis sorge il Gateway Arch, completato nel 1965 su progetto di Eero Saarinen: alto 192 metri, con base larga quanto l'altezza, è l'arco più alto del mondo."
+  ],
+  "sources": [
+   "https://education.nationalgeographic.org/resource/gateway-arch-completed",
+   "https://aisc.org/modernsteel/news/2015/october/gateway-arch-celebrates-50th-anniversary"
+  ]
+ },
+ "USA-3532": {
+  "facts": [
+   "L'Arbor Day, la festa degli alberi, nacque in Nebraska su proposta di J. Sterling Morton: il primo si tenne il 10 aprile 1872 e, secondo le stime, vi furono piantati oltre un milione di alberi."
+  ],
+  "sources": [
+   "https://history.nebraska.gov/j-sterling-morton-creates-arbor-day/"
+  ]
+ },
+ "USA-3533": {
+  "facts": [
+   "Il nome Oklahoma unisce le parole choctaw okla, \"popolo\", e humma, \"rosso\": fu proposto nel 1866 dal capo choctaw Allen Wright."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Oklahoma",
+   "https://www.choctawnation.com/news/iti-fabvssa/choctaw-place-names-in-oklahumma/"
+  ]
+ },
+ "USA-3534": {
+  "facts": [
+   "I volti di Washington, Jefferson, Theodore Roosevelt e Lincoln sul monte Rushmore furono scolpiti tra il 1927 e il 1941 sotto la guida di Gutzon Borglum; capo intagliatore fu l'italiano Luigi Del Bianco."
+  ],
+  "sources": [
+   "https://www.britannica.com/art/How-Was-Mount-Rushmore-Built",
+   "https://www.hmdb.org/m.asp?m=134568"
+  ]
+ },
+ "USA-3535": {
+  "facts": [
+   "È l'unico stato americano diviso in parrocchie (parishes) invece che in contee: i confini ricalcano le parrocchie cattoliche dell'epoca coloniale francese e spagnola, e il termine è ufficiale dalla costituzione del 1845."
+  ],
+  "sources": [
+   "https://64parishes.org/a-mysterious-switch",
+   "https://www.worldatlas.com/articles/why-does-louisiana-have-parishes-and-not-counties.html"
+  ]
+ },
+ "USA-3536": {
+  "facts": [
+   "Il nome Texas deriva dalla parola caddo taysha, \"amico\", che gli spagnoli usarono per indicare i Caddo; non a caso il motto ufficiale dello stato, adottato nel 1930, è \"Friendship\"."
+  ],
+  "sources": [
+   "https://texashighways.com/culture/preserving-the-endangered-language-of-the-caddo/",
+   "https://statesymbolsusa.org/symbol-official-item/texas/state-motto/friendship"
+  ]
+ },
+ "USA-3537": {
+  "facts": [
+   "Il soprannome ufficiale «Constitution State», adottato nel 1959, richiama i Fundamental Orders del 1639, considerati da alcuni storici la prima costituzione scritta, ma la tesi è discussa.",
+   "Prima del 1959 il Connecticut era noto soprattutto come «Nutmeg State», lo stato della noce moscata."
+  ],
+  "sources": [
+   "https://portal.ct.gov/csl/research/state-nicknames",
+   "https://en.wikipedia.org/wiki/Law_of_Connecticut",
+   "https://todayincthistory.com/2020/04/08/april-8-connecticut-becomes-the-constitution-state-2/"
+  ]
+ },
+ "USA-3538": {
+  "facts": [
+   "Nel gennaio 1776 il New Hampshire si diede una propria costituzione e un governo indipendente dalla Gran Bretagna, sei mesi prima della Dichiarazione d'indipendenza.",
+   "Il motto «Live Free or Die» viene da una lettera del 1809 del generale John Stark, eroe della battaglia di Bennington; è ufficiale dal 1945."
+  ],
+  "sources": [
+   "https://www.thedartmouth.com/article/2026/01/live-free-or-die-new-hampshire-at-250",
+   "https://politifact.com/factchecks/2015/apr/10/rand-paul/liberty-themed-speech-rand-paul-attributed-nh-mott/"
+  ]
+ },
+ "USA-3539": {
+  "facts": [
+   "Il 4 maggio 1776 il Rhode Island fu la prima colonia a rinunciare alla fedeltà a re Giorgio III, due mesi prima della Dichiarazione d'indipendenza.",
+   "Fu invece l'ultima delle tredici colonie a ratificare la Costituzione federale, il 29 maggio 1790, con 34 voti contro 32."
+  ],
+  "sources": [
+   "https://www.history.com/this-day-in-history/may-4/rhode-island-declares-independence",
+   "https://thenewportbuzz.com/on-this-day-in-history-rhode-island-became-last-of-the-original-13-colonies-to-ratify-the-u-s-constitution/30236"
+  ]
+ },
+ "USA-3540": {
+  "facts": [
+   "Prima di entrare nell'Unione nel 1791 come quattordicesimo stato, il Vermont fu per anni una repubblica indipendente, proclamata nel 1777.",
+   "La costituzione del Vermont del 1777 fu la prima a vietare la schiavitù degli adulti, anche se con limiti di età per i giovani."
+  ],
+  "sources": [
+   "https://encyclopedia.com/politics/encyclopedias-almanacs-transcripts-and-maps/vermont-constitution-1777-july-8-1777",
+   "https://allthingsliberty.com/2021/07/the-vermont-constitution-of-1777/"
+  ]
+ },
+ "USA-3541": {
+  "facts": [
+   "Il 1º dicembre 1955 a Montgomery Rosa Parks rifiutò di cedere il posto sull'autobus: ne nacque un boicottaggio durato oltre un anno, simbolo del movimento per i diritti civili."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Rosa_Parks",
+   "https://prologue.blogs.archives.gov/2015/11/30/the-montgomery-bus-boycott/"
+  ]
+ },
+ "USA-3542": {
+  "facts": [
+   "Il nome si deve a Juan Ponce de León, che nel 1513 sbarcò nel periodo di Pasqua, la «Pascua Florida» spagnola.",
+   "Sant'Agostino, fondata dagli spagnoli nel 1565, è la più antica città di origine europea abitata senza interruzioni negli Stati Uniti continentali."
+  ],
+  "sources": [
+   "https://www.historytoday.com/archive/months-past/ponce-de-le%C3%B3n-lands-florida",
+   "https://www.smithsonianmag.com/travel/us-oldest-city-st-augustine-florida-180956434/"
+  ]
+ },
+ "USA-3543": {
+  "facts": [
+   "La colonia nacque con la carta reale del 1732 concessa ai fiduciari guidati da James Oglethorpe e fu chiamata così in onore di re Giorgio II.",
+   "La Coca-Cola fu inventata ad Atlanta nel 1886 dal farmacista John Pemberton."
+  ],
+  "sources": [
+   "https://Www.wikipedia.org/wiki/Antebellum_Georgia",
+   "https://www.thefactsite.com/georgia-facts/"
+  ]
+ },
+ "USA-3544": {
+  "facts": [
+   "Il delta del Mississippi è considerato la culla del blues: qui nacquero o suonarono Charley Patton, Son House, Robert Johnson, Muddy Waters e B.B. King.",
+   "Elvis Presley nacque a Tupelo l'8 gennaio 1935, in una piccola casa costruita dal padre, oggi museo."
+  ],
+  "sources": [
+   "https://www.pbs.org/theblues/roadtrip/deltahist.html",
+   "https://www.smithsonianmag.com/arts-culture/where-blues-was-born-180955479/",
+   "https://en.wikipedia.org/wiki/Elvis_Presley_Birthplace",
+   "https://www.mshistorynow.mdah.ms.gov/articles/32/elvis-presley-the-early-years"
+  ]
+ },
+ "USA-3545": {
+  "facts": [
+   "Il 20 dicembre 1860 la Carolina del Sud fu il primo stato a uscire dall'Unione.",
+   "I primi colpi della guerra di secessione furono sparati il 12 aprile 1861 contro Fort Sumter, nel porto di Charleston."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/South_Carolina_in_the_American_Civil_War",
+   "https://www.battlefields.org/learn/articles/fort-sumter-history"
+  ]
+ },
+ "USA-3546": {
+  "facts": [
+   "La Home Insurance Building di Chicago, completata nel 1885 su progetto di William Le Baron Jenney, è spesso considerata il primo grattacielo del mondo grazie allo scheletro portante in metallo."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Home_Insurance_Building",
+   "https://guinnessworldrecords.com/world-records/first-skyscraper"
+  ]
+ },
+ "USA-3547": {
+  "facts": [
+   "La 500 Miglia di Indianapolis si corre dal 1911; la pista è detta «Brickyard» perché nel 1909 fu pavimentata con circa 3,2 milioni di mattoni, di cui resta una striscia sul traguardo."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Indianapolis_500",
+   "https://www.theglobeandmail.com/globe-drive/reviews/classics/indy-500-a-century-of-pounding-the-brickyard/article4263276/"
+  ]
+ },
+ "USA-3548": {
+  "facts": [
+   "Il Kentucky Derby si corre a Louisville ogni anno senza interruzioni dal 1875; nella prima edizione 13 fantini su 15 erano afroamericani, compreso il vincitore Oliver Lewis.",
+   "Mammoth Cave è il sistema di grotte più lungo conosciuto al mondo, con oltre 680 km di gallerie esplorate."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kentucky_Derby",
+   "https://en.wikipedia.org/wiki/1875_Kentucky_Derby",
+   "https://www.nps.gov/articles/000/exploring-the-worlds-longest-known-cave.htm",
+   "https://www.guinnessworldrecords.com/world-records/114055-longest-cave-system"
+  ]
+ },
+ "USA-3549": {
+  "facts": [
+   "Il 17 dicembre 1903, presso Kill Devil Hills vicino a Kitty Hawk, i fratelli Wright compirono il primo volo a motore controllato: 12 secondi per circa 37 metri."
+  ],
+  "sources": [
+   "https://www.airandspace.si.edu/stories/editorial/wright-brothers-made-history-kitty-hawk",
+   "https://www.history.com/this-day-in-history/December-17/first-airplane-flies"
+  ]
+ },
+ "USA-3550": {
+  "facts": [
+   "Detto «madre dei presidenti», l'Ohio ha dato i natali a sette presidenti, tra cui Grant, Garfield, McKinley e Taft.",
+   "Il nome viene dal fiume Ohio, da una parola seneca che significa «grande fiume» o «buon fiume»."
+  ],
+  "sources": [
+   "https://www.ohiostatehouse.org/museum/ohio-presidents/about",
+   "https://www.wvxu.org/post/ohio-has-produced-8-presidents-who-could-be-next"
+  ]
+ },
+ "USA-3551": {
+  "facts": [
+   "A Nashville il Grand Ole Opry va in onda dal 1925: nato come «barn dance» radiofonico, è il programma radio più longevo della storia americana.",
+   "Il Great Smoky Mountains, condiviso con la Carolina del Nord, è il parco nazionale più visitato degli Stati Uniti."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Grand_Ole_Opry",
+   "https://www.mentalfloss.com/article/59016/15-things-you-might-not-know-about-tennessee"
+  ]
+ },
+ "USA-3552": {
+  "facts": [
+   "Il nome rende omaggio a Elisabetta I, la «regina vergine», e risale agli anni 1580 con Walter Raleigh.",
+   "Jamestown, fondata nel 1607, fu il primo insediamento inglese permanente in America."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Colony_of_Virginia",
+   "https://www.commonwealth.virginia.gov/about-virginia/history-and-facts-on-virginia"
+  ]
+ },
+ "USA-3553": {
+  "facts": [
+   "Secondo la tradizione il Partito Repubblicano nacque in una piccola scuola di Ripon, dove il 20 marzo 1854 si tenne un'assemblea contro l'espansione della schiavitù che propose quel nome."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Republican_Party_of_Wisconsin",
+   "https://www.wuwm.com/2024-07-18/how-the-gop-got-its-start-in-ripon-wi"
+  ]
+ },
+ "USA-3554": {
+  "facts": [
+   "Nacque durante la guerra di secessione: le contee nordoccidentali della Virginia se ne separarono ed entrarono nell'Unione il 20 giugno 1863.",
+   "Il New River Gorge Bridge, aperto nel 1977 a 267 metri sopra il fiume, fu fino al 2003 il ponte ad arco a campata unica più lungo del mondo."
+  ],
+  "sources": [
+   "https://wvpublic.org/story/radio/june-20-1863-west-virginia-enters-the-union/",
+   "https://en.wikipedia.org/wiki/New_River_Gorge_Bridge"
+  ]
+ },
+ "USA-3555": {
+  "facts": [
+   "È detto «First State» perché il 7 dicembre 1787 fu il primo a ratificare la Costituzione degli Stati Uniti, all'unanimità.",
+   "Il nome deriva dalla baia e dal fiume intitolati a Thomas West, barone De La Warr, governatore della colonia della Virginia."
+  ],
+  "sources": [
+   "https://www.ebsco.com/research-starters/history/delaware-ratifies-constitution",
+   "https://www.history.com/articles/delaware"
+  ]
+ },
+ "USA-3556": {
+  "facts": [
+   "La pianta di Washington fu disegnata nel 1791 dall'ingegnere francese Pierre L'Enfant, con viali diagonali che aprono prospettive sui monumenti.",
+   "Una legge federale del 1910 lega l'altezza degli edifici alla larghezza della strada: per questo in città non ci sono grattacieli."
+  ],
+  "sources": [
+   "https://centennial.ncpc.gov/library.html",
+   "https://www.ncpc.gov/topics/heights/"
+  ]
+ },
+ "USA-3557": {
+  "facts": [
+   "Il nome onora la regina Enrichetta Maria, moglie di Carlo I d'Inghilterra, che concesse la carta della colonia.",
+   "Nel settembre 1814 Francis Scott Key vide la bandiera ancora issata su Fort McHenry a Baltimora dopo il bombardamento inglese e scrisse i versi dell'inno nazionale."
+  ],
+  "sources": [
+   "https://www.smithsonianmag.com/travel/maryland-history-and-heritage-9152244/",
+   "https://www.nps.gov/fomc/historyculture/francis-scott-key.htm"
+  ]
+ },
+ "USA-3558": {
+  "facts": [
+   "Il 6 novembre 1869 a New Brunswick si giocò la prima partita di football tra università: Rutgers batté Princeton 6 a 4, con regole più simili al calcio."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/1869_Princeton_vs._Rutgers_football_game",
+   "https://www.rutgers.edu/news/birthplace-college-football"
+  ]
+ },
+ "USA-3559": {
+  "facts": [
+   "Il Canale Erie, inaugurato il 26 ottobre 1825, collegava Albany sul fiume Hudson a Buffalo sul lago Erie: lungo il suo percorso crebbero città come Utica, Syracuse e Rochester."
+  ],
+  "sources": [
+   "https://www.britannica.com/summary/Erie-Canal",
+   "https://nystateparks.blog/2025/03/11/celebrating-200-years-along-the-erie-canal/"
+  ]
+ },
+ "USA-3560": {
+  "facts": [
+   "Il nome significa \"boschi di Penn\": William Penn propose Sylvania, dal latino silva, e re Carlo II vi aggiunse Penn in onore dell'ammiraglio William Penn, padre del fondatore."
+  ],
+  "sources": [
+   "https://lumberheritage.org/heritage/our-roots/penns-woods-making-of-a-country/",
+   "https://statesymbolsusa.org/node/883"
+  ]
+ },
+ "USA-3561": {
+  "facts": [
+   "Il Maine è di gran lunga il primo produttore di aragoste degli Stati Uniti: i suoi pescatori sbarcano circa quattro quinti del pescato nazionale."
+  ],
+  "sources": [
+   "https://www.mainepublic.org/maine/2017-11-19/lobster-catch-might-be-less-this-year",
+   "https://www.foxbusiness.com/markets/maines-lobster-catch-value-grew-last-year-officials-say"
+  ]
+ },
+ "USA-3562": {
+  "facts": [
+   "Il Michigan è l'unico stato americano formato da due penisole separate, unite dal 1957 dal ponte sospeso Mackinac, lungo quasi otto chilometri, sopra lo stretto tra i laghi Michigan e Huron."
+  ],
+  "sources": [
+   "https://www.michiganpublic.org/section/stateside/2026-04-03/why-does-michigan-have-two-peninsulas",
+   "https://wikipedia2007.classicistranieri.com/m/a/c/Mackinac_Bridge_372f.html"
+  ]
+ },
+ "USA-3563": {
+  "facts": [
+   "Nel 1867 la Russia vendette l'Alaska agli Stati Uniti per 7,2 milioni di dollari, circa due centesimi per acro; l'acquisto, voluto dal segretario di Stato Seward, fu deriso come \"la follia di Seward\"."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Alaska_Purchase"
+  ]
+ }
+}
