@@ -475,6 +475,13 @@ test('Germania: il selettore passa dai Länder ai distretti', async ({ page }) =
   // Cliccare la linguetta Germania non cambia il livello scelto.
   await page.click('[data-map="germania"]');
   expect(await page.evaluate(() => mapKey)).toBe('distretti');
+  // Il selettore riporta al primo livello.
+  await page.click('#levels [data-level="germania"]');
+  await page.waitForFunction(() => mapKey === 'germania' && game.mode === 'daily');
+  await expect(page.locator('#levels [data-level="germania"]')).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('.prov')).toHaveCount(16);
+  await page.click('#levels [data-level="distretti"]');
+  await page.waitForFunction(() => mapKey === 'distretti');
   await page.click('#btn-stats');
   await expect(page.locator('#stats-map')).toHaveText('Germania · Distretti');
 });
@@ -525,6 +532,11 @@ test('Mondo: il selettore passa dalle nazioni alle regioni', async ({ page }) =>
   await page.waitForFunction(() => mapKey === 'regioni' && game.mode === 'daily');
   await expect(page).toHaveURL(/\?mappa=regioni$/);
   await expect(page.locator('[data-map="mondo"]')).toHaveAttribute('aria-selected', 'true');
+  await page.click('#levels [data-level="mondo"]');                 // e si torna alle nazioni
+  await page.waitForFunction(() => mapKey === 'mondo');
+  await expect(page.locator('.prov')).toHaveCount(199);
+  await page.click('#levels [data-level="regioni"]');
+  await page.waitForFunction(() => mapKey === 'regioni' && game.mode === 'daily');
   const s = await state(page);
   const opt = await page.evaluate(() => game.opt);
   expect(opt).toBeGreaterThanOrEqual(6);
