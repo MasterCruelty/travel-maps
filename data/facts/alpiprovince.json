@@ -1,0 +1,1170 @@
+{
+ "AT-900": {
+  "facts": [
+   "La tradizione dei caffè viennesi è iscritta dal 2011 nel patrimonio culturale immateriale UNESCO dell'Austria."
+  ],
+  "sources": [
+   "https://en.wikipedia.com/wiki/Kaffeehaus",
+   "https://www.austria.info/it/ispirazione/cultura-caffe/"
+  ]
+ },
+ "CH-AI": {
+  "facts": [
+   "Appenzello Interno fu l'ultimo cantone svizzero a concedere il voto alle donne: lo impose il Tribunale federale nel novembre 1990, dopo che la Landsgemeinde maschile lo aveva respinto per la terza volta."
+  ],
+  "sources": [
+   "https://swissinfo.ch/eng/a-visit-to-appenzell-inner-rhodes--the-last-canton-to-grant-women-the-right-to-vote-in-switzerland-/46328984",
+   "https://en.wikipedia.com/wiki/Women%27s_suffrage_in_Switzerland"
+  ]
+ },
+ "CH-GE": {
+  "facts": [
+   "Ogni anno a dicembre la Fête de l'Escalade ricorda il fallito assalto notturno dei Savoia a Ginevra del 1602; secondo la tradizione Mère Royaume rovesciò una pentola di zuppa sugli assalitori.",
+   "Simbolo della festa è la marmite in cioccolato ripiena di marzapane, che viene rotta dal più giovane e dal più anziano dei presenti dopo una formula rituale."
+  ],
+  "sources": [
+   "https://www.alimentarium.org/en/fact-sheet/escalade",
+   "https://geneve.com/fr/que-faire/histoire-culture/fete-de-lescalade",
+   "https://www.myswitzerland.com/en/experiences/food-wine/marmite-de-lescalade-choc-pot/"
+  ]
+ },
+ "CH-GL": {
+  "facts": [
+   "Lo Schabziger, formaggio alle erbe a forma di cono, è considerato il più antico prodotto di marca svizzero: già nel 1463 la Landsgemeinde ne fissò regole di qualità e marchio d'origine.",
+   "Lo stemma cantonale raffigura san Fridolino, missionario irlandese: è l'unico santo presente su una bandiera cantonale svizzera."
+  ],
+  "sources": [
+   "https://www.srf.ch/news/glarner-schabziger-das-aelteste-markenprodukt-der-schweiz",
+   "https://www.suedostschweiz.ch/schweiz-und-welt/neue-maerkte-fuer-altes-produkt-finden-1118629",
+   "https://flagspot.net/Flags/ch-gl.html"
+  ]
+ },
+ "CH-NW": {
+  "facts": [
+   "Secondo una leggenda del XVI secolo Arnold Winkelried di Stans decise la battaglia di Sempach del 1386 gettandosi sulle picche nemiche; molti storici dubitano che sia esistito.",
+   "Sullo Stanserhorn sale la CabriO, presentata come la prima funivia al mondo con il piano superiore della cabina scoperto."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Arnold_von_Winkelried",
+   "https://hls-dhs-dss.ch/fr/articles/024437",
+   "https://www.tour-switzerland.ch/guides/stanserhorn/"
+  ]
+ },
+ "CH-OW": {
+  "facts": [
+   "A Flüeli-Ranft visse da eremita Nicolao della Flüe (Bruder Klaus), canonizzato nel 1947 e patrono della Svizzera e della Guardia Svizzera Pontificia."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Nicholas_of_Fl%C3%BCe",
+   "https://vaticanstate.va/en/state-and-government/general-informations/saint-of-the-day/1653-21-march-saint-nicholas-of-fluee-patron-saint-of-switzerland-and-the-pontifical-swiss-guard.html"
+  ]
+ },
+ "CH-UR": {
+  "facts": [
+   "Secondo la leggenda Guglielmo Tell nacque a Bürglen e ad Altdorf, capoluogo di Uri, sfidò il balivo Gessler colpendo con la balestra la mela posta sul capo del figlio.",
+   "La gola della Schöllenen, a lungo quasi impraticabile, fu aperta tra XII e XIII secolo grazie al Ponte del Diavolo; secondo la leggenda fu costruito dal diavolo in cambio della prima anima che l'avesse attraversato."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/it/articles/008796/",
+   "https://www.myswitzerland.com/it-it/scoprire-la-svizzera/gola-di-schoellenen/"
+  ]
+ },
+ "CH-ZG": {
+  "facts": [
+   "La Zuger Kirschtorte, torta imbevuta di kirsch, fu creata nel 1915 dal pasticciere Heinrich Höhn; dal 2015 il nome è riservato alle torte prodotte nel cantone."
+  ],
+  "sources": [
+   "https://www.srf.ch/radio-srf-musikwelle/zuger-spezialitaet-warum-das-kirschtorten-rezept-der-nussbaumers-nicht-geheim-ist",
+   "https://en.wikipedia.org/wiki/Zuger_Kirschtorte"
+  ]
+ },
+ "DE-08111": {
+  "facts": [
+   "A Stoccarda nacque nel 1770 il filosofo Georg Wilhelm Friedrich Hegel; la sua casa natale ospita un museo.",
+   "Le case progettate da Le Corbusier nel quartiere modello Weissenhof di Stoccarda sono dal 2016 patrimonio mondiale UNESCO."
+  ],
+  "sources": [
+   "https://www.britannica.com/print/article/259378",
+   "https://www.wikipedia.com/wiki/Hegelhaus",
+   "https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/land-foerdert-unesco-welterbestaetten"
+  ]
+ },
+ "DE-08115": {
+  "facts": [
+   "Weil der Stadt, nel circondario di Böblingen, è la città natale dell'astronomo Johannes Kepler (1571-1630); la sua casa natale ospita dal 1940 un museo a lui dedicato.",
+   "A Weil der Stadt nacque anche Johannes Brenz, il riformatore protestante del Württemberg."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Weil_der_Stadt",
+   "https://de.wikivoyage.org/wiki/Weil_der_Stadt"
+  ]
+ },
+ "DE-08116": {
+  "facts": [
+   "A Esslingen ha sede Kessler, la più antica cantina di spumante della Germania, fondata nel 1826 da Georg Christian von Kessler, che aveva lavorato presso Veuve Clicquot in Champagne."
+  ],
+  "sources": [
+   "https://www.visit-bw.com/en/tips-and-stories/kessler-sekt-winery",
+   "https://www.deutsche-biographie.de/sfz40693.html"
+  ]
+ },
+ "DE-08117": {
+  "facts": [
+   "Göppingen sorge ai piedi dell'Hohenstaufen, il monte dove si trovava il castello d'origine della dinastia degli Staufer, quella di Federico Barbarossa.",
+   "A Göppingen fu fondata nel 1859 la Märklin, celebre produttrice di trenini elettrici."
+  ],
+  "sources": [
+   "https://stuttgart-tourist.de/en/a-goeppingen",
+   "https://en.wikipedia.org/wiki/M%C3%A4rklin"
+  ]
+ },
+ "DE-08119": {
+  "facts": [
+   "A Schorndorf nacque nel 1834 Gottlieb Daimler, pioniere dell'automobile; la sua casa natale è oggi un museo."
+  ],
+  "sources": [
+   "https://presse.stuttgart-tourist.de/en/freizeit/zwischen-mittelalterstadt-barockem-gesamtkunstwerk-schillers-spuren-und-daimlers-geburtsort"
+  ]
+ },
+ "DE-08135": {
+  "facts": [
+   "A Giengen an der Brenz ha sede la Steiff: qui nel 1902 Richard Steiff, nipote della fondatrice Margarete, ideò un orso di peluche snodato, antenato del teddy bear."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Richard_Steiff",
+   "https://corporate.steiff.com/en/steiff-teddy/history/"
+  ]
+ },
+ "DE-08136": {
+  "facts": [
+   "Ad Aalen sorgeva il più grande forte romano di cavalleria a nord delle Alpi, sul limes, che ospitava un'ala di circa mille cavalieri; oggi sul sito c'è il Limesmuseum."
+  ],
+  "sources": [
+   "https://www.HMdb.org/m.asp?m=143249",
+   "https://www.aalen.de/deutsche-version.7217.25.htm"
+  ]
+ },
+ "DE-08237": {
+  "facts": [
+   "Freudenstadt ha la piazza del mercato più grande della Germania, circa 4,5 ettari: intorno al 1600 l'area era destinata a un castello del duca Federico I di Württemberg, mai costruito."
+  ],
+  "sources": [
+   "https://www.alpen-guide.de/reisefuehrer/uebersicht/freudenstadt-72250"
+  ]
+ },
+ "DE-08311": {
+  "facts": [
+   "La torre ovest del Duomo di Friburgo, alta circa 116 metri in arenaria rossa, fu definita dallo storico dell'arte Jacob Burckhardt forse la più bella torre della terra."
+  ],
+  "sources": [
+   "https://www.schwarzwald-tourismus.info/attraktionen/freiburger-muenster-63fbba12cc",
+   "https://www.Wikipedia.com/wiki/Freiburg_Minster"
+  ]
+ },
+ "DE-08315": {
+  "facts": [
+   "Nel circondario si trova il Feldberg, che con circa 1493 metri è la vetta più alta del Baden-Württemberg e della Germania fuori dalle Alpi.",
+   "Ai piedi del Feldberg si trova il Titisee, uno dei laghi più noti della Foresta Nera."
+  ],
+  "sources": [
+   "https://de.wikivoyage.org/wiki/Feldberg_(Berg_im_Schwarzwald)",
+   "https://www.black-forest-travel.com/feldberg/"
+  ]
+ },
+ "DE-08316": {
+  "facts": [
+   "A Emmendingen è sepolta Cornelia Schlosser, sorella di Goethe, che il poeta visitò nel 1779.",
+   "Le rovine della Hochburg, tra Emmendingen e Sexau, sono considerate il secondo complesso fortificato del Baden per grandezza dopo il castello di Heidelberg."
+  ],
+  "sources": [
+   "https://tourismus.meinestadt.de/emmendingen/sehenswuerdigkeiten",
+   "https://www.wikipedia.org/wiki/Hochburg"
+  ]
+ },
+ "DE-08317": {
+  "facts": [
+   "L'Ortenaukreis è il circondario più esteso del Baden-Württemberg: si allunga dalla pianura del Reno, al confine con la Francia, fino alla Foresta Nera.",
+   "A Rust, nell'Ortenaukreis, si trova l'Europa-Park, il più grande parco divertimenti della Germania."
+  ],
+  "sources": [
+   "https://en.wikipedia.com/wiki/Ortenaukreis",
+   "https://statistik-bw.de/Service/Veroeff/Monatshefte/PDF/Beitrag21_12_07.pdf",
+   "https://www.stuttgarter-zeitung.de/lokales/baden-wuerttemberg/europa-park-150-millionen-menschen-besuchen-deutschlands-groessten-freizeitpark-79125277.html"
+  ]
+ },
+ "DE-08325": {
+  "facts": [
+   "Rottweil, fondata dai Romani intorno al 73 d.C. come Arae Flaviae, è considerata la città più antica del Baden-Württemberg."
+  ],
+  "sources": [
+   "https://www.heidelberg24.de/deutschland/baden-wuerttemberg/flaviae-aelteste-stadt-baden-wuerttemberg-rottweil-geschichte-arae-93191488.html",
+   "https://encycloreader.org/r/wikipedia.php?q=Rottweil"
+  ]
+ },
+ "DE-08326": {
+  "facts": [
+   "A Donaueschingen la Brigach e la Breg si uniscono formando il Danubio; nel parco del castello dei principi di Fürstenberg si trova la sorgente considerata già dai Romani l'origine del fiume."
+  ],
+  "sources": [
+   "https://www.alpen-guide.de/reisefuehrer/uebersicht/donaueschingen-aasen-78166"
+  ]
+ },
+ "DE-08327": {
+  "facts": [
+   "Tuttlingen si definisce \"centro mondiale della tecnica medicale\" per le numerose aziende di strumenti chirurgici e medicali presenti in città.",
+   "Tra Immendingen e Fridingen il Danubio in alcuni periodi scompare quasi del tutto nel sottosuolo carsico: è la cosiddetta Donauversickerung."
+  ],
+  "sources": [
+   "https://dewiki.de/Lexikon/Tuttlingen",
+   "https://www.donaubergland.de/wp-content/uploads/2023/11/donauversickerung_flyer.pdf"
+  ]
+ },
+ "DE-08335": {
+  "facts": [
+   "L'isola monastica di Reichenau, nella parte occidentale del lago di Costanza, è patrimonio mondiale UNESCO dal 2000.",
+   "Durante il Concilio di Costanza (1414-1418), l'11 novembre 1417 fu eletto papa Martino V: è l'unico conclave mai tenuto a nord delle Alpi."
+  ],
+  "sources": [
+   "https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/land-foerdert-unesco-welterbestaetten",
+   "https://en.wikipedia.org/wiki/Council_of_Constance",
+   "https://www.wissen.de/lexikon/konstanzer-konzil"
+  ]
+ },
+ "DE-08336": {
+  "facts": [
+   "Le rovine del castello di Rötteln, sopra Lörrach, sono considerate le terze per grandezza del Baden; il castello fu distrutto nel 1678 durante la guerra d'Olanda."
+  ],
+  "sources": [
+   "https://www.schwarzwald-tourismus.info/attraktionen/burg-roetteln-3b58c1b606",
+   "https://europeana.eu/en/item/1236/item_GF2LCUKJCH6BYS7RR2NJSEYGUR3AGC2G"
+  ]
+ },
+ "DE-08337": {
+  "facts": [
+   "La cupola del duomo di St. Blasien, nella Foresta Nera meridionale, ha un diametro di 36 metri: all'inaugurazione nel 1783 era tra le più grandi cupole di chiesa d'Europa."
+  ],
+  "sources": [
+   "https://de.wikivoyage.org/wiki/St._Blasien",
+   "https://structurae.net/de/bauwerke/dom-sankt-blasius"
+  ]
+ },
+ "DE-08415": {
+  "facts": [
+   "Il castello di Lichtenstein, sull'Alb sveva, fu costruito nel 1840-1842 ispirandosi al romanzo \"Lichtenstein\" di Wilhelm Hauff, pubblicato nel 1826.",
+   "A Reutlingen nacque nel 1789 l'economista Friedrich List, sostenitore dei dazi protettivi e pioniere delle ferrovie tedesche."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lichtenstein_Castle_(W%C3%BCrttemberg)",
+   "https://www.deutsche-biographie.de/118573489.html",
+   "https://en.wikipedia.org/wiki/Friedrich_List"
+  ]
+ },
+ "DE-08416": {
+  "facts": [
+   "L'università di Tubinga fu fondata nel 1477 dal conte Eberardo il Barbuto; nella torre sul Neckar oggi detta Hölderlinturm il poeta Friedrich Hölderlin visse dal 1807 al 1843.",
+   "Rottenburg am Neckar, nel circondario di Tubinga, è sede vescovile della diocesi di Rottenburg-Stoccarda; la cattedrale è dedicata a san Martino."
+  ],
+  "sources": [
+   "https://www.britannica.com/topic/University-of-Tubingen",
+   "https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/T%C3%BCbingen",
+   "https://en.wikipedia.org/wiki/Rottenburg_Cathedral"
+  ]
+ },
+ "DE-08417": {
+  "facts": [
+   "Il castello di Hohenzollern, presso Hechingen, è la culla della dinastia degli Hohenzollern, da cui discesero i re di Prussia e gli imperatori tedeschi; l'edificio attuale fu costruito a partire dal 1847."
+  ],
+  "sources": [
+   "https://wikipedia.com/wiki/Burg_Hohenzollern",
+   "https://burg-hohenzollern.com/en/about-the-castle/family-history"
+  ]
+ },
+ "DE-08421": {
+  "facts": [
+   "La torre del Duomo di Ulma, completata nel 1890, è alta circa 161,5 metri ed è stata a lungo il campanile di chiesa più alto del mondo."
+  ],
+  "sources": [
+   "https://www.oberschwaben-tourismus.de/attraktionen/ulmer-muenster-e99566ae37",
+   "https://www.evangelisch.de/inhalte/223145/13-11-2023/ausblicke-vom-hoechsten-kirchturm-impressionen-aus-dem-ulmer-muenster"
+  ]
+ },
+ "DE-08425": {
+  "facts": [
+   "Le grotte della valle dell'Ach presso Schelklingen e Blaubeuren, dove sono state trovate alcune delle più antiche opere d'arte dell'umanità, sono dal 2017 patrimonio mondiale UNESCO."
+  ],
+  "sources": [
+   "https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/hoehlen-und-eiszeitkunst-der-schwaebischen-alb-in-unesco-welterbeliste-aufgenommen-1",
+   "https://www.schwaebische.de/regional/ulm-alb-donau/schelklingen/grosse-freude-ueber-weltkulturerbe-status-448303"
+  ]
+ },
+ "DE-08426": {
+  "facts": [
+   "Nel 1761 a Biberach fu messa in scena \"La tempesta\" nella traduzione di Christoph Martin Wieland: fu la prima rappresentazione di un dramma di Shakespeare in tedesco nei paesi di lingua tedesca."
+  ],
+  "sources": [
+   "https://www.wieland-museum.de/en/wieland-and-shakespeare.html"
+  ]
+ },
+ "DE-08435": {
+  "facts": [
+   "Il 2 luglio 1900 il primo dirigibile Zeppelin, LZ 1, si alzò in volo da un hangar galleggiante sul lago di Costanza presso Friedrichshafen."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Zeppelin_LZ_1"
+  ]
+ },
+ "DE-08436": {
+  "facts": [
+   "A Weingarten si trova la basilica di San Martino, consacrata nel 1724 dopo sette anni di lavori e spesso indicata come la più grande chiesa barocca della Germania.",
+   "La basilica custodisce una reliquia del Sangue di Cristo, al centro del Blutritt, la processione a cavallo che si tiene ogni anno in maggio."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Weingarten,_W%C3%BCrttemberg",
+   "https://www.stadt-weingarten.de/site/Weingarten-2023/get/documents_E2130120582/weingarten/Weingarten_Mediathek/Kultur%20%26%20Freizeit/Basilika%20Flyer.pdf"
+  ]
+ },
+ "DE-08437": {
+  "facts": [
+   "Il castello di Sigmaringen, sul Danubio, fu dal 1576 al 1850 residenza dei principi di Hohenzollern-Sigmaringen, ramo svevo della dinastia."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Sigmaringen_Castle"
+  ]
+ },
+ "DE-09161": {
+  "facts": [
+   "Il 23 aprile 1516 a Ingolstadt i duchi di Baviera emanarono il Reinheitsgebot, la legge sulla purezza della birra che ammetteva solo acqua, orzo e luppolo."
+  ],
+  "sources": [
+   "https://knowledgestore2.fbk.eu/pikes-demo/eswc2016/wes2015.d187.naf.html"
+  ]
+ },
+ "DE-09162": {
+  "facts": [
+   "L'Oktoberfest nacque dai festeggiamenti per le nozze del principe ereditario Ludwig di Baviera con Teresa di Sassonia-Hildburghausen, il 12 ottobre 1810; il prato della festa si chiama Theresienwiese in suo onore."
+  ],
+  "sources": [
+   "https://unofficialroyalty.com/oktoberfests-royal-connection",
+   "https://www.aol.com/articles/origins-oktoberfest-205245245.html"
+  ]
+ },
+ "DE-09163": {
+  "facts": [
+   "Rosenheim sorge alla confluenza della Mangfall nell'Inn. In epoca romana presso l'attraversamento del fiume c'era la stazione di Pons Aeni, il cui nome sopravvive nelle località di Langenpfunzen e Leonhardspfunzen.",
+   "Il Lokschuppen, centro espositivo aperto nel 1988, occupa un edificio della prima officina ferroviaria della città."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Rosenheim",
+   "https://de.wikivoyage.org/wiki/Rosenheim",
+   "https://vici.org/vici/9206"
+  ]
+ },
+ "DE-09171": {
+  "facts": [
+   "Altötting è il più celebre santuario mariano della Germania: nella Gnadenkapelle si venera una Madonna nera in legno di tiglio, giunta qui intorno al 1330.",
+   "Nella Gnadenkapelle di Altötting sono custodite le urne d'argento con i cuori dei principi elettori e dei re di Baviera della casa Wittelsbach."
+  ],
+  "sources": [
+   "https://de.wikivoyage.org/wiki/Alt%C3%B6tting",
+   "https://www.muenchen.travel/pois/berge-seen/altoetting"
+  ]
+ },
+ "DE-09172": {
+  "facts": [
+   "Il parco nazionale di Berchtesgaden, istituito nel 1978, è l'unico parco nazionale alpino della Germania; comprende il lago Königssee e il massiccio del Watzmann, alto 2713 metri."
+  ],
+  "sources": [
+   "https://nationalpark-berchtesgaden.bayern.de/natur/nationalpark/geschichte/index.htm",
+   "https://de.wikivoyage.org/wiki/Nationalpark_Berchtesgaden"
+  ]
+ },
+ "DE-09173": {
+  "facts": [
+   "Nel sud del circondario si trovano il Walchensee e il Kochelsee: la centrale idroelettrica del Walchensee sfrutta il dislivello tra i due laghi ed è una delle maggiori centrali ad accumulo della Germania."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bad_T%C3%B6lz-Wolfratshausen",
+   "https://www.gem.wiki/Walchensee_hydroelectric_plant"
+  ]
+ },
+ "DE-09174": {
+  "facts": [
+   "Tra Ottocento e Novecento Dachau fu, insieme a Worpswede, una delle più importanti colonie di artisti tedesche, attirate dalla luce e dal paesaggio della palude del Dachauer Moos."
+  ],
+  "sources": [
+   "https://de.wikivoyage.org/wiki/Dachau",
+   "https://www.muenchen.travel/pois/berge-seen/dachau"
+  ]
+ },
+ "DE-09175": {
+  "facts": [
+   "L'Ebersberger Forst, circa 90 km² a est di Monaco, è una delle più vaste aree forestali continue della Germania meridionale."
+  ],
+  "sources": [
+   "https://www.muenchen.de/leben/diverse-orte/ebersberger-forst",
+   "https://www.muenchenwiki.de/wiki/Ebersberger_Forst"
+  ]
+ },
+ "DE-09176": {
+  "facts": [
+   "Dai calcari a lastre di Solnhofen, nel circondario, provengono tutti gli esemplari noti di Archaeopteryx; uno è esposto al Jura-Museum di Eichstätt.",
+   "Il calcare di Solnhofen veniva estratto anche come pietra litografica per la stampa."
+  ],
+  "sources": [
+   "https://en.wikipedia.com/wiki/Solnhofen_Limestone",
+   "https://en.wikipedia.org/wiki/Solnhofen_limestone",
+   "https://de.wikivoyage.org/wiki/Solnhofen"
+  ]
+ },
+ "DE-09177": {
+  "facts": [
+   "A Erding ha sede la Erdinger Weißbräu, che si definisce la più grande birreria di birra di frumento del mondo e produce esclusivamente nella sua sede cittadina.",
+   "La Therme Erding, uno dei complessi termali più grandi del mondo, si trova alle porte della città."
+  ],
+  "sources": [
+   "https://int.erdinger.de/brewery",
+   "https://www.therme-erding.de/fileadmin/userdaten/user_upload/04_Infos/Presse/Travelcircus_beste-Thermen_ThermeErding.pdf"
+  ]
+ },
+ "DE-09178": {
+  "facts": [
+   "A Weihenstephan, sul colle sopra Freising, ha sede la Bayerische Staatsbrauerei Weihenstephan, considerata il più antico birrificio ancora attivo al mondo; le sue origini risalgono al 1040.",
+   "Il duomo di Freising, di origine romanica, fu rinnovato in stile barocco nel Settecento dai fratelli Asam ed è concattedrale dell'arcidiocesi di Monaco e Frisinga."
+  ],
+  "sources": [
+   "https://www.muenchen.travel/pois/berge-seen/freising",
+   "https://de.wikivoyage.org/wiki/Freising"
+  ]
+ },
+ "DE-09179": {
+  "facts": [
+   "Il monastero cistercense di Fürstenfeld fu fondato dal duca Ludovico il Severo come atto di espiazione per aver fatto giustiziare nel 1256 la moglie Maria di Brabante, ingiustamente sospettata di adulterio.",
+   "La chiesa abbaziale di Fürstenfeld è considerata una delle opere principali del tardo barocco della Germania meridionale."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/F%C3%BCrstenfeld_Abbey",
+   "https://www.muenchen.travel/pois/berge-seen/fuerstenfeldbruck"
+  ]
+ },
+ "DE-09180": {
+  "facts": [
+   "Nel circondario si trova la Zugspitze, la montagna più alta della Germania con circa 2962 metri.",
+   "Garmisch-Partenkirchen ospitò i Giochi olimpici invernali del 1936, i primi a includere lo sci alpino; i due villaggi di Garmisch e Partenkirchen erano stati uniti poco prima, in vista dei Giochi."
+  ],
+  "sources": [
+   "https://simple.wikipedia.com/wiki/Garmisch-Partenkirchen",
+   "https://olympics.com/en/news/relive-the-glories-of-past-olympic-winter-games-garmisch-partenkirchen-1936"
+  ]
+ },
+ "DE-09181": {
+  "facts": [
+   "Nel carcere di Landsberg am Lech Adolf Hitler scontò nel 1924 parte della pena dopo il fallito putsch di Monaco e lì dettò il primo volume del Mein Kampf, con l'aiuto di Rudolf Hess."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Landsberg_Prison"
+  ]
+ },
+ "DE-09182": {
+  "facts": [
+   "Nel circondario di Miesbach si trovano due noti laghi prealpini, il Tegernsee e lo Schliersee, oltre al monte Wendelstein, meta classica di escursioni."
+  ],
+  "sources": [
+   "https://www.metropolregion-muenchen.eu/en/about-us/profiles-of-member-counties-and-cities/miesbach-district",
+   "https://wikipedia.com/wiki/Miesbach_district"
+  ]
+ },
+ "DE-09183": {
+  "facts": [
+   "Per quasi novecento anni Mühldorf am Inn fu un'exclave dell'arcivescovato di Salisburgo, fino al passaggio alla Baviera nel 1802.",
+   "Nei pressi di Mühldorf si combatté nel 1322 la battaglia in cui Ludovico il Bavaro sconfisse e fece prigioniero l'asburgico Federico il Bello."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/M%C3%BChldorf",
+   "https://en.wikipedia.org/wiki/Battle_of_M%C3%BChldorf"
+  ]
+ },
+ "DE-09184": {
+  "facts": [
+   "A Oberschleißheim sorge il complesso di Schleißheim, residenza estiva dei Wittelsbach formata da tre palazzi: il Castello Vecchio, il Castello Nuovo e il castello di Lustheim.",
+   "A Garching si trova un grande campus di ricerca con diverse facoltà della Technische Universität München e il reattore di ricerca soprannominato \"uovo atomico\"."
+  ],
+  "sources": [
+   "https://de.wikivoyage.org/wiki/Schloss_Schlei%C3%9Fheim",
+   "https://www.muenchenwiki.de/wiki/Garching"
+  ]
+ },
+ "DE-09185": {
+  "facts": [
+   "Neuburg an der Donau fu per secoli capitale del principato di Palatinato-Neuburg, nato nel 1505; il castello rinascimentale fu fatto costruire dal conte palatino Ottone Enrico.",
+   "A Schrobenhausen nacque nel 1836 il pittore Franz von Lenbach; la zona è nota per l'asparago di Schrobenhausen, coltivato dal 1912 e tutelato da indicazione geografica protetta UE."
+  ],
+  "sources": [
+   "https://schloesser.bayern.de/englisch/palace/objects/neuburg.htm",
+   "https://en.wikipedia.org/wiki/Franz_von_Lenbach",
+   "https://en.wikipedia.com/wiki/Schrobenhausen"
+  ]
+ },
+ "DE-09186": {
+  "facts": [
+   "Gran parte del circondario rientra nella Hallertau, la più vasta area continua di coltivazione del luppolo al mondo, con circa 18.000 ettari; Pfaffenhofen ne è la città più grande."
+  ],
+  "sources": [
+   "https://www.ich-geh-wandern.de/landkreis-pfaffenhofen-an-der-ilm",
+   "https://www.muenchen.travel/pois/berge-seen/hallertau"
+  ]
+ },
+ "DE-09187": {
+  "facts": [
+   "Sull'isola di Herrenchiemsee, nel lago Chiemsee, Ludwig II fece costruire tra il 1878 e il 1886 un castello ispirato a Versailles; rimase incompiuto e il re vi soggiornò solo una decina di giorni."
+  ],
+  "sources": [
+   "https://www.muenchen.de/sehenswuerdigkeiten/schloss-herrenchiemsee",
+   "https://en.wikipedia.com/wiki/Herrenchiemsee"
+  ]
+ },
+ "DE-09188": {
+  "facts": [
+   "Nel giugno 1886 il re Ludwig II di Baviera fu trovato morto nel lago di Starnberg, presso Berg; una croce di legno nell'acqua segna il punto e le circostanze della morte restano oscure."
+  ],
+  "sources": [
+   "https://secretmuenchen.com/en/votive-chapel-of-berg-on-lake-starnberg/",
+   "https://www.frommers.com/destinations/starnberger-see/things-to-do/"
+  ]
+ },
+ "DE-09189": {
+  "facts": [
+   "Il Chiemsee appartiene quasi interamente al circondario di Traunstein, mentre le sue isole, tra cui Herrenchiemsee con la reggia di Ludwig II, formano un comune del circondario di Rosenheim."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Chiemsee_(Gemeinde)",
+   "https://www.chiemsee-chiemgau.info/fileadmin/chiemgau/Presse/Basisinfo_Natur.pdf"
+  ]
+ },
+ "DE-09190": {
+  "facts": [
+   "Presso Steingaden sorge la Wieskirche, chiesa di pellegrinaggio rococò iscritta dal 1983 nel patrimonio mondiale dell'UNESCO."
+  ],
+  "sources": [
+   "https://maps.adac.de/ort/steingaden-bayern",
+   "https://www.ich-geh-wandern.de/könig-ludwig-weg-vom-starnberger-see-ins-allgäu"
+  ]
+ },
+ "DE-09261": {
+  "facts": [
+   "La \"Landshuter Hochzeit\" rievoca le nozze celebrate nel 1475 tra il duca Giorgio il Ricco e Edvige Jagellona, ed è una delle maggiori feste storiche d'Europa.",
+   "Il campanile della chiesa di San Martino, alto circa 130 metri, è considerato la torre in mattoni più alta del mondo."
+  ],
+  "sources": [
+   "https://www.bahn.de/strecke/landshut",
+   "https://www.munich.travel/en/pois/lakes-mountains/landshut"
+  ]
+ },
+ "DE-09262": {
+  "facts": [
+   "Passau è detta \"città dei tre fiumi\": vi confluiscono il Danubio, l'Inn e l'Ilz, sorvegliati dalla fortezza di Veste Oberhaus."
+  ],
+  "sources": [
+   "https://howtogermany.com/pages/lowerbavaria.html"
+  ]
+ },
+ "DE-09263": {
+  "facts": [
+   "Nel 1435 Agnes Bernauer, moglie segreta del duca Alberto III, fu annegata nel Danubio presso Straubing per ordine del suocero, il duca Ernesto; la sua storia è rievocata da un dramma all'aperto."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Agnes_Bernauer",
+   "https://www.deutsche-biographie.de/gnd118509756.html"
+  ]
+ },
+ "DE-09271": {
+  "facts": [
+   "A Metten, sul Danubio vicino a Deggendorf, sorge un'abbazia benedettina fondata intorno al 766, nota per la sua biblioteca barocca affrescata."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Metten_Abbey",
+   "https://de.wikivoyage.org/wiki/Metten"
+  ]
+ },
+ "DE-09272": {
+  "facts": [
+   "Il circondario ospita parte del Parco nazionale della Foresta Bavarese, inaugurato il 7 ottobre 1970 come primo parco nazionale della Germania."
+  ],
+  "sources": [
+   "https://www.nationalpark-bayerischer-wald.bayern.de/ueber_uns/geschichte/doc/festschrift_eroeffnung_npbw.pdf",
+   "https://www.lernhelfer.de/schuelerlexikon/biologie/artikel/bayerischer-wald-nationalpark"
+  ]
+ },
+ "DE-09273": {
+  "facts": [
+   "Sul colle Michelsberg sopra Kelheim sorge la Befreiungshalle, monumento ottocentesco che celebra le guerre di liberazione contro Napoleone.",
+   "Tra Kelheim e l'abbazia di Weltenburg il Danubio attraversa una stretta gola, il Donaudurchbruch, percorsa da battelli turistici."
+  ],
+  "sources": [
+   "https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/Kelheim",
+   "https://secretmuenchen.com/befreiungshalle-kelheim-niederbayern/"
+  ]
+ },
+ "DE-09275": {
+  "facts": [
+   "Il circondario si trova dove si incontrano Baviera, Austria e Repubblica Ceca, ed è attraversato da Danubio, Inn, Ilz e Rott.",
+   "Bad Füssing e Bad Griesbach, nel circondario, formano con Bad Birnbach il triangolo termale della Bassa Baviera."
+  ],
+  "sources": [
+   "https://www.landkreis-passau.de/media/11473/lkrpa_infobroschuere_2022-final.pdf",
+   "https://en.wikipedia.org/wiki/Lower_Bavarian_Spa_Triangle"
+  ]
+ },
+ "DE-09276": {
+  "facts": [
+   "Il Parco nazionale della Foresta Bavarese, primo parco nazionale tedesco (1970), si estende lungo il confine ceco da Bayerisch Eisenstein, nel circondario di Regen, fino a Mauth."
+  ],
+  "sources": [
+   "https://www.nationalpark-bayerischer-wald.bayern.de/ueber_uns/geschichte/doc/festschrift_eroeffnung_npbw.pdf",
+   "https://www.lernhelfer.de/schuelerlexikon/biologie/artikel/bayerischer-wald-nationalpark"
+  ]
+ },
+ "DE-09277": {
+  "facts": [
+   "Bad Birnbach, con le terme Rottal Terme, è il vertice del triangolo termale della Bassa Baviera che si trova nel circondario di Rottal-Inn; gli altri due sono nel vicino circondario di Passau."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lower_Bavarian_Spa_Triangle",
+   "https://de.wikipedia.org/wiki/Bad_Birnbach"
+  ]
+ },
+ "DE-09278": {
+  "facts": [
+   "Sul Bogenberg sorge una chiesa di pellegrinaggio considerata il più antico santuario mariano della Baviera; dal 1475 vi arriva ogni Pentecoste un pellegrinaggio con un grande cero da Holzkirchen."
+  ],
+  "sources": [
+   "https://en.wikipedia.com/wiki/Straubing-Bogen",
+   "https://de.wikivoyage.org/wiki/Bogen",
+   "https://www.festivalsindeutschland.de/festival/bogenberger-pfingstkerzenwallfahrt"
+  ]
+ },
+ "DE-09279": {
+  "facts": [
+   "Dingolfing ospita il più grande stabilimento europeo della BMW, nato nel 1967 dall'acquisizione della casa automobilistica locale Hans Glas."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/BMW_Group_Plant_Dingolfing",
+   "https://en.wikipedia.org/wiki/Dingolfing"
+  ]
+ },
+ "DE-09362": {
+  "facts": [
+   "Il Ponte di Pietra (Steinerne Brücke) di Ratisbona, costruito tra il 1135 e il 1146, è il più antico ponte conservato della Germania; un tempo era detto \"ottava meraviglia del mondo\".",
+   "Il centro storico di Ratisbona con Stadtamhof è patrimonio mondiale dell'UNESCO."
+  ],
+  "sources": [
+   "https://www.munich.travel/pois/berge-seen/regensburg",
+   "https://www.european-traveler.com/category/germany/bavaria/regensburg"
+  ]
+ },
+ "DE-09375": {
+  "facts": [
+   "A Donaustauf, sul colle Bräuberg a circa 10 km da Ratisbona, sorge il Walhalla, tempio neoclassico ispirato al Partenone e dedicato a personalità illustri di lingua tedesca."
+  ],
+  "sources": [
+   "https://blog.komoot.nl/guide/212804/attractions-in-landkreis-regensburg",
+   "https://blog.komoot.nl/guide/296086/attractions-around-tegernheim"
+  ]
+ },
+ "DE-09577": {
+  "facts": [
+   "A Weißenburg sorgeva il forte romano di Biriciana, lungo il Limes retico, oggi patrimonio UNESCO; restano anche le terme romane.",
+   "Nel 1979, vicino alle terme di Weißenburg, fu scoperto un tesoro romano di 114 oggetti in metallo, esposto nel locale RömerMuseum."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Biriciana",
+   "https://www.weissenburg.de/pdf/tourist-information/flyer-roemisches-weissenburg-4_aufl-2019.pdf"
+  ]
+ },
+ "DE-09761": {
+  "facts": [
+   "La Fuggerei, fondata da Jakob Fugger nel 1521, è il più antico complesso di case sociali del mondo ancora in uso; l'affitto annuo è rimasto simbolico, 88 centesimi."
+  ],
+  "sources": [
+   "https://www.planet-wissen.de/gesellschaft/wirtschaft/globaler_handel/globaler-handel-fugger-fuggerei-wohnen-100.html"
+  ]
+ },
+ "DE-09762": {
+  "facts": [
+   "Dopo la seconda guerra mondiale i profughi tedeschi di Gablonz (oggi Jablonec nad Nisou) fondarono il quartiere di Neugablonz, dove ricostruirono la loro industria della bigiotteria."
+  ],
+  "sources": [
+   "https://www.deutsche-handwerks-zeitung.de/neugablonz-das-mekka-der-modeschmuckbranche-342745/"
+  ]
+ },
+ "DE-09763": {
+  "facts": [
+   "Kempten, l'antica Cambodunum, si considera la più antica città della Germania citata per iscritto: il geografo Strabone la nomina come Kambodounon.",
+   "I resti della città romana di Cambodunum sono visibili nel parco archeologico di Kempten."
+  ],
+  "sources": [
+   "https://de.wikivoyage.org/wiki/Kempten",
+   "https://opus.bibliothek.uni-augsburg.de/opus4/frontdoor/index/index/year/2017/docId/22660"
+  ]
+ },
+ "DE-09764": {
+  "facts": [
+   "Nel marzo 1525 i rappresentanti dei contadini in rivolta si riunirono a Memmingen nella casa della corporazione dei merciai e adottarono i Dodici articoli, considerati tra le prime carte dei diritti di libertà in Europa."
+  ],
+  "sources": [
+   "https://en.wikipedia.com/wiki/Twelve_Articles",
+   "https://stadtarchiv.memmingen.de/fileadmin/Allgemeine_Dateiverwaltung/Webseite_Stadtarchiv/Allgemeines/MMZwoelfArtikelStand2025.pdf"
+  ]
+ },
+ "DE-09771": {
+  "facts": [
+   "Sulla collina di Oberwittelsbach sorgeva il castello da cui prese il nome la dinastia dei Wittelsbach; fu distrutto nel 1209 e oggi è un monumento nazionale."
+  ],
+  "sources": [
+   "https://www.augsburg-tourismus.de/files/augsburgtourismus/media/infomaterial/pdf/2021/regio_flyer_wittelsbacher_2021_web.pdf",
+   "https://Www.Wikipedia.org/wiki/Burg_Wittelsbach"
+  ]
+ },
+ "DE-09772": {
+  "facts": [
+   "Gran parte del circondario rientra nel parco naturale Augsburg - Westliche Wälder, istituito nel 1988: circa 1.175 km² in prevalenza boscosi tra i fiumi Mindel e Lech."
+  ],
+  "sources": [
+   "https://Www.Wikipedia.org/wiki/Augsburg_Western_Woods_Nature_Park",
+   "https://www.landkreis-guenzburg.de/wp-content/uploads/2023/04/Naturpark_Augsburg-Westliche_Waelder.pdf"
+  ]
+ },
+ "DE-09773": {
+  "facts": [
+   "Dillingen an der Donau, residenza dei principi vescovi di Augusta, ebbe dal 1549 un'università retta dai gesuiti, soppressa nel periodo napoleonico."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Dillingen_an_der_Donau",
+   "https://en.wikipedia.org/wiki/University_of_Dillingen"
+  ]
+ },
+ "DE-09774": {
+  "facts": [
+   "A Günzburg si trova Legoland Deutschland, aperto il 17 maggio 2002 dal gruppo LEGO a metà strada tra Monaco di Baviera e Stoccarda."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Legoland_Deutschland_Resort"
+  ]
+ },
+ "DE-09775": {
+  "facts": [
+   "Neu-Ulm crebbe come testa di ponte bavarese della fortezza federale di Ulma, costruita tra il 1842 e il 1859 dalla Confederazione germanica, e divenne così città di guarnigione."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Fortress_of_Ulm",
+   "https://en.wikipedia.org/wiki/Neu-Ulm"
+  ]
+ },
+ "DE-09776": {
+  "facts": [
+   "All'ingresso del porto di Lindau, sull'isola nel lago di Costanza, si fronteggiano il leone bavarese del 1856 e il Nuovo faro, l'unico faro della Baviera e il più meridionale della Germania."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Leuchtturm_Lindau",
+   "https://www.lindau.de/content/uploads/2023/03/LTK_Presseinfo_Lindau-Tourismus_Zahlen-Fakten-2024.pdf"
+  ]
+ },
+ "DE-09777": {
+  "facts": [
+   "A Schwangau sorge il castello di Neuschwanstein, fatto costruire da Ludovico II di Baviera a partire dal 1869 e rimasto incompiuto alla sua morte nel 1886.",
+   "Sotto Neuschwanstein si trova Hohenschwangau, il castello dove Ludovico II trascorse l'infanzia."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Schwangau"
+  ]
+ },
+ "DE-09778": {
+  "facts": [
+   "Bad Wörishofen è la città termale dove il sacerdote Sebastian Kneipp visse e sviluppò la sua idroterapia; Kneipp era nato nel 1821 a Stephansried, nella parrocchia di Ottobeuren."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bad_W%C3%B6rishofen",
+   "https://en.bad-woerishofen.de/kneipp-bad-woerishofen/sebastian-kneipp-my-life"
+  ]
+ },
+ "DE-09779": {
+  "facts": [
+   "Il Ries di Nördlingen è un cratere da impatto di meteorite formatosi circa 15 milioni di anni fa; la sua origine cosmica fu dimostrata solo nel 1960.",
+   "La chiesa di San Giorgio a Nördlingen, con la torre detta Daniel di circa 90 metri, è costruita quasi interamente in suevite, roccia nata dall'impatto del meteorite."
+  ],
+  "sources": [
+   "https://www.psi.edu/epo/resources/impact-craters/virtual-tours/ries/nordlingen/",
+   "https://en.geopark-ries.de/aussichtspunkte/?addPage=2"
+  ]
+ },
+ "DE-09780": {
+  "facts": [
+   "Oberstdorf è il comune più meridionale della Germania: nel suo territorio si trova l'Haldenwanger Eck, a circa 1.930 metri, indicato come il punto più a sud del paese."
+  ],
+  "sources": [
+   "https://dewiki.de/Lexikon/Oberstdorf",
+   "https://www.worldatlas.com/articles/the-most-extreme-points-of-germany.html"
+  ]
+ },
+ "IT-AO": {
+  "facts": [
+   "Il capoluogo Aosta fu fondato dai Romani nel 25 a.C. con il nome di Augusta Praetoria, in onore di Augusto, nel territorio dei Salassi.",
+   "L'Arco di Augusto di Aosta fu eretto nel 25 a.C. per celebrare la vittoria sui Salassi; la vicina Porta Praetoria è tra le porte romane meglio conservate."
+  ],
+  "sources": [
+   "https://lovevda.it/en/culture/roman-age-in-valle-d-aosta",
+   "https://www.italia.it/it/valle-aosta/aosta/arco-di-augusto"
+  ]
+ },
+ "IT-BG": {
+  "facts": [
+   "Le Mura veneziane di Bergamo, costruite dalla Repubblica di Venezia tra il 1561 e il 1588, sono patrimonio UNESCO dal 2017.",
+   "Gaetano Donizetti nacque nel 1797 a Bergamo, in un seminterrato di via Borgo Canale: la casa natale è oggi un museo."
+  ],
+  "sources": [
+   "https://www.italia.it/it/lombardia/bergamo/mura-veneziane",
+   "https://en.wikipedia.org/wiki/Gaetano_Donizetti",
+   "https://www.visitbergamo.net/en/gaetano-donizetti"
+  ]
+ },
+ "IT-BI": {
+  "facts": [
+   "A Trivero, nel Biellese, Ermenegildo Zegna fondò nel 1910 il suo lanificio; sui monti attorno fece piantare 500.000 alberi, nucleo dell'attuale Oasi Zegna.",
+   "Il santuario di Oropa, a circa 1.200 metri di quota sopra Biella, è considerato il più importante santuario mariano delle Alpi."
+  ],
+  "sources": [
+   "https://www.artribune.com/?p=850291",
+   "https://www.italia.it/it/piemonte/biella/cosa-fare/itinerario-per-biella-e-oasi-zegna-di-2-giorni",
+   "https://www.italia.it/it/piemonte/biella/cosa-fare/alpi-biellesi-oropa-e-belmonte"
+  ]
+ },
+ "IT-BL": {
+  "facts": [
+   "Canale d'Agordo, nel Bellunese, è il paese natale di Albino Luciani, papa Giovanni Paolo I.",
+   "Ad Agordo, nel Bellunese, Leonardo Del Vecchio fondò Luxottica nel 1961: il primo stabilimento del gruppo è ancora lì."
+  ],
+  "sources": [
+   "https://cortinacultura.dolomiti.org/en/canale-d-agordo",
+   "https://en.wikipedia.org/wiki/Agordo"
+  ]
+ },
+ "IT-BS": {
+  "facts": [
+   "A Brescia il monastero di San Salvatore-Santa Giulia, fondato nel 753 dal futuro re longobardo Desiderio, è patrimonio UNESCO dal 2011 insieme all'area romana del Capitolium."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Longobards_in_Italy:_Places_of_Power_(568%E2%80%93774_A.D.)",
+   "https://www.visitbrescia.it/en/activity/brescia-unesco/"
+  ]
+ },
+ "IT-BZ": {
+  "facts": [
+   "Ötzi, l'uomo dell'età del rame trovato nel 1991 sui ghiacci vicino al Similaun, è conservato dal 1998 nel Museo archeologico dell'Alto Adige a Bolzano, in una cella a -6 °C.",
+   "Le misurazioni del 1991 collocarono il punto di ritrovamento di Ötzi circa 92 metri dentro il territorio italiano: per questo la mummia è custodita in Alto Adige."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/%C3%96tzi",
+   "https://www.sudtirol.com/en/must-see/oetzi-the-iceman.htm"
+  ]
+ },
+ "IT-CN": {
+  "facts": [
+   "Ad Alba, nel Cuneese, si tiene ogni autunno la Fiera internazionale del tartufo bianco d'Alba, nata nel 1929.",
+   "I paesaggi vitivinicoli di Langhe-Roero e Monferrato, che comprendono le colline del Cuneese attorno ad Alba, sono patrimonio UNESCO dal 2014."
+  ],
+  "sources": [
+   "https://lavocedinewyork.com/food/2014/11/12/fiera-del-tartufo-dalba-unottima-annata-per-sua-maesta",
+   "https://it.wikivoyage.org/wiki/Langhe"
+  ]
+ },
+ "IT-CO": {
+  "facts": [
+   "Alessandro Volta nacque a Como nel 1745; il Tempio Voltiano, sul lungolago, ne conserva strumenti originali ed è stato costruito nel 1927 per il centenario della morte.",
+   "A Como la lavorazione della seta si sviluppò dal XVII secolo; dal 1985 la città ha un Museo della Seta, nato con gli ex allievi dell'istituto tecnico Setificio."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Tempio_Voltiano",
+   "https://irinsubria.uninsubria.it/retrieve/46c4ce67-85f6-4431-91b8-361b07d922db/2247-10467-1-PB.pdf",
+   "https://www.saronnonews.it/2026/06/26/il-museo-della-seta-di-como-diventa-museo-dimpresa-con-il-riconoscimento-della-regione/"
+  ]
+ },
+ "IT-CR": {
+  "facts": [
+   "Cremona è la città di Antonio Stradivari: il saper fare liutario della tradizione cremonese è patrimonio culturale immateriale UNESCO dal 2012.",
+   "Il Torrazzo, campanile del duomo di Cremona, è alto circa 112 metri e ospita un grande orologio astronomico."
+  ],
+  "sources": [
+   "https://siviaggia.it/idee-di-viaggio/video/cremona-capitale-mondiale-liuteria/446876/",
+   "https://www.finestresullarte.info/viaggi/alla-scoperta-di-cremona",
+   "https://www.ilgiornale.it/news/viaggi/cremona-torrone-suon-violino-2258871.html"
+  ]
+ },
+ "IT-GO": {
+  "facts": [
+   "Gorizia e la slovena Nova Gorica sono state insieme Capitale europea della cultura 2025, la prima con un titolo transfrontaliero.",
+   "A Gorizia piazza Transalpina fu divisa in due dal confine tracciato dopo la Seconda guerra mondiale; oggi una targa al centro, circondata da un mosaico, segna la linea."
+  ],
+  "sources": [
+   "https://www.quotidiano.net/itinerari/friuli-venezia-giulia/gorizia-nova-gorica-capitale-europea-cultura-transfrontaliera-v6x4xmky",
+   "https://siviaggia.it/idee-di-viaggio/gorizia-itinerario-luoghi-insoliti/561128/"
+  ]
+ },
+ "IT-IM": {
+  "facts": [
+   "Il capoluogo Imperia nacque nel 1923 dall'unione di Porto Maurizio, Oneglia e altri comuni vicini; il nome viene dal torrente Impero, che scorre tra i due centri storici.",
+   "Il primo Festival di Sanremo si tenne nel Casinò della città dal 29 al 31 gennaio 1951: vinse Nilla Pizzi con \"Grazie dei fiori\" e fu trasmesso solo alla radio."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Imperia",
+   "https://www.ilpost.it/2021/01/29/primo-festival-sanremo-1951/",
+   "https://en.wikipedia.org/wiki/Sanremo_Music_Festival_1951"
+  ]
+ },
+ "IT-LC": {
+  "facts": [
+   "Lecco è la terra dei Promessi Sposi: Manzoni passò le estati dell'infanzia a Villa Manzoni, al Caleotto, e il rione di Pescarenico è citato espressamente nel romanzo.",
+   "A Mandello del Lario si producono dal 1921 le moto Guzzi, marchio fondato da Carlo Guzzi e Giorgio Parodi."
+  ],
+  "sources": [
+   "https://www.italia.it/it/lombardia/cosa-fare/cosa-vedere-a-lecco-i-luoghi-dei-promessi-sposi",
+   "https://leccotourism.it/wp-content/uploads/2024/03/lecco_citta_manzoniana.pdf",
+   "https://en.wikipedia.org/wiki/Moto_Guzzi"
+  ]
+ },
+ "IT-LO": {
+  "facts": [
+   "Il capoluogo Lodi fu rifondato nel 1158 per volere di Federico Barbarossa, dopo che i milanesi avevano distrutto l'antica Laus Pompeia, l'attuale Lodi Vecchio.",
+   "Il 10 maggio 1796 Napoleone sconfisse gli austriaci nella battaglia del ponte di Lodi, con un celebre assalto attraverso il ponte di legno sull'Adda."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lodi,_Lombardy",
+   "https://en.wikipedia.org/wiki/Lodi_Vecchio",
+   "https://en.wikipedia.org/wiki/Battle_of_Lodi"
+  ]
+ },
+ "IT-MB": {
+  "facts": [
+   "Nella Cappella di Teodolinda del Duomo di Monza è custodita la Corona Ferrea che, secondo la tradizione, contiene un chiodo della croce di Cristo.",
+   "L'Autodromo di Monza, nel parco della Villa Reale, è attivo dal 1922 ed è detto il Tempio della velocità."
+  ],
+  "sources": [
+   "https://moveo.telepass.com/monza-cosa-vedere/",
+   "https://sport.sky.it/formula-1/2026/09/04/f1-gp-italia-monza-curiosita"
+  ]
+ },
+ "IT-MI": {
+  "facts": [
+   "Il marmo rosato del Duomo di Milano, iniziato nel 1386, viene dalle cave di Candoglia e arrivava in città in barca lungo il Ticino e il Naviglio.",
+   "Durante la Seconda guerra mondiale la Madonnina dorata del Duomo fu coperta di stracci perché i suoi riflessi non attirassero i bombardieri."
+  ],
+  "sources": [
+   "https://siviaggia.it/varie/duomo-milano-segreti-curiosita/564063/"
+  ]
+ },
+ "IT-MN": {
+  "facts": [
+   "Virgilio nacque nel 70 a.C. ad Andes, villaggio che dal Duecento viene identificato con Pietole, vicino a Mantova.",
+   "Nel castello di San Giorgio, a Mantova, Andrea Mantegna dipinse tra il 1465 e il 1474 la Camera degli Sposi, una stanza interamente affrescata."
+  ],
+  "sources": [
+   "https://ftp.comune.mantova.it/attachments/article/870/Virgilio%20a%20Mantova_GUIDA.pdf",
+   "https://italyplanner.com/mantova-guide.html"
+  ]
+ },
+ "IT-NO": {
+  "facts": [
+   "La cupola della basilica di San Gaudenzio, progettata da Alessandro Antonelli, supera i 120 metri ed è costruita solo in mattoni e calce, senza strutture in ferro.",
+   "Il 23 marzo 1849, dopo la sconfitta piemontese nella battaglia di Novara (detta anche della Bicocca), Carlo Alberto abdicò."
+  ],
+  "sources": [
+   "https://travel.thewom.it/italia/piemonte/novara/cupola-da-record.html",
+   "https://en.wikipedia.org/wiki/Basilica_of_San_Gaudenzio",
+   "https://en.wikipedia.org/wiki/Battle_of_Novara_(1849)"
+  ]
+ },
+ "IT-PD": {
+  "facts": [
+   "L'Orto botanico di Padova, fondato nel 1545 dall'Università, è il più antico orto accademico al mondo ancora nella sede originaria.",
+   "Nel 1678 Elena Lucrezia Cornaro Piscopia si laureò in filosofia all'Università di Padova: fu la prima donna laureata al mondo."
+  ],
+  "sources": [
+   "https://www.storyhunt.io/en/articles/top-things-to-do-in-padua"
+  ]
+ },
+ "IT-PN": {
+  "facts": [
+   "A Spilimbergo ha sede la Scuola Mosaicisti del Friuli, fondata nel 1922, che si rifà alla tradizione musiva di Aquileia, Bisanzio e Venezia.",
+   "Nel territorio si produce il Montasio DOP, formaggio usato per il frico, piatto tipico friulano."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Spilimbergo",
+   "https://scuolamosaicistifriuli.it/en/tag/mosaici-in-fvg-en/page/2/",
+   "https://moveo.telepass.com/scopri-pordenone-friuli/"
+  ]
+ },
+ "IT-PV": {
+  "facts": [
+   "La prima pietra della Certosa di Pavia fu posata nel 1396 da Gian Galeazzo Visconti, che la volle come mausoleo di famiglia; vi è sepolto anche Ludovico il Moro.",
+   "Il Ponte Coperto di Pavia sul Ticino, costruito nel 1351, fu distrutto dai bombardamenti del 1944 e ricostruito nel 1951."
+  ],
+  "sources": [
+   "https://www.ilgiorno.it/milano/cosa-fare/sch-dove-gita-giornata-fuori-porta-w350tk6n/visitare-pavia-e-la-certosa-da-milano-meno-di-50-euro-per-una-gita-fuoriporta-nella-storia-longobarda",
+   "https://www.viaggiapiccoli.com/cosa-vedere-a-pavia-con-i-bambini-in-un-giorno/"
+  ]
+ },
+ "IT-SO": {
+  "facts": [
+   "La Via dei Terrazzamenti, percorso di circa 70 km da Morbegno a Tirano, attraversa i vigneti terrazzati con muri a secco della Valtellina, dove nascono vini come lo Sforzato.",
+   "Il Bitto DOP si produce negli alpeggi intorno a Morbegno con latte vaccino e una piccola parte di latte di capra, e può stagionare oltre dieci anni."
+  ],
+  "sources": [
+   "https://www.in-lombardia.it/en/tourism-in-lombardy/valtellina/dei-terrazzamenti",
+   "https://www.ilgiorno.it/sondrio/cosa-fare/sentieri-gusto-bitto-valtellina-casera-ae0d05aa",
+   "https://www.tuttobiciweb.it/article/2026/08/06/1785936780/cycling-valtellina-food-and-wine-tourism-cycle-tourism-valtellina-path?lang=en"
+  ]
+ },
+ "IT-SV": {
+  "facts": [
+   "La Torretta, torre medievale del porto di Savona, è dedicata a Leon Pancaldo, navigatore savonese che partecipò al primo giro del mondo con Magellano.",
+   "Accanto al Duomo di Savona si trova una Cappella Sistina, fatta costruire da papa Sisto IV tra il 1481 e il 1483 come mausoleo per i genitori."
+  ],
+  "sources": [
+   "https://wanderlog.com/view/mbowmbltuf",
+   "https://www.museionline.info/liguria-musei-monumenti/cappella-sistina-savona"
+  ]
+ },
+ "IT-TN": {
+  "facts": [
+   "Tra il 1545 e il 1563 il capoluogo ospitò il Concilio di Trento, diciannovesimo concilio ecumenico della Chiesa cattolica.",
+   "Il Castello del Buonconsiglio di Trento fu per secoli residenza dei principi vescovi; il Magno Palazzo rinascimentale fu voluto nel Cinquecento dal cardinale Bernardo Clesio."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Council_of_Trent",
+   "https://travel.thewom.it/italia/trentino-alto-adige/trento/trento-cosa-vedere.html"
+  ]
+ },
+ "IT-TO": {
+  "facts": [
+   "Torino fu la prima capitale del Regno d'Italia, dal 1861 al 1865; a Palazzo Carignano si riunì il primo Parlamento italiano.",
+   "Il Museo Egizio di Torino, fondato nel 1824, è considerato il più importante museo di antichità egizie al mondo dopo quello del Cairo."
+  ],
+  "sources": [
+   "https://www.immobiliare.it/news/vivere-a/torino/14-curiosita-su-torino-412223/",
+   "https://www.eroicafenice.com/viaggi/torino-capoluogo-piemontese/",
+   "https://www.mentelocale.it/torino/91936-torino-citt-dei-record-10-primati-che-la-rendono-unica-in-italia-e-in-europa.htm"
+  ]
+ },
+ "IT-TS": {
+  "facts": [
+   "Il Castello di Miramare, affacciato sul golfo di Trieste, fu costruito nell'Ottocento come residenza dell'arciduca Massimiliano d'Asburgo.",
+   "A Trieste soffia la bora, vento freddo che può raggiungere raffiche di 150 km/h."
+  ],
+  "sources": [
+   "https://www.vanupied.com/italie/guide-trieste/",
+   "https://audiala.com/it/italia/trieste",
+   "https://www.thelocal.it/20190823/weekend-wanderlust-24-hours-trieste"
+  ]
+ },
+ "IT-TV": {
+  "facts": [
+   "Secondo la ricostruzione più diffusa, il tiramisù nacque a Treviso tra la fine degli anni Sessanta e i primi anni Settanta nel ristorante Le Beccherie.",
+   "Il Radicchio rosso di Treviso IGP deve aspetto e croccantezza alla forzatura, tecnica di coltivazione messa a punto nell'Ottocento nelle campagne trevigiane."
+  ],
+  "sources": [
+   "https://italyplanner.com/treviso-guide",
+   "https://italysegreta.com/it/what-to-do-in-treviso-venices-cooler-quieter-cousin/"
+  ]
+ },
+ "IT-UD": {
+  "facts": [
+   "Il colle del castello di Udine è artificiale: uno studio del 2023 lo data all'età del Bronzo, smentendo la leggenda secondo cui lo avrebbero innalzato i soldati di Attila.",
+   "Nel Palazzo Patriarcale di Udine, residenza dei patriarchi di Aquileia dal 1593 al 1751, si conservano affreschi di Tiepolo, tra cui il Giudizio di Salomone del 1729."
+  ],
+  "sources": [
+   "https://geoscienze.unipd.it/la-collina-del-castello-di-udine-non-%C3%A8-naturale-%C3%A8-stata-realizzata-durante-l%E2%80%99et%C3%A0-del-bronzo-mano",
+   "https://cultura.gov.it/comunicato/udine-il-colle-del-castello-tumulo-artificiale-della-protostoria-europea",
+   "https://www.turismofvg.it/Museums/Museo-diocesano-and-galleria-del-Tiepolo"
+  ]
+ },
+ "IT-VA": {
+  "facts": [
+   "Il Sacro Monte di Varese, con 14 cappelle lungo la via sacra completata nel 1698, è patrimonio UNESCO.",
+   "L'Isolino Virginia, nel lago di Varese, abitato dal Neolitico all'età del Bronzo, fa parte del sito UNESCO dei siti palafitticoli preistorici dell'arco alpino."
+  ],
+  "sources": [
+   "https://in-lombardia.it/en/varese-unesco",
+   "https://sacromontedivarese.it/content/file/the-unesco-site-of-varese.pdf"
+  ]
+ },
+ "IT-VB": {
+  "facts": [
+   "Delle Isole Borromee sul Lago Maggiore, l'Isola dei Pescatori è l'unica abitata, mentre l'Isola Bella ospita il seicentesco Palazzo Borromeo con giardini barocchi.",
+   "A Macugnaga, ai piedi del Monte Rosa, e a Formazza vivono comunità walser che conservano lingua e tradizioni proprie."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Borromean_Islands",
+   "https://www.italia.it/en/piedmont/verbania",
+   "https://www.verbanonews.it/canali-tematici/turismo/2023/03/22/i-borghi-piemontesi-piu-belli-dal-lago-maggiore-allossola/953695/?output=pdf"
+  ]
+ },
+ "IT-VC": {
+  "facts": [
+   "Il Codex Vercellensis, conservato a Vercelli, è il più antico manoscritto dei Vangeli in latino antico: risale al IV secolo ed è attribuito a sant'Eusebio, primo vescovo della città.",
+   "A Vercelli si conserva anche il Vercelli Book, manoscritto della fine del X secolo con testi religiosi in antico inglese."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Codex_Vercellensis",
+   "https://artsandculture.google.com/story/TgKSdG9TdAajLA",
+   "https://historyofinformation.com/detail.php?id=1494"
+  ]
+ },
+ "IT-VE": {
+  "facts": [
+   "Nel 1291 le fornaci dei vetrai veneziani furono trasferite a Murano per il timore degli incendi in città: da allora l'isola è il centro del vetro.",
+   "Il Ghetto di Venezia, istituito il 29 marzo 1516, fu il primo al mondo; il nome deriverebbe probabilmente dal getto, una fonderia che sorgeva nella zona."
+  ],
+  "sources": [
+   "https://www.worldatlas.com/articles/how-many-islands-does-venice-have.html",
+   "https://en.wikipedia.org/wiki/Venetian_Ghetto",
+   "https://www.unilibro.it/libro/9788804659921"
+  ]
+ },
+ "IT-VI": {
+  "facts": [
+   "Il capoluogo ospita il Teatro Olimpico, ultima opera di Palladio completata da Scamozzi: fu inaugurato il 3 marzo 1585 con l'Edipo re di Sofocle.",
+   "Le scene fisse di Scamozzi del Teatro Olimpico, sette vie prospettiche in legno che riproducono le strade di Tebe, sono giunte intatte fino a oggi."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Teatro_Olimpico",
+   "https://www.italia.it/it/veneto/vicenza/cosa-fare/teatro-olimpico-di-vicenza"
+  ]
+ },
+ "IT-VR": {
+  "facts": [
+   "Il festival lirico dell'Arena di Verona nacque nel 1913 per il centenario della nascita di Verdi, con una rappresentazione dell'Aida.",
+   "All'inizio degli spettacoli serali in Arena il pubblico accende per tradizione piccole candele, i moccoletti."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Arena_di_Verona_Festival",
+   "https://www.eventim.de/artist/arena-di-verona/"
+  ]
+ },
+ "LI": {
+  "facts": [
+   "Il Liechtenstein è uno dei due soli Stati doppiamente senza sbocco al mare (l'altro è l'Uzbekistan): anche i suoi vicini, Svizzera e Austria, non hanno coste."
+  ],
+  "sources": [
+   "https://en.wikipedia.com/wiki/Liechtenstein"
+  ]
+ },
+ "MC": {
+  "facts": [
+   "Secondo la tradizione, nel 1297 Francesco Grimaldi detto \"Malizia\" conquistò la fortezza della Rocca di Monaco travestito da frate francescano; i Grimaldi regnano da allora.",
+   "Monte Carlo prende il nome dal principe Carlo III, che dopo la perdita di Mentone e Roccabruna (1861) puntò sul casinò e poté abolire le imposte dirette per i residenti."
+  ],
+  "sources": [
+   "https://www.pilotguides.com/articles/how-monaco-became-monaco/",
+   "https://media-trade.visitmonaco.com/en/editorial-resources/destination/introduction-to-the-destination/history-of-monaco-in-7-dates",
+   "https://www.monacodc.org/monhistory.html"
+  ]
+ }
+}

@@ -1,0 +1,442 @@
+{
+ "AT-1": {
+  "facts": [
+   "A Hallstatt si estrae sale da circa 7000 anni: la sua miniera è considerata la più antica del mondo e il paesaggio di Hallstatt-Dachstein/Salzkammergut è patrimonio UNESCO dal 1997."
+  ],
+  "sources": [
+   "https://explore.com/1399714/discover-oldest-salt-mine-in-world-hallstatt-austria",
+   "https://www.austriadirect.com/hallstatt-unesco/"
+  ]
+ },
+ "AT-2": {
+  "facts": [
+   "La Wachau, tratto della valle del Danubio tra Melk e Krems con vigneti terrazzati, è patrimonio UNESCO dal 2000; ne fa parte l'abbazia benedettina di Melk, fondata nel 1089."
+  ],
+  "sources": [
+   "https://lower-austria.info/city-melk-an-der-donau",
+   "https://simple.wikipedia.com/wiki/Melk_Abbey"
+  ]
+ },
+ "AT-3": {
+  "facts": [
+   "Il Lago di Neusiedl, lago di steppa condiviso con l'Ungheria, è dal 2001 patrimonio dell'umanità UNESCO insieme al paesaggio culturale che lo circonda.",
+   "A Eisenstadt, nella Bergkirche, si trova la tomba di Joseph Haydn, che per decenni lavorò al servizio dei principi Esterházy."
+  ],
+  "sources": [
+   "https://whc.unesco.org/en/list/772",
+   "https://en.wikipedia.org/wiki/Lake_Neusiedl",
+   "https://en.wikipedia.org/wiki/Bergkirche_(Eisenstadt)",
+   "https://burgenland.info/en/dc/detail/POI/haydn-church-with-haydn-mausoleum-and-calvary"
+  ]
+ },
+ "AT-4": {
+  "facts": [
+   "Simbolo di Klagenfurt è la fontana del Lindwurm, un drago scolpito alla fine del Cinquecento: secondo la leggenda il mostro infestava le paludi dove poi sorse la città."
+  ],
+  "sources": [
+   "https://www.austria.org/wahrzeichen/klagenfurt",
+   "https://www.lonelyplanet.com/austria/the-south/klagenfurt/attractions/dragon-fountain/a/poi-sig/1336459/358639"
+  ]
+ },
+ "AT-5": {
+  "facts": [
+   "Il canto natalizio «Stille Nacht» fu eseguito per la prima volta la notte di Natale del 1818 nella chiesa di San Nicola a Oberndorf, su testo di Joseph Mohr e musica di Franz Xaver Gruber."
+  ],
+  "sources": [
+   "https://www.salzburgerland.com/de/magazin/stille-nacht-ort-oberndorf-die-urauffuehrung/"
+  ]
+ },
+ "AT-6": {
+  "facts": [
+   "La Stiria è la patria dello Steirisches Kürbiskernöl, olio verde scuro di semi di zucca tostati, tutelato come indicazione geografica protetta: per un litro servono semi di circa 35 zucche."
+  ],
+  "sources": [
+   "https://www.patentamt.at/en/steirischeskuerbiskernoel",
+   "https://www.bmluk.gv.at/themen/lebensmittel/trad-lebensmittel/oel/steir_kuerbiskernoel.html"
+  ]
+ },
+ "AT-7": {
+  "facts": [
+   "Innsbruck ha ospitato due volte le Olimpiadi invernali, nel 1964 e nel 1976; la seconda volta subentrò a Denver, che aveva rinunciato per motivi finanziari."
+  ],
+  "sources": [
+   "https://www.innsbruck.gv.at/en/freizeit/sport/olympiastadt-innsbruck/olympia-1976-innsbruck-die-zweite",
+   "https://www.olympics.com/ioc/news/innsbruck-1964-olympic-venues-overview"
+  ]
+ },
+ "AT-8": {
+  "facts": [
+   "La tradizione dei caffè viennesi è iscritta dal 2011 nel patrimonio culturale immateriale UNESCO dell'Austria."
+  ],
+  "sources": [
+   "https://en.wikipedia.com/wiki/Kaffeehaus",
+   "https://www.austria.info/it/ispirazione/cultura-caffe/"
+  ]
+ },
+ "AT-9": {
+  "facts": [
+   "Il Festival di Bregenz porta in scena l'opera sulla Seebühne, un palco costruito nel Lago di Costanza, davanti a una tribuna di circa 7000 posti; nel 1946 la prima edizione si tenne su due chiatte ormeggiate nel lago."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bregenzer_Festspiele",
+   "https://www.festspielhausbregenz.com/en/r/seebuehne"
+  ]
+ },
+ "CH-AG": {
+  "facts": [
+   "Nel comune di Habsburg sorge il castello d'origine degli Asburgo, citato dal 1108; a Königsfelden la regina Elisabetta fondò un monastero dove nel 1308 era stato ucciso il marito, re Alberto I."
+  ],
+  "sources": [
+   "https://www.ag.ch/de/themen/kultur-sport/kultur/museum-aargau/kloster-koenigsfelden",
+   "https://www.ag.ch/media/kanton-aargau/bks/kultur/erinnerungskultur/bksak-habsburger-gedenkakt.pdf"
+  ]
+ },
+ "CH-AI": {
+  "facts": [
+   "Appenzello Interno fu l'ultimo cantone svizzero a concedere il voto alle donne: lo impose il Tribunale federale nel novembre 1990, dopo che la Landsgemeinde maschile lo aveva respinto per la terza volta."
+  ],
+  "sources": [
+   "https://swissinfo.ch/eng/a-visit-to-appenzell-inner-rhodes--the-last-canton-to-grant-women-the-right-to-vote-in-switzerland-/46328984",
+   "https://en.wikipedia.com/wiki/Women%27s_suffrage_in_Switzerland"
+  ]
+ },
+ "CH-AR": {
+  "facts": [
+   "Fu il penultimo cantone a introdurre il voto alle donne: lo decise la Landsgemeinde di Hundwil il 30 aprile 1989, dopo cinque bocciature tra il 1970 e il 1984."
+  ],
+  "sources": [
+   "https://www.srf.ch/news/frauenstimmrecht-ar-es-war-ein-grossartiger-moment",
+   "https://www.nau.ch/ort/waldstatt/vor-30-jahren-wurden-frauen-politisch-mundig-65513278"
+  ]
+ },
+ "CH-BE": {
+  "facts": [
+   "Al confine con il Vallese, lo Jungfraujoch ospita a 3454 metri la stazione ferroviaria più alta d'Europa, inaugurata nel 1912."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Top_of_Europe",
+   "https://it.wikivoyage.org/wiki/Ferrovia_della_Jungfrau"
+  ]
+ },
+ "CH-BL": {
+  "facts": [
+   "Ad Augst si trovano i resti della città romana di Augusta Raurica, il più grande parco archeologico della Svizzera, con un teatro considerato il meglio conservato a nord delle Alpi."
+  ],
+  "sources": [
+   "https://www.myswitzerland.com/de/erlebnisse/augusta-raurica-die-roemerstadt/",
+   "https://www.basel.com/de/attraktionen/augusta-raurica-augst-6599f6325c"
+  ]
+ },
+ "CH-FR": {
+  "facts": [
+   "Friburgo è uno dei tre cantoni ufficialmente bilingui: il fiume Sarine, che lo attraversa, segna in parte il confine tra francese e tedesco, il cosiddetto Röstigraben.",
+   "Il formaggio Gruyère prende il nome dal distretto friburghese della Gruyère."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/R%C3%B6stigraben",
+   "https://fribourg.ch/en/inspiration/linguistic-diversity/"
+  ]
+ },
+ "CH-GE": {
+  "facts": [
+   "Ogni anno a dicembre la Fête de l'Escalade ricorda il fallito assalto notturno dei Savoia a Ginevra del 1602; secondo la tradizione Mère Royaume rovesciò una pentola di zuppa sugli assalitori.",
+   "Simbolo della festa è la marmite in cioccolato ripiena di marzapane, che viene rotta dal più giovane e dal più anziano dei presenti dopo una formula rituale."
+  ],
+  "sources": [
+   "https://www.alimentarium.org/en/fact-sheet/escalade",
+   "https://geneve.com/fr/que-faire/histoire-culture/fete-de-lescalade",
+   "https://www.myswitzerland.com/en/experiences/food-wine/marmite-de-lescalade-choc-pot/"
+  ]
+ },
+ "CH-GL": {
+  "facts": [
+   "Lo Schabziger, formaggio alle erbe a forma di cono, è considerato il più antico prodotto di marca svizzero: già nel 1463 la Landsgemeinde ne fissò regole di qualità e marchio d'origine.",
+   "Lo stemma cantonale raffigura san Fridolino, missionario irlandese: è l'unico santo presente su una bandiera cantonale svizzera."
+  ],
+  "sources": [
+   "https://www.srf.ch/news/glarner-schabziger-das-aelteste-markenprodukt-der-schweiz",
+   "https://www.suedostschweiz.ch/schweiz-und-welt/neue-maerkte-fuer-altes-produkt-finden-1118629",
+   "https://flagspot.net/Flags/ch-gl.html"
+  ]
+ },
+ "CH-GR": {
+  "facts": [
+   "È l'unico cantone svizzero trilingue, con tedesco, romancio e italiano come lingue ufficiali.",
+   "A Zernez ha sede il Parco nazionale svizzero, fondato nel 1914: è il più antico parco nazionale delle Alpi."
+  ],
+  "sources": [
+   "https://www.gr.ch/DE/kanton/Seiten/Ueberblick.aspx",
+   "https://hls-dhs-dss.ch/de/articles/024594",
+   "https://en.wikipedia.org/wiki/Swiss_National_Park"
+  ]
+ },
+ "CH-JU": {
+  "facts": [
+   "È il più giovane cantone svizzero: nato dalla separazione di tre distretti francofoni dal Canton Berna, approvata dal voto federale del 1978, esiste dal 1º gennaio 1979."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Jura_separatism",
+   "https://lenews.ch/2016/11/18/swiss-fact-switzerlands-newest-canton-was-created-as-recently-as-1979/"
+  ]
+ },
+ "CH-LU": {
+  "facts": [
+   "Il Kapellbrücke di Lucerna, costruito attorno al 1360, è considerato il più antico ponte coperto in legno d'Europa; nell'incendio del 18 agosto 1993 andò in gran parte distrutto e fu riaperto nell'aprile 1994."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kapellbr%C3%BCcke",
+   "https://www.luzern.com/de/poi/kapellbruecke"
+  ]
+ },
+ "CH-NE": {
+  "facts": [
+   "Dal 1707 fu un principato del re di Prussia e al tempo stesso cantone svizzero; la rivoluzione repubblicana del 1º marzo 1848 pose fine al dominio prussiano, a cui il re rinunciò formalmente solo nel 1857."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/fr/articles/017372/",
+   "https://fr.vikidia.org/wiki/Canton_de_Neuch%C3%A2tel"
+  ]
+ },
+ "CH-NW": {
+  "facts": [
+   "Secondo una leggenda del XVI secolo Arnold Winkelried di Stans decise la battaglia di Sempach del 1386 gettandosi sulle picche nemiche; molti storici dubitano che sia esistito.",
+   "Sullo Stanserhorn sale la CabriO, presentata come la prima funivia al mondo con il piano superiore della cabina scoperto."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Arnold_von_Winkelried",
+   "https://hls-dhs-dss.ch/fr/articles/024437",
+   "https://www.tour-switzerland.ch/guides/stanserhorn/"
+  ]
+ },
+ "CH-OW": {
+  "facts": [
+   "A Flüeli-Ranft visse da eremita Nicolao della Flüe (Bruder Klaus), canonizzato nel 1947 e patrono della Svizzera e della Guardia Svizzera Pontificia."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Nicholas_of_Fl%C3%BCe",
+   "https://vaticanstate.va/en/state-and-government/general-informations/saint-of-the-day/1653-21-march-saint-nicholas-of-fluee-patron-saint-of-switzerland-and-the-pontifical-swiss-guard.html"
+  ]
+ },
+ "CH-SG": {
+  "facts": [
+   "Il distretto dell'abbazia di San Gallo, con la celebre biblioteca, è Patrimonio dell'umanità dal 1983; vi è conservata la Pianta di San Gallo, unico progetto architettonico altomedievale giunto fino a noi."
+  ],
+  "sources": [
+   "https://www.bak.admin.ch/dam/bak/rm/dokumente/baukultur/archaelogie-denkmalpflege/stiftsbezirk-st-gallen.pdf.download.pdf/stiftsbezirk-st-gallen.pdf",
+   "https://wikipedia.com/wiki/Abbey_Library_of_St_Gall"
+  ]
+ },
+ "CH-SH": {
+  "facts": [
+   "Nel cantone, a Neuhausen am Rheinfall, si trovano le cascate del Reno: larghe circa 150 metri e alte circa 23, sono considerate le più grandi d'Europa per portata d'acqua."
+  ],
+  "sources": [
+   "https://www.zuerich.com/en/visit/nature/rhine-falls-europes-biggest-waterfall"
+  ]
+ },
+ "CH-SO": {
+  "facts": [
+   "A Soletta il numero 11 ha un valore simbolico: secondo la tradizione locale la città conta 11 chiese, 11 fontane e 11 torri, e la cattedrale di Sant'Orso ha scalinate a gruppi di 11 gradini."
+  ],
+  "sources": [
+   "https://switzerlanding.com/de/solothurn/"
+  ]
+ },
+ "CH-SZ": {
+  "facts": [
+   "Dal nome di Svitto deriva quello dell'intera Svizzera: già nel Trecento il nome del cantone veniva esteso a tutta la Confederazione.",
+   "La bandiera svizzera, croce bianca su fondo rosso, deriva dallo stemma del Canton Svitto."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/it/articles/007385/2017-05-11/",
+   "https://en.wikipedia.com/wiki/Name_of_Switzerland",
+   "https://en.wikipedia.com/wiki/Canton_Schwyz"
+  ]
+ },
+ "CH-TG": {
+  "facts": [
+   "In Svizzera la Turgovia è soprannominata scherzosamente «Mostindien»: «Most» per il sidro dei suoi frutteti di mele, «Indien» perché la forma del cantone ricorderebbe quella dell'India."
+  ],
+  "sources": [
+   "https://en.thurgau-bodensee.ch/blog/medienmitteilung/mostindien-ruft-herbstzeit-im-thurgau-27e50cc3-6f20-4170-a4a6-f06814688804.html"
+  ]
+ },
+ "CH-TI": {
+  "facts": [
+   "I tre castelli di Bellinzona (Castelgrande, Montebello e Sasso Corbaro) sono Patrimonio dell'umanità dal 2000.",
+   "Il Monte San Giorgio, Patrimonio dell'umanità dal 2003, è noto per i fossili di pesci e rettili marini del Triassico medio, risalenti a circa 240 milioni di anni fa."
+  ],
+  "sources": [
+   "https://www.ticino.ch/it/explore/unesco-world-heritage",
+   "https://www.ticino.ch/en/arricchimenti/common/127521.html"
+  ]
+ },
+ "CH-UR": {
+  "facts": [
+   "Secondo la leggenda Guglielmo Tell nacque a Bürglen e ad Altdorf, capoluogo di Uri, sfidò il balivo Gessler colpendo con la balestra la mela posta sul capo del figlio.",
+   "La gola della Schöllenen, a lungo quasi impraticabile, fu aperta tra XII e XIII secolo grazie al Ponte del Diavolo; secondo la leggenda fu costruito dal diavolo in cambio della prima anima che l'avesse attraversato."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/it/articles/008796/",
+   "https://www.myswitzerland.com/it-it/scoprire-la-svizzera/gola-di-schoellenen/"
+  ]
+ },
+ "CH-VD": {
+  "facts": [
+   "I vigneti terrazzati del Lavaux, sulle rive del Lago di Ginevra, sono patrimonio dell'umanità UNESCO dal 2007; le terrazze risalgono in gran parte ai monaci benedettini e cistercensi dell'XI secolo."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lavaux"
+  ]
+ },
+ "CH-VS": {
+  "facts": [
+   "Nel massiccio del Monte Rosa si trova la Punta Dufour, 4634 m, la vetta più alta della Svizzera, intitolata nel 1863 al generale Guillaume-Henri Dufour.",
+   "Il Grande ghiacciaio dell'Aletsch, lungo circa 20 km, è il più esteso delle Alpi e fa parte del sito Patrimonio dell'umanità Jungfrau-Aletsch."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Dufourspitze",
+   "https://www.valais.ch/de/erleben/aktivitaeten/naturschauplaetze/gletscher/der-grosse-aletschgletscher",
+   "https://www.bergwelten.com/a/der-grosse-aletschgletscher"
+  ]
+ },
+ "CH-ZG": {
+  "facts": [
+   "La Zuger Kirschtorte, torta imbevuta di kirsch, fu creata nel 1915 dal pasticciere Heinrich Höhn; dal 2015 il nome è riservato alle torte prodotte nel cantone."
+  ],
+  "sources": [
+   "https://www.srf.ch/radio-srf-musikwelle/zuger-spezialitaet-warum-das-kirschtorten-rezept-der-nussbaumers-nicht-geheim-ist",
+   "https://en.wikipedia.org/wiki/Zuger_Kirschtorte"
+  ]
+ },
+ "CH-ZH": {
+  "facts": [
+   "Dal 1519 Ulrico Zwingli predicò al Grossmünster di Zurigo, dando avvio alla Riforma protestante in Svizzera."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/it/articles/010447/",
+   "https://www.zuerich.com/it/visitare/ulrico-zwingli"
+  ]
+ },
+ "DE-1": {
+  "facts": [
+   "Carl Benz, nato nel 1844 a Mühlburg, oggi quartiere di Karlsruhe, brevettò nel 1886 la Patent-Motorwagen, considerata la prima automobile moderna.",
+   "Nel 1888 Bertha Benz percorse con l'auto del marito circa 106 km, il primo viaggio a lunga distanza in automobile della storia."
+  ],
+  "sources": [
+   "https://en.wikipedia.com/wiki/Karl_Benz"
+  ]
+ },
+ "DE-2": {
+  "facts": [
+   "L'Oktoberfest nasce dalle feste per le nozze del principe ereditario Ludovico di Baviera con Teresa di Sassonia-Hildburghausen, nell'ottobre 1810, celebrate con una corsa di cavalli.",
+   "Il prato dove si tiene l'Oktoberfest, la Theresienwiese, prende il nome dalla principessa Teresa; la festa fu poi anticipata a settembre per il clima più mite."
+  ],
+  "sources": [
+   "https://tg24.sky.it/mondo/approfondimenti/oktoberfest-settembre-storia",
+   "https://www.geopop.it/oktoberfest-cose-la-storia-vera-della-festa-della-birra-di-monaco-di-baviera-e-quando-si-tiene/"
+  ]
+ },
+ "FR-1": {
+  "facts": [
+   "Nel 1924 Chamonix, ai piedi del Monte Bianco, ospitò la prima edizione dei Giochi olimpici invernali, con 258 atleti di 16 nazioni.",
+   "Il Monte Bianco, sul confine con l'Italia, è la vetta più alta delle Alpi, con circa 4.807 metri di altitudine."
+  ],
+  "sources": [
+   "https://it.wikivoyage.org/wiki/Chamonix-Mont-Blanc",
+   "https://www.lovevda.it/it/scoprire/grandi-montagne/monte-bianco"
+  ]
+ },
+ "FR-2": {
+  "facts": [
+   "Nel 2018 l'UNESCO ha iscritto i saperi della profumeria del territorio di Grasse, dalla coltivazione delle piante da profumo alla composizione delle fragranze, nel patrimonio culturale immateriale dell'umanità."
+  ],
+  "sources": [
+   "https://www.mane.com/media/perfumery-savoir-faire-in-the-grasse-area-listed-as-intangible-cultural-heritage-of-humanity-by-unesco",
+   "https://carrementbelle.com/blog/en/2019/10/16/grasse-perfume/"
+  ]
+ },
+ "IT-1": {
+  "facts": [
+   "La basilica di Aquileia conserva un mosaico pavimentale del IV secolo di circa 750 metri quadrati, riportato alla luce nel 1909; l'area archeologica e la basilica sono patrimonio UNESCO dal 1998."
+  ],
+  "sources": [
+   "https://www.visititaly.eu/it/unesco/siti-unesco-in-friuli-venezia-giulia-zona-archeologica-e-basilica-patriarcale-di-aquileia",
+   "https://www.italia.it/it/friuli-venezia-giulia/cosa-fare/aquileia-rovine-basilica"
+  ]
+ },
+ "IT-2": {
+  "facts": [
+   "Portovenere, le Cinque Terre e le isole Palmaria, Tino e Tinetto sono patrimonio UNESCO dal 1997 come paesaggio culturale, per i terrazzamenti costruiti dall'uomo sulla costa ripida."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Cinque_Terre"
+  ]
+ },
+ "IT-3": {
+  "facts": [
+   "La Lombardia prende nome dai Longobardi, popolo germanico giunto in Italia nel 568 che fece di Pavia la capitale del suo regno; Langobardi è tradizionalmente interpretato come \"dalle lunghe barbe\"."
+  ],
+  "sources": [
+   "https://www.etymonline.com/it/word/Lombardy",
+   "https://www.etymonline.com/it/word/Langobard"
+  ]
+ },
+ "IT-4": {
+  "facts": [
+   "Il nome Piemonte viene dal latino medievale Pedemontium, da ad pedem montium, \"ai piedi dei monti\", cioè delle Alpi.",
+   "Torino fu la prima capitale del Regno d'Italia, proclamato il 17 marzo 1861, fino al trasferimento a Firenze nel 1865."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Piedmont",
+   "https://www.geopop.it/10-curiosita-sul-piemonte-dalla-prima-capitale-ditalia-alla-nascita-del-gianduia/"
+  ]
+ },
+ "IT-5": {
+  "facts": [
+   "Ötzi, la mummia dell'età del rame trovata il 19 settembre 1991 sul ghiacciaio del Similaun a circa 3.210 metri, è conservata nel Museo archeologico dell'Alto Adige a Bolzano."
+  ],
+  "sources": [
+   "https://www.suedtirol.info/it/questo-e-l-alto-adige/gente/personaggi-e-personalita/otzi",
+   "https://www.focus.it/scienza/salute/ricerca-l-uomo-dei-ghiacci-compie-25-anni-oetzi-svela-i-suoi-segreti"
+  ]
+ },
+ "IT-6": {
+  "facts": [
+   "In Valle d'Aosta il francese è lingua ufficiale accanto all'italiano.",
+   "Nel 1800 il forte di Bard, difeso da circa 400 soldati austro-piemontesi, riuscì a trattenere a lungo un esercito francese di 40.000 uomini diretto in Italia."
+  ],
+  "sources": [
+   "https://it.wikivoyage.org/wiki/Valle_d'Aosta",
+   "https://italoamericano.org/valle-daosta-ancient-rome/"
+  ]
+ },
+ "IT-7": {
+  "facts": [
+   "Le colline del Prosecco di Conegliano e Valdobbiadene, con i vigneti su stretti terrazzamenti erbosi detti ciglioni, sono patrimonio UNESCO dal 2019 come paesaggio culturale."
+  ],
+  "sources": [
+   "https://www.ansa.it/english/news/2019/07/08/prosecco-hills-become-unesco-site_eaf8f2f3-f55a-4607-a365-c39fb15428fe.html",
+   "https://www.worldheritagesite.org/list/id/1571"
+  ]
+ },
+ "LI": {
+  "facts": [
+   "Il Liechtenstein è uno dei due soli Stati doppiamente senza sbocco al mare (l'altro è l'Uzbekistan): anche i suoi vicini, Svizzera e Austria, non hanno coste."
+  ],
+  "sources": [
+   "https://en.wikipedia.com/wiki/Liechtenstein"
+  ]
+ },
+ "MC": {
+  "facts": [
+   "Secondo la tradizione, nel 1297 Francesco Grimaldi detto \"Malizia\" conquistò la fortezza della Rocca di Monaco travestito da frate francescano; i Grimaldi regnano da allora.",
+   "Monte Carlo prende il nome dal principe Carlo III, che dopo la perdita di Mentone e Roccabruna (1861) puntò sul casinò e poté abolire le imposte dirette per i residenti."
+  ],
+  "sources": [
+   "https://www.pilotguides.com/articles/how-monaco-became-monaco/",
+   "https://media-trade.visitmonaco.com/en/editorial-resources/destination/introduction-to-the-destination/history-of-monaco-in-7-dates",
+   "https://www.monacodc.org/monhistory.html"
+  ]
+ }
+}
