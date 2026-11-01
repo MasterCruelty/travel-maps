@@ -562,18 +562,16 @@ test('Alpi: il selettore passa dalle regioni alle province e distretti', async (
   await expect(page.locator('.prov')).toHaveCount(62);
   let opt = await page.evaluate(() => game.opt);
   expect(opt).toBeGreaterThanOrEqual(3);
-  expect(opt).toBeLessThanOrEqual(7);
   await page.click('#levels [data-level="alpiprovince"]');
   await page.waitForFunction(() => mapKey === 'alpiprovince' && game.mode === 'daily');
   await expect(page).toHaveURL(/\?mappa=alpiprovince$/);
   await expect(page.locator('[data-map="alpi"]')).toHaveAttribute('aria-selected', 'true');
   opt = await page.evaluate(() => game.opt);
   expect(opt).toBeGreaterThanOrEqual(4);
-  expect(opt).toBeLessThanOrEqual(12);
-  // Le tratte lunghe richieste restano nel quotidiano: Milano-Monaco e Milano-Stoccarda.
-  const d = await page.evaluate(() => { const b = bfs('IT-MI'); return [b['DE-09162'], b['DE-08111']]; });
-  expect(d[0]).toBeLessThanOrEqual(12);
-  expect(d[1]).toBeLessThanOrEqual(12);
+  // Nessun tetto alla distanza: anche le due aree più lontane possono essere un puzzle.
+  const far = await page.evaluate(() => Math.max(...SIGLAS.map(s => Math.max(...Object.values(bfs(s))))));
+  expect(far).toBeGreaterThan(12);
+  expect(await page.evaluate(() => MAP.maxDist)).toBeGreaterThanOrEqual(far);
 });
 
 test('Alpi: regioni di nazioni diverse confinano', async ({ page }) => {

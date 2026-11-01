@@ -158,7 +158,7 @@ MAPS.alpi = {
   zoomIcon: '🏔️', zoomTitle: 'Mostra tutte le Alpi',
   storagePrefix: 'pi_alpi_',
   seedOffset: 4807,
-  minDist: 3, maxDist: 7,
+  minDist: 3, maxDist: Infinity,   // può capitare anche una tratta da un capo all'altro
   extraMin: 2, extraFactor: 0.8,
   codes: false,
   aliases: {},
@@ -179,7 +179,7 @@ MAPS.alpiprovince = {
   zoomIcon: '🏔️', zoomTitle: 'Mostra tutte le Alpi',
   storagePrefix: 'pi_alpiprovince_',
   seedOffset: 8848,
-  minDist: 4, maxDist: 12,
+  minDist: 4, maxDist: Infinity,
   extraMin: 4, extraFactor: 0.8,
   codes: false,
   aliases: {},
