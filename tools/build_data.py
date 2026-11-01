@@ -472,14 +472,24 @@ ALPS = Polygon([
     (6.40, 43.70), (6.90, 43.60), (7.25, 43.70),
 ])
 # Distanza massima (km) del centro di un'area dalle Alpi, per nazione. Austria,
-# Svizzera, Slovenia, Liechtenstein e Monaco sono incluse per intero. In Italia
+# Svizzera, Slovenia, Liechtenstein e Monaco sono incluse per intero; Croazia e
+# Ungheria seguono le regole più sotto. In Italia
 # ci si ferma alla latitudine di Milano, salvo le province che toccano le Alpi.
 ALPS_REACH = {'ITA': 130, 'DEU': 150, 'FRA': 70}   # 150 km: fino a Stoccarda
 ALPS_SOUTH = 45.1
+# A nord-ovest della Svizzera la Francia arriva più lontano, come la Germania sull'altra
+# sponda del Reno: Giura, Doubs, Territorio di Belfort e Alto Reno.
+FRANCE_NORTH = (46.3, 120)
+# La Croazia non ha Alpi, ma le contee del nord sono vicine quanto il Giura francese.
+# Dell'Ungheria si prendono solo le due contee con le ultime propaggini alpine (monti di
+# Kőszeg e colline di Sopron), con dentro le loro città di rango comitale.
+CROATIA_REACH = 90
+HUNGARY_COUNTIES = {'Vas': ['Szombathely'], 'Győr-Moson-Sopron': ['Győr', 'Sopron']}
 SLOVENIA_WEST = {'Gorenjska', 'Goriška', 'Obalno-kraška', 'Osrednjeslovenska', 'Notranjsko-kraška'}
 AUSTRIAN_STATES = {'1': 'Burgenland', '2': 'Carinzia', '3': 'Bassa Austria', '4': 'Alta Austria',
                    '5': 'Salisburghese', '6': 'Stiria', '7': 'Tirolo', '8': 'Vorarlberg', '9': 'Vienna'}
-ISO2 = {'ITA': 'IT', 'FRA': 'FR', 'CHE': 'CH', 'LIE': 'LI', 'AUT': 'AT', 'DEU': 'DE', 'SVN': 'SI', 'MCO': 'MC'}
+ISO2 = {'ITA': 'IT', 'FRA': 'FR', 'CHE': 'CH', 'LIE': 'LI', 'AUT': 'AT', 'DEU': 'DE', 'SVN': 'SI', 'MCO': 'MC',
+        'HRV': 'HR', 'HUN': 'HU'}
 ITALIAN_REGIONS = {"Valle d'Aosta/Vallée d'Aoste": "Valle d'Aosta", 'Trentino-Alto Adige/Südtirol': 'Trentino-Alto Adige'}
 
 
@@ -577,7 +587,7 @@ def alpine_units():
     """Province e distretti dell'arco alpino, con la regione di appartenenza."""
     ne = 'ne_10m_admin_1_states_provinces.geojson'
     ne_features = fetch(NATURAL_EARTH + ne, ne)
-    codes = {'ITA', 'FRA', 'CHE', 'LIE', 'AUT', 'DEU', 'SVN', 'MCO'}
+    codes = set(ISO2)
     # Le fonti nazionali non combaciano lungo le frontiere: ogni area viene
     # ritagliata sul contorno della propria nazione in Natural Earth.
     nations = {c: unary_union([geom(f) for f in ne_features if f['properties']['adm0_a3'] == c]).buffer(0)
@@ -591,7 +601,7 @@ def alpine_units():
         p = f['properties']
         if len(p['iso']) == 3 and not ('901' <= p['iso'] <= '923'):   # Vienna intera, non i suoi distretti
             units.append(('AUT', 'AT-' + p['iso'], austrian_name(p['name']), AUSTRIAN_STATES[p['iso'][0]], [], geom(f)))
-    slovenia = {}
+    slovenia, hungary = {}, {}
     for f in ne_features:
         p = f['properties']
         code = p['adm0_a3']
@@ -600,10 +610,19 @@ def alpine_units():
                           [p['name']], geom(f)))
         elif code == 'SVN':
             slovenia.setdefault(p['region'], []).append(geom(f))
+        elif code == 'HRV':
+            name = region_name(p)
+            units.append(('HRV', 'HR-' + p['iso_3166_2'][3:], name, name, [p['name']], geom(f)))
+        elif code == 'HUN':
+            hungary[region_name(p)] = (p, geom(f))
     for region, gs in sorted(slovenia.items()):
         units.append(('SVN', 'SI-' + re.sub(r'[^A-Z]', '', region.upper())[:6], REGION_NAMES['SVN'][region],
                       'Slovenia occidentale' if region in SLOVENIA_WEST else 'Slovenia orientale',
                       [region], unary_union(gs).buffer(0)))
+    for county, cities in HUNGARY_COUNTIES.items():
+        p, g = hungary[county]
+        g = unary_union([g] + [hungary[c][1] for c in cities]).buffer(0)
+        units.append(('HUN', 'HU-' + p['iso_3166_2'][3:], county, county, [p['name']], g))
     cantons = {f['properties']['iso_3166_2'][3:]: f['properties'] for f in ne_features
                if f['properties']['adm0_a3'] == 'CHE'}
     for canton, key, name, g in swiss_districts():
@@ -627,15 +646,20 @@ def alps_km(g):
 
 
 def in_alpine_area(country, g):
+    if country == 'HRV':
+        return alps_km(g) <= CROATIA_REACH
     if country not in ALPS_REACH:
         return True
-    if alps_km(g) > ALPS_REACH[country]:
+    reach = ALPS_REACH[country]
+    if country == 'FRA' and g.centroid.y >= FRANCE_NORTH[0]:
+        reach = FRANCE_NORTH[1]
+    if alps_km(g) > reach:
         return False
     return country != 'ITA' or g.centroid.y >= ALPS_SOUTH or g.intersects(ALPS)
 
 
 ALPINE_COUNTRIES = {'ITA': 'Italia', 'FRA': 'Francia', 'CHE': 'Svizzera', 'LIE': 'Liechtenstein', 'AUT': 'Austria',
-                    'DEU': 'Germania', 'SVN': 'Slovenia', 'MCO': 'Monaco'}
+                    'DEU': 'Germania', 'SVN': 'Slovenia', 'MCO': 'Monaco', 'HRV': 'Croazia', 'HUN': 'Ungheria'}
 
 
 def load_alpiprovince():

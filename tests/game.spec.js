@@ -559,7 +559,7 @@ test('Alpi: il selettore passa dalle regioni alle province e distretti', async (
   await page.click('[data-map="alpi"]');
   await page.waitForFunction(() => mapKey === 'alpi' && game.mode === 'daily');
   await expect(page.locator('#levels .level')).toHaveText(['Regioni', 'Province e distretti']);
-  await expect(page.locator('.prov')).toHaveCount(50);
+  await expect(page.locator('.prov')).toHaveCount(62);
   let opt = await page.evaluate(() => game.opt);
   expect(opt).toBeGreaterThanOrEqual(3);
   expect(opt).toBeLessThanOrEqual(7);
