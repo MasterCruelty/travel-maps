@@ -24,7 +24,8 @@ import sys
 import urllib.request
 
 import shapely
-from shapely.geometry import MultiPolygon, Polygon, shape
+import shapely.affinity
+from shapely.geometry import MultiPolygon, Point, Polygon, shape
 from shapely.ops import polylabel, unary_union
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -439,6 +440,134 @@ def load_regioni():
     return items
 
 
+# ---------- Arco alpino ----------
+# Distretti austriaci (Bezirke) al 2021: Statistik Austria, CC BY 4.0, nella
+# conversione GeoJSON di ginseng666 (Flooh Perlot, CC BY 4.0).
+AUSTRIAN_DISTRICTS = ('https://raw.githubusercontent.com/ginseng666/GeoJSON-TopoJSON-Austria/'
+                      '81df08cced08b02a873f6375e17424e053a99ac0/2021/simplified-95/bezirke_95_geo.json')
+# Contorno approssimato delle Alpi (lon, lat), da Nizza in senso orario lungo il
+# piede dei rilievi: serve solo a scegliere le aree vicine alle montagne.
+ALPS = Polygon([
+    (7.25, 43.70), (7.55, 43.78), (8.00, 43.90), (8.45, 44.30), (7.90, 44.40), (7.55, 44.45),
+    (7.35, 44.75), (7.45, 45.05), (7.65, 45.35), (7.85, 45.50), (8.05, 45.60), (8.45, 45.80),
+    (8.85, 45.85), (9.10, 45.82), (9.45, 45.80), (9.75, 45.72), (10.15, 45.62), (10.55, 45.55),
+    (10.85, 45.60), (11.20, 45.65), (11.55, 45.75), (11.80, 45.80), (12.20, 45.90), (12.65, 46.05),
+    (13.10, 46.20), (13.60, 46.10), (14.00, 45.95), (14.50, 45.95), (15.00, 46.00), (15.50, 46.30),
+    (15.75, 46.55), (15.60, 46.85), (15.45, 47.05), (15.95, 47.35), (16.20, 47.75), (16.25, 48.15),
+    (15.60, 48.15), (15.00, 48.05), (14.40, 47.95), (13.90, 47.90), (13.00, 47.85), (12.60, 47.85),
+    (12.10, 47.80), (11.60, 47.75), (11.10, 47.75), (10.60, 47.70), (10.20, 47.65), (9.75, 47.55),
+    (9.40, 47.40), (8.90, 47.25), (8.55, 47.15), (8.20, 47.00), (7.80, 46.85), (7.45, 46.75),
+    (7.10, 46.60), (6.85, 46.45), (6.55, 46.35), (6.15, 46.15), (5.95, 45.95), (5.85, 45.65),
+    (5.60, 45.30), (5.40, 45.00), (5.15, 44.70), (5.10, 44.30), (5.60, 44.05), (5.85, 43.85),
+    (6.40, 43.70), (6.90, 43.60), (7.25, 43.70),
+])
+# Distanza massima (km) del centro di un'area dalle Alpi, per nazione. Austria,
+# Svizzera, Slovenia, Liechtenstein e Monaco sono incluse per intero. In Italia
+# ci si ferma alla latitudine di Milano, salvo le province che toccano le Alpi.
+ALPS_REACH = {'ITA': 130, 'DEU': 150, 'FRA': 70}   # 150 km: fino a Stoccarda
+ALPS_SOUTH = 45.1
+SWISS_REGIONS = {  # le sette grandi regioni statistiche svizzere
+    'Regione del Lemano': ['VD', 'VS', 'GE'], 'Espace Mittelland': ['BE', 'FR', 'SO', 'NE', 'JU'],
+    'Svizzera nordoccidentale': ['BS', 'BL', 'AG'], 'Zurigo': ['ZH'],
+    'Svizzera orientale': ['GL', 'SH', 'AR', 'AI', 'SG', 'GR', 'TG'],
+    'Svizzera centrale': ['LU', 'UR', 'SZ', 'OW', 'NW', 'ZG'], 'Ticino': ['TI'],
+}
+SLOVENIA_WEST = {'Gorenjska', 'Goriška', 'Obalno-kraška', 'Osrednjeslovenska', 'Notranjsko-kraška'}
+AUSTRIAN_STATES = {'1': 'Burgenland', '2': 'Carinzia', '3': 'Bassa Austria', '4': 'Alta Austria',
+                   '5': 'Salisburghese', '6': 'Stiria', '7': 'Tirolo', '8': 'Vorarlberg', '9': 'Vienna'}
+ISO2 = {'ITA': 'IT', 'FRA': 'FR', 'CHE': 'CH', 'LIE': 'LI', 'AUT': 'AT', 'DEU': 'DE', 'SVN': 'SI', 'MCO': 'MC'}
+ITALIAN_REGIONS = {"Valle d'Aosta/Vallée d'Aoste": "Valle d'Aosta", 'Trentino-Alto Adige/Südtirol': 'Trentino-Alto Adige'}
+
+
+def austrian_name(raw):
+    """'Eisenstadt(Stadt)' -> 'Eisenstadt (città)', 'Krems(Land)' -> 'Krems (circondario)'."""
+    name = raw.replace('Stadt Linz', 'Linz(Stadt)').replace('Stadt Steyr', 'Steyr(Stadt)').replace('Stadt Wels', 'Wels(Stadt)')
+    name = re.sub(r'\s*\(Stadt\)$| Stadt$|-Stadt$', ' (città)', name)
+    name = re.sub(r'\s*\(Land\)$| Land$|-Land$', ' (circondario)', name)
+    return name.replace('Wien (città)', 'Vienna')
+
+
+def alpine_units():
+    """Province e distretti dell'arco alpino, con la regione di appartenenza."""
+    ne = 'ne_10m_admin_1_states_provinces.geojson'
+    ne_features = fetch(NATURAL_EARTH + ne, ne)
+    codes = {'ITA', 'FRA', 'CHE', 'LIE', 'AUT', 'DEU', 'SVN', 'MCO'}
+    # Le fonti nazionali non combaciano lungo le frontiere: ogni area viene
+    # ritagliata sul contorno della propria nazione in Natural Earth.
+    nations = {c: unary_union([geom(f) for f in ne_features if f['properties']['adm0_a3'] == c]).buffer(0)
+               for c in codes}
+    units = []   # (country, id, name, region, aliases, geom)
+    for a in load_italia():
+        units.append(('ITA', 'IT-' + a['id'], a['name'], ITALIAN_REGIONS.get(a['group'], a['group']), [], a['geom']))
+    for a in load_distretti():
+        units.append(('DEU', 'DE-' + a['id'], a['name'], a['group'], [], a['geom']))
+    for f in fetch(AUSTRIAN_DISTRICTS, 'austria_bezirke.geojson'):
+        p = f['properties']
+        if len(p['iso']) == 3 and not ('901' <= p['iso'] <= '923'):   # Vienna intera, non i suoi distretti
+            units.append(('AUT', 'AT-' + p['iso'], austrian_name(p['name']), AUSTRIAN_STATES[p['iso'][0]], [], geom(f)))
+    slovenia = {}
+    for f in ne_features:
+        p = f['properties']
+        code = p['adm0_a3']
+        if code == 'FRA' and p['iso_3166_2'][3:].isdigit():
+            units.append(('FRA', p['iso_3166_2'], region_name(p), REGION_NAMES['FRA'][p['region']],
+                          [p['name']], geom(f)))
+        elif code == 'CHE':
+            canton = p['iso_3166_2'][3:]
+            region = next(r for r, cs in SWISS_REGIONS.items() if canton in cs)
+            units.append(('CHE', p['iso_3166_2'], region_name(p), region, [p['name']], geom(f)))
+        elif code == 'SVN':
+            slovenia.setdefault(p['region'], []).append(geom(f))
+    for region, gs in sorted(slovenia.items()):
+        units.append(('SVN', 'SI-' + re.sub(r'[^A-Z]', '', region.upper())[:6], REGION_NAMES['SVN'][region],
+                      'Slovenia occidentale' if region in SLOVENIA_WEST else 'Slovenia orientale',
+                      [region], unary_union(gs).buffer(0)))
+    units.append(('LIE', 'LI', 'Liechtenstein', 'Liechtenstein', [], nations['LIE']))
+    units.append(('MCO', 'MC', 'Monaco', 'Monaco', ['Principato di Monaco'], nations['MCO']))
+    units = [(c, i, n, r, al, g.intersection(nations[c]).buffer(0)) for c, i, n, r, al, g in units]
+    return [u for u in units if not u[5].is_empty]
+
+
+def alps_km(g):
+    """Distanza in km del centro dell'area dal contorno delle Alpi (0 se dentro)."""
+    k = math.cos(math.radians(46.5))
+    c = g.centroid
+    scaled = shapely.affinity.scale(ALPS, xfact=k, yfact=1, origin=(0, 0))
+    return scaled.distance(Point(c.x * k, c.y)) * 111.32
+
+
+def in_alpine_area(country, g):
+    if country not in ALPS_REACH:
+        return True
+    if alps_km(g) > ALPS_REACH[country]:
+        return False
+    return country != 'ITA' or g.centroid.y >= ALPS_SOUTH or g.intersects(ALPS)
+
+
+def load_alpiprovince():
+    return [{'id': i, 'name': n, 'group': r, 'aliases': al, 'geom': g}
+            for c, i, n, r, al, g in alpine_units() if in_alpine_area(c, g)]
+
+
+def load_alpi():
+    # Le regioni intere che contengono almeno una provincia o un distretto della mappa.
+    units = alpine_units()
+    kept = {(c, r) for c, i, n, r, al, g in units if in_alpine_area(c, g)}
+    regions = {}
+    for c, i, n, r, al, g in units:
+        if (c, r) in kept:
+            regions.setdefault((c, r), []).append(g)
+    countries = {'ITA': 'Italia', 'FRA': 'Francia', 'CHE': 'Svizzera', 'LIE': 'Liechtenstein', 'AUT': 'Austria',
+                 'DEU': 'Germania', 'SVN': 'Slovenia', 'MCO': 'Monaco'}
+    items, counter = [], {}
+    for (c, r), gs in sorted(regions.items()):
+        counter[c] = counter.get(c, 0) + 1
+        iso2 = ISO2[c]
+        items.append({'id': f'{iso2}-{counter[c]}' if c not in ('LIE', 'MCO') else iso2, 'name': r,
+                      'group': countries[c], 'geom': unary_union(gs).buffer(0)})
+    return items
+
+
 MAPS = {
     'italia': {
         'load': load_italia,
@@ -483,6 +612,20 @@ MAPS = {
         # Le isole senza confini terrestri restano staccate, come in travle;
         # contano solo i collegamenti fissi più noti.
         'links': [('GBR', 'FRA', '🚆'), ('DNK', 'SWE', '🌉'), ('BHR', 'SAU', '🌉')],
+    },
+    'alpi': {
+        'load': load_alpi,
+        'touch': 0.01,        # fonti diverse per nazione: piccole fessure lungo le frontiere
+        'simplify': 0.01,
+        'label_tol': 0.005,
+        'projection': equirectangular(46.5, 100.0),
+    },
+    'alpiprovince': {
+        'load': load_alpiprovince,
+        'touch': 0.01,
+        'simplify': 0.004,
+        'label_tol': 0.003,
+        'projection': equirectangular(46.5, 100.0),
     },
     'regioni': {
         'load': load_regioni,

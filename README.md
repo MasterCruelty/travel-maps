@@ -1,6 +1,6 @@
 # Travel Maps
 
-Un puzzle geografico quotidiano su più mappe: collega due **province italiane**, due **comuni o quartieri di Milano e Brianza**, due **Länder tedeschi**, due **nazioni** o due **regioni del mondo**, nominando quelli che attraverseresti lungo il tragitto, nel minor numero di mosse possibile.
+Un puzzle geografico quotidiano su più mappe: collega due **province italiane**, due **comuni o quartieri di Milano e Brianza**, due **Länder tedeschi**, due aree dell'**arco alpino**, due **nazioni** o due **regioni del mondo**, nominando quelli che attraverseresti lungo il tragitto, nel minor numero di mosse possibile.
 
 **Gioca online: <https://mastercruelty.github.io/travel-maps/>**
 
@@ -18,11 +18,14 @@ Si sceglie la mappa dalle linguette in alto. Ognuna ha il suo puzzle quotidiano,
 | **Milano** | 187 comuni della Città metropolitana di Milano e della provincia di Monza e della Brianza, più gli 88 quartieri (NIL) del comune di Milano | 🛣️ San Colombano al Lambro, staccato dal resto della città metropolitana, collegato a San Zenone al Lambro | 4–8 confini | `/?mappa=milano` |
 | **Germania · Länder** | 16 Länder | — | 3–5 confini | `/?mappa=germania` |
 | **Germania · Distretti** | 400 distretti (Kreise) | — | 4–7 confini | `/?mappa=distretti` |
+| **Alpi · Regioni** | 31 regioni di 8 nazioni (regioni italiane e francesi, Länder austriaci e tedeschi, grandi regioni svizzere, Slovenia, Liechtenstein, Monaco) | — | 3–7 confini | `/?mappa=alpi` |
+| **Alpi · Province e distretti** | 258 aree: province italiane, dipartimenti francesi, cantoni svizzeri, distretti austriaci e tedeschi, regioni statistiche slovene | — | 4–12 confini | `/?mappa=alpiprovince` |
 | **Mondo · Nazioni** | 199 nazioni | 🚆 tunnel della Manica, 🌉 ponti dell'Øresund e di re Fahd | 4–8 confini | `/?mappa=mondo` |
 | **Mondo · Regioni** | 2980 regioni, stati e province | 🚆 tunnel della Manica, 🌉 ponti dell'Øresund, dello Storebælt, di re Fahd e di Johor | 6–50 confini | `/?mappa=regioni` |
 
 - **Milano**: il comune di Milano non è un'unica area ma è diviso nei suoi 88 quartieri, che confinano tra loro e con i comuni intorno. Se scrivi "Milano" il gioco ti ricorda di indicare un quartiere.
 - **Germania**: sotto la linguetta un selettore sceglie tra **Länder** e **Distretti**, ognuno con quotidiano e statistiche propri. Per i Länder si accettano anche i nomi in tedesco (`Bayern`, `Hessen`, `NRW`…) e le sigle (`BY`, `HE`…). I distretti usano i nomi tedeschi; città e circondario omonimi sono distinti, ad esempio `München (città)` e `München (circondario)`.
+- **Alpi**: l'arco alpino da Nizza a Vienna, con le aree fino a circa 150 km dalle montagne: a sud fino a Milano e Venezia, a nord fino a Monaco di Baviera e Stoccarda. Un selettore sceglie tra **Regioni** e **Province e distretti**; la distanza massima dei puzzle permette tratte come Milano–Monaco (7 confini) e Milano–Stoccarda (10). Si accettano anche i nomi locali dei cantoni (`Graubünden`, `Vaud`) e dei dipartimenti.
 - **Mondo**: come in travle, le nazioni senza confini terrestri (Giappone, Australia, Islanda…) si possono nominare ma non collegano nulla: si colorano di nero ⬛ e non sono mai partenza o arrivo. La Francia comprende la Guyana francese, quindi confina con Brasile e Suriname.
   Sotto la linguetta un selettore sceglie tra **Nazioni** e **Regioni**. Le regioni sono le suddivisioni di primo livello di ogni nazione (stati USA, province cinesi, oblast russi…); dove sono molto minute sono accorpate nelle regioni statistiche o storiche: Italia, Francia e Spagna per regioni, Regno Unito per regioni inglesi più Scozia, Galles e Irlanda del Nord, e così Slovenia, Lettonia, Filippine, Uganda, Macedonia del Nord, Azerbaigian e Kosovo. Le nazioni sotto i 3000 km² restano un'unica area. Si accettano anche i nomi locali e inglesi (`Bayern`, `Tirol`, `Moscow`); i nomi uguali in nazioni diverse hanno la nazione tra parentesi, ad esempio `Limburgo (Belgio)`. I percorsi possono essere lunghi: fino a 50 confini.
 
@@ -53,9 +56,9 @@ Si sceglie la mappa dalle linguette in alto. Ognuna ha il suo puzzle quotidiano,
 - Partita quotidiana **salvata** automaticamente: puoi chiudere la pagina e riprendere.
 - **Tema scuro** automatico, layout per mobile, navigazione da tastiera.
 
-| Quotidiano | Allenamento | Milano | Germania | Mondo |
-| :---: | :---: | :---: | :---: | :---: |
-| ![Quotidiano con la mappa nascosta](docs/screenshots/quotidiano.png) | ![Allenamento su mobile](docs/screenshots/mobile.png) | ![Milano dal Duomo a Monza attraverso i quartieri](docs/screenshots/milano.png) | ![Germania con un suggerimento](docs/screenshots/germania.png) | ![Mondo dal Portogallo alla Polonia](docs/screenshots/mondo.png) |
+| Quotidiano | Allenamento | Milano | Germania | Alpi | Mondo |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| ![Quotidiano con la mappa nascosta](docs/screenshots/quotidiano.png) | ![Allenamento su mobile](docs/screenshots/mobile.png) | ![Milano dal Duomo a Monza attraverso i quartieri](docs/screenshots/milano.png) | ![Germania con un suggerimento](docs/screenshots/germania.png) | ![Alpi da Milano a Monaco di Baviera](docs/screenshots/alpi.png) | ![Mondo dal Portogallo alla Polonia](docs/screenshots/mondo.png) |
 
 | Regioni del mondo | Risultato | Curiosità | Tema scuro | Regole |
 | :---: | :---: | :---: | :---: | :---: |
@@ -109,7 +112,7 @@ Rigenera le immagini di questo README in `docs/screenshots/`. Usa sempre le stes
 
 ### Dati delle mappe
 
-I file in `data/` (`italia.json`, `milano.json`, `germania.json`, `distretti.json`, `mondo.json`, `regioni.json`) sono generati da `tools/build_data.py`:
+I file in `data/` (`italia.json`, `milano.json`, `germania.json`, `distretti.json`, `alpi.json`, `alpiprovince.json`, `mondo.json`, `regioni.json`) sono generati da `tools/build_data.py`:
 
 ```bash
 pip install shapely
@@ -119,7 +122,7 @@ python3 tools/build_data.py milano     # solo una
 
 Per ogni mappa lo script:
 
-1. scarica i confini da fonti pubblicate su GitHub, ognuna fissata a un commit preciso (vedi [Crediti](#crediti)); per Milano sostituisce il comune con i suoi 88 quartieri, ritagliati sul confine ufficiale del comune così da combaciare con i comuni vicini; per le regioni del mondo accorpa le suddivisioni troppo minute e unisce le aree sotto i 150 km² alla vicina;
+1. scarica i confini da fonti pubblicate su GitHub, ognuna fissata a un commit preciso (vedi [Crediti](#crediti)); per Milano sostituisce il comune con i suoi 88 quartieri, ritagliati sul confine ufficiale del comune così da combaciare con i comuni vicini; per le regioni del mondo accorpa le suddivisioni troppo minute e unisce le aree sotto i 150 km² alla vicina; per le Alpi sceglie le aree in base alla distanza da un contorno approssimato delle montagne e ritaglia ogni nazione sul suo confine in Natural Earth, perché le fonti nazionali non combaciano lungo le frontiere;
 2. calcola quali aree confinano tra loro;
 3. aggiunge i collegamenti fissi (ponti, tunnel) e, in Italia e a Milano, collega le parti staccate (isole, exclavi) all'area più vicina, come un traghetto;
 4. semplifica i confini mantenendo identici i tratti condivisi tra aree vicine;
@@ -133,7 +136,7 @@ Le curiosità di fine partita sono in `data/facts/<mappa>.json`, una voce per ar
 { "FI": { "facts": ["...", "..."], "sources": ["https://..."] } }
 ```
 
-Sono scritte a mano, una o due per area, verificate su fonti indicate in `sources` (Wikipedia, siti istituzionali, cataloghi dei beni culturali). Le regole: al massimo 220 caratteri, solo fatti duraturi (niente popolazione, sindaci o cronaca), tradizioni e ipotesi presentate come tali. Oggi coprono tutte le 110 province, 186 dei 187 comuni di Milano e Brianza, 82 degli 88 quartieri di Milano, i 16 Länder, 397 dei 400 distretti tedeschi tutte le 199 nazioni e 192 delle 2980 regioni del mondo (Italia, Germania, Spagna, Francia, Regno Unito, Svizzera, Austria, Stati Uniti, Canada e Australia). Per le aree senza curiosità il gioco mostra solo l'altra località. Un test controlla che ogni voce corrisponda a un'area della mappa, abbia una fonte valida e rispetti la lunghezza massima.
+Sono scritte a mano, una o due per area, verificate su fonti indicate in `sources` (Wikipedia, siti istituzionali, cataloghi dei beni culturali). Le regole: al massimo 220 caratteri, solo fatti duraturi (niente popolazione, sindaci o cronaca), tradizioni e ipotesi presentate come tali. Oggi coprono tutte le 110 province, 186 dei 187 comuni di Milano e Brianza, 82 degli 88 quartieri di Milano, i 16 Länder, 397 dei 400 distretti tedeschi tutte le 199 nazioni e 192 delle 2980 regioni del mondo (Italia, Germania, Spagna, Francia, Regno Unito, Svizzera, Austria, Stati Uniti, Canada e Australia). Le mappe delle Alpi riusano le curiosità delle stesse aree nelle altre mappe: 24 regioni su 31 e 139 province e distretti su 258; mancano i distretti austriaci, i dipartimenti francesi e le regioni slovene. Per le aree senza curiosità il gioco mostra solo l'altra località. Un test controlla che ogni voce corrisponda a un'area della mappa, abbia una fonte valida e rispetti la lunghezza massima.
 
 ### Aggiungere una mappa
 
@@ -166,7 +169,8 @@ Il gioco è gratuito e senza pubblicità. Se ti piace puoi [offrirmi un caffè s
 - Idea e meccanica di gioco: [travle](https://travle.earth) di Oisín Carroll (Teuteuf Games).
 - Confini di province e comuni: dati ISTAT con licenza CC BY 4.0, distribuiti da [openpolis/geojson-italy](https://github.com/openpolis/geojson-italy) (province, nomi e codici) e da [l1n00/confini-comuni-istat](https://github.com/l1n00/confini-comuni-istat) (confini comunali dettagliati, Istat, *Confini delle unità amministrative a fini statistici al 1° gennaio 2026*, versione non generalizzata).
 - Quartieri di Milano: NIL (Nuclei d'Identità Locale) dal portale open data del Comune di Milano, nella conversione di [abahgat/opendata-milano](https://github.com/abahgat/opendata-milano).
-- Nazioni, regioni del mondo e Länder: [Natural Earth](https://www.naturalearthdata.com), pubblico dominio, da [nvkelso/natural-earth-vector](https://github.com/nvkelso/natural-earth-vector).
+- Nazioni, regioni del mondo, Länder, dipartimenti francesi, cantoni svizzeri e regioni slovene: [Natural Earth](https://www.naturalearthdata.com), pubblico dominio, da [nvkelso/natural-earth-vector](https://github.com/nvkelso/natural-earth-vector).
+- Distretti austriaci: Statistik Austria, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), nella conversione GeoJSON di [ginseng666/GeoJSON-TopoJSON-Austria](https://github.com/ginseng666/GeoJSON-TopoJSON-Austria) (Flooh Perlot, CC BY 4.0).
 - Distretti tedeschi: © GeoBasis-DE / BKG 2018, VG250, [Datenlizenz Deutschland – Namensnennung 2.0](https://www.govdata.de/dl-de/by-2-0), nella conversione GeoJSON di [opendatalab-de/simple-geodata-selector](https://github.com/opendatalab-de/simple-geodata-selector); Eisenach è unita al Wartburgkreis come dal 2021.
 - Tutte le geometrie sono semplificate per l'uso sul web.
 - Curiosità: testi originali basati sulle fonti indicate per ogni voce in `data/facts/`.

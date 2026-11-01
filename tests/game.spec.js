@@ -553,9 +553,51 @@ test('Regioni: nomi locali, collegamenti fissi e isole senza confini', async ({ 
   expect((await state(page)).moves).toEqual(['guess:ITA-R15', 'guess:ITA-R17', 'guess:AUT-2329']);
 });
 
-test('quattro linguette leggibili anche su mobile', async ({ page }) => {
+// ---------- Alpi ----------
+test('Alpi: il selettore passa dalle regioni alle province e distretti', async ({ page }) => {
   await open(page, '/');
-  await expect(page.locator('.map-tab')).toHaveCount(4);
+  await page.click('[data-map="alpi"]');
+  await page.waitForFunction(() => mapKey === 'alpi' && game.mode === 'daily');
+  await expect(page.locator('#levels .level')).toHaveText(['Regioni', 'Province e distretti']);
+  await expect(page.locator('.prov')).toHaveCount(31);
+  let opt = await page.evaluate(() => game.opt);
+  expect(opt).toBeGreaterThanOrEqual(3);
+  expect(opt).toBeLessThanOrEqual(7);
+  await page.click('#levels [data-level="alpiprovince"]');
+  await page.waitForFunction(() => mapKey === 'alpiprovince' && game.mode === 'daily');
+  await expect(page).toHaveURL(/\?mappa=alpiprovince$/);
+  await expect(page.locator('[data-map="alpi"]')).toHaveAttribute('aria-selected', 'true');
+  opt = await page.evaluate(() => game.opt);
+  expect(opt).toBeGreaterThanOrEqual(4);
+  expect(opt).toBeLessThanOrEqual(12);
+  // Le tratte lunghe richieste restano nel quotidiano: Milano-Monaco e Milano-Stoccarda.
+  const d = await page.evaluate(() => { const b = bfs('IT-MI'); return [b['DE-09162'], b['DE-08111']]; });
+  expect(d[0]).toBeLessThanOrEqual(12);
+  expect(d[1]).toBeLessThanOrEqual(12);
+});
+
+test('Alpi: regioni di nazioni diverse confinano', async ({ page }) => {
+  await open(page, '/?mappa=alpi&da=IT-3&a=DE-2');
+  await expect(page.locator('#start-name')).toHaveText('Lombardia');
+  await expect(page.locator('#end-name')).toHaveText('Baviera');
+  await guess(page, 'Svizzera orientale');
+  await guess(page, 'Vorarlberg');
+  await expect(page.locator('#result-title')).toHaveText(/Perfetto/);
+});
+
+test('Alpi: province e cantoni oltre confine, anche con il nome locale', async ({ page }) => {
+  await open(page, '/?mappa=alpiprovince&da=IT-CO&a=IT-BZ');
+  await expect(page.locator('#start-name')).toHaveText('Como');
+  expect(await page.evaluate(() => NB['IT-CO'])).toContain('CH-TI');
+  expect(await page.evaluate(() => NB.LI)).toEqual(expect.arrayContaining(['CH-SG', 'AT-801']));
+  await guess(page, 'Graubünden');
+  await expect(page.locator('#result-title')).toHaveText(/Perfetto/);
+  expect((await state(page)).moves).toEqual(['guess:CH-GR']);
+});
+
+test('cinque linguette leggibili anche su mobile', async ({ page }) => {
+  await open(page, '/');
+  await expect(page.locator('.map-tab')).toHaveCount(5);
   for (const tab of await page.locator('.map-tab').all()) {
     const fits = await tab.evaluate(el => el.scrollWidth <= el.clientWidth + 1);
     expect(fits, await tab.textContent()).toBe(true);
@@ -601,7 +643,7 @@ test('senza vittoria le curiosità non compaiono', async ({ page }) => {
 test('i file delle curiosità sono validi', async ({}, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop', 'basta una volta');
   const fs = require('fs');
-  for (const map of ['italia', 'milano', 'germania', 'distretti', 'mondo', 'regioni']) {
+  for (const map of ['italia', 'milano', 'germania', 'distretti', 'alpi', 'alpiprovince', 'mondo', 'regioni']) {
     const areas = JSON.parse(fs.readFileSync(`data/${map}.json`, 'utf8')).areas;
     const facts = JSON.parse(fs.readFileSync(`data/facts/${map}.json`, 'utf8'));
     for (const [id, entry] of Object.entries(facts)) {

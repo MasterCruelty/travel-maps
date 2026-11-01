@@ -109,6 +109,12 @@ await guess(page, 'Sicilia', 'Grigioni');
 await shot(page, 'regioni');
 await page.context().close();
 
+// Alpi: da Milano a Monaco di Baviera tra province, cantoni e distretti
+page = await open({ width: 390, height: 844, url: `http://localhost:${PORT}/?mappa=alpiprovince&da=IT-MI&a=DE-09162` });
+await guess(page, 'Bergamo', 'Sondrio', 'Bolzano', 'Schwaz');
+await shot(page, 'alpi');
+await page.context().close();
+
 // Germania: dalla Baviera allo Schleswig-Holstein
 page = await open({ width: 390, height: 844, url: `http://localhost:${PORT}/?mappa=germania&da=BY&a=SH` });
 await guess(page, 'Turingia');
