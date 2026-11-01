@@ -41,6 +41,7 @@ Si sceglie la mappa dalle linguette in alto. Ognuna ha il suo puzzle quotidiano,
 - Per arrenderti premi 🏳️ due volte: la prima chiede conferma.
 - A partita vinta compare **Lo sapevi?**: una curiosità sulla località di partenza e una su quella di arrivo, ognuna con la sua fonte.
 - I collegamenti tratteggiati della tabella sopra contano come confini.
+- La mappa si ingrandisce con due dita sul telefono, con la rotella sul computer o con i pulsanti **+** e **−**, e si sposta trascinandola. Ogni nuova mossa riporta la vista sulla partita; il pulsante con la bandiera mostra la mappa intera.
 
 ### Quotidiano e allenamento
 

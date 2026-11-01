@@ -553,6 +553,75 @@ test('Regioni: nomi locali, collegamenti fissi e isole senza confini', async ({ 
   expect((await state(page)).moves).toEqual(['guess:ITA-R15', 'guess:ITA-R17', 'guess:AUT-2329']);
 });
 
+// ---------- Zoom a mano ----------
+test('i pulsanti + e − ingrandiscono e rimpiccioliscono la mappa', async ({ page }) => {
+  await open(page, CHALLENGE);
+  await page.waitForTimeout(700);                      // fine dell'animazione iniziale
+  const w0 = await page.evaluate(() => view[2]);
+  await page.click('#btn-zoom-in');
+  const w1 = await page.evaluate(() => view[2]);
+  expect(w1).toBeLessThan(w0 * 0.7);
+  await page.click('#btn-zoom-out');
+  await page.click('#btn-zoom-out');
+  expect(await page.evaluate(() => view[2])).toBeGreaterThan(w0);
+  // non si va oltre una volta e mezza la mappa intera
+  for (let i = 0; i < 8; i++) await page.click('#btn-zoom-out');
+  const max = await page.evaluate(() => fitToWrap(DATA.viewBox)[2] * 1.5);
+  expect(await page.evaluate(() => view[2])).toBeLessThanOrEqual(max + 0.01);
+});
+
+test('trascinare sposta la mappa e la rotella ingrandisce dove punta il cursore', async ({ page }) => {
+  await open(page, CHALLENGE);
+  await page.waitForTimeout(700);
+  const box = await page.locator('#map').boundingBox();
+  const cx = box.x + box.width / 2, cy = box.y + box.height / 2;
+  const before = await page.evaluate(() => view.slice());
+  await page.mouse.move(cx, cy);
+  await page.mouse.down();
+  await page.mouse.move(cx + 60, cy + 30, { steps: 5 });
+  await page.mouse.up();
+  const after = await page.evaluate(() => view.slice());
+  expect(after[0]).toBeLessThan(before[0]);            // trascinando a destra si vede più a ovest
+  expect(after[2]).toBeCloseTo(before[2], 5);
+  await expect(page.locator('#tooltip')).toBeHidden();  // il trascinamento non apre il nome
+
+  await page.mouse.move(cx, cy);
+  const target = await page.evaluate(([x, y]) => clientToMap(x, y), [cx, cy]);
+  await page.mouse.wheel(0, -400);
+  await page.waitForTimeout(200);
+  expect(await page.evaluate(() => view[2])).toBeLessThan(after[2]);
+  const still = await page.evaluate(([x, y]) => clientToMap(x, y), [cx, cy]);
+  expect(still[0]).toBeCloseTo(target[0], -1);         // il punto sotto il cursore resta fermo
+  expect(still[1]).toBeCloseTo(target[1], -1);
+
+  // una nuova mossa riporta la vista sulla partita
+  await guess(page, 'Frosinone');
+  await page.waitForTimeout(700);
+  expect(await page.evaluate(() => view.map(n => n.toFixed(1)).join())).toBe(
+    await page.evaluate(() => targetView().map(n => n.toFixed(1)).join()));
+});
+
+test('il pizzico a due dita ingrandisce e il tocco dopo un gesto non apre il nome', async ({ page }) => {
+  await open(page, CHALLENGE);
+  await page.waitForTimeout(700);
+  const w0 = await page.evaluate(() => view[2]);
+  await page.evaluate(() => {
+    const svg = $('map');
+    const r = svg.getBoundingClientRect();
+    const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+    const fire = (type, id, x, y) => svg.dispatchEvent(new PointerEvent(type, {
+      pointerId: id, pointerType: 'touch', clientX: x, clientY: y, bubbles: true, isPrimary: id === 1 }));
+    fire('pointerdown', 1, cx - 20, cy);
+    fire('pointerdown', 2, cx + 20, cy);
+    for (let d = 25; d <= 80; d += 5) { fire('pointermove', 1, cx - d, cy); fire('pointermove', 2, cx + d, cy); }
+    fire('pointerup', 1, cx - 80, cy);
+    fire('pointerup', 2, cx + 80, cy);
+    svg.dispatchEvent(new MouseEvent('click', { clientX: cx, clientY: cy, bubbles: true }));
+  });
+  expect(await page.evaluate(() => view[2])).toBeLessThan(w0 / 3);    // dita da 40 a 160 px: circa 4x
+  await expect(page.locator('#tooltip')).toBeHidden();
+});
+
 // ---------- Alpi ----------
 test('Alpi: il selettore passa dalle regioni alle province e distretti', async ({ page }) => {
   await open(page, '/');
