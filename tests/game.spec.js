@@ -559,7 +559,7 @@ test('Alpi: il selettore passa dalle regioni alle province e distretti', async (
   await page.click('[data-map="alpi"]');
   await page.waitForFunction(() => mapKey === 'alpi' && game.mode === 'daily');
   await expect(page.locator('#levels .level')).toHaveText(['Regioni', 'Province e distretti']);
-  await expect(page.locator('.prov')).toHaveCount(31);
+  await expect(page.locator('.prov')).toHaveCount(50);
   let opt = await page.evaluate(() => game.opt);
   expect(opt).toBeGreaterThanOrEqual(3);
   expect(opt).toBeLessThanOrEqual(7);
@@ -580,19 +580,19 @@ test('Alpi: regioni di nazioni diverse confinano', async ({ page }) => {
   await open(page, '/?mappa=alpi&da=IT-3&a=DE-2');
   await expect(page.locator('#start-name')).toHaveText('Lombardia');
   await expect(page.locator('#end-name')).toHaveText('Baviera');
-  await guess(page, 'Svizzera orientale');
+  await guess(page, 'Graubünden');                 // nome tedesco del cantone dei Grigioni
   await guess(page, 'Vorarlberg');
   await expect(page.locator('#result-title')).toHaveText(/Perfetto/);
 });
 
-test('Alpi: province e cantoni oltre confine, anche con il nome locale', async ({ page }) => {
+test('Alpi: province e distretti oltre confine, compresi quelli svizzeri', async ({ page }) => {
   await open(page, '/?mappa=alpiprovince&da=IT-CO&a=IT-BZ');
   await expect(page.locator('#start-name')).toHaveText('Como');
-  expect(await page.evaluate(() => NB['IT-CO'])).toContain('CH-TI');
-  expect(await page.evaluate(() => NB.LI)).toEqual(expect.arrayContaining(['CH-SG', 'AT-801']));
-  await guess(page, 'Graubünden');
+  expect(await page.evaluate(() => NB['IT-CO'])).toEqual(expect.arrayContaining(['CH-2105', 'CH-2106']));  // Lugano, Mendrisio
+  expect(await page.evaluate(() => NB.LI)).toEqual(expect.arrayContaining(['CH-1724', 'AT-801']));          // Werdenberg, Bludenz
+  expect(await page.evaluate(() => [area('AT-306').name, area('CH-1902').name])).toEqual(['Baden (Austria)', 'Baden (Svizzera)']);
+  await guess(page, 'Sondrio');
   await expect(page.locator('#result-title')).toHaveText(/Perfetto/);
-  expect((await state(page)).moves).toEqual(['guess:CH-GR']);
 });
 
 test('cinque linguette leggibili anche su mobile', async ({ page }) => {

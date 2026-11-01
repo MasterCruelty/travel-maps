@@ -20,6 +20,7 @@ import json
 import math
 import re
 import os
+import struct
 import sys
 import urllib.request
 
@@ -445,6 +446,15 @@ def load_regioni():
 # conversione GeoJSON di ginseng666 (Flooh Perlot, CC BY 4.0).
 AUSTRIAN_DISTRICTS = ('https://raw.githubusercontent.com/ginseng666/GeoJSON-TopoJSON-Austria/'
                       '81df08cced08b02a873f6375e17424e053a99ac0/2021/simplified-95/bezirke_95_geo.json')
+# Comuni svizzeri 2014 (swisstopo VEC200, coordinate svizzere LV03 in metri) con
+# il numero del distretto, e la tabella dei nomi dei distretti. Sono dati anteriori
+# alle riforme successive, come la sostituzione dei distretti dei Grigioni con le
+# regioni nel 2016.
+SWISS_2014 = ('https://raw.githubusercontent.com/greenore/swiss-maps/'
+              'ad2c881327fab2fcaffd0d39571a71a9047ab722/src/V200/2014/')
+SWISS_CANTONS = {1: 'ZH', 2: 'BE', 3: 'LU', 4: 'UR', 5: 'SZ', 6: 'OW', 7: 'NW', 8: 'GL', 9: 'ZG', 10: 'FR',
+                 11: 'SO', 12: 'BS', 13: 'BL', 14: 'SH', 15: 'AR', 16: 'AI', 17: 'SG', 18: 'GR', 19: 'AG',
+                 20: 'TG', 21: 'TI', 22: 'VD', 23: 'VS', 24: 'NE', 25: 'GE', 26: 'JU'}
 # Contorno approssimato delle Alpi (lon, lat), da Nizza in senso orario lungo il
 # piede dei rilievi: serve solo a scegliere le aree vicine alle montagne.
 ALPS = Polygon([
@@ -466,17 +476,93 @@ ALPS = Polygon([
 # ci si ferma alla latitudine di Milano, salvo le province che toccano le Alpi.
 ALPS_REACH = {'ITA': 130, 'DEU': 150, 'FRA': 70}   # 150 km: fino a Stoccarda
 ALPS_SOUTH = 45.1
-SWISS_REGIONS = {  # le sette grandi regioni statistiche svizzere
-    'Regione del Lemano': ['VD', 'VS', 'GE'], 'Espace Mittelland': ['BE', 'FR', 'SO', 'NE', 'JU'],
-    'Svizzera nordoccidentale': ['BS', 'BL', 'AG'], 'Zurigo': ['ZH'],
-    'Svizzera orientale': ['GL', 'SH', 'AR', 'AI', 'SG', 'GR', 'TG'],
-    'Svizzera centrale': ['LU', 'UR', 'SZ', 'OW', 'NW', 'ZG'], 'Ticino': ['TI'],
-}
 SLOVENIA_WEST = {'Gorenjska', 'Goriška', 'Obalno-kraška', 'Osrednjeslovenska', 'Notranjsko-kraška'}
 AUSTRIAN_STATES = {'1': 'Burgenland', '2': 'Carinzia', '3': 'Bassa Austria', '4': 'Alta Austria',
                    '5': 'Salisburghese', '6': 'Stiria', '7': 'Tirolo', '8': 'Vorarlberg', '9': 'Vienna'}
 ISO2 = {'ITA': 'IT', 'FRA': 'FR', 'CHE': 'CH', 'LIE': 'LI', 'AUT': 'AT', 'DEU': 'DE', 'SVN': 'SI', 'MCO': 'MC'}
 ITALIAN_REGIONS = {"Valle d'Aosta/Vallée d'Aoste": "Valle d'Aosta", 'Trentino-Alto Adige/Südtirol': 'Trentino-Alto Adige'}
+
+
+def fetch_binary(url, name):
+    path = os.path.join(CACHE, name)
+    if not os.path.exists(path):
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        print('Scarico', name)
+        urllib.request.urlretrieve(url, path)
+    with open(path, 'rb') as f:
+        return f.read()
+
+
+def read_dbf(data):
+    count = struct.unpack('<I', data[4:8])[0]
+    header, size = struct.unpack('<HH', data[8:12])
+    fields, pos = [], 32
+    while data[pos] != 0x0D:
+        fields.append((data[pos:pos + 11].split(b'\0')[0].decode(), data[pos + 16]))
+        pos += 32
+    rows = []
+    for i in range(count):
+        rec, row, at = data[header + i * size:header + (i + 1) * size], {}, 1
+        for name, length in fields:
+            row[name] = rec[at:at + length].decode('latin-1').strip()
+            at += length
+        rows.append(row)
+    return rows
+
+
+def lv03_to_wgs84(e, n):
+    """Formule approssimate di swisstopo (precisione di circa un metro)."""
+    y, x = (e - 600000) / 1e6, (n - 200000) / 1e6
+    lon = 2.6779094 + 4.728982 * y + 0.791484 * y * x + 0.1306 * y * x * x - 0.0436 * y ** 3
+    lat = 16.9023892 + 3.238272 * x - 0.270978 * y * y - 0.002528 * x * x - 0.0447 * y * y * x - 0.0140 * x ** 3
+    return lon * 100 / 36, lat * 100 / 36
+
+
+def read_shp_polygons(data):
+    """Poligoni di uno shapefile (tipo 5), già convertiti in longitudine e latitudine."""
+    shapes, pos = [], 100
+    while pos < len(data):
+        length = struct.unpack('>i', data[pos + 4:pos + 8])[0] * 2
+        rec = data[pos + 8:pos + 8 + length]
+        pos += 8 + length
+        if struct.unpack('<i', rec[:4])[0] != 5:
+            shapes.append(None)
+            continue
+        nparts, npoints = struct.unpack('<2i', rec[36:44])
+        parts = list(struct.unpack(f'<{nparts}i', rec[44:44 + 4 * nparts])) + [npoints]
+        pts = struct.unpack(f'<{2 * npoints}d', rec[44 + 4 * nparts:44 + 4 * nparts + 16 * npoints])
+        shells, holes = [], []
+        for a, b in zip(parts, parts[1:]):
+            ring = Polygon([lv03_to_wgs84(pts[2 * i], pts[2 * i + 1]) for i in range(a, b)])
+            # negli shapefile gli anelli esterni girano in senso orario
+            (holes if ring.exterior.is_ccw else shells).append(ring.buffer(0))
+        shapes.append(unary_union(shells).difference(unary_union(holes)) if holes else unary_union(shells))
+    return shapes
+
+
+def swiss_districts():
+    """Distretti svizzeri 2014; i cantoni senza distretti valgono come un distretto solo."""
+    names = {r['BEZIRKSNR']: r['BEZIRKSNAM'] for r in
+             read_dbf(fetch_binary(SWISS_2014 + 'VEC200_ADMLVL2.dbf', 'swiss2014/VEC200_ADMLVL2.dbf'))}
+    rows = read_dbf(fetch_binary(SWISS_2014 + 'VEC200_Commune.dbf', 'swiss2014/VEC200_Commune.dbf'))
+    shapes = read_shp_polygons(fetch_binary(SWISS_2014 + 'VEC200_Commune.shp', 'swiss2014/VEC200_Commune.shp'))
+    parts = {}
+    for row, g in zip(rows, shapes):
+        if row['COUNTRY'] != 'CH' or g is None:
+            continue
+        canton = SWISS_CANTONS[int(row['KANTONSNR'])]
+        key = row['BEZIRKSNR'] if row['BEZIRKSNR'] != '0' else canton
+        parts.setdefault((canton, key), []).append(g)
+    out = {k: unary_union(gs).buffer(0) for k, gs in parts.items()}
+    # Nei cantoni con distretti alcune parti senza distretto (zone sui laghi e simili)
+    # vanno al distretto vicino con più confine in comune.
+    with_districts = {c for c, k in out if k != c}
+    for (canton, key) in [k for k in out if k[0] == k[1] and k[0] in with_districts]:
+        piece = out.pop((canton, key))
+        best = max((k for k in out if k[0] == canton),
+                   key=lambda k: out[k].buffer(0.002).intersection(piece).area)
+        out[best] = unary_union([out[best], piece]).buffer(0)
+    return [(canton, key, names.get(key), g) for (canton, key), g in sorted(out.items())]
 
 
 def austrian_name(raw):
@@ -512,16 +598,20 @@ def alpine_units():
         if code == 'FRA' and p['iso_3166_2'][3:].isdigit():
             units.append(('FRA', p['iso_3166_2'], region_name(p), REGION_NAMES['FRA'][p['region']],
                           [p['name']], geom(f)))
-        elif code == 'CHE':
-            canton = p['iso_3166_2'][3:]
-            region = next(r for r, cs in SWISS_REGIONS.items() if canton in cs)
-            units.append(('CHE', p['iso_3166_2'], region_name(p), region, [p['name']], geom(f)))
         elif code == 'SVN':
             slovenia.setdefault(p['region'], []).append(geom(f))
     for region, gs in sorted(slovenia.items()):
         units.append(('SVN', 'SI-' + re.sub(r'[^A-Z]', '', region.upper())[:6], REGION_NAMES['SVN'][region],
                       'Slovenia occidentale' if region in SLOVENIA_WEST else 'Slovenia orientale',
                       [region], unary_union(gs).buffer(0)))
+    cantons = {f['properties']['iso_3166_2'][3:]: f['properties'] for f in ne_features
+               if f['properties']['adm0_a3'] == 'CHE'}
+    for canton, key, name, g in swiss_districts():
+        p = cantons[canton]
+        if key == canton:   # cantone senza distretti
+            units.append(('CHE', 'CH-' + canton, region_name(p), region_name(p), [p['name']], g))
+        else:
+            units.append(('CHE', 'CH-' + key, name, region_name(p), [], g))
     units.append(('LIE', 'LI', 'Liechtenstein', 'Liechtenstein', [], nations['LIE']))
     units.append(('MCO', 'MC', 'Monaco', 'Monaco', ['Principato di Monaco'], nations['MCO']))
     units = [(c, i, n, r, al, g.intersection(nations[c]).buffer(0)) for c, i, n, r, al, g in units]
@@ -544,9 +634,18 @@ def in_alpine_area(country, g):
     return country != 'ITA' or g.centroid.y >= ALPS_SOUTH or g.intersects(ALPS)
 
 
+ALPINE_COUNTRIES = {'ITA': 'Italia', 'FRA': 'Francia', 'CHE': 'Svizzera', 'LIE': 'Liechtenstein', 'AUT': 'Austria',
+                    'DEU': 'Germania', 'SVN': 'Slovenia', 'MCO': 'Monaco'}
+
+
 def load_alpiprovince():
-    return [{'id': i, 'name': n, 'group': r, 'aliases': al, 'geom': g}
-            for c, i, n, r, al, g in alpine_units() if in_alpine_area(c, g)]
+    units = [u for u in alpine_units() if in_alpine_area(u[0], u[5])]
+    counts = {}
+    for u in units:
+        counts[u[2]] = counts.get(u[2], 0) + 1
+    # Nomi uguali in nazioni diverse (Baden in Svizzera e in Austria): si aggiunge la nazione.
+    return [{'id': i, 'name': n if counts[n] == 1 else f'{n} ({ALPINE_COUNTRIES[c]})',
+             'group': r, 'aliases': al, 'geom': g} for c, i, n, r, al, g in units]
 
 
 def load_alpi():
@@ -557,14 +656,19 @@ def load_alpi():
     for c, i, n, r, al, g in units:
         if (c, r) in kept:
             regions.setdefault((c, r), []).append(g)
-    countries = {'ITA': 'Italia', 'FRA': 'Francia', 'CHE': 'Svizzera', 'LIE': 'Liechtenstein', 'AUT': 'Austria',
-                 'DEU': 'Germania', 'SVN': 'Slovenia', 'MCO': 'Monaco'}
+    countries = ALPINE_COUNTRIES
+    cantons = {region_name(f['properties']): f['properties'] for f in fetch(NATURAL_EARTH + 'ne_10m_admin_1_states_provinces.geojson', 'ne_10m_admin_1_states_provinces.geojson')
+               if f['properties']['adm0_a3'] == 'CHE'}
     items, counter = [], {}
     for (c, r), gs in sorted(regions.items()):
         counter[c] = counter.get(c, 0) + 1
         iso2 = ISO2[c]
-        items.append({'id': f'{iso2}-{counter[c]}' if c not in ('LIE', 'MCO') else iso2, 'name': r,
-                      'group': countries[c], 'geom': unary_union(gs).buffer(0)})
+        item = {'id': f'{iso2}-{counter[c]}' if c not in ('LIE', 'MCO') else iso2, 'name': r,
+                'group': countries[c], 'geom': unary_union(gs).buffer(0)}
+        if c == 'CHE':
+            item['id'] = cantons[r]['iso_3166_2']
+            item['aliases'] = [cantons[r]['name']]
+        items.append(item)
     return items
 
 
