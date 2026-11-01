@@ -141,7 +141,7 @@ const MAPS = {
     },
   },
 };
-const ALPS_NOTE = 'L\'arco alpino da Nizza a Vienna, con le aree fino a circa 150 km dalle montagne: a sud fino a Milano e Venezia, a nord fino a Monaco di Baviera e Stoccarda. Comprende Italia, Francia, Svizzera, Liechtenstein, Austria, Germania, Slovenia e Monaco.';
+const ALPS_NOTE = 'L\'arco alpino da Nizza a Vienna, con le aree fino a circa 150 km dalle montagne: a sud fino a Milano e Venezia, a nord fino a Monaco di Baviera e Stoccarda. Comprende Italia, Francia, Svizzera, Liechtenstein, Austria, Germania, Slovenia e Monaco, le contee della Croazia settentrionale e le due contee ungheresi con le ultime colline alpine (Vas e Győr-Moson-Sopron).';
 MAPS.alpi = {
   tab: 'Alpi',
   level: 'Regioni',
@@ -154,11 +154,11 @@ MAPS.alpi = {
   unknown: 'Regione non riconosciuta',
   already: 'è già stata inserita',
   ambiguous: 'Più regioni corrispondono: scegline una dalla lista',
-  linksNote: ALPS_NOTE + ' Le aree sono regioni italiane e francesi, Länder austriaci e tedeschi, cantoni svizzeri e le due regioni della Slovenia.',
+  linksNote: ALPS_NOTE + ' Le aree sono regioni italiane e francesi, Länder austriaci e tedeschi, cantoni svizzeri, le due regioni della Slovenia e le contee croate e ungheresi.',
   zoomIcon: '🏔️', zoomTitle: 'Mostra tutte le Alpi',
   storagePrefix: 'pi_alpi_',
   seedOffset: 4807,
-  minDist: 3, maxDist: 7,
+  minDist: 3, maxDist: Infinity,   // può capitare anche una tratta da un capo all'altro
   extraMin: 2, extraFactor: 0.8,
   codes: false,
   aliases: {},
@@ -175,11 +175,11 @@ MAPS.alpiprovince = {
   unknown: 'Area non riconosciuta',
   already: 'è già stata inserita',
   ambiguous: 'Più aree corrispondono: scegline una dalla lista',
-  linksNote: ALPS_NOTE + ' Le aree sono le province italiane, i dipartimenti francesi, i distretti svizzeri, austriaci e tedeschi e le regioni statistiche slovene. I distretti svizzeri sono quelli del 2014: nei Grigioni, per esempio, dal 2016 al loro posto ci sono le regioni. I cantoni senza distretti (Ginevra, Uri, Zugo…) contano come un\'area sola. Città e circondario con lo stesso nome sono indicati come (città) e (circondario).',
+  linksNote: ALPS_NOTE + ' Le aree sono le province italiane, i dipartimenti francesi, i distretti svizzeri, austriaci e tedeschi, le regioni statistiche slovene e le contee croate e ungheresi. I distretti svizzeri sono quelli del 2014: nei Grigioni, per esempio, dal 2016 al loro posto ci sono le regioni. I cantoni senza distretti (Ginevra, Uri, Zugo…) contano come un\'area sola. Città e circondario con lo stesso nome sono indicati come (città) e (circondario).',
   zoomIcon: '🏔️', zoomTitle: 'Mostra tutte le Alpi',
   storagePrefix: 'pi_alpiprovince_',
   seedOffset: 8848,
-  minDist: 4, maxDist: 12,
+  minDist: 4, maxDist: Infinity,
   extraMin: 4, extraFactor: 0.8,
   codes: false,
   aliases: {},

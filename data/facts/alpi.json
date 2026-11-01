@@ -349,6 +349,25 @@
  },
  "FR-2": {
   "facts": [
+   "Louis Pasteur nacque a Dole, nel Giura, il 27 dicembre 1822; la sua casa natale, nel quartiere dei conciatori, è oggi un museo.",
+   "Dole fu capitale della Franca Contea fino al 1676."
+  ],
+  "sources": [
+   "https://www.terredelouispasteur.fr/en/?p=12167",
+   "https://www.britannica.com/place/Dole-France"
+  ]
+ },
+ "FR-3": {
+  "facts": [
+   "Nella cattedrale di Reims venivano incoronati i re di Francia; la città è oggi uno dei centri della produzione dello champagne."
+  ],
+  "sources": [
+   "https://it.wikivoyage.org/wiki/Reims",
+   "https://kiwix.lema.org/wikipedia_en_all_mini_2024-02/A/Reims"
+  ]
+ },
+ "FR-4": {
+  "facts": [
    "Nel 2018 l'UNESCO ha iscritto i saperi della profumeria del territorio di Grasse, dalla coltivazione delle piante da profumo alla composizione delle fragranze, nel patrimonio culturale immateriale dell'umanità."
   ],
   "sources": [
