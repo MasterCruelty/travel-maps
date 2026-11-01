@@ -212,6 +212,11 @@ MAPS.regioni = {
 const DEFAULT_MAP = 'italia';
 const GAME_TITLE = 'Travel Maps';
 
+// Versione della pubblicazione, presa dall'indirizzo dello script (game.js?v=...):
+// i dati la ripetono, così una pagina nuova non usa dati vecchi rimasti in cache.
+const VERSION = new URL(document.currentScript.src).searchParams.get('v');
+const versioned = (url) => VERSION ? `${url}?v=${VERSION}` : url;
+
 const EMOJI = { 'g-ok': '🟩', 'g-near': '🟧', 'g-far': '🟥', 'g-none': '⬛', hint: '💡' };
 const DAILY_EPOCH = new Date(2024, 0, 1);
 const REDUCED_MOTION = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -373,7 +378,7 @@ function bestCompletion() {
 // ---------- Dati ----------
 async function loadData(key) {
   if (!dataCache[key]) {
-    const res = await fetch(MAPS[key].file);
+    const res = await fetch(versioned(MAPS[key].file));
     if (!res.ok) throw new Error('HTTP ' + res.status);
     dataCache[key] = await res.json();
   }
@@ -955,7 +960,7 @@ function showResult() {
 async function loadFacts(key) {
   if (!(key in factsCache)) {
     try {
-      const res = await fetch(MAPS[key].facts);
+      const res = await fetch(versioned(MAPS[key].facts));
       factsCache[key] = res.ok ? await res.json() : {};
     } catch {
       factsCache[key] = {};
