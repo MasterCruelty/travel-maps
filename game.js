@@ -617,19 +617,114 @@ function targetView() {
   return fitToWrap([x, y, w, h]);
 }
 
-function setView(v) {
+// quick: durante un gesto si salta il ricalcolo delle etichette sovrapposte,
+// che sulle mappe grandi è lento; si rifà alla fine del gesto.
+function setView(v, quick = false) {
   view = v;
   $('map').setAttribute('viewBox', v.map(n => n.toFixed(1)).join(' '));
-  updateLabelSize();
+  updateLabelSize(quick);
 }
 
-function updateLabelSize() {
+function updateLabelSize(quick = false) {
   if (!view) return;
   const px = $('map-wrap').clientWidth || 500;
   const unitsPerPx = view[2] / px;
   $('layer-labels').setAttribute('font-size', (13 * unitsPerPx).toFixed(2));
   $('layer-sea').setAttribute('font-size', (14 * unitsPerPx).toFixed(2));
-  declutterLabels();
+  if (!quick) declutterLabels();
+}
+
+// ---------- Zoom e spostamento a mano ----------
+// Pizzico e trascinamento sul telefono, rotella e trascinamento col mouse,
+// pulsanti + e −. Una nuova mossa riporta la vista sulla partita.
+function clientToMap(cx, cy) {
+  const r = $('map').getBoundingClientRect();
+  return [view[0] + (cx - r.left) / r.width * view[2], view[1] + (cy - r.top) / r.height * view[3]];
+}
+
+function clampView([x, y, w, h]) {
+  const full = fitToWrap(DATA.viewBox);
+  const k = Math.min(Math.max(w, full[2] / 80), full[2] * 1.5) / w;   // da 80x a 1/1,5 della mappa intera
+  const nw = w * k, nh = h * k;
+  const cx = x + w / 2, cy = y + h / 2;
+  // il centro della vista resta dentro la mappa
+  const mx = Math.min(Math.max(cx, full[0]), full[0] + full[2]);
+  const my = Math.min(Math.max(cy, full[1]), full[1] + full[3]);
+  return [mx - nw / 2, my - nh / 2, nw, nh];
+}
+
+function zoomAt(factor, cx, cy, quick = false) {
+  if (!view) return;
+  cancelAnimationFrame(updateZoom.raf);
+  const [px, py] = clientToMap(cx, cy);
+  const [x, y, w, h] = view;
+  const nw = w / factor, nh = h / factor;
+  // il punto sotto il dito o il cursore resta fermo
+  setView(clampView([px - (px - x) * nw / w, py - (py - y) * nh / h, nw, nh]), quick);
+}
+
+function zoomButton(factor) {
+  const r = $('map').getBoundingClientRect();
+  zoomAt(factor, r.left + r.width / 2, r.top + r.height / 2);
+}
+
+function initMapGestures() {
+  const svg = $('map');
+  const pointers = new Map();         // pointerId -> [x, y]
+  let last = null;                    // {x, y, dist} della posizione precedente del gesto
+  let moved = false;
+
+  const snapshot = () => {
+    const pts = [...pointers.values()];
+    const x = pts.reduce((a, p) => a + p[0], 0) / pts.length;
+    const y = pts.reduce((a, p) => a + p[1], 0) / pts.length;
+    const dist = pts.length > 1 ? Math.hypot(pts[0][0] - pts[1][0], pts[0][1] - pts[1][1]) : 0;
+    return { x, y, dist };
+  };
+
+  svg.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    pointers.set(e.pointerId, [e.clientX, e.clientY]);
+    last = snapshot();
+    if (pointers.size === 1) moved = false;
+  });
+  svg.addEventListener('pointermove', (e) => {
+    if (!pointers.has(e.pointerId) || !view) return;
+    pointers.set(e.pointerId, [e.clientX, e.clientY]);
+    const now = snapshot();
+    if (!moved && Math.hypot(now.x - last.x, now.y - last.y) < 6 && pointers.size === 1) return;
+    if (!moved) svg.setPointerCapture(e.pointerId);
+    moved = true;
+    hideTooltip();
+    cancelAnimationFrame(updateZoom.raf);
+    const r = svg.getBoundingClientRect();
+    const [x, y, w, h] = view;
+    let next = [x - (now.x - last.x) / r.width * w, y - (now.y - last.y) / r.height * h, w, h];
+    setView(clampView(next), true);
+    if (now.dist && last.dist) zoomAt(now.dist / last.dist, now.x, now.y, true);
+    last = now;
+  });
+  const end = (e) => {
+    if (!pointers.delete(e.pointerId)) return;
+    last = pointers.size ? snapshot() : null;
+    if (!pointers.size && moved) declutterLabels();
+  };
+  svg.addEventListener('pointerup', end);
+  svg.addEventListener('pointercancel', end);
+  // Un trascinamento non vale come tocco su un'area.
+  svg.addEventListener('click', (e) => {
+    if (moved) { e.stopImmediatePropagation(); moved = false; }
+  }, true);
+
+  svg.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    zoomAt(Math.exp(-e.deltaY * (e.deltaMode === 1 ? 0.05 : 0.0015)), e.clientX, e.clientY, true);
+    clearTimeout(initMapGestures.wheelTimer);
+    initMapGestures.wheelTimer = setTimeout(declutterLabels, 150);
+  }, { passive: false });
+
+  $('btn-zoom-in').addEventListener('click', () => zoomButton(1.6));
+  $('btn-zoom-out').addEventListener('click', () => zoomButton(1 / 1.6));
 }
 
 function updateZoom(animate = true) {
@@ -1185,7 +1280,8 @@ function init() {
   startGame(challenge ? 'practice' : 'daily', challenge);
 
   const svg = $('map');
-  svg.addEventListener('pointermove', (e) => { if (e.pointerType === 'mouse') showTooltip(e); });
+  initMapGestures();
+  svg.addEventListener('pointermove', (e) => { if (e.pointerType === 'mouse' && !e.buttons) showTooltip(e); });
   svg.addEventListener('pointerleave', hideTooltip);
   svg.addEventListener('click', (e) => {
     showTooltip(e);
