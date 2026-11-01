@@ -1265,9 +1265,11 @@ function newPractice() {
   $('guess-input').focus();
 }
 
-async function switchMap(key) {
+// fromTab: il clic sulla linguetta già aperta non cambia il livello scelto;
+// il selettore dei livelli invece passa sempre al livello indicato.
+async function switchMap(key, fromTab = false) {
   if (key === mapKey && game) return;
-  if (MAPS[key].levels && MAPS[key].levels.includes(mapKey) && game) return;   // stessa linguetta
+  if (fromTab && MAPS[key].levels && MAPS[key].levels.includes(mapKey) && game) return;
   closeModals(false);
   await loadData(key);
   view = null;
@@ -1313,7 +1315,7 @@ function init() {
   });
 
   for (const btn of document.querySelectorAll('[data-map]')) {
-    btn.addEventListener('click', () => switchMap(btn.dataset.map).catch(showLoadError));
+    btn.addEventListener('click', () => switchMap(btn.dataset.map, true).catch(showLoadError));
   }
   $('levels').addEventListener('click', (e) => {
     const btn = e.target.closest('[data-level]');
