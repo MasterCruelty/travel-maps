@@ -379,6 +379,14 @@ test('ogni mappa ha salvataggi e statistiche separati', async ({ page }) => {
   expect((await state(page)).won).toBe(true);
 });
 
+test('Milano: anche le tratte che attraversano la città possono essere il quotidiano', async ({ page }) => {
+  await open(page, '/?mappa=milano');
+  expect(await page.evaluate(() => game.opt)).toBeGreaterThanOrEqual(4);
+  const far = await page.evaluate(() => Math.max(...SIGLAS.map(s => Math.max(...Object.values(bfs(s))))));
+  expect(far).toBeGreaterThan(12);
+  expect(await page.evaluate(() => MAP.maxDist)).toBeGreaterThanOrEqual(far);
+});
+
 test('sfida su Milano: quartieri, testi e risultato', async ({ page }) => {
   await open(page, MI_CHALLENGE);
   await expect(page.locator('#puzzle-id')).toHaveText('Sfida');

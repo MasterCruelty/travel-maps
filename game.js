@@ -57,7 +57,7 @@ const MAPS = {
     zoomIcon: '🗺️', zoomTitle: 'Mostra tutta la mappa',
     storagePrefix: 'pi_milano_',
     seedOffset: 54321,
-    minDist: 4, maxDist: 8,
+    minDist: 4, maxDist: Infinity,   // anche le tratte che attraversano la città, fino a 17 confini
     extraMin: 4, extraFactor: 1,
     codes: false,
     aliases: {},
