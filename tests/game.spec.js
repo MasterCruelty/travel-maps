@@ -634,6 +634,15 @@ test('il pizzico a due dita ingrandisce e il tocco dopo un gesto non apre il nom
   await expect(page.locator('#tooltip')).toBeHidden();
 });
 
+test('le terre fuori dal gioco sono grigie, ma non nel quotidiano a mappa nascosta', async ({ page }) => {
+  await open(page, CHALLENGE);
+  await expect(page.locator('#layer-context .context')).toHaveCount(1);
+  await expect(page.locator('#layer-context')).toBeVisible();
+  await open(page, '/');
+  expect(await page.evaluate(() => game.mode)).toBe('daily');
+  await expect(page.locator('#layer-context')).toBeHidden();
+});
+
 // ---------- Alpi ----------
 test('Alpi: il selettore passa dalle regioni alle province e distretti', async ({ page }) => {
   await open(page, '/');

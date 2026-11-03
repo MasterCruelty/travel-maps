@@ -511,6 +511,7 @@ function colorFor(sig) {
 
 // ---------- Mappa ----------
 function buildMap() {
+  $('layer-context').innerHTML = DATA.context ? `<path class="context" d="${DATA.context}"/>` : '';
   $('layer-prov').innerHTML = SIGLAS.map(s =>
     `<path class="prov" id="p-${s}" data-sig="${s}" d="${area(s).path}"/>`).join('');
   $('layer-regions').innerHTML = Object.values(DATA.groups).map(d =>

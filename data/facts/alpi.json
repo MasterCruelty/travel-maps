@@ -375,6 +375,95 @@
    "https://carrementbelle.com/blog/en/2019/10/16/grasse-perfume/"
   ]
  },
+ "HR-1": {
+  "facts": [
+   "Karlovac fu fondata il 13 luglio 1579 dagli Asburgo come fortezza a stella a sei punte alla confluenza di Kupa e Korana, contro l'avanzata ottomana; il nome tedesco Karlstadt ricorda l'arciduca Carlo II."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Karlovac",
+   "https://visitkarlovac.hr/en/the-karlovac-of-yore/"
+  ]
+ },
+ "HR-2": {
+  "facts": [
+   "Sulla collina di Hušnjakovo, a Krapina, il paleontologo Dragutin Gorjanović-Kramberger scavò tra il 1899 e il 1905 circa 900 resti fossili di Neanderthal, una delle raccolte più ricche al mondo."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Krapina_Neanderthal_site",
+   "https://www.mhz.hr/en/dogadanja/124-obljetnica-otkrica-krapinskog-pracovjeka-muzej-krapinskih-neandertalaca/"
+  ]
+ },
+ "HR-3": {
+  "facts": [
+   "Il castello di Čakovec, appartenuto per cinque generazioni alla famiglia Zrinski, è il maggiore monumento profano del Međimurje e dal 1954 ospita il Museo del Međimurje."
+  ],
+  "sources": [
+   "https://mmc.hr/starigrad_en.html",
+   "https://en.wikipedia.org/wiki/%C4%8Cakovec"
+  ]
+ },
+ "HR-4": {
+  "facts": [
+   "La samoborska kremšnita, millefoglie alla crema servita tiepida e simbolo della città di Samobor, è iscritta nella lista croata dei beni culturali immateriali."
+  ],
+  "sources": [
+   "https://www.samobor.hr/en/visit/samobor-kremsnita-c52",
+   "https://n1info.hr/english/news/samoborska-kremsnita-dessert-enters-list-of-intangible-assets/"
+  ]
+ },
+ "HR-5": {
+  "facts": [
+   "L'Arena di Pola, anfiteatro romano del I secolo, è l'unico rimasto con tutte e quattro le torri laterali, che contenevano cisterne d'acqua profumata e scale di accesso alle gradinate."
+  ],
+  "sources": [
+   "https://structurae.net/en/structures/pula-amphitheater",
+   "https://www.croatiatraveller.com/Istria/Amphitheater.html"
+  ]
+ },
+ "HR-6": {
+  "facts": [
+   "A Fiume Giovanni Luppis e Robert Whitehead svilupparono il primo siluro semovente, presentato nel dicembre 1866; in città nacque poi la prima fabbrica di siluri al mondo."
+  ],
+  "sources": [
+   "https://visitrijeka.hr/en/torpedo/",
+   "https://rijekaheritage.org/en/kj/torpedo"
+  ]
+ },
+ "HR-7": {
+  "facts": [
+   "Dal 1767 Varaždin fu sede del Consiglio reale croato e quindi capitale della Croazia, finché il grande incendio del 1776 distrusse gran parte della città e la capitale fu trasferita a Zagabria."
+  ],
+  "sources": [
+   "https://varazdin.hr/en/history/"
+  ]
+ },
+ "HR-8": {
+  "facts": [
+   "Nel 1906 Slavoljub Penkala brevettò la sua matita automatica e aprì a Zagabria una fabbrica che divenne una delle maggiori produttrici di articoli di cancelleria al mondo."
+  ],
+  "sources": [
+   "https://www.hr/croatia/inventions/pen",
+   "https://lovezagreb.hr/topics/more-than-words/slavoljub-eduard-penkala"
+  ]
+ },
+ "HU-1": {
+  "facts": [
+   "L'arciabbazia benedettina di Pannonhalma, fondata nel 996 come primo monastero benedettino d'Ungheria, è patrimonio UNESCO dal 1996 ed è ancora abitata dai monaci."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Pannonhalma_Archabbey",
+   "https://www.worldheritagesite.org/list/Pannonhalma"
+  ]
+ },
+ "HU-2": {
+  "facts": [
+   "Secondo la tradizione san Martino di Tours nacque nel IV secolo a Savaria, l'odierna Szombathely, considerata la città più antica d'Ungheria; una chiesa sorge nel luogo indicato come sua casa natale."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Szombathely",
+   "https://archiv.martinus.hu/st-martin-s-church"
+  ]
+ },
  "IT-1": {
   "facts": [
    "La basilica di Aquileia conserva un mosaico pavimentale del IV secolo di circa 750 metri quadrati, riportato alla luce nel 1909; l'area archeologica e la basilica sono patrimonio UNESCO dal 1998."
@@ -456,6 +545,23 @@
    "https://www.pilotguides.com/articles/how-monaco-became-monaco/",
    "https://media-trade.visitmonaco.com/en/editorial-resources/destination/introduction-to-the-destination/history-of-monaco-in-7-dates",
    "https://www.monacodc.org/monhistory.html"
+  ]
+ },
+ "SI-1": {
+  "facts": [
+   "Le opere dell'architetto Jože Plečnik a Lubiana, tra cui i ponti sulla Ljubljanica e il cimitero di Žale, sono state iscritte nel 2021 nel patrimonio mondiale dell'UNESCO."
+  ],
+  "sources": [
+   "https://www.gov.si/en/news/2021-08-02-plecniks-works-added-to-the-unesco-world-heritage-list/",
+   "https://en.wikipedia.org/wiki/The_works_of_Jo%C5%BEe_Ple%C4%8Dnik_in_Ljubljana_%E2%80%93_Human_Centred_Urban_Design"
+  ]
+ },
+ "SI-2": {
+  "facts": [
+   "Nel quartiere Lent di Maribor cresce la Stara trta, vite di žametovka riconosciuta dal Guinness dei primati come la più vecchia vite del mondo, con un'età stimata di oltre 350 anni."
+  ],
+  "sources": [
+   "https://www.visitmaribor.si/en/offer/cultural-landmarks/4379-stara-trta/"
   ]
  }
 }

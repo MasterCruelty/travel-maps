@@ -127,7 +127,8 @@ Per ogni mappa lo script:
 2. calcola quali aree confinano tra loro;
 3. aggiunge i collegamenti fissi (ponti, tunnel) e, in Italia e a Milano, collega le parti staccate (isole, exclavi) all'area più vicina, come un traghetto;
 4. semplifica i confini mantenendo identici i tratti condivisi tra aree vicine;
-5. calcola per ogni area il punto in cui scrivere il nome, il riquadro per lo zoom e il contorno dei gruppi (regioni, province, continenti). Le mappe del mondo usano la proiezione Equal Earth. `regioni` va generata dopo `mondo`, da cui prende i nomi delle nazioni.
+5. ritaglia le terre emerse attorno alle aree di gioco (Natural Earth), disegnate in grigio perché il bordo della mappa non sembri mare; nel quotidiano a mappa nascosta non si vedono;
+6. calcola per ogni area il punto in cui scrivere il nome, il riquadro per lo zoom e il contorno dei gruppi (regioni, province, continenti). Le mappe del mondo usano la proiezione Equal Earth. `regioni` va generata dopo `mondo`, da cui prende i nomi delle nazioni.
 
 ### Curiosità
 
@@ -137,7 +138,7 @@ Le curiosità di fine partita sono in `data/facts/<mappa>.json`, una voce per ar
 { "FI": { "facts": ["...", "..."], "sources": ["https://..."] } }
 ```
 
-Sono scritte a mano, una o due per area, verificate su fonti indicate in `sources` (Wikipedia, siti istituzionali, cataloghi dei beni culturali). Le regole: al massimo 220 caratteri, solo fatti duraturi (niente popolazione, sindaci o cronaca), tradizioni e ipotesi presentate come tali. Oggi coprono tutte le 110 province, 186 dei 187 comuni di Milano e Brianza, 82 degli 88 quartieri di Milano, i 16 Länder, 397 dei 400 distretti tedeschi tutte le 199 nazioni e 192 delle 2980 regioni del mondo (Italia, Germania, Spagna, Francia, Regno Unito, Svizzera, Austria, Stati Uniti, Canada e Australia). Le mappe delle Alpi riusano le curiosità delle stesse aree nelle altre mappe: 49 regioni su 62 e 121 province e distretti su 394; mancano i distretti svizzeri e austriaci, i dipartimenti francesi, le regioni slovene e le contee croate e ungheresi. Per le aree senza curiosità il gioco mostra solo l'altra località. Un test controlla che ogni voce corrisponda a un'area della mappa, abbia una fonte valida e rispetti la lunghezza massima.
+Sono scritte a mano, una o due per area, verificate su fonti indicate in `sources` (Wikipedia, siti istituzionali, cataloghi dei beni culturali). Le regole: al massimo 220 caratteri, solo fatti duraturi (niente popolazione, sindaci o cronaca), tradizioni e ipotesi presentate come tali. Oggi coprono tutte le 110 province, 186 dei 187 comuni di Milano e Brianza, 82 degli 88 quartieri di Milano, i 16 Länder, 397 dei 400 distretti tedeschi tutte le 199 nazioni e 192 delle 2980 regioni del mondo (Italia, Germania, Spagna, Francia, Regno Unito, Svizzera, Austria, Stati Uniti, Canada e Australia). Nelle mappe delle Alpi hanno curiosità 61 regioni su 62 e 311 province e distretti su 394, in parte riprese dalle stesse aree delle altre mappe; mancano soprattutto distretti svizzeri. Per le aree senza curiosità il gioco mostra solo l'altra località. Un test controlla che ogni voce corrisponda a un'area della mappa, abbia una fonte valida e rispetti la lunghezza massima.
 
 ### Aggiungere una mappa
 
