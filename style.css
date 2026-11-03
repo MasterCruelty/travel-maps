@@ -7,6 +7,7 @@
   --sea: #a9d3e8;
   --land: #ebe7dc;
   --land-stroke: #a49d8e;
+  --land-out: #d6d3cc;        /* terra fuori dal gioco */
   --region-stroke: #6f6858;
   --label: #1f1f1f;
   --label-halo: rgba(255, 255, 255, .85);
@@ -38,6 +39,7 @@
     --land: #3a3d40;
     --g-none: #0a0a0c;
     --land-stroke: #5d6166;
+    --land-out: #2a2c2f;
     --region-stroke: #a5a9ae;
     --label: #f4f4f4;
     --label-halo: rgba(0, 0, 0, .75);
@@ -156,6 +158,10 @@ main { max-width: 560px; margin: 0 auto; padding: 10px 14px 48px; }
 .prov.hint { fill: var(--hint); stroke: var(--hint-stroke); stroke-dasharray: 4 3; stroke-width: 1.2; }
 .prov.solution { fill: var(--solution); }
 .prov.path-hl { stroke: var(--label); stroke-width: 1.6; }
+
+/* terre fuori dal gioco: nascoste nel quotidiano, dove la mappa è segreta */
+.context { fill: var(--land-out); stroke: none; pointer-events: none; }
+#map.fog #layer-context { display: none; }
 
 .region {
   fill: none; stroke: var(--region-stroke); stroke-width: 1.3;

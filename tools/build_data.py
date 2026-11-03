@@ -771,6 +771,27 @@ MAPS = {
 }
 
 
+# ---------- Terra fuori dal gioco ----------
+# Le terre emerse attorno alle aree di gioco (paesi vicini, territori esclusi) si
+# disegnano in grigio, così il bordo della mappa non sembra mare.
+LAND = None
+
+
+def context_land(simplified, cfg):
+    global LAND
+    if LAND is None:
+        name = 'ne_10m_land.geojson'
+        LAND = unary_union([geom(f) for f in fetch(NATURAL_EARTH + name, name)]).buffer(0)
+    x0, y0, x1, y1 = unary_union(simplified).bounds
+    # anche oltre i bordi, perché la mappa si può spostare e rimpicciolire
+    dx, dy = (x1 - x0) * 0.75, (y1 - y0) * 0.75
+    frame = shapely.box(max(x0 - dx, -180), max(y0 - dy, -90), min(x1 + dx, 180), min(y1 + dy, 90))
+    played = unary_union(simplified).buffer(cfg['touch'] * 2)
+    land = LAND.intersection(frame).difference(played).simplify(cfg['simplify'] * 1.5)
+    tiny = (frame.area / 2e5)          # isolette invisibili alla scala della mappa
+    return [p for p in polys_of(land) if p.area > tiny]
+
+
 # ---------- Costruzione ----------
 def build(key, cfg):
     proj = cfg['projection']
@@ -863,6 +884,7 @@ def build(key, cfg):
                     round(maxx - minx + 2 * margin, 1), round(maxy - miny + 2 * margin, 1)],
         'links': links,
         'groups': groups,
+        'context': to_path(context_land(simplified, cfg)),
         'areas': areas,
     }
     out = os.path.join(ROOT, 'data', f'{key}.json')
