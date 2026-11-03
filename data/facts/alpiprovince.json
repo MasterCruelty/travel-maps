@@ -1,4 +1,842 @@
 {
+ "AT-101": {
+  "facts": [
+   "Joseph Haydn, per decenni al servizio degli Esterházy, riposa a Eisenstadt nel mausoleo della Bergkirche, dove i suoi resti furono traslati da Vienna nel 1820."
+  ],
+  "sources": [
+   "https://burgenland.info/en/dc/detail/POI/haydn-church-with-haydn-mausoleum-and-calvary",
+   "https://www.wikipedia.org/wiki/Bergkirche_(Eisenstadt)"
+  ]
+ },
+ "AT-102": {
+  "facts": [
+   "Rust è la più piccola città statutaria d'Austria ed è detta la città delle cicogne: ogni estate decine di coppie nidificano sui camini delle case barocche e rinascimentali del centro."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Rust,_Burgenland",
+   "https://www.freistadt-rust.at/en/our-town/"
+  ]
+ },
+ "AT-103": {
+  "facts": [
+   "La cava romana di Sankt Margarethen, tra le più antiche e grandi d'Europa, ha fornito la pietra calcarea della Leitha per Carnuntum, per il duomo di Santo Stefano e per i palazzi del Ring di Vienna."
+  ],
+  "sources": [
+   "https://oris.hr/en/oris-magazine/overview-of-articles/[212]directing-a-natural-theatre,3552.html",
+   "https://repository.europe-geology.eu/egdidocs/eurolithos/st_margarethen.pdf"
+  ]
+ },
+ "AT-104": {
+  "facts": [
+   "Il castello di Güssing, documentato dal 1157, è il più antico del Burgenland e sorge sulla cima di un cono vulcanico spento; dal Cinquecento appartiene alla famiglia Batthyány."
+  ],
+  "sources": [
+   "https://burgguessing.at/en/history/",
+   "https://en.wikipedia.org/wiki/G%C3%BCssing"
+  ]
+ },
+ "AT-105": {
+  "facts": [
+   "Il 1° agosto 1664, sul fiume Raab tra Mogersdorf e l'abbazia di Szentgotthárd, l'esercito imperiale guidato da Raimondo Montecuccoli sconfisse gli Ottomani nella battaglia di San Gottardo."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Battle_of_Saint_Gotthard_(1664)",
+   "https://en.wikipedia.org/wiki/Mogersdorf"
+  ]
+ },
+ "AT-106": {
+  "facts": [
+   "Il castello di Forchtenstein, ancora proprietà degli Esterházy, custodisce la loro Schatzkammer: l'unica camera delle meraviglie del Seicento in Europa conservata con ambienti e arredi originali."
+  ],
+  "sources": [
+   "https://austria-forum.org/af/Wissenssammlungen/Burgen_und_Schl%C3%B6sser/Burgenland/Forchtenstein",
+   "https://www.mamilade.at/bgld/mattersburg/ausflugstipps/schlechtwetter/schatzkammer-auf-burg-forchtenstein"
+  ]
+ },
+ "AT-107": {
+  "facts": [
+   "Nel comune di Apetlon, nel parco nazionale Neusiedler See-Seewinkel, una piccola targa presso un laghetto salato segna il punto più basso dell'Austria, a 114 metri sul livello del mare."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Apetlon",
+   "https://www.burgenland.info/en/dc/detail/POI/lowest-measured-point-in-austria-114m-1"
+  ]
+ },
+ "AT-108": {
+  "facts": [
+   "Franz Liszt nacque il 22 ottobre 1811 a Raiding, dove il padre lavorava per l'amministrazione degli Esterházy; la casa natale è oggi un museo affiancato da una sala da concerto aperta nel 2006."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Liszthaus_Raiding",
+   "https://en.wikipedia.org/wiki/Raiding,_Austria"
+  ]
+ },
+ "AT-109": {
+  "facts": [
+   "Oberwart, in ungherese Felsőőr, è un centro storico della minoranza ungherese del Burgenland e ospita la più antica comunità calvinista dell'attuale Austria, tollerata come parrocchia articolare dal 1681."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Oberwart",
+   "https://en.wikipedia.org/wiki/Upper_%C5%90rs%C3%A9g"
+  ]
+ },
+ "AT-201": {
+  "facts": [
+   "Al centro del Neuer Platz di Klagenfurt si trova la fontana del Lindwurm, il drago della leggenda di fondazione della città, scolpito alla fine del Cinquecento in scisto cloritico."
+  ],
+  "sources": [
+   "https://www.visitklagenfurt.at/wp-content/uploads/2021/03/altstadtwand_deu.pdf",
+   "https://austria-forum.org/af/AEIOU/Lindwurm-Brunnen/Lindwurm-Brunnen_english"
+  ]
+ },
+ "AT-202": {
+  "facts": [
+   "Il medico e alchimista Paracelso trascorse la giovinezza a Villach, dove si trasferì nel 1502 con il padre Wilhelm von Hohenheim, che vi esercitava la professione medica."
+  ],
+  "sources": [
+   "https://austria-forum.org/af/Biographien/Paracelsus",
+   "https://en.wikipedia.org/wiki/Paracelsus"
+  ]
+ },
+ "AT-203": {
+  "facts": [
+   "Hermagor deve il nome a sant'Ermagora, secondo la tradizione primo vescovo di Aquileia: la parrocchia, citata dal 1169 e dedicata ai santi Ermagora e Fortunato, fu fondata dal patriarcato aquileiese."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hermagor_District",
+   "https://en.wikipedia.org/wiki/Hermagor-Pressegger_See"
+  ]
+ },
+ "AT-204": {
+  "facts": [
+   "Nella piana dello Zollfeld, presso Maria Saal, si trova il Trono ducale (Herzogstuhl), seggio di pietra del IX secolo dove venivano insediati i duchi di Carinzia, ricavato da pietre romane di Virunum."
+  ],
+  "sources": [
+   "https://austria-forum.org/af/AustriaWiki/Herzogstuhl",
+   "https://austria-forum.org/af/AustriaWiki/Maria_Saal"
+  ]
+ },
+ "AT-205": {
+  "facts": [
+   "Il castello di Hochosterwitz, su una rupe isolata del distretto, fu trasformato tra il 1570 e il 1586 da Georg von Khevenhüller in una fortezza la cui rampa d'accesso attraversa 14 porte."
+  ],
+  "sources": [
+   "https://www.burgenwelt.org/oesterreich/hochoster/burgenwelt-hochoster-oesterreich.pdf",
+   "https://www.bergwelten.com/a/rund-um-die-burg-hochosterwitz-in-kaernten"
+  ]
+ },
+ "AT-206": {
+  "facts": [
+   "Il castello di Porcia a Spittal, iniziato nel 1533 per Gabriel von Salamanca, è uno dei più importanti edifici rinascimentali d'Austria; dal 1961 il suo cortile ospita ogni estate le Komödienspiele."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Schloss_Porcia",
+   "https://austria-forum.org/af/AEIOU/Porcia%2C_Schloss/Porcia%2C_Schloss_english?skin=raw"
+  ]
+ },
+ "AT-207": {
+  "facts": [
+   "Il 25 gennaio 1348, durante il terremoto del Friuli, un versante del monte Dobratsch franò a valle: l'accumulo di detriti, detto Schütt, è tra i più vasti delle Alpi orientali."
+  ],
+  "sources": [
+   "https://austria-forum.org/af/AustriaWiki/Dobratsch",
+   "https://www.zobodat.at/pdf/CAR-SH_Schuett_0222-0227.pdf"
+  ]
+ },
+ "AT-208": {
+  "facts": [
+   "Il distretto rientrava nella zona A del plebiscito di Carinzia del 10 ottobre 1920: benché in prevalenza di lingua slovena, la zona votò al 59% per restare all'Austria anziché unirsi alla Jugoslavia."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Carinthian_plebiscite"
+  ]
+ },
+ "AT-209": {
+  "facts": [
+   "L'abbazia benedettina di St. Paul im Lavanttal, fondata nel 1091, è detta lo \"scrigno della Carinzia\" per le sue collezioni d'arte, e custodisce le tombe di tredici Asburgo delle origini."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Saint_Paul%27s_Abbey,_Lavanttal",
+   "https://www.kaerntencard.at/sommer/en/betriebe/treasury-of-carinthia/"
+  ]
+ },
+ "AT-210": {
+  "facts": [
+   "Secondo una leggenda del Cinquecento, il re di Polonia Boleslao II, esiliato dopo l'uccisione di san Stanislao, visse i suoi ultimi anni come penitente muto nell'abbazia di Ossiach, dove una tomba gli è attribuita."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ossiach_Abbey",
+   "https://austria-forum.org/af/AEIOU/Ossiach/Ossiach_english?skin=raw"
+  ]
+ },
+ "AT-301": {
+  "facts": [
+   "Krems compare in un documento del 995 come \"urbs quae dicitur Chremisa\" ed è tra le città più antiche d'Austria.",
+   "Lo Steiner Tor, porta tardogotica del 1480 circa, è l'unica sopravvissuta delle quattro porte dell'antica cinta di Krems ed è il simbolo della città."
+  ],
+  "sources": [
+   "https://www.museumkrems.at/fileadmin/Subseiten/Museum_Krems/Dateien/Formulare/Rundgang_museumkrems_SekII.pdf",
+   "https://krems.info/en/steiner-tor",
+   "https://en.wikipedia.org/wiki/Krems_an_der_Donau"
+  ]
+ },
+ "AT-302": {
+  "facts": [
+   "Sankt Pölten vanta il più antico diritto cittadino documentato d'Austria, concesso nel 1159 dal vescovo Corrado di Passavia, ed è anche il capoluogo regionale più giovane, scelto per la Bassa Austria nel 1986."
+  ],
+  "sources": [
+   "https://www.noe.gv.at/noe/84383_stadtrecht.html",
+   "https://noe.gv.at/noe/40_Jahre_Landeshauptstadt.html"
+  ]
+ },
+ "AT-303": {
+  "facts": [
+   "Waidhofen an der Ybbs dovette la sua ricchezza alla lavorazione del ferro della Stiria; sulla torre civica, alta 50 metri, un quadrante segna le 11.45, ricordata come l'ora della vittoria sui Turchi."
+  ],
+  "sources": [
+   "https://login.waidhofen.at/getmedia/4721/3",
+   "https://www.tips.at/nachrichten/waidhofen-ybbs/kultur/465462-blick-ins-tuermerstuebchen-saisoneroeffnung-im-stadtturm"
+  ]
+ },
+ "AT-304": {
+  "facts": [
+   "L'imperatore Massimiliano I nacque nel 1459 nel castello di Wiener Neustadt e vi è sepolto sotto l'altare maggiore della cappella di San Giorgio.",
+   "Dal 1751 il castello ospita l'Accademia militare teresiana, fondata da Maria Teresa per la formazione degli ufficiali."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Burg_Wiener_Neustadt",
+   "https://en.wikipedia.org/wiki/Theresian_Military_Academy"
+  ]
+ },
+ "AT-305": {
+  "facts": [
+   "Il distretto è nel cuore del Mostviertel, la terra del sidro di pere: la Moststraße attraversa colline punteggiate di peri secolari, che in aprile fioriscono a centinaia di migliaia."
+  ],
+  "sources": [
+   "https://www.lower-austria.info/tours/most-cycle-route",
+   "https://www.tips.at/nachrichten/amstetten/land-leute/531759-birnbaumbluete-an-der-moststrasse"
+  ]
+ },
+ "AT-306": {
+  "facts": [
+   "Beethoven trascorse a Baden le estati dal 1821 al 1823 e nella casa di Rathausgasse 10 compose parti essenziali della Nona sinfonia.",
+   "Nel 2021 Baden è entrata nel patrimonio UNESCO come unica città austriaca del sito \"Grandi città termali d'Europa\"."
+  ],
+  "sources": [
+   "https://www.beethovenhaus-baden.at/wp-content/uploads/2024/03/PM-Beethovenhaus-Baden-Presseinfo.pdf",
+   "https://lower-austria.info/the-spa-town-of-baden"
+  ]
+ },
+ "AT-307": {
+  "facts": [
+   "A Petronell-Carnuntum sorgeva Carnuntum, capoluogo della provincia romana della Pannonia Superiore; del IV secolo è l'Heidentor, arco trionfale a quattro fornici oggi in parte conservato."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Carnuntum",
+   "https://en.wikipedia.org/wiki/Heidentor"
+  ]
+ },
+ "AT-308": {
+  "facts": [
+   "Tra Dürnkrut e Jedenspeigen si combatté il 26 agosto 1278 la battaglia del Marchfeld: Rodolfo d'Asburgo sconfisse Ottocaro II di Boemia, che morì nello scontro, aprendo agli Asburgo il dominio sull'Austria."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Battle_on_the_Marchfeld",
+   "https://austria-forum.org/af/AEIOU/Ottokar_II.%2C_P%C5%99emysl/Ottokar_II.%2C_P%C5%99emysl_english"
+  ]
+ },
+ "AT-309": {
+  "facts": [
+   "Con il trattato di Saint-Germain la parte settentrionale di Gmünd, con la stazione e le officine ferroviarie, passò alla Cecoslovacchia, formando nel 1920 la città di České Velenice, separata dal fiume Lainsitz."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Gm%C3%BCnd,_Lower_Austria",
+   "https://en.wikipedia.org/wiki/%C4%8Cesk%C3%A9_Velenice_railway_station"
+  ]
+ },
+ "AT-310": {
+  "facts": [
+   "Sotto il centro di Retz si estende l'Erlebniskeller, rete di cantine vinicole lunga circa 20 km e presentata come la più grande cantina storica d'Austria."
+  ],
+  "sources": [
+   "https://www.lower-austria.info/destinations/a-retzer-erlebniskeller",
+   "https://www.noe.gv.at/noe/112422_retzer-erlebniskeller.html"
+  ]
+ },
+ "AT-311": {
+  "facts": [
+   "Nell'abbazia di Altenburg la sala della biblioteca, lunga 48 metri, è coperta da cupole affrescate da Paul Troger nel 1742, tra cui la visita della regina di Saba a Salomone."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Altenburg_Abbey"
+  ]
+ },
+ "AT-312": {
+  "facts": [
+   "Il castello di Kreuzenstein, presso Leobendorf, fu ricostruito tra il 1874 e il 1906 dal conte Johann Nepomuk Wilczek sulle rovine medievali, come museo per le sue collezioni d'arte."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Burg_Kreuzenstein",
+   "https://austria-forum.org/af/AEIOU/Kreuzenstein"
+  ]
+ },
+ "AT-313": {
+  "facts": [
+   "La Venere di Willendorf, statuetta di circa 29.500 anni fa, fu trovata il 7 agosto 1908 durante i lavori della ferrovia lungo il Danubio, a Willendorf nella Wachau; oggi è al Museo di storia naturale di Vienna."
+  ],
+  "sources": [
+   "https://noe.gv.at/noe/Geschichte-Landeskunde/Venus_Willendorf.html",
+   "https://www.nhm.at/presse/top10/venus_of_willendorf"
+  ]
+ },
+ "AT-314": {
+  "facts": [
+   "L'abbazia cistercense di Lilienfeld fu fondata nel 1202 dal duca babenberghese Leopoldo VI, che vi è sepolto; è considerata il più grande complesso monastico medievale dell'Austria."
+  ],
+  "sources": [
+   "https://austria-forum.org/af/Heimatlexikon/Zisterzienserstift_Lilienfeld",
+   "https://www.lilienfeld.at/Zisterzienserstift_Lilienfeld"
+  ]
+ },
+ "AT-315": {
+  "facts": [
+   "L'abbazia benedettina di Melk, sul Danubio, fu ricostruita in forme barocche dal 1702 su progetto di Jakob Prandtauer; è il maggiore complesso monastico del barocco austriaco."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Stift_Melk",
+   "https://www.stiftmelk.at/en/visit-experience/melk-abbey-highlights-of-your-visit/"
+  ]
+ },
+ "AT-316": {
+  "facts": [
+   "A Mistelbach, nel Weinviertel, ha sede dal 2007 il museo dedicato a Hermann Nitsch, esponente dell'Azionismo viennese, che morì nella città nel 2022."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Museumszentrum_Mistelbach",
+   "https://www.noe.gv.at/noe/Kunst-Kultur/nitsch_museum.html"
+  ]
+ },
+ "AT-317": {
+  "facts": [
+   "La Seegrotte di Hinterbrühl è un'ex miniera di gesso allagata nel 1912 da un'esplosione: oggi è considerata il più grande lago sotterraneo d'Europa e si visita in barca."
+  ],
+  "sources": [
+   "https://www.wienerwald.info/ausflug-freizeit/seegrotte-hinterbruehl",
+   "https://www.noen.at/ausflugsziele/industrieviertel/hinterbruehl-europas-groesste-unterseewelt-72981284"
+  ]
+ },
+ "AT-318": {
+  "facts": [
+   "La ferrovia del Semmering, progettata dal veneziano Carl von Ghega e aperta nel 1854, è considerata la prima ferrovia d'alta montagna del mondo; nel 1998 è stata la prima linea ferroviaria iscritta nel patrimonio UNESCO."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Semmeringbahn",
+   "https://suedbahnmuseum.at/at/museum/unesco-weltkulturerbe"
+  ]
+ },
+ "AT-319": {
+  "facts": [
+   "L'abbazia dei canonici agostiniani di Herzogenburg fu fondata nel 1112 dal vescovo Ulrico di Passavia e trasferita in seguito nella sede attuale per sfuggire alle piene del Danubio."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Stift_Herzogenburg",
+   "https://www.stift-herzogenburg.at/leben-im-stift/die-augustiner-chorherren/"
+  ]
+ },
+ "AT-320": {
+  "facts": [
+   "Nella dolina del Grünloch, presso Lunz am See, il 19 febbraio 1932 furono misurati -52,6 °C, la temperatura più bassa mai registrata in Austria."
+  ],
+  "sources": [
+   "https://uwz.at/de/a/kaltluftsee-gruenloch",
+   "https://www.sn.at/panorama/oesterreich/das-sind-die-kuehlsten-orte-oesterreichs-hier-finden-sie-abkuehlung-art-658599"
+  ]
+ },
+ "AT-321": {
+  "facts": [
+   "Il pittore Egon Schiele nacque a Tulln il 12 giugno 1890 nell'edificio della stazione, dove il padre era capostazione; la città gli dedica un museo nell'ex carcere distrettuale."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Egon_Schiele",
+   "https://www.tulln.at/en/experience/city-culture/egon-schiele/egon-schiele-museum"
+  ]
+ },
+ "AT-322": {
+  "facts": [
+   "Dal castello di Raabs an der Thaya, chiamato Rakous dai vicini cechi, deriva il nome ceco e slovacco dell'Austria: Rakousko, «la terra oltre Raabs»."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Burg_Raabs_an_der_Thaya",
+   "https://www.raabs-thaya.gv.at/Leben_in_Raabs/Geschichte"
+  ]
+ },
+ "AT-323": {
+  "facts": [
+   "L'altopiano calcareo della Hohe Wand è parco naturale dal 1969; dalla piattaforma panoramica Skywalk, sporgente sulla parete rocciosa, lo sguardo spazia sul bacino di Vienna."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hohe_Wand_Nature_Park",
+   "https://www.naturparke.at/naturpark/niederoesterreich/hohe-wand/"
+  ]
+ },
+ "AT-325": {
+  "facts": [
+   "L'abbazia cistercense di Zwettl fu fondata nel 1138 da Hadmar I di Kuenring ed è considerata il terzo monastero cistercense più antico al mondo ancora attivo senza interruzioni."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Stift_Zwettl",
+   "https://www.stift-zwettl.at/kloster-und-pfarren/geschichte/"
+  ]
+ },
+ "AT-401": {
+  "facts": [
+   "La Linzer Torte compare in un ricettario del 1653 conservato nell'abbazia di Admont: è considerata la più antica torta di cui si conosca una ricetta con il proprio nome."
+  ],
+  "sources": [
+   "https://www.bmluk.gv.at/themen/lebensmittel/trad-lebensmittel/backerzeugnisse/linzer_torte.html",
+   "https://linzjournal.at/genuss/linzer-torte/"
+  ]
+ },
+ "AT-402": {
+  "facts": [
+   "Il Quintetto «La trota» di Schubert nacque su richiesta di Sylvester Paumgartner, violoncellista dilettante di Steyr conosciuto dal compositore durante il soggiorno in città del 1819."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Trout_Quintet"
+  ]
+ },
+ "AT-403": {
+  "facts": [
+   "L'imperatore Massimiliano I d'Asburgo morì nel castello di Wels il 12 gennaio 1519, durante il viaggio da Innsbruck a Linz; fu sepolto a Wiener Neustadt."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Maximilian_I._(HRR)",
+   "https://www.oberoesterreich.at/oesterreich-poi/detail/430032809/kaiser-maximilian-i-in-der-burg-wels.html"
+  ]
+ },
+ "AT-404": {
+  "facts": [
+   "Secondo la tradizione Hans Staininger, capitano della città di Braunau, morì nel 1567 inciampando nella propria lunghissima barba; la barba è conservata nel museo distrettuale."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hans_Staininger_(mayor)",
+   "https://www.braunau.at/Unsere_Stadt/Geschichte/Stadtgeschichte/1504_-_1799"
+  ]
+ },
+ "AT-405": {
+  "facts": [
+   "Il 30 ottobre 1613 l'astronomo Giovanni Keplero sposò a Eferding, in seconde nozze, Susanna Reuttinger, figlia di un borghese della città."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Johannes_Kepler",
+   "http://www.regef.at/Eferding_feiert_400_Jahre_Kepler-Hochzeit_5"
+  ]
+ },
+ "AT-406": {
+  "facts": [
+   "Freistadt conserva quasi intatte le mura medievali; il birrificio cittadino è della Braucommune, che riunisce i proprietari delle 149 case del centro storico, le cui quote sono legate agli immobili."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Braucommune_Freistadt",
+   "https://www.wienerzeitung.at/a/wo-das-bier-einer-stadt-gehoert"
+  ]
+ },
+ "AT-407": {
+  "facts": [
+   "La miniera di sale di Hallstatt è ritenuta la più antica del mondo ancora in attività; la necropoli sopra il paese ha dato il nome alla cultura di Hallstatt della prima età del ferro."
+  ],
+  "sources": [
+   "https://www.hallstatt.info/salzwelten/",
+   "https://austria-forum.org/af/Heimatlexikon/Hallstatt"
+  ]
+ },
+ "AT-408": {
+  "facts": [
+   "Il castello di Parz, presso Grieskirchen, conserva affreschi rinascimentali del 1580 circa voluti dal protestante Sigmund von Pollheim, con scene polemiche contro il papato, scialbati durante la Controriforma."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Schloss_Parz",
+   "https://www.oberoesterreich.at/oesterreich-poi/detail/401869/landschloss-parz-mit-renaissancegarten.html"
+  ]
+ },
+ "AT-409": {
+  "facts": [
+   "L'abbazia benedettina di Kremsmünster fu fondata nel 777 dal duca di Baviera Tassilo III; vi si conserva il calice di Tassilo, capolavoro di oreficeria dell'VIII secolo con il nome del duca e della moglie Liutpirc."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Tassilokelch",
+   "https://www.stift-kremsmuenster.at/wissenschaft/tassilokelch"
+  ]
+ },
+ "AT-410": {
+  "facts": [
+   "Anton Bruckner, nato ad Ansfelden, fu organista dell'abbazia di Sankt Florian e per sua volontà è sepolto nella cripta della basilica, proprio sotto il grande organo che oggi porta il suo nome."
+  ],
+  "sources": [
+   "http://www.stift-st-florian.at/stift-st-florian/stiftsbasilika/gruft.html",
+   "http://www.stift-st-florian.at/musik/anton-bruckner.html"
+  ]
+ },
+ "AT-411": {
+  "facts": [
+   "A Grein sul Danubio il teatro civico, ricavato nel 1791 dai cittadini nel granaio del municipio, è considerato il più antico teatro borghese dell'Austria ancora conservato."
+  ],
+  "sources": [
+   "https://austria-forum.org/af/AustriaWiki/Stadttheater_Grein",
+   "https://www.stadttheater-grein.at/"
+  ]
+ },
+ "AT-412": {
+  "facts": [
+   "Ried e l'Innviertel appartenevano alla Baviera fino alla pace di Teschen del 1779, che li assegnò all'Austria; tornati bavaresi nel 1810, passarono definitivamente all'Austria nel 1816."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Friede_von_Teschen",
+   "https://en.wikipedia.org/wiki/Innviertel"
+  ]
+ },
+ "AT-413": {
+  "facts": [
+   "L'abbazia di Schlägl, ai piedi della Selva Boema, è retta dal 1218 dai canonici premonstratensi; la sua birra è documentata dal 1580 e il birrificio è uno dei due monastici ancora attivi in Austria."
+  ],
+  "sources": [
+   "https://www.oberoesterreich.at/oesterreich-poi/detail/430001040/praemonstratenser-chorherrenstift-schlaegl.html",
+   "https://www.gastroszene.at/ausflugstipps/stiftsbrauerei-schlaegl"
+  ]
+ },
+ "AT-414": {
+  "facts": [
+   "Nella piazza principale di Schärding, cittadina barocca sull'Inn al confine con la Baviera, si allinea la Silberzeile, una fila di case borghesi colorate con i caratteristici frontoni a campana."
+  ],
+  "sources": [
+   "https://www.schaerding.at/",
+   "https://ooe.orf.at/magazin/stories/silberzeile/"
+  ]
+ },
+ "AT-415": {
+  "facts": [
+   "A Garsten sorge un'abbazia benedettina fondata nel 1082 e soppressa nel 1787: dal 1851 i suoi edifici ospitano un carcere, mentre l'antica chiesa abbaziale è diventata parrocchiale."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Stift_Garsten",
+   "https://commons.wikimedia.org/wiki/Category:Justizanstalt_Garsten?uselang=de"
+  ]
+ },
+ "AT-416": {
+  "facts": [
+   "Bad Leonfelden, nel Mühlviertel, è legata al pan di zenzero: la Lebzelterei Kastner vi produce Lebkuchen da oltre 460 anni e ne racconta la storia nel museo Lebzeltarium."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bad_Leonfelden",
+   "https://www.kastner-austria.at/cafeundfabrikverkauf-bad-leonfelden/"
+  ]
+ },
+ "AT-417": {
+  "facts": [
+   "Dal 1900 al 1916 Gustav Klimt trascorse le estati sull'Attersee e tra il 1908 e il 1912 dipinse più volte lo Schloss Kammer, il castello che si affaccia sul lago."
+  ],
+  "sources": [
+   "https://sammlung.belvedere.at/objects/3112/schloss-kammer-am-attersee-iii",
+   "https://sammlung.belvedere.at/objects/8691/allee-zum-schloss-kammer"
+  ]
+ },
+ "AT-418": {
+  "facts": [
+   "L'abbazia benedettina di Lambach, fondata nel 1056, conserva affreschi dell'XI secolo, tra le più antiche pitture murali romaniche dell'Austria, riscoperti nel 1868 e nel 1957."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Stift_Lambach",
+   "https://www.stift-lambach.at/beinahe-1000-jahre-alte-fresken/"
+  ]
+ },
+ "AT-501": {
+  "facts": [
+   "La fortezza di Hohensalzburg, iniziata nel 1077 dall'arcivescovo Gebhard, è considerata il più grande castello interamente conservato dell'Europa centrale e non fu mai conquistata con le armi."
+  ],
+  "sources": [
+   "https://www.salzburg.info/en/sights/top10/hohensalzburg-fortress"
+  ]
+ },
+ "AT-502": {
+  "facts": [
+   "Il compositore di \"Stille Nacht\", Franz Xaver Gruber, visse e morì a Hallein nel 1863, dove è sepolto e dove la sua ex casa ospita oggi un museo dedicato al canto.",
+   "Sul Dürrnberg, sopra Hallein, si estraeva sale già in epoca celtica: il Keltenmuseum della città espone reperti di quella cultura e della storia delle saline."
+  ],
+  "sources": [
+   "https://www.stillenacht.at/orte/hallein",
+   "https://de.wikipedia.org/wiki/Keltenmuseum_Hallein",
+   "https://en.wikipedia.org/wiki/Hallein"
+  ]
+ },
+ "AT-503": {
+  "facts": [
+   "A Oberndorf, la notte di Natale del 1818, Joseph Mohr e Franz Xaver Gruber eseguirono per la prima volta \"Stille Nacht\" nella chiesa di San Nicola; sul luogo sorge oggi la Stille-Nacht-Kapelle."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Stille-Nacht-Kapelle",
+   "https://en.wikipedia.org/wiki/Silent_Night_Chapel"
+  ]
+ },
+ "AT-504": {
+  "facts": [
+   "Presso Werfen si apre l'Eisriesenwelt, considerata la più grande grotta di ghiaccio del mondo: scoperta nel 1879, si estende per circa 40 km, ma solo il primo chilometro è ghiacciato."
+  ],
+  "sources": [
+   "https://www.eisriesenwelt.at/en/"
+  ]
+ },
+ "AT-505": {
+  "facts": [
+   "Nel Lungau sfilano i Samson, gigantesche figure portate in processione; la tradizione, attestata a Tamsweg dal 1720, è iscritta nel registro austriaco del patrimonio immateriale."
+  ],
+  "sources": [
+   "https://www.salzburgerland.com/de/magazin/samsonumzuege-riesen-im-lungau-unterwegs/",
+   "https://trachtenbibel.at/der-samson/"
+  ]
+ },
+ "AT-506": {
+  "facts": [
+   "Le cascate di Krimml, nel parco nazionale degli Alti Tauri, con un salto complessivo di 380 metri in tre balzi sono le più alte dell'Austria."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Krimmler_Wasserf%C3%A4lle",
+   "https://www.krimmler-wasserwelten.at/en/waterfall"
+  ]
+ },
+ "AT-601": {
+  "facts": [
+   "Sull'orologio dell'Uhrturm, simbolo di Graz sullo Schlossberg, la lancetta lunga segna le ore e quella corta i minuti: in origine c'era solo quella delle ore, fatta grande per essere letta da lontano."
+  ],
+  "sources": [
+   "https://www.graz.at/cms/beitrag/10267235/7776010/der_grazer_uhrturm.html",
+   "https://www.weekend.at/bundesland/steiermark/graz-uhrturm-zeiger-verkehrt"
+  ]
+ },
+ "AT-603": {
+  "facts": [
+   "Il distretto è il cuore della zona dello Schilcher, rosato ottenuto dal vitigno Blauer Wildbacher, descritto per la prima volta nel 1580 e oggi tutelato dalla denominazione Weststeiermark DAC."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Schilcher_(wine)",
+   "https://www.bmluk.gv.at/themen/lebensmittel/trad-lebensmittel/getraenke/schilcher.html"
+  ]
+ },
+ "AT-606": {
+  "facts": [
+   "A Thal, alle porte di Graz, nacque Arnold Schwarzenegger: la sua casa natale, un'ex casa forestale del 1806, è dal 2011 un museo dedicato alla sua vita."
+  ],
+  "sources": [
+   "https://www.graztourismus.at/en/sightseeing-culture/sights/arnold-schwarzenegger-museum_shg_4223",
+   "https://www.stadt-graz.at/museen-ausstellungen/arnold-schwarzenegger-museum.html"
+  ]
+ },
+ "AT-610": {
+  "facts": [
+   "Presso Leibnitz sorgeva Flavia Solva, unica città romana dell'attuale Stiria, che ottenne lo statuto cittadino sotto Vespasiano intorno al 70 d.C.; i resti sono visitabili a Wagna."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Flavia_Solva",
+   "https://www.museum-joanneum.at/flavia-solva/ueber-uns/geschichte"
+  ]
+ },
+ "AT-611": {
+  "facts": [
+   "A Leoben si trova l'abbazia di Göss, fondata prima del 1020 e considerata il più antico monastero della Stiria; nei suoi edifici ha sede dal 1860 la birreria Gösser."
+  ],
+  "sources": [
+   "https://www.aeiou.at/aeiou.encyclop.g/g584832.htm",
+   "https://www.tourismus-leoben.at/at/kultur-ausfluege/fuehrungen/fuehrung-stift-goess.html"
+  ]
+ },
+ "AT-612": {
+  "facts": [
+   "L'abbazia benedettina di Admont custodisce la più grande sala di biblioteca monastica del mondo, lunga circa 70 metri, completata nel 1776 e scampata quasi intatta all'incendio del 1865."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Stift_Admont",
+   "https://stiftadmont.at/en/about-the-abbey-library/"
+  ]
+ },
+ "AT-614": {
+  "facts": [
+   "A Murau si produce birra dal 1495: la Murauer Brauerei, unica sopravvissuta delle tante birrerie cittadine dell'Ottocento, è dal 1910 una cooperativa e ospita il museo Brauerei der Sinne."
+  ],
+  "sources": [
+   "https://museen.de/brauerei-der-sinne-murau.html",
+   "https://www.alpen-guide.de/reisefuehrer/poi/brauereimuseum-murau"
+  ]
+ },
+ "AT-616": {
+  "facts": [
+   "A Piber, frazione di Köflach, ha sede l'allevamento dei cavalli lipizzani: dal 1920 vi nascono gli stalloni destinati alla Scuola di equitazione spagnola di Vienna."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Bundesgest%C3%BCt_Piber"
+  ]
+ },
+ "AT-617": {
+  "facts": [
+   "La chiesa barocca sul Weizberg, sopra Weiz, è considerata il capolavoro dell'architetto Joseph Hueber; consacrata nel 1776, è stata elevata a basilica minore nel 2017-2018."
+  ],
+  "sources": [
+   "https://de.wikipedia.org/wiki/Weizbergkirche",
+   "https://www.weiz.at/Basilika_am_Weizberg_4"
+  ]
+ },
+ "AT-620": {
+  "facts": [
+   "A Spielberg si trova il circuito oggi chiamato Red Bull Ring, inaugurato nel 1969 come Österreichring e poi noto come A1-Ring, sede del Gran Premio d'Austria di Formula 1."
+  ],
+  "sources": [
+   "https://www.redbullring.com/en/history/",
+   "https://www.steiermark.com/en/Murtal/Motorsport/Red-Bull-Ring"
+  ]
+ },
+ "AT-621": {
+  "facts": [
+   "La basilica di Mariazell, che custodisce la statua lignea della Magna Mater Austriae, è il principale santuario mariano d'Austria; secondo la leggenda il monaco Magnus vi portò la statua nel 1157."
+  ],
+  "sources": [
+   "https://de.m.wikipedia.org/wiki/Basilika_Mariazell",
+   "https://austria-forum.org/af/AustriaWiki/Mariazell"
+  ]
+ },
+ "AT-622": {
+  "facts": [
+   "Il complesso termale di Bad Blumau, aperto nel 1997 e progettato artisticamente da Friedensreich Hundertwasser, è considerato la più grande opera d'arte abitabile dell'artista viennese."
+  ],
+  "sources": [
+   "https://bad-blumau.gv.at/freizeit-und-tourismus/rogner-bad-blumau"
+  ]
+ },
+ "AT-623": {
+  "facts": [
+   "La Riegersburg sorge su una rupe di basalto di origine vulcanica; il castello, oggi dei Liechtenstein, è legato alla figura di Elisabeth Katharina Wechsler, detta la Gallerin, e alla caccia alle streghe del Seicento."
+  ],
+  "sources": [
+   "https://de.m.wikipedia.org/wiki/Riegersburg_(Steiermark)",
+   "https://www.riegersburg.gv.at/tourismus/tourismus"
+  ]
+ },
+ "AT-701": {
+  "facts": [
+   "Il Tettuccio d'oro (Goldenes Dachl), simbolo di Innsbruck, fu realizzato intorno al 1500 per l'imperatore Massimiliano I ed è coperto da 2.657 tegole di rame dorato a fuoco."
+  ],
+  "sources": [
+   "https://www.tirol.at/aktivitaeten/ausflugsziele/pois/goldenes-dachl-1",
+   "https://www.tirol.tl/de/highlights/museen-ausstellungen/museum-goldenes-dachl/"
+  ]
+ },
+ "AT-702": {
+  "facts": [
+   "Lo Schemenlaufen, il carnevale in maschera di Imst, è iscritto dal 2012 nella lista UNESCO del patrimonio culturale immateriale.",
+   "A Imst Hermann Gmeiner fondò nel 1949 il primo villaggio SOS per l'infanzia; il fondatore è sepolto proprio nel villaggio."
+  ],
+  "sources": [
+   "https://austria-forum.org/af/AustriaWiki/Imst",
+   "https://en.wikipedia.org/wiki/Hermann_Gmeiner",
+   "https://www.vol.at/65-jahre-sos-kinderdorf-wie-aus-einem-dorf-500-wurden/3939672"
+  ]
+ },
+ "AT-703": {
+  "facts": [
+   "Nella zecca di Hall in Tirol fu coniato dal 1486 il Guldiner dell'arciduca Sigismondo, grande moneta d'argento considerata il primo tallero della storia."
+  ],
+  "sources": [
+   "https://www.tirol.gv.at/fileadmin/themen/kunst-kultur/museum/Museen_in_Tirol/Fachartikel_A-Z_2010-2022/Hall-MuenzeHall_OdM_04-2018_SG.pdf",
+   "https://austria-forum.org/af/Wissenssammlungen/Museen/Burg_Hasegg%2C_Hall"
+  ]
+ },
+ "AT-704": {
+  "facts": [
+   "Dal 1931 Kitzbühel ospita le gare dell'Hahnenkamm: la discesa libera sulla pista Streif è considerata la più difficile del circuito di Coppa del mondo."
+  ],
+  "sources": [
+   "https://www.tirol.tl/de/kalender/details/internationales-hahnenkammrennen/",
+   "https://www.vienna.at/13-zahlen-zur-streif-zwischen-grossen-siegen-rekorden-und-schweren-stuerzen/5625887"
+  ]
+ },
+ "AT-705": {
+  "facts": [
+   "Dalla fortezza di Kufstein suona ogni giorno a mezzogiorno la Heldenorgel, organo all'aperto costruito nel 1931 in memoria dei caduti della Prima guerra mondiale."
+  ],
+  "sources": [
+   "https://www.tirol.at/blog/b-empfehlungen/ein-tag-in-kufstein",
+   "https://www.kitzbueheler-alpen.com/de/kam/reisefuehrer/festung-kufstein.html"
+  ]
+ },
+ "AT-706": {
+  "facts": [
+   "A St. Anton am Arlberg Hannes Schneider fondò nel 1921 la prima scuola di sci austriaca e sviluppò la tecnica dell'Arlberg, modello per l'insegnamento dello sci nel mondo."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Arlberg_technique",
+   "https://www.skiarlberg.at/en/winter/ski-heritage",
+   "https://tirol.gv.at/fileadmin/themen/kunst-kultur/museum/Museen_in_Tirol/Fachartikel_A-Z_2010-2022/StAntonArlberg-MuseumStAntonAmArlberg_OdM_12-2016_SM.pdf"
+  ]
+ },
+ "AT-707": {
+  "facts": [
+   "A Dölsach, pochi chilometri a est di Lienz, si trovano gli scavi di Aguntum, città romana del Norico elevata a municipium sotto l'imperatore Claudio."
+  ],
+  "sources": [
+   "https://www.tyrol.tl/en/highlights/museums-and-exhibitions/roman-city-and-museum-aguntum/",
+   "https://www1.leiza.de/transformation/noricum/aguntum/aguntum-english.htm"
+  ]
+ },
+ "AT-708": {
+  "facts": [
+   "Presso Reutte il ponte sospeso pedonale highline179, lungo circa 406 metri e inaugurato nel 2014, collega le rovine del castello di Ehrenberg al Fort Claudia, sopra la strada del Fernpass."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Highline179"
+  ]
+ },
+ "AT-709": {
+  "facts": [
+   "Tra Quattrocento e Cinquecento Schwaz fu uno dei maggiori centri minerari d'Europa grazie all'argento e al rame; tra i principali finanziatori delle miniere c'erano i Fugger di Augusta."
+  ],
+  "sources": [
+   "https://www.silberbergwerk.at/en/history",
+   "https://www.tirol.tl/de/tirol/achensee-und-silberregion-karwendel/schwaz/"
+  ]
+ },
+ "AT-801": {
+  "facts": [
+   "A Bludenz si produce cioccolato dalla fine dell'Ottocento, quando Suchard vi aprì uno stabilimento; oggi vi si fabbricano le grandi tavolette Milka."
+  ],
+  "sources": [
+   "https://www.walsertal.at/bludenz/en/cultural-path-industrial-culture-bludenz_vc4154",
+   "https://www.mondelezinternational.com/Germany-Austria/"
+  ]
+ },
+ "AT-802": {
+  "facts": [
+   "Il Festival di Bregenz nacque nel 1946 con spettacoli allestiti su due chiatte; oggi le opere vanno in scena sul grande palcoscenico galleggiante sul lago di Costanza."
+  ],
+  "sources": [
+   "https://bregenzerfestspiele.com/en/festspielzeit/80-years-new-ground",
+   "https://en.wikipedia.org/wiki/Bregenzer_Festspiele"
+  ]
+ },
+ "AT-803": {
+  "facts": [
+   "Nella biblioteca del palazzo di Hohenems furono ritrovati nel 1755 e nel 1779 due dei principali manoscritti del Canto dei Nibelunghi, i codici C e A."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Nibelungenlied",
+   "https://austria-forum.org/af/AustriaWiki/Palast_Hohenems"
+  ]
+ },
+ "AT-804": {
+  "facts": [
+   "Il giovane Arthur Conan Doyle, futuro autore di Sherlock Holmes, studiò nel 1875-76 al collegio gesuita Stella Matutina di Feldkirch."
+  ],
+  "sources": [
+   "https://www.feldkirch.at/fileadmin/user_upload/document/Stadtarchiv/2009_4-August_Sherlock_Holmes_an_der_Stella_Matutina.pdf",
+   "https://en.wikipedia.org/wiki/Stella_Matutina_(Jesuit_school)"
+  ]
+ },
  "AT-900": {
   "facts": [
    "La tradizione dei caffè viennesi è iscritta dal 2011 nel patrimonio culturale immateriale UNESCO dell'Austria."
@@ -6,6 +844,541 @@
   "sources": [
    "https://en.wikipedia.com/wiki/Kaffeehaus",
    "https://www.austria.info/it/ispirazione/cultura-caffe/"
+  ]
+ },
+ "CH-1001": {
+  "facts": [
+   "Il museo di Estavayer-le-Lac è noto come museo delle rane: espone 108 rane imbalsamate a metà Ottocento, attribuite a François Perrier, in scene di vita quotidiana."
+  ],
+  "sources": [
+   "https://fribourg.ch/fr/estavayer-payerne/musees/musee-destavayer-le-lac-et-ses-grenouilles/",
+   "https://en.wikipedia.org/wiki/Museum_of_Estavayer-le-Lac"
+  ]
+ },
+ "CH-1002": {
+  "facts": [
+   "Il castello duecentesco di Romont ospita il Vitromusée, unico museo svizzero interamente dedicato all'arte del vetro e della vetrata, dal Medioevo a oggi."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Romont_Glass_Museum",
+   "https://www.museums.ch/fr/visite-au-musee/musees/musees/vitromusee-romont-2241.html"
+  ]
+ },
+ "CH-1003": {
+  "facts": [
+   "Il castello di Gruyères, del XIII secolo, fu residenza dei conti di Gruyère; nel borgo dal 1998 il museo HR Giger espone le opere del creatore della creatura di Alien."
+  ],
+  "sources": [
+   "https://fribourg.ch/wp-content/uploads/2024/02/Fact-sheet_2025_EN_Gruyeres.pdf",
+   "https://www.myswitzerland.com/en/experiences/hr-giger-museum"
+  ]
+ },
+ "CH-1004": {
+  "facts": [
+   "La funicolare di Friburgo tra Neuveville e Saint-Pierre, in servizio dal 1899, funziona ancora a contrappeso d'acqua usando le acque reflue della città alta."
+  ],
+  "sources": [
+   "https://www.tpf.ch/Portals/0/Images/Fichiers/Medias/FR/20240202_CP_125_funiculaire_Fribourg.pdf",
+   "https://fribourg.ch/fr/fribourg/trains-transports-touristiques/funiculaire-de-fribourg/"
+  ]
+ },
+ "CH-1005": {
+  "facts": [
+   "Il 22 giugno 1476 a Morat (Murten) i Confederati sconfissero Carlo il Temerario, duca di Borgogna; molti soldati borgognoni annegarono nel lago durante la fuga."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/fr/articles/008884",
+   "https://fribourg.ch/fr/regionlacdemorat/histoire/la-bataille-de-morat/"
+  ]
+ },
+ "CH-1006": {
+  "facts": [
+   "È l'unico distretto del canton Friburgo interamente germanofono; il dialetto locale, il Senslerdeutsch, conta circa 30.000 parlanti."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/de/articles/008155",
+   "https://fribourg.ch/de/schwarzsee/kultur/wier-seisler/"
+  ]
+ },
+ "CH-1007": {
+  "facts": [
+   "Sopra Les Paccots, nel comune di Châtel-Saint-Denis, si trova il Lac des Joncs, piccolo lago di montagna protetto come il vicino lago Lussy, riserva naturale paludosa."
+  ],
+  "sources": [
+   "https://fribourg.ch/en/les-paccots/nature/the-lac-des-joncs/",
+   "https://fribourg.ch/fr/les-paccots/architecture-et-monuments/commune-de-chatel-st-denis/"
+  ]
+ },
+ "CH-101": {
+  "facts": [
+   "A Kappel am Albis l'11 ottobre 1531 morì in battaglia il riformatore Ulrico Zwingli.",
+   "Secondo la tradizione, nel 1529 a Kappel le truppe nemiche condivisero una zuppa di latte e pane sul confine tra Zurigo e Zugo, evitando lo scontro."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kappel_Abbey",
+   "https://blog.nationalmuseum.ch/en/2021/10/the-second-war-of-kappel/"
+  ]
+ },
+ "CH-102": {
+  "facts": [
+   "A Rheinau sorge su un'isola del Reno un'antica abbazia benedettina, fondata nell'alto Medioevo e soppressa nel 1862."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/de/articles/000032/",
+   "https://en.wikipedia.org/wiki/Rheinau_Abbey"
+  ]
+ },
+ "CH-103": {
+  "facts": [
+   "L'aeroporto di Zurigo si trova nel comune di Kloten: fu costruito tra il 1946 e il 1948 sul terreno di una piazza d'armi d'artiglieria ed entrò in funzione nel 1948."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/de/articles/000050",
+   "https://www.flughafen-zuerich.ch/de/unternehmen/flughafen-zuerich/flughafen-entwicklung/flughafengeschichte"
+  ]
+ },
+ "CH-104": {
+  "facts": [
+   "Il borgo fortificato di Regensberg fu fondato intorno al 1245 dai baroni di Regensberg sull'estremità orientale della Lägern; il distretto portò il suo nome fino al 1871."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/de/articles/000075/2011-12-23/",
+   "https://en.wikipedia.org/wiki/Regensberg"
+  ]
+ },
+ "CH-105": {
+  "facts": [
+   "A Bubikon sorge il Ritterhaus, fondato nel 1192 da Diethelm von Toggenburg: è considerata la commenda dell'Ordine di San Giovanni meglio conservata d'Europa e dal 1941 ospita un museo dedicato all'ordine."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ritterhaus_Bubikon"
+  ]
+ },
+ "CH-106": {
+  "facts": [
+   "A Kilchberg, sulla riva sinistra del lago di Zurigo, hanno sede il gruppo cioccolatiero Lindt & Sprüngli e il museo Lindt Home of Chocolate.",
+   "Thomas Mann trascorse gli ultimi anni a Kilchberg ed è sepolto nel cimitero del paese, accanto al figlio Golo e al poeta Conrad Ferdinand Meyer."
+  ],
+  "sources": [
+   "https://www.kilchberg.ch/fileadmin/user_upload/gemeinde/PDF/Friedhof_Plan_.pdf",
+   "https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/Kilchberg%2C_Z%C3%BCrich"
+  ]
+ },
+ "CH-107": {
+  "facts": [
+   "Nell'inverno 1853-54 le acque eccezionalmente basse del lago di Zurigo fecero emergere a Obermeilen pali e reperti preistorici: da qui Ferdinand Keller formulò la teoria delle palafitte."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/it/articles/007856/",
+   "https://hls-dhs-dss.ch/de/articles/007856"
+  ]
+ },
+ "CH-108": {
+  "facts": [
+   "Sopra il lago di Pfäffikon si trova il castrum romano di Irgenhausen, eretto probabilmente sotto Diocleziano a difesa della strada per Vitudurum: è il rudere romano meglio conservato della Svizzera nord-orientale."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Irgenhausen_Castrum",
+   "https://hls-dhs-dss.ch/de/articles/007815"
+  ]
+ },
+ "CH-109": {
+  "facts": [
+   "Il 22 novembre 1832 tessitori a domicilio dell'Oberland zurighese incendiarono la tessitura meccanica Corrodi & Pfister di Oberuster: è il più noto caso di distruzione di macchine nella storia svizzera."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/de/articles/000135"
+  ]
+ },
+ "CH-110": {
+  "facts": [
+   "Il castello di Kyburg, a sud di Winterthur, passò agli Asburgo nel 1264; secondo le cronache tardomedievali vi furono custodite per un periodo le insegne imperiali. Fino al 1798 fu sede dei balivi zurighesi."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/de/articles/007829",
+   "https://www.zuerich.com/de/besuchen/sehenswuerdigkeiten/museum-schloss-kyburg"
+  ]
+ },
+ "CH-1101": {
+  "facts": [
+   "Su uno sperone roccioso sopra Oensingen domina il castello di Neu-Bechburg, del XIII secolo, per secoli sede di un balivo solettese e considerato il complesso fortificato più importante del cantone."
+  ],
+  "sources": [
+   "https://so.ch/fileadmin/internet/bjd/bjd-arp/Heimatschutz/ISOS-Aufnahmeblaetter-1988/Oensingen.pdf",
+   "https://hls-dhs-dss.ch/de/articles/001063"
+  ]
+ },
+ "CH-1102": {
+  "facts": [
+   "La valle della Dünnern, dietro al Weissenstein, forma il Parco naturale Thal; all'imbocco della chiusa di Balsthal sorge il castello di Alt-Falkenstein, citato nel 1255 e ceduto a Soletta nel 1420."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Thal_Nature_Park",
+   "https://hls-dhs-dss.ch/articles/015034"
+  ]
+ },
+ "CH-1103": {
+  "facts": [
+   "La regione prende nome dal castello di Buchegg, probabilmente dell'XI secolo, sede dei conti di Buchegg: la casata si estinse nel 1347 e il castello, distrutto nel 1383, non fu più ricostruito."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/de/articles/019510"
+  ]
+ },
+ "CH-1104": {
+  "facts": [
+   "Il 22 luglio 1499 a Dornach i Confederati sconfissero le truppe dell'imperatore Massimiliano I: fu la battaglia decisiva della guerra sveva, chiusa due mesi dopo con la pace di Basilea.",
+   "Sulla collina di Dornach sorge il Goetheanum, centro dell'antroposofia ideato da Rudolf Steiner: il primo edificio in legno bruciò nella notte di Capodanno 1922-23, quello attuale in cemento è del 1924-28."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Battle_of_Dornach",
+   "https://hls-dhs-dss.ch/de/articles/008891"
+  ]
+ },
+ "CH-1105": {
+  "facts": [
+   "Schönenwerd è legata al calzaturificio Bally: i fratelli Bally vi trasferirono la loro fabbrica nel 1823 e dal 1868 Carl Franz Bally creò sulla riva dell'Aar il Ballypark, oggi aperto al pubblico."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/de/articles/001170"
+  ]
+ },
+ "CH-1106": {
+  "facts": [
+   "Il territorio è attraversato dall'Emme, il fiume che dà nome all'Emmental bernese; la costruzione del canale dell'Emme nel 1864 favorì l'industrializzazione dei comuni vicini."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/de/articles/007726"
+  ]
+ },
+ "CH-1107": {
+  "facts": [
+   "Grenchen è un centro storico dell'orologeria svizzera: la prima fabbrica di movimenti grezzi vi nacque nel 1856 e da essa deriva ETA, il produttore di movimenti oggi parte di Swatch Group, con sede in città."
+  ],
+  "sources": [
+   "https://eta.ch/en/enterprise",
+   "https://hls-dhs-dss.ch/de/articles/001148"
+  ]
+ },
+ "CH-1108": {
+  "facts": [
+   "Sul binario 12 della stazione di Olten una pietra ricorda che la rete ferroviaria svizzera fu in origine misurata a partire da Olten, nodo ferroviario dal 1856."
+  ],
+  "sources": [
+   "https://de.wikivoyage.org/wiki/Olten",
+   "https://www.swiss-spectator.ch/en/nederlands-175-jaar-zwitserse-spoorwegen/"
+  ]
+ },
+ "CH-1109": {
+  "facts": [
+   "A Soletta il numero 11 ricorre ovunque: la cattedrale di Sant'Orso, completata nel 1773, ha 11 campane e 11 altari, e la scalinata d'accesso è divisa in tre rampe di 11 gradini."
+  ],
+  "sources": [
+   "https://so.ch/fileadmin/internet/bjd/bjd-ada/pdf/ADSO15/19_de_sol_st_ursen_gelaeut_adso_2015.pdf",
+   "https://en.wikipedia.com/wiki/Solothurn_Cathedral"
+  ]
+ },
+ "CH-111": {
+  "facts": [
+   "Il monastero benedettino femminile di Fahr, fondato nel 1130 e retto dall'abate di Einsiedeln, è un'exclave del Canton Argovia completamente circondata dal comune zurighese di Unterengstringen."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Fahr_Convent",
+   "https://hls-dhs-dss.ch/de/articles/011606"
+  ]
+ },
+ "CH-1110": {
+  "facts": [
+   "Sopra Büsserach sorge il castello di Neu-Thierstein, costruito come sede dei protettori del monastero di Beinwil e passato ai conti di Thierstein; estinta la casata nel 1522, divenne sede dei balivi di Soletta."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Neu-Thierstein_Castle",
+   "https://hls-dhs-dss.ch/de/articles/011487"
+  ]
+ },
+ "CH-112": {
+  "facts": [
+   "Dal pulpito del Grossmünster, dove era parroco dal 1519, Ulrico Zwingli avviò la Riforma zurighese; nel 1524 l'ultima badessa del Fraumünster cedette l'abbazia alla città.",
+   "Il coro del Fraumünster, sulla riva sinistra della Limmat di fronte al Grossmünster, è illuminato da vetrate realizzate da Marc Chagall."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Fraum%C3%BCnster",
+   "https://en.wikipedia.org/wiki/Reformation_in_Z%C3%BCrich"
+  ]
+ },
+ "CH-1301": {
+  "facts": [
+   "L'Ermitage di Arlesheim, creato nel 1785 attorno a tre stagni di mulino, è il più grande giardino paesaggistico all'inglese della Svizzera.",
+   "Nel 1679 il capitolo del duomo di Basilea si trasferì ad Arlesheim, che ebbe così il suo duomo barocco, costruito nel 1679-81, e le case dei canonici."
+  ],
+  "sources": [
+   "https://api.isos.bak.admin.ch/ob/1348/doc/ISOS_1348.pdf",
+   "https://de.wikivoyage.org/wiki/Arlesheim",
+   "https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/raumplanung/denkmalpflege/inventare/kantonales-inventar-der-geschuetzten-kulturdenkmaeler/arlesheim/dom-domplatz-16"
+  ]
+ },
+ "CH-1302": {
+  "facts": [
+   "Il Laufental appartenne al Canton Berna fino al 1993: dopo una lunga serie di votazioni, approvate anche dal voto federale del 26 settembre 1993, dal 1° gennaio 1994 fa parte di Basilea Campagna."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Laufental_change_of_canton",
+   "https://hls-dhs-dss.ch/de/articles/008482"
+  ]
+ },
+ "CH-1303": {
+  "facts": [
+   "Ad Augst si trovano i resti della città romana di Augusta Raurica, il cui teatro, capace di circa 10.000 spettatori, è il teatro antico meglio conservato a nord delle Alpi."
+  ],
+  "sources": [
+   "https://augustaraurica.ch/en/visit/theater"
+  ]
+ },
+ "CH-1304": {
+  "facts": [
+   "Su uno sperone roccioso al confine tra Ormalingen, Buus e Hemmiken si ergono le rovine del castello di Farnsburg, costruito tra il 1319 e il 1342 dai conti di Thierstein."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Farnsburg_Castle"
+  ]
+ },
+ "CH-1305": {
+  "facts": [
+   "La Waldenburgerbahn tra Liestal e Waldenburg, aperta nel 1880-81 per iniziativa dell'orologiaio Gédéon Thommen, fu l'unica ferrovia pubblica svizzera a scartamento di 750 mm, convertita a scartamento metrico nel 2022."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Waldenburg_railway",
+   "https://www.baselland.ch/politik-und-behorden/landrat-parlament/medienmitteilungen/umspurung-der-waldenburgerbahn"
+  ]
+ },
+ "CH-1401": {
+  "facts": [
+   "Il distretto occupa la parte alta del Klettgau, valle vinicola dello Sciaffusano, dove il Blauburgunder (Pinot nero) è il vitigno nettamente prevalente."
+  ],
+  "sources": [
+   "https://www.myswitzerland.com/ja/experiences/summer-autumn/summer/stories/from-vines-to-the-rhine-and-to-rolling-hills/"
+  ]
+ },
+ "CH-1402": {
+  "facts": [
+   "Nella grotta del Kesslerloch, presso Thayngen, nel 1874 fu trovata una celebre incisione su corno di renna del Maddaleniano, nota come «renna al pascolo».",
+   "Il Kesslerloch si apre sul versante nord della valle del Fulach, all'estremità sud-orientale del Reiat, e fu abitato da cacciatori di renne e cavalli alla fine dell'ultima glaciazione."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/it/articles/012557/2007-08-10/",
+   "https://www.bak.admin.ch/dam/de/sd-web/jDgXtflm6AI8/rg25039.pdf"
+  ]
+ },
+ "CH-1403": {
+  "facts": [
+   "Il Munot, fortezza circolare del Cinquecento che domina Sciaffusa, ha un guardiano che ogni sera alle nove suona ancora a mano la campana, appesa lì dal 1589."
+  ],
+  "sources": [
+   "https://www.myswitzerland.com/en-us/experiences/munot-fortress/",
+   "https://www.srf.ch/sendungen/dok/lebendige-tradition-die-letzte-alarmglocke-der-schweiz"
+  ]
+ },
+ "CH-1404": {
+  "facts": [
+   "A Schleitheim, il 24 febbraio 1527, un'assemblea di anabattisti svizzeri adottò i sette Articoli di Schleitheim, tradizionalmente attribuiti a Michael Sattler.",
+   "Gli Articoli di Schleitheim sono considerati la più nota confessione di fede anabattista e restano un riferimento per le comunità mennonite."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Schleitheim_Confession",
+   "https://germanhistorydocs.org/de/von-den-reformationen-bis-zum-dreissigjaehrigen-krieg-1500-1648/die-bekenntnischrift-der-taeuferbewegung-die-schleitheimer-artikel-1527"
+  ]
+ },
+ "CH-1405": {
+  "facts": [
+   "Il centro storico di Stein am Rhein è noto per le facciate dipinte con affreschi tardogotici e del primo barocco; il municipio sulla piazza del mercato risale al 1539-1542.",
+   "Il castello di Hohenklingen, sopra la città, nacque come torre dei signori di Klingen intorno al 1255 e nel 1457 fu acquistato dalla città di Stein am Rhein."
+  ],
+  "sources": [
+   "https://maps.adac.de/ort/stein-am-rhein-kanton-schaffhausen",
+   "https://hls-dhs-dss.ch/de/articles/010954"
+  ]
+ },
+ "CH-1406": {
+  "facts": [
+   "La chiesa di San Maurizio, costruita nel 1491 su uno sperone sopra Hallau, fu meta di pellegrinaggio fino alla Riforma ed è il simbolo del Klettgau vitivinicolo."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hallau",
+   "https://hls-dhs-dss.ch/de/articles/001289"
+  ]
+ },
+ "CH-1501": {
+  "facts": [
+   "A Urnäsch i Silvesterchläuse festeggiano il capodanno due volte: il 31 dicembre e il 13 gennaio, data del «vecchio San Silvestro» secondo il calendario giuliano.",
+   "I gruppi di Chläuse, detti Schuppel, vanno di casa in casa con grandi campanacci e intonano lo Zäuerli, un canto jodel senza parole; il museo di Urnäsch ne conserva maschere e copricapi."
+  ],
+  "sources": [
+   "https://houseofswitzerland.org/swissstories/society/urnaschs-magical-double-new-years-eve",
+   "https://www.appenzell.ch/en/appenzell/museums/museum-of-appenzell-customs-urnaesch.html"
+  ]
+ },
+ "CH-1502": {
+  "facts": [
+   "A Trogen sorge il Villaggio Pestalozzi per bambini colpiti dalla guerra, nato da un appello di Walter Robert Corti sulla rivista «Du»; la prima pietra fu posta nel 1946."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/de/articles/016628/",
+   "https://en.wikipedia.org/wiki/Kinderdorf_Pestalozzi"
+  ]
+ },
+ "CH-1503": {
+  "facts": [
+   "Henry Dunant, fondatore della Croce Rossa, trascorse gli ultimi diciotto anni di vita nell'ospedale distrettuale di Heiden, dove morì il 30 ottobre 1910; oggi l'edificio ospita un museo a lui dedicato."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Henry_Dunant_Museum",
+   "https://avarchives.icrc.org/Picture/10449"
+  ]
+ },
+ "CH-1721": {
+  "facts": [
+   "Il complesso abbaziale di San Gallo, con la sua biblioteca, è patrimonio UNESCO dal 1983; vi si conserva la Pianta di San Gallo, unico disegno architettonico dell'alto Medioevo giunto in originale."
+  ],
+  "sources": [
+   "https://www.bak.admin.ch/dam/bak/rm/dokumente/baukultur/archaelogie-denkmalpflege/stiftsbezirk-st-gallen.pdf.download.pdf/stiftsbezirk-st-gallen.pdf",
+   "https://www.bodensee.de/region/schweiz/bodensee-magazin-schweiz/st.gallen-seit-612"
+  ]
+ },
+ "CH-1722": {
+  "facts": [
+   "Il Kornhaus di Rorschach, granaio barocco sul lago di Costanza, fu costruito nel 1746-1749 da Johann Caspar Bagnato per l'abate di San Gallo."
+  ],
+  "sources": [
+   "https://data.geo.admin.ch/ch.babs.kulturgueter/PDF/kgs_08259_gsk-d.pdf",
+   "https://hls-dhs-dss.ch/de/articles/001327/"
+  ]
+ },
+ "CH-1723": {
+  "facts": [
+   "Nell'aprile 1923, con il taglio di Diepoldsau, il Reno fu deviato in un nuovo letto rettilineo di circa sei chilometri; il vecchio corso è oggi il Vecchio Reno, area naturale al confine con l'Austria."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Alter_Rhein",
+   "https://www.srf.ch/news/schweiz/100-jahre-rheindurchstich-erst-die-rheinkorrektur-brachte-ruhe-ins-st-galler-rheintal"
+  ]
+ },
+ "CH-1724": {
+  "facts": [
+   "Werdenberg, frazione di Grabs ai piedi del suo castello, è considerata la città più piccola della Svizzera: conta poche decine di case di legno e ha diritti cittadini dal Medioevo.",
+   "Secondo l'inventario federale ISOS, Werdenberg è il più antico insediamento in legno della Svizzera."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/de/articles/007646/",
+   "https://api.isos.bak.admin.ch/ob/5830/doc/ISOS_5830.pdf"
+  ]
+ },
+ "CH-1725": {
+  "facts": [
+   "La sorgente termale nella gola della Tamina, presso Pfäfers, secondo la tradizione fu scoperta intorno al 1240 da cacciatori dell'abbazia; nel 1535 Paracelso vi fu il primo medico termale."
+  ],
+  "sources": [
+   "https://www.museums.ch/de/museumsbesuch/museen/museen/altes-bad-pfaefers-2213.html",
+   "https://resortragaz.ch/uploads/files/Dokumente/Allg.Grbr/GRBR-Booklet-Geschichte.pdf"
+  ]
+ },
+ "CH-1726": {
+  "facts": [
+   "Nel 1870 un gruppo di esuli polacchi fondò nel castello di Rapperswil il Museo polacco, uno dei primi musei nazionali della Polonia, che ha sede in città ancora oggi.",
+   "Rapperswil è soprannominata «città delle rose» per i numerosi roseti pubblici e privati del suo territorio."
+  ],
+  "sources": [
+   "https://www.srf.ch/news/schweiz/bewegte-geschichte-das-polenmuseum-in-rapperswil-hat-ein-neues-zuhause",
+   "https://maps.adac.de/ort/rapperswil-kanton-st-gallen"
+  ]
+ },
+ "CH-1727": {
+  "facts": [
+   "Il riformatore Ulrico Zwingli nacque nel 1484 a Wildhaus, nell'alto Toggenburg; la sua casa natale in legno, salvata dalla demolizione nel 1848, è oggi visitabile."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Wildhaus",
+   "https://www.sonntagsblatt.de/artikel/kirche/zwinglis-milchsuppe-auf-den-spuren-der-reformation-der-schweiz"
+  ]
+ },
+ "CH-1728": {
+  "facts": [
+   "Il Hof zu Wil, edificio più imponente del centro storico di Wil, fu per secoli residenza secondaria e centro amministrativo dei principi abati di San Gallo, ai quali la città passò nel 1226."
+  ],
+  "sources": [
+   "https://hls-dhs-dss.ch/de/articles/001403",
+   "https://data.geo.admin.ch/ch.babs.kulturgueter/PDF/kgs_08414_gsk-d.pdf"
+  ]
+ },
+ "CH-1821": {
+  "facts": [
+   "Presso Filisur la Ferrovia retica attraversa il viadotto del Landwasser, alto 65 metri, simbolo della linea dell'Albula, patrimonio UNESCO dal 2008 insieme alla linea del Bernina."
+  ],
+  "sources": [
+   "https://structurae.net/de/bauwerke/landwasserviadukt",
+   "https://www.myswitzerland.com/de/erlebnisse/landwasserviadukt-der-rhb/"
+  ]
+ },
+ "CH-1822": {
+  "facts": [
+   "Il viadotto elicoidale di Brusio, aperto nel 1908, è un ponte in pietra a nove arcate su cui il treno del Bernina gira in cerchio per guadagnare quota in poco spazio."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Brusio_spiral_viaduct",
+   "https://www.graubuenden.ch/it/tour/stazione-di-brusio-viadotto"
+  ]
+ },
+ "CH-1823": {
+  "facts": [
+   "La chiesa di San Martino a Zillis conserva un soffitto ligneo romanico del XII secolo con 153 pannelli dipinti, con mostri marini ai bordi e scene della vita di Cristo al centro."
+  ],
+  "sources": [
+   "https://www.graubuenden.ch/en/attractions/exhibition-church-of-st-martin",
+   "https://www.european-traveler.com/switzerland/see-painted-romanesque-ceiling-st-martins-church-zillis/"
+  ]
+ },
+ "CH-1824": {
+  "facts": [
+   "La frana di Flims, staccatasi circa 9500 anni fa, è la più grande conosciuta nelle Alpi; nei suoi detriti il Reno anteriore ha scavato la gola della Ruinaulta."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Flims_rockslide",
+   "https://www.srf.ch/wissen/klimawandel/vor-fast-9500-jahren-flimser-bergsturz-tausendmal-mehr-geroell-als-bei-blatten"
+  ]
+ },
+ "CH-1825": {
+  "facts": [
+   "Guarda, in Bassa Engadina, è il paese di Schellen-Ursli: il libro di Selina Chönz illustrato da Alois Carigiet, uscito nel 1945 in romancio come «Uorsin», è ambientato tra le sue case."
+  ],
+  "sources": [
+   "https://www.engadin.com/en/unterengadin/schellen-ursli/schellen-ursli-buch",
+   "https://en.wikipedia.org/wiki/Selina_Ch%C3%B6nz"
+  ]
+ },
+ "CH-1826": {
+  "facts": [
+   "Il paesaggio di Maienfeld, nella Bündner Herrschaft, ispirò a Johanna Spyri i romanzi di Heidi; sopra il borgo sorge l'Heididorf con la casa museo dedicata al personaggio."
+  ],
+  "sources": [
+   "https://www.graubuenden.ch/de/ausflugsziele/heididorf-maienfeld",
+   "https://www.myswitzerland.com/en-id/experiences/maienfeld-heidis-world/"
+  ]
+ },
+ "CH-1827": {
+  "facts": [
+   "Friedrich Nietzsche trascorse sette estati a Sils Maria dal 1881; la casa dove alloggiava è un museo. Secondo il filosofo, l'Engadina fu il luogo di nascita del suo «Zarathustra»."
+  ],
+  "sources": [
+   "https://www.graubuenden.ch/de/ausflugsziele/nietzsche-haus",
+   "https://www.swissinfo.ch/eng/a-sea-of-tranquillity-and-philosophy/12822"
+  ]
+ },
+ "CH-1828": {
+  "facts": [
+   "Le rovine del castello di Mesocco, tra le più grandi dei Grigioni, furono sede dei de Sacco, signori della Mesolcina fino al 1480, poi dei Trivulzio; il castello fu smantellato nel 1526."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Mesocco_Castle",
+   "https://hls-dhs-dss.ch/it/articles/001557/"
   ]
  },
  "CH-AI": {
@@ -805,6 +2178,237 @@
    "https://www.worldatlas.com/articles/the-most-extreme-points-of-germany.html"
   ]
  },
+ "FR-01": {
+  "facts": [
+   "A Bourg-en-Bresse sorge il monastero reale di Brou, in gotico fiammeggiante, voluto da Margherita d'Austria in memoria del marito Filiberto II di Savoia detto il Bello; i lavori iniziarono nel 1506."
+  ],
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Monast%C3%A8re_royal_de_Brou",
+   "https://patrimoines.ain.fr/n/monastere-royal-de-brou-a-bourg-en-bresse/n:352"
+  ]
+ },
+ "FR-04": {
+  "facts": [
+   "A Digne-les-Bains si trova la casa dell'esploratrice Alexandra David-Néel, che la chiamò Samten Dzong e vi morì nel 1969 lasciandola alla città; oggi è un museo."
+  ],
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Maison_Alexandra_David-Neel",
+   "https://www.dignelesbains-tourisme.com/decouvrir/les-incontournables/maison-alexandra-david-neel/"
+  ]
+ },
+ "FR-05": {
+  "facts": [
+   "Briançon, a 1326 metri, è la città più alta di Francia; le sue fortificazioni di Vauban sono dal 2008 patrimonio dell'UNESCO."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Brian%C3%A7on",
+   "https://www.ville-briancon.fr/decouverte/ville-dart-dhistoire-patrimoine-unesco/briancon-patrimoine-mondial-unesco"
+  ]
+ },
+ "FR-06": {
+  "facts": [
+   "Giuseppe Garibaldi nacque a Nizza il 4 luglio 1807; nel 1860 protestò contro la cessione della sua città natale alla Francia."
+  ],
+  "sources": [
+   "https://www.esercito.difesa.it/storia/giuseppe-garibaldi/83206.html",
+   "https://www.cultura.trentino.it/Biblio/Approfondimenti/accaddeoggi-4-luglio-1807-nasce-Giuseppe-Garibaldi"
+  ]
+ },
+ "FR-07": {
+  "facts": [
+   "La grotta Chauvet, scoperta nel 1994 presso Vallon-Pont-d'Arc, conserva pitture rupestri risalenti a circa 36.000 anni fa ed è patrimonio dell'UNESCO dal 2014."
+  ],
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Grotte_Chauvet"
+  ]
+ },
+ "FR-13": {
+  "facts": [
+   "Nel parco naturale regionale della Camargue, tra i due rami del delta del Rodano, si trova lo stagno del Fangassier, unico sito di nidificazione dei fenicotteri rosa in Francia."
+  ],
+  "sources": [
+   "https://www.parcs-naturels-regionaux.fr/les-parcs/larchipel-des-60-parcs/parc-naturel-regional-de-camargue",
+   "https://www.parc-camargue.fr/oiseaux-camargue.html"
+  ]
+ },
+ "FR-25": {
+  "facts": [
+   "Victor Hugo nacque a Besançon nel 1802, dove il padre era ufficiale di guarnigione; vi trascorse però solo poche settimane."
+  ],
+  "sources": [
+   "https://maisonvictorhugo.besancon.fr/en/maison-victor-hugo-2/victor-hugo/",
+   "https://www.franceinfo.fr/culture/patrimoine/besancon-sur-les-traces-de-victor-hugo-dans-sa-maison-natale_3356143.html"
+  ]
+ },
+ "FR-26": {
+  "facts": [
+   "A Hauterives il postino Ferdinand Cheval costruì da solo, tra il 1879 e il 1912, il Palais idéal, con pietre raccolte durante il suo giro di consegne; è monumento storico dal 1969."
+  ],
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Palais_id%C3%A9al",
+   "https://www.culture.gouv.fr/actualites/plus-de-cent-ans-de-reve-avec-le-palais-ideal-du-facteur-cheval"
+  ]
+ },
+ "FR-38": {
+  "facts": [
+   "La funivia della Bastiglia di Grenoble, inaugurata nel 1934, è tra le prime funivie urbane al mondo; le sue cabine sferiche, dette \"bolle\", risalgono al 1976."
+  ],
+  "sources": [
+   "https://bastille-grenoble.fr/le-telepherique-et-son-histoire/",
+   "https://www.poma.net/realisation/telepherique-de-la-bastille-les-bulles-de-grenoble/"
+  ]
+ },
+ "FR-39": {
+  "facts": [
+   "Louis Pasteur nacque a Dole nel 1822 e crebbe ad Arbois, dove condusse parte dei suoi studi sulla fermentazione del vino; la sua casa è oggi un museo."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Louis_Pasteur",
+   "https://hebdo39.net/louis-pasteur-un-jurassien-devenu-bienfaiteur-de-lhumanite/"
+  ]
+ },
+ "FR-68": {
+  "facts": [
+   "Il museo Unterlinden di Colmar custodisce l'altare di Issenheim, dipinto da Matthias Grünewald tra il 1512 e il 1516 per la commenda degli Antoniti di Issenheim."
+  ],
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Retable_d'Issenheim"
+  ]
+ },
+ "FR-73": {
+  "facts": [
+   "L'abbazia di Hautecombe, sul lago del Bourget, è la necropoli di Casa Savoia: vi sono sepolti anche l'ultimo re d'Italia Umberto II e la regina Maria José."
+  ],
+  "sources": [
+   "https://patrimoines.savoie.fr/web/psp_18075/l-abbaye-d-hautecombe-un-lieu-hors-du-temps",
+   "https://www.larousse.fr/encyclopedie/ville/Hautecombe/123327"
+  ]
+ },
+ "FR-74": {
+  "facts": [
+   "Chamonix ospitò nel 1924 la Settimana internazionale degli sport invernali, riconosciuta dal CIO nel 1926 come primi Giochi olimpici invernali della storia."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/1924_Winter_Olympics",
+   "https://gallica.bnf.fr/blog/25012024/chamonix-1924-les-premiers-jeux-olympiques-dhiver"
+  ]
+ },
+ "FR-83": {
+  "facts": [
+   "Il parco nazionale di Port-Cros, istituito nel 1963 attorno alle isole di Port-Cros e Porquerolles al largo di Hyères, è considerato il primo parco nazionale marino d'Europa."
+  ],
+  "sources": [
+   "http://en.portcros-parcnational.fr/The-National-Park-of-Port-Cros-Porquerolles"
+  ]
+ },
+ "FR-84": {
+  "facts": [
+   "Ad Avignone risiedettero i papi dal 1309 al 1377; il Palazzo dei Papi, eretto sotto Benedetto XII e Clemente VI, è il più grande palazzo gotico del suo genere ed è patrimonio dell'UNESCO."
+  ],
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Palais_des_papes_d'Avignon",
+   "https://whc.unesco.org/en/list/228/"
+  ]
+ },
+ "FR-90": {
+  "facts": [
+   "Il Leone di Belfort, scolpito da Auguste Bartholdi in arenaria rosa dei Vosgi sotto la cittadella, celebra la resistenza della città all'assedio prussiano del 1870-1871.",
+   "Grazie a quella resistenza, con il trattato di Francoforte del 1871 Belfort fu l'unica parte dell'Alsazia a restare francese, da cui nacque l'attuale Territorio di Belfort."
+  ],
+  "sources": [
+   "https://fr.wikipedia.org/wiki/Lion_de_Belfort",
+   "https://fr.wikipedia.org/wiki/Si%C3%A8ge_de_Belfort_(1870-1871)"
+  ]
+ },
+ "HR-01": {
+  "facts": [
+   "La samoborska kremšnita, millefoglie alla crema servita tiepida e simbolo della città di Samobor, è iscritta nella lista croata dei beni culturali immateriali."
+  ],
+  "sources": [
+   "https://www.samobor.hr/en/visit/samobor-kremsnita-c52",
+   "https://n1info.hr/english/news/samoborska-kremsnita-dessert-enters-list-of-intangible-assets/"
+  ]
+ },
+ "HR-02": {
+  "facts": [
+   "Sulla collina di Hušnjakovo, a Krapina, il paleontologo Dragutin Gorjanović-Kramberger scavò tra il 1899 e il 1905 circa 900 resti fossili di Neanderthal, una delle raccolte più ricche al mondo."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Krapina_Neanderthal_site",
+   "https://www.mhz.hr/en/dogadanja/124-obljetnica-otkrica-krapinskog-pracovjeka-muzej-krapinskih-neandertalaca/"
+  ]
+ },
+ "HR-04": {
+  "facts": [
+   "Karlovac fu fondata il 13 luglio 1579 dagli Asburgo come fortezza a stella a sei punte alla confluenza di Kupa e Korana, contro l'avanzata ottomana; il nome tedesco Karlstadt ricorda l'arciduca Carlo II."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Karlovac",
+   "https://visitkarlovac.hr/en/the-karlovac-of-yore/"
+  ]
+ },
+ "HR-05": {
+  "facts": [
+   "Dal 1767 Varaždin fu sede del Consiglio reale croato e quindi capitale della Croazia, finché il grande incendio del 1776 distrusse gran parte della città e la capitale fu trasferita a Zagabria."
+  ],
+  "sources": [
+   "https://varazdin.hr/en/history/"
+  ]
+ },
+ "HR-08": {
+  "facts": [
+   "A Fiume Giovanni Luppis e Robert Whitehead svilupparono il primo siluro semovente, presentato nel dicembre 1866; in città nacque poi la prima fabbrica di siluri al mondo."
+  ],
+  "sources": [
+   "https://visitrijeka.hr/en/torpedo/",
+   "https://rijekaheritage.org/en/kj/torpedo"
+  ]
+ },
+ "HR-18": {
+  "facts": [
+   "L'Arena di Pola, anfiteatro romano del I secolo, è l'unico rimasto con tutte e quattro le torri laterali, che contenevano cisterne d'acqua profumata e scale di accesso alle gradinate."
+  ],
+  "sources": [
+   "https://structurae.net/en/structures/pula-amphitheater",
+   "https://www.croatiatraveller.com/Istria/Amphitheater.html"
+  ]
+ },
+ "HR-20": {
+  "facts": [
+   "Il castello di Čakovec, appartenuto per cinque generazioni alla famiglia Zrinski, è il maggiore monumento profano del Međimurje e dal 1954 ospita il Museo del Međimurje."
+  ],
+  "sources": [
+   "https://mmc.hr/starigrad_en.html",
+   "https://en.wikipedia.org/wiki/%C4%8Cakovec"
+  ]
+ },
+ "HR-21": {
+  "facts": [
+   "Nel 1906 Slavoljub Penkala brevettò la sua matita automatica e aprì a Zagabria una fabbrica che divenne una delle maggiori produttrici di articoli di cancelleria al mondo."
+  ],
+  "sources": [
+   "https://www.hr/croatia/inventions/pen",
+   "https://lovezagreb.hr/topics/more-than-words/slavoljub-eduard-penkala"
+  ]
+ },
+ "HU-GS": {
+  "facts": [
+   "L'arciabbazia benedettina di Pannonhalma, fondata nel 996 come primo monastero benedettino d'Ungheria, è patrimonio UNESCO dal 1996 ed è ancora abitata dai monaci."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Pannonhalma_Archabbey",
+   "https://www.worldheritagesite.org/list/Pannonhalma"
+  ]
+ },
+ "HU-VA": {
+  "facts": [
+   "Secondo la tradizione san Martino di Tours nacque nel IV secolo a Savaria, l'odierna Szombathely, considerata la città più antica d'Ungheria; una chiesa sorge nel luogo indicato come sua casa natale."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Szombathely",
+   "https://archiv.martinus.hu/st-martin-s-church"
+  ]
+ },
  "IT-AO": {
   "facts": [
    "Il capoluogo Aosta fu fondato dai Romani nel 25 a.C. con il nome di Augusta Praetoria, in onore di Augusto, nel territorio dei Salassi.",
@@ -1165,6 +2769,113 @@
    "https://www.pilotguides.com/articles/how-monaco-became-monaco/",
    "https://media-trade.visitmonaco.com/en/editorial-resources/destination/introduction-to-the-destination/history-of-monaco-in-7-dates",
    "https://www.monacodc.org/monhistory.html"
+  ]
+ },
+ "SI-GORENJ": {
+  "facts": [
+   "Il poeta nazionale sloveno France Prešeren nacque nel 1800 a Vrba, nell'Alta Carniola; la sua casa natale è un museo dal 1939 e ne conserva la culla."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Pre%C5%A1eren_House",
+   "https://www.culture.si/en/Birthplace_of_France_Pre%C5%A1eren"
+  ]
+ },
+ "SI-GORIKA": {
+  "facts": [
+   "Kobarid è la Caporetto della battaglia del 1917; la ritirata italiana che ne seguì è narrata da Ernest Hemingway in Addio alle armi."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kobarid"
+  ]
+ },
+ "SI-JUGOVZ": {
+  "facts": [
+   "Novo mesto è detta \"città delle situle\": nella zona sono stati trovati sedici secchi di bronzo dell'età del ferro, nove dei quali decorati con scene figurate."
+  ],
+  "sources": [
+   "https://www.zgodovinska-mesta.si/en/towns/novo-mesto/",
+   "https://www.dolenjskimuzej.si/en/departments/archaeology/"
+  ]
+ },
+ "SI-KOROKA": {
+  "facts": [
+   "Il compositore Hugo Wolf nacque nel 1860 a Slovenj Gradec, allora Windischgraz; la sua casa natale sulla piazza principale è oggi un museo a lui dedicato."
+  ],
+  "sources": [
+   "https://culture.gov.si/en/Birthplace_of_Hugo_Wolf",
+   "https://www.britannica.com/biography/Hugo-Wolf"
+  ]
+ },
+ "SI-NOTRAN": {
+  "facts": [
+   "Nelle Grotte di Postumia fu inaugurata nel 1872 la prima ferrovia al mondo all'interno di una grotta; vi vive il proteo, anfibio cieco che la tradizione popolare riteneva un cucciolo di drago."
+  ],
+  "sources": [
+   "https://www.postojnska-jama.eu/en/postojna-cave/",
+   "https://slovenia.si/this-is-slovenia/postojna-cave"
+  ]
+ },
+ "SI-OBALNO": {
+  "facts": [
+   "A Lipica l'arciduca Carlo d'Austria fondò nel 1580 l'allevamento da cui discendono i cavalli lipizzani; il nome del villaggio deriva dallo sloveno lipa, tiglio."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lipizzan",
+   "https://www.lipica.org/en/about-the-stud-farm/"
+  ]
+ },
+ "SI-OSREDN": {
+  "facts": [
+   "Nelle paludi di Lubiana, presso Vrhnika, nel 2002 è stata ritrovata una ruota di legno di frassino datata a oltre 5100 anni fa: è considerata la più antica ruota di legno con asse mai rinvenuta."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ljubljana_Marshes_Wheel",
+   "https://slovenia.si/art-and-cultural-heritage/worlds-oldest-wheel-found-in-slovenia"
+  ]
+ },
+ "SI-PODRAV": {
+  "facts": [
+   "Davanti alla Casa della Vecchia Vite, nel quartiere Lent di Maribor, cresce una vite di žametovka di circa 400 anni, iscritta nel Guinness dei primati come la più antica vite coltivata ancora produttiva."
+  ],
+  "sources": [
+   "https://www.visitmaribor.si/en/what-to-do/sights/4953-",
+   "https://www.guinnessworldrecords.com/world-records/72739-oldest-vine"
+  ]
+ },
+ "SI-POMURS": {
+  "facts": [
+   "La prekmurska gibanica, dolce a strati di pasta con ripieni di semi di papavero, noci, mele e ricotta, è originaria dell'Oltremura ed è tutelata dal 2010 come Specialità tradizionale garantita dell'Unione europea."
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Prekmurska_gibanica",
+   "https://english.sta.si/1486580/dessert-from-prekmurje-protected-by-eu"
+  ]
+ },
+ "SI-SAVINJ": {
+  "facts": [
+   "La bassa valle della Savinja è il cuore della coltivazione del luppolo in Slovenia. A Žalec dal 2016 una fontana a forma di cono di luppolo eroga birra prodotta con luppolo sloveno."
+  ],
+  "sources": [
+   "https://www.slovenia.info/en/stories/grab-a-beer-at-the-green-gold-fountain",
+   "https://www.slovenia.info/en/press-centre/news-of-the-tourism-press-agency/5474-the-first-beer-fountain-in-europe-opens-its-taps"
+  ]
+ },
+ "SI-SPODNJ": {
+  "facts": [
+   "Nel castello di Brežice, sede del Museo del Posavje, la Sala dei Cavalieri è interamente affrescata con paesaggi, divinità ed eroi classici: è il principale esempio di affresco barocco profano in Slovenia."
+  ],
+  "sources": [
+   "https://www.culture.si/en/Bre%C5%BEice_Castle",
+   "https://www.lonelyplanet.com/pois/1259269"
+  ]
+ },
+ "SI-ZASAVS": {
+  "facts": [
+   "La ciminiera della centrale termoelettrica di Trbovlje, alta 360 metri e dismessa dopo la chiusura dell'impianto nel 2014, è la più alta d'Europa."
+  ],
+  "sources": [
+   "https://www.rtvslo.si/news-in-english/slovenia-revealed/europe-s-tallest-smokestack/379469",
+   "https://english.sta.si/2860430/trbovlje-chimney-turned-into-longest-climbing-route"
   ]
  }
 }
