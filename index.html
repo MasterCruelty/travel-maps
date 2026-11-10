@@ -5,18 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Travel Maps · Province Italiane</title>
 <meta name="description" content="Collega due province italiane, o due comuni di Milano e Brianza, attraversando i confini nel minor numero di mosse. Un puzzle geografico quotidiano.">
-<meta name="theme-color" content="#166534">
+<meta name="theme-color" content="#efe7d6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10171f" media="(prefers-color-scheme: dark)">
 <meta property="og:title" content="Travel Maps">
 <meta property="og:description" content="Collega due province italiane, o due comuni di Milano e Brianza, attraversando i confini nel minor numero di mosse.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='11' fill='%23efe7d6' stroke='%231d2733' stroke-width='1.5'/><path d='M12 3l3 9-3 9-3-9z' fill='%231d2733'/><path d='M12 3l3 9H9z' fill='%23b07d2b'/></svg>">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M12 3.5l2.8 8.5-2.8 8.5-2.8-8.5z" fill="currentColor"/><path d="M12 3.5l2.8 8.5H9.2z" fill="var(--brass)"/></symbol>
+    <symbol id="i-stats" viewBox="0 0 24 24"><path d="M5 20V11M12 20V4M19 20v-6"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M3 7h4l10 10h4M3 17h4l3-3M14 10l3-3h4M18.5 4.5L21 7l-2.5 2.5M18.5 14.5L21 17l-2.5 2.5"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9.5 18h5M10.5 21h3M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5.5 21V4M5.5 4.5h12l-2.5 4 2.5 4h-12"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h5a3 3 0 0 0 0-6h-2a3 3 0 0 1 0-6h5"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V4M8 8l4-4 4 4M5 13v6.5h14V13"/></symbol>
+    <symbol id="i-fit" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="1.6"/><path d="M12 2v3.5M12 18.5V22M2 12h3.5M18.5 12H22"/></symbol>
+    <symbol id="i-cup" viewBox="0 0 24 24"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5zM16 11h2a2 2 0 0 1 0 4h-2M8.5 3.5v2.5M12.5 3.5v2.5"/></symbol>
+  </defs>
+</svg>
 <header class="topbar">
   <button id="btn-help" class="icon-btn" title="Come si gioca" aria-label="Come si gioca">?</button>
-  <h1>Travel <span>Maps</span></h1>
-  <button id="btn-stats" class="icon-btn" title="Statistiche" aria-label="Statistiche">📊</button>
+  <h1><svg class="logo" aria-hidden="true"><use href="#i-compass"/></svg>Travel <span>Maps</span></h1>
+  <button id="btn-stats" class="icon-btn" title="Statistiche" aria-label="Statistiche"><svg class="ic" aria-hidden="true"><use href="#i-stats"/></svg></button>
 </header>
 
 <main>
@@ -31,8 +47,8 @@
   <nav class="levels" id="levels" aria-label="Livello" hidden></nav>
 
   <nav class="modes" aria-label="Modalità di gioco">
-    <button id="mode-daily" class="mode" aria-pressed="true">📅 Quotidiano</button>
-    <button id="mode-practice" class="mode" aria-pressed="false">🎲 Allenamento</button>
+    <button id="mode-daily" class="mode" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg> Quotidiano</button>
+    <button id="mode-practice" class="mode" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-shuffle"/></svg> Allenamento</button>
   </nav>
 
   <div id="prompt" class="prompt">
@@ -56,7 +72,7 @@
       <g id="layer-labels"></g>
     </svg>
     <div class="map-tools">
-      <button id="btn-zoom" class="map-btn" title="Mostra tutta l'Italia" aria-label="Mostra tutta l'Italia">🇮🇹</button>
+      <button id="btn-zoom" class="map-btn" title="Mostra tutta l'Italia" aria-label="Mostra tutta l'Italia"><svg class="ic" aria-hidden="true"><use href="#i-fit"/></svg></button>
       <button id="btn-zoom-in" class="map-btn zoom-step" type="button" title="Ingrandisci" aria-label="Ingrandisci">+</button>
       <button id="btn-zoom-out" class="map-btn zoom-step" type="button" title="Rimpicciolisci" aria-label="Rimpicciolisci">−</button>
     </div>
@@ -82,18 +98,18 @@
   <div id="message" class="message" role="status" aria-live="polite" hidden></div>
 
   <div class="actions" id="actions-play">
-    <button id="btn-hint" class="ghost" type="button">💡 Suggerimento <small>(−1 tentativo)</small></button>
-    <button id="btn-giveup" class="ghost" type="button">🏳️ Mi arrendo</button>
+    <button id="btn-hint" class="ghost" type="button"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg> Suggerimento <small>(−1 tentativo)</small></button>
+    <button id="btn-giveup" class="ghost" type="button"><svg class="ic" aria-hidden="true"><use href="#i-flag"/></svg> Mi arrendo</button>
   </div>
   <div class="actions" id="actions-over" hidden>
-    <button id="btn-show-result" class="primary" type="button">🏁 Vedi risultato</button>
-    <button id="btn-new" class="ghost" type="button">🎲 Nuova partita</button>
+    <button id="btn-show-result" class="primary" type="button"><svg class="ic" aria-hidden="true"><use href="#i-route"/></svg> Vedi risultato</button>
+    <button id="btn-new" class="ghost" type="button"><svg class="ic" aria-hidden="true"><use href="#i-shuffle"/></svg> Nuova partita</button>
   </div>
 
   <ol id="guesses" class="guesses" aria-label="Mosse"></ol>
 
   <footer class="foot">
-    <a class="coffee" href="https://paypal.me/mastercruelty" target="_blank" rel="noopener">☕ Offrimi un caffè</a>
+    <a class="coffee" href="https://paypal.me/mastercruelty" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-cup"/></svg> Offrimi un caffè</a>
     Ispirato a <a href="https://travle.earth/ita" rel="noopener">travle</a>.
     Confini: Istat (CC BY 4.0), Comune di Milano, © GeoBasis-DE / BKG 2018 (dl-de/by-2-0), Statistik Austria (CC BY 4.0), swisstopo, Natural Earth.
     <a href="https://github.com/MasterCruelty/travel-maps#crediti" rel="noopener">Fonti e licenze</a>.
@@ -109,13 +125,13 @@
     <div id="result-grid" class="result-grid"></div>
     <div id="result-path" class="result-path"></div>
     <div class="modal-actions">
-      <button id="btn-share" class="primary">📋 Condividi</button>
-      <button id="btn-practice" class="ghost">🎲 Partita casuale</button>
+      <button id="btn-share" class="primary"><svg class="ic" aria-hidden="true"><use href="#i-share"/></svg> Condividi</button>
+      <button id="btn-practice" class="ghost"><svg class="ic" aria-hidden="true"><use href="#i-shuffle"/></svg> Partita casuale</button>
     </div>
     <p id="share-ok" class="share-ok" hidden>Copiato negli appunti!</p>
     <p id="next-puzzle" class="next-puzzle muted" hidden></p>
     <div id="result-facts" class="result-facts" hidden></div>
-    <p class="coffee-line"><a class="coffee" href="https://paypal.me/mastercruelty" target="_blank" rel="noopener">☕ Ti è piaciuto? Offrimi un caffè</a></p>
+    <p class="coffee-line"><a class="coffee" href="https://paypal.me/mastercruelty" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-cup"/></svg> Ti è piaciuto? Offrimi un caffè</a></p>
   </div>
 </div>
 
@@ -130,7 +146,7 @@
       <li>Nel puzzle quotidiano la mappa è nascosta: vedi solo partenza, arrivo e ciò che inserisci. La cartina completa compare a fine partita.</li>
       <li>I tentativi sono limitati e dipendono dal percorso più breve possibile.</li>
       <li>Il punteggio è <b>Perfetto</b> se usi esattamente il numero minimo di <span data-u="many">province</span>, altrimenti <b>+N</b>.</li>
-      <li>Il 💡 suggerimento mostra sulla mappa il contorno del prossimo passo utile, senza nome; un secondo aiuto ne rivela le iniziali. Ogni aiuto costa un tentativo.</li>
+      <li>Il suggerimento mostra sulla mappa il contorno del prossimo passo utile, senza nome; un secondo aiuto ne rivela le iniziali. Ogni aiuto costa un tentativo.</li>
       <li>Ingrandisci la mappa con due dita, la rotella o i pulsanti + e −, e spostala trascinandola.</li>
       <li>I colori indicano quanto ogni scelta ti allontana dal percorso ottimale:</li>
     </ul>

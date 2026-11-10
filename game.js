@@ -16,7 +16,7 @@ const MAPS = {
     already: 'è già stata inserita',
     ambiguous: 'Più province corrispondono: scegline una dalla lista',
     linksNote: '⛴️ I tratti di mare tratteggiati (Stretto di Messina, traghetto Livorno–Olbia) contano come confini.',
-    zoomIcon: '🇮🇹', zoomTitle: "Mostra tutta l'Italia",
+    zoomTitle: "Mostra tutta l'Italia",
     storagePrefix: 'pi_',
     seedOffset: 12345,
     minDist: 4, maxDist: 8,
@@ -54,7 +54,7 @@ const MAPS = {
     ambiguous: 'Più nomi corrispondono: scegline uno dalla lista',
     unknownHints: { milano: 'Milano è divisa nei suoi 88 quartieri: scrivi il nome di un quartiere (es. Duomo, Isola, Lambrate)' },
     linksNote: 'Il comune di Milano è diviso nei suoi 88 quartieri (NIL). 🛣️ San Colombano al Lambro è staccato dal resto della città metropolitana: il tratteggio che lo unisce a San Zenone al Lambro conta come un confine.',
-    zoomIcon: '🗺️', zoomTitle: 'Mostra tutta la mappa',
+    zoomTitle: 'Mostra tutta la mappa',
     storagePrefix: 'pi_milano_',
     seedOffset: 54321,
     minDist: 4, maxDist: Infinity,   // anche le tratte che attraversano la città, fino a 17 confini
@@ -75,7 +75,7 @@ const MAPS = {
     already: 'è già stato inserito',
     ambiguous: 'Più Länder corrispondono: scegline uno dalla lista',
     linksNote: 'Berlino è circondata dal Brandeburgo e Brema dalla Bassa Sassonia. Si accettano anche i nomi in tedesco.',
-    zoomIcon: '🇩🇪', zoomTitle: 'Mostra tutta la Germania',
+    zoomTitle: 'Mostra tutta la Germania',
     storagePrefix: 'pi_germania_',
     seedOffset: 4242,
     minDist: 3, maxDist: 5,
@@ -101,7 +101,7 @@ const MAPS = {
     already: 'è già stato inserito',
     ambiguous: 'Più distretti corrispondono: scegline uno dalla lista',
     linksNote: 'I distretti sono i 400 Kreise tedeschi, con i nomi in tedesco. Quando una città extracircondariale e un circondario hanno lo stesso nome sono indicati come (città) e (circondario), per esempio München (città) e München (circondario).',
-    zoomIcon: '🇩🇪', zoomTitle: 'Mostra tutta la Germania',
+    zoomTitle: 'Mostra tutta la Germania',
     storagePrefix: 'pi_distretti_',
     seedOffset: 9090,
     minDist: 4, maxDist: 7,
@@ -122,7 +122,7 @@ const MAPS = {
     already: 'è già stata inserita',
     ambiguous: 'Più nazioni corrispondono: scegline una dalla lista',
     linksNote: '🚆 Il tunnel della Manica e 🌉 i ponti dell\'Øresund e di re Fahd contano come confini. Le nazioni senza confini terrestri (Giappone, Australia…) si possono nominare ma non collegano nulla e si colorano di nero.',
-    zoomIcon: '🌍', zoomTitle: 'Mostra tutto il mondo',
+    zoomTitle: 'Mostra tutto il mondo',
     storagePrefix: 'pi_mondo_',
     seedOffset: 777,
     minDist: 4, maxDist: 8,
@@ -155,7 +155,7 @@ MAPS.alpi = {
   already: 'è già stata inserita',
   ambiguous: 'Più regioni corrispondono: scegline una dalla lista',
   linksNote: ALPS_NOTE + ' Le aree sono regioni italiane e francesi, Länder austriaci e tedeschi, cantoni svizzeri, le due regioni della Slovenia e le contee croate e ungheresi.',
-  zoomIcon: '🏔️', zoomTitle: 'Mostra tutte le Alpi',
+  zoomTitle: 'Mostra tutte le Alpi',
   storagePrefix: 'pi_alpi_',
   seedOffset: 4807,
   minDist: 3, maxDist: Infinity,   // può capitare anche una tratta da un capo all'altro
@@ -176,7 +176,7 @@ MAPS.alpiprovince = {
   already: 'è già stata inserita',
   ambiguous: 'Più aree corrispondono: scegline una dalla lista',
   linksNote: ALPS_NOTE + ' Le aree sono le province italiane, i dipartimenti francesi, i distretti svizzeri, austriaci e tedeschi, le regioni statistiche slovene e le contee croate e ungheresi. I distretti svizzeri sono quelli del 2014: nei Grigioni, per esempio, dal 2016 al loro posto ci sono le regioni. I cantoni senza distretti (Ginevra, Uri, Zugo…) contano come un\'area sola. Città e circondario con lo stesso nome sono indicati come (città) e (circondario).',
-  zoomIcon: '🏔️', zoomTitle: 'Mostra tutte le Alpi',
+  zoomTitle: 'Mostra tutte le Alpi',
   storagePrefix: 'pi_alpiprovince_',
   seedOffset: 8848,
   minDist: 4, maxDist: Infinity,
@@ -201,7 +201,7 @@ MAPS.regioni = {
     'brasile', 'stati uniti', 'usa', 'canada', 'australia', 'argentina', 'messico', 'regno unito', 'inghilterra']
     .map(n => [n, 'Qui si gioca con le regioni: scrivi una regione, uno stato o una provincia (es. Lombardia, Baviera, Texas)'])),
   linksNote: 'Le aree sono le suddivisioni di primo livello di ogni nazione (stati, regioni, province); nei paesi dove sono molto piccole, come Italia, Francia, Spagna e Regno Unito, sono accorpate in regioni. I piccoli stati restano interi. 🚆 Il tunnel della Manica e 🌉 i ponti dell\'Øresund, dello Storebælt, di re Fahd e di Johor contano come confini; le isole senza collegamenti si colorano di nero. Si accettano anche i nomi locali e in inglese.',
-  zoomIcon: '🌍', zoomTitle: 'Mostra tutto il mondo',
+  zoomTitle: 'Mostra tutto il mondo',
   storagePrefix: 'pi_regioni_',
   seedOffset: 31337,
   minDist: 6, maxDist: 50,
@@ -216,6 +216,9 @@ const GAME_TITLE = 'Travel Maps';
 // i dati la ripetono, così una pagina nuova non usa dati vecchi rimasti in cache.
 const VERSION = new URL(document.currentScript.src).searchParams.get('v');
 const versioned = (url) => VERSION ? `${url}?v=${VERSION}` : url;
+
+// Icona dallo sprite SVG di index.html.
+const ic = (name) => `<svg class="ic" aria-hidden="true"><use href="#i-${name}"/></svg>`;
 
 const EMOJI = { 'g-ok': '🟩', 'g-near': '🟧', 'g-far': '🟥', 'g-none': '⬛', hint: '💡' };
 const DAILY_EPOCH = new Date(2024, 0, 1);
@@ -751,7 +754,7 @@ function updateZoom(animate = true) {
 
 function renderZoomButton() {
   const btn = $('btn-zoom');
-  btn.textContent = showAll ? '🔍' : MAP.zoomIcon;
+  btn.innerHTML = ic(showAll ? 'target' : 'fit');
   btn.title = showAll ? 'Torna alla partita' : MAP.zoomTitle;
   btn.setAttribute('aria-label', btn.title);
 }
@@ -789,7 +792,7 @@ function renderAll() {
   $('puzzle-id').textContent = game.label;
   $('mode-daily').setAttribute('aria-pressed', String(game.mode === 'daily'));
   $('mode-practice').setAttribute('aria-pressed', String(game.mode !== 'daily'));
-  $('btn-new').textContent = game.mode === 'daily' ? '🎲 Allenamento' : '🎲 Nuova partita';
+  $('btn-new').innerHTML = ic('shuffle') + (game.mode === 'daily' ? ' Allenamento' : ' Nuova partita');
 
   const playing = !game.over;
   $('guess-input').disabled = !playing;
@@ -821,7 +824,7 @@ function renderMoves() {
       const level = m.level || 2;
       const what = !nameHidden(m.sigla) ? esc(p.name)
         : level === 1 ? 'Contorno sulla mappa' : initialsHtml(m.sigla);
-      return `<li class="hint-row"><span class="dot hint"></span><span>💡 ${what}</span>` +
+      return `<li class="hint-row"><span class="dot hint"></span><span>${what}</span>` +
              `<span class="reg">${level === 1 ? 'suggerimento' : 'iniziali'}</span></li>`;
     }
     return `<li><span class="dot ${m.color}"></span><span>${esc(p.name)}</span><span class="reg">${esc(p.group)}</span></li>`;
@@ -870,20 +873,20 @@ function giveHint() {
   const sig = pendingHint() || bestCompletion()[0];
   if (!sig) return;
   const level = hintLevel(sig);
-  if (level >= 2) { showMessage(`💡 Hai già tutti gli aiuti per questo passo: ${initialsHtml(sig)}`, 'info', true); return; }
+  if (level >= 2) { showMessage(`Hai già tutti gli aiuti per questo passo: ${initialsHtml(sig)}`, 'info', true); return; }
   if (remaining() <= 1) { showMessage('Non hai abbastanza tentativi per un suggerimento', 'warn'); return; }
   game.moves.push({ sigla: sig, type: 'hint', level: level + 1 });
-  if (level === 0) showMessage('💡 Il contorno del prossimo passo utile è sulla mappa', 'info');
-  else showMessage(`💡 Iniziali: ${initialsHtml(sig)}`, 'info', true);
+  if (level === 0) showMessage('Il contorno del prossimo passo utile è sulla mappa', 'info');
+  else showMessage(`Iniziali: ${initialsHtml(sig)}`, 'info', true);
   afterMove();
 }
 
 function renderHintButton() {
   const sig = pendingHint();
   const level = sig ? hintLevel(sig) : 0;
-  $('btn-hint').innerHTML = level === 0 ? '💡 Suggerimento <small>(−1 tentativo)</small>'
-    : level === 1 ? '💡 Iniziali <small>(−1 tentativo)</small>'
-    : '💡 Iniziali <small>(già usate)</small>';
+  $('btn-hint').innerHTML = ic('bulb') + (level === 0 ? ' Suggerimento <small>(−1 tentativo)</small>'
+    : level === 1 ? ' Iniziali <small>(−1 tentativo)</small>'
+    : ' Iniziali <small>(già usate)</small>');
 }
 
 function afterMove() {
@@ -913,7 +916,7 @@ function resetGiveUp() {
   const btn = $('btn-giveup');
   clearTimeout(resetGiveUp.timer);
   btn.classList.remove('confirm');
-  btn.textContent = '🏳️ Mi arrendo';
+  btn.innerHTML = ic('flag') + ' Mi arrendo';
 }
 
 function onGiveUpClick() {
@@ -939,17 +942,19 @@ function scoreText() {
 function showResult() {
   const route = `${area(game.start).name} → ${area(game.end).name}`;
   let title;
-  if (game.won) title = overPar() <= 0 ? '🏆 Perfetto!' : '✅ Completato!';
-  else title = game.gaveUp ? '🏳️ Ti sei arreso' : '😞 Tentativi esauriti';
+  if (game.won) title = overPar() <= 0 ? 'Perfetto!' : 'Completato!';
+  else title = game.gaveUp ? 'Ti sei arreso' : 'Tentativi esauriti';
   $('result-title').textContent = title;
+  $('result-title').className = game.won ? 'won' : 'lost';
   $('result-sub').textContent = `${route} · ${scoreText()} (${game.moves.length}/${game.maxGuesses})`;
-  $('result-grid').textContent = game.moves.map(m => EMOJI[m.type === 'hint' ? 'hint' : m.color]).join('') || '—';
+  $('result-grid').innerHTML = game.moves.map(m =>
+    `<i class="sq ${m.type === 'hint' ? 'hint' : m.color}"></i>`).join('') || '—';
 
   const path = shortestPath(game.start, game.end);
   $('result-path').innerHTML = `<b>Un percorso ideale (${game.needed} ${MAP.many}):</b><br>` +
     path.map(s => `<span class="step">${esc(area(s).name)}</span>`).join(' <span class="sep">›</span> ');
 
-  $('btn-practice').textContent = game.mode === 'daily' ? '🎲 Allenamento' : '🎲 Nuova partita';
+  $('btn-practice').innerHTML = ic('shuffle') + (game.mode === 'daily' ? ' Allenamento' : ' Nuova partita');
   $('share-ok').hidden = true;
   renderFacts();
   openModal('result-modal');
