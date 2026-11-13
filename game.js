@@ -818,16 +818,21 @@ function renderStatus() {
 }
 
 function renderMoves() {
-  $('guesses').innerHTML = game.moves.slice().reverse().map(m => {
+  // La mossa appena fatta entra con una breve animazione; il resto no.
+  const fresh = renderMoves.game === game && game.moves.length > renderMoves.count;
+  renderMoves.game = game;
+  renderMoves.count = game.moves.length;
+  $('guesses').innerHTML = game.moves.slice().reverse().map((m, i) => {
     const p = area(m.sigla);
+    const cls = fresh && i === 0 ? ' new' : '';
     if (m.type === 'hint') {
       const level = m.level || 2;
       const what = !nameHidden(m.sigla) ? esc(p.name)
         : level === 1 ? 'Contorno sulla mappa' : initialsHtml(m.sigla);
-      return `<li class="hint-row"><span class="dot hint"></span><span>${what}</span>` +
+      return `<li class="hint-row${cls}"><span class="dot hint"></span><span>${what}</span>` +
              `<span class="reg">${level === 1 ? 'suggerimento' : 'iniziali'}</span></li>`;
     }
-    return `<li><span class="dot ${m.color}"></span><span>${esc(p.name)}</span><span class="reg">${esc(p.group)}</span></li>`;
+    return `<li class="${cls.trim()}"><span class="dot ${m.color}"></span><span>${esc(p.name)}</span><span class="reg">${esc(p.group)}</span></li>`;
   }).join('');
 }
 
@@ -848,16 +853,94 @@ function shake() {
   input.classList.add('shake');
 }
 
+// ---------- Suoni ----------
+// Sintetizzati al momento con Web Audio: nessun file audio da scaricare.
+// Ogni esito ha il suo timbro; le scelte ottimali di fila salgono di tono.
+// Sul telefono una breve vibrazione accompagna errori e fine partita.
+let audioCtx = null;
+let soundOn = store.get('pi_sound', true);
+const soundLog = [];                 // ultimi suoni suonati (usato dai test)
+
+const NOTE = (n) => 440 * Math.pow(2, (n - 69) / 12);   // numero MIDI -> Hz
+
+function tone(freq, start, dur, { type = 'triangle', gain = .22, slide = 0 } = {}) {
+  const t0 = audioCtx.currentTime + start;
+  const osc = audioCtx.createOscillator();
+  const env = audioCtx.createGain();
+  osc.type = type;
+  osc.frequency.setValueAtTime(freq, t0);
+  if (slide) osc.frequency.exponentialRampToValueAtTime(freq * slide, t0 + dur);
+  env.gain.setValueAtTime(0.0001, t0);
+  env.gain.exponentialRampToValueAtTime(gain, t0 + 0.012);
+  env.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+  osc.connect(env).connect(audioCtx.destination);
+  osc.start(t0);
+  osc.stop(t0 + dur + 0.02);
+}
+
+const SOUNDS = {
+  // scelta sul percorso ideale: due note che salgono, più acute a ogni scelta ottimale di fila
+  'g-ok': (step = 0) => { const b = 76 + step * 2; tone(NOTE(b), 0, .14); tone(NOTE(b + 5), .08, .22); },
+  'g-near': () => tone(NOTE(67), 0, .22, { gain: .2 }),
+  'g-far': () => { tone(NOTE(62), 0, .16, { gain: .2 }); tone(NOTE(57), .12, .26, { gain: .2 }); },
+  'g-none': () => tone(110, 0, .3, { type: 'sine', gain: .35, slide: .6 }),
+  error: () => tone(150, 0, .12, { type: 'square', gain: .06, slide: .8 }),
+  hint: () => [84, 88, 91].forEach((n, i) => tone(NOTE(n), i * .06, .18, { type: 'sine', gain: .12 })),
+  perfect: () => {
+    [72, 76, 79, 84].forEach((n, i) => tone(NOTE(n), i * .1, .3));
+    [72, 76, 79, 84].forEach(n => tone(NOTE(n), .45, .9, { type: 'sine', gain: .1 }));
+  },
+  win: () => [72, 76, 79].forEach((n, i) => tone(NOTE(n), i * .11, i === 2 ? .5 : .25)),
+  lose: () => [67, 63, 60].forEach((n, i) => tone(NOTE(n), i * .16, i === 2 ? .6 : .26, { gain: .18 })),
+};
+const VIBRATION = { 'g-far': [35], 'g-none': [60, 40, 60], error: [25], perfect: [30, 60, 30, 60, 90], win: [30, 60, 60], lose: [140] };
+
+function playSound(name, step = 0) {
+  if (!soundOn) return;
+  soundLog.push(name);
+  if (soundLog.length > 20) soundLog.shift();
+  try {
+    audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    SOUNDS[name](step);
+  } catch { /* audio non disponibile */ }
+  if (VIBRATION[name] && navigator.vibrate) { try { navigator.vibrate(VIBRATION[name]); } catch { /* idem */ } }
+}
+
+// Quante scelte ottimali di fila chiudono l'elenco delle mosse.
+function okStreak() {
+  let n = 0;
+  for (let i = game.moves.length - 1; i >= 0 && game.moves[i].type === 'guess' && game.moves[i].color === 'g-ok'; i--) n++;
+  return n;
+}
+
+function renderSoundButton() {
+  const btn = $('btn-sound');
+  btn.innerHTML = ic(soundOn ? 'sound' : 'mute');
+  btn.title = soundOn ? 'Disattiva i suoni' : 'Attiva i suoni';
+  btn.setAttribute('aria-label', btn.title);
+  btn.setAttribute('aria-pressed', String(soundOn));
+}
+
+function toggleSound() {
+  soundOn = !soundOn;
+  store.set('pi_sound', soundOn);
+  renderSoundButton();
+  playSound('g-ok');
+}
+
 // ---------- Mosse ----------
 function submitGuess(sig) {
   if (game.over) return;
-  if (!sig) { showMessage(MAP.unknown, 'err'); shake(); return; }
+  if (!sig) { showMessage(MAP.unknown, 'err'); shake(); playSound('error'); return; }
   const name = area(sig).name;
-  if (sig === game.start || sig === game.end) { showMessage(`${name} è già la partenza o l'arrivo`, 'warn'); shake(); return; }
-  if (isGuessed(sig)) { showMessage(`${name} ${MAP.already}`, 'warn'); shake(); return; }
+  if (sig === game.start || sig === game.end) { showMessage(`${name} è già la partenza o l'arrivo`, 'warn'); shake(); playSound('error'); return; }
+  if (isGuessed(sig)) { showMessage(`${name} ${MAP.already}`, 'warn'); shake(); playSound('error'); return; }
 
-  game.moves.push({ sigla: sig, type: 'guess', color: colorFor(sig) });
+  const color = colorFor(sig);
+  game.moves.push({ sigla: sig, type: 'guess', color });
   clearMessage();
+  playSound(color, Math.min(okStreak() - 1, 6));
   afterMove();
 }
 
@@ -876,6 +959,7 @@ function giveHint() {
   if (level >= 2) { showMessage(`Hai già tutti gli aiuti per questo passo: ${initialsHtml(sig)}`, 'info', true); return; }
   if (remaining() <= 1) { showMessage('Non hai abbastanza tentativi per un suggerimento', 'warn'); return; }
   game.moves.push({ sigla: sig, type: 'hint', level: level + 1 });
+  playSound('hint');
   if (level === 0) showMessage('Il contorno del prossimo passo utile è sulla mappa', 'info');
   else showMessage(`Iniziali: ${initialsHtml(sig)}`, 'info', true);
   afterMove();
@@ -899,7 +983,11 @@ function afterMove() {
   saveState();
   renderAll();
   updateZoom();
-  if (game.over) finish();
+  if (game.over) {
+    const end = !game.won ? 'lose' : overPar() <= 0 ? 'perfect' : 'win';
+    setTimeout(() => playSound(end), 280);
+    finish();
+  }
 }
 
 function giveUp() {
@@ -909,6 +997,7 @@ function giveUp() {
   saveState();
   renderAll();
   updateZoom();
+  playSound('lose');
   finish();
 }
 
@@ -1229,7 +1318,7 @@ function onSubmit(e) {
   if (r.empty) return;
   if (r.ambiguous) { showMessage(MAP.ambiguous, 'warn'); return; }
   const tip = !r.sig && (MAP.unknownHints || {})[norm($('guess-input').value)];
-  if (tip) { showMessage(tip, 'warn'); shake(); return; }
+  if (tip) { showMessage(tip, 'warn'); shake(); playSound('error'); return; }
   pick(r.sig);
 }
 
@@ -1337,6 +1426,8 @@ function init() {
   $('mode-daily').addEventListener('click', () => { if (game.mode !== 'daily') startGame('daily'); });
   $('mode-practice').addEventListener('click', () => { if (game.mode === 'daily') newPractice(); });
   $('btn-help').addEventListener('click', () => openModal('help-modal'));
+  $('btn-sound').addEventListener('click', toggleSound);
+  renderSoundButton();
   $('btn-stats').addEventListener('click', () => { renderStats(); openModal('stats-modal'); });
 
   document.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', () => closeModals()));

@@ -41,6 +41,7 @@ Si sceglie la mappa dalle linguette in alto. Ognuna ha il suo puzzle quotidiano,
 - Per arrenderti premi 🏳️ due volte: la prima chiede conferma.
 - A partita vinta compare **Lo sapevi?**: una curiosità sulla località di partenza e una su quella di arrivo, ognuna con la sua fonte.
 - I collegamenti tratteggiati della tabella sopra contano come confini.
+- Ogni scelta ha il suo suono: due note che salgono per il percorso ideale (sempre più acute se le scelte ideali sono di fila), una nota per la piccola deviazione, due che scendono per la grande, un tonfo per le aree senza collegamento via terra, un ronzio per i nomi sbagliati, una fanfara a partita vinta. I suoni sono generati dal browser, senza file audio; sul telefono errori e fine partita vibrano. L'altoparlante in alto li spegne, e la scelta resta salvata.
 - La mappa si ingrandisce con due dita sul telefono, con la rotella sul computer o con i pulsanti **+** e **−**, e si sposta trascinandola. Ogni nuova mossa riporta la vista sulla partita; il pulsante con la bandiera mostra la mappa intera.
 
 ### Quotidiano e allenamento

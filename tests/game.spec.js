@@ -573,6 +573,35 @@ test('Regioni: nomi locali, collegamenti fissi e isole senza confini', async ({ 
   expect((await state(page)).moves).toEqual(['guess:ITA-R15', 'guess:ITA-R17', 'guess:AUT-2329']);
 });
 
+// ---------- Suoni ----------
+test('ogni esito ha il suo suono e il pulsante li spegne', async ({ page }) => {
+  await open(page, CHALLENGE);
+  const log = () => page.evaluate(() => soundLog.slice());
+  await guess(page, 'Atlantide');
+  await guess(page, 'Frosinone');
+  await guess(page, 'Rieti');
+  expect(await log()).toEqual(['error', 'g-ok', 'g-near']);
+
+  // spenti: nessun suono, e la scelta resta salvata
+  await page.click('#btn-sound');
+  await expect(page.locator('#btn-sound')).toHaveAttribute('aria-pressed', 'false');
+  await guess(page, 'Roma');
+  expect(await log()).toEqual(['error', 'g-ok', 'g-near']);
+  await page.reload();
+  await page.waitForFunction(() => typeof game !== 'undefined' && game !== null);
+  expect(await page.evaluate(() => soundOn)).toBe(false);
+  await page.click('#btn-sound');
+  expect(await log()).toEqual(['g-ok']);          // riaccendendo si sente un suono di prova
+});
+
+test('la partita perfetta finisce con il suono della vittoria', async ({ page }) => {
+  await open(page, CHALLENGE);
+  for (const n of ['Frosinone', 'Roma', 'Viterbo', 'Siena']) await guess(page, n);
+  await expect(page.locator('#result-title')).toHaveText(/Perfetto/);
+  expect(await page.evaluate(() => soundLog.slice())).toEqual(['g-ok', 'g-ok', 'g-ok', 'g-ok', 'perfect']);
+  await expect(page.locator('#guesses li').first()).toHaveClass(/new/);
+});
+
 // ---------- Zoom a mano ----------
 test('i pulsanti + e − ingrandiscono e rimpiccioliscono la mappa', async ({ page }) => {
   await open(page, CHALLENGE);

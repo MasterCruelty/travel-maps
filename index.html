@@ -26,13 +26,18 @@
     <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V4M8 8l4-4 4 4M5 13v6.5h14V13"/></symbol>
     <symbol id="i-fit" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
     <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="1.6"/><path d="M12 2v3.5M12 18.5V22M2 12h3.5M18.5 12H22"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4zM15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></symbol>
+    <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4zM16 9.5l5 5M21 9.5l-5 5"/></symbol>
     <symbol id="i-cup" viewBox="0 0 24 24"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5zM16 11h2a2 2 0 0 1 0 4h-2M8.5 3.5v2.5M12.5 3.5v2.5"/></symbol>
   </defs>
 </svg>
 <header class="topbar">
-  <button id="btn-help" class="icon-btn" title="Come si gioca" aria-label="Come si gioca">?</button>
+  <div class="top-side"><button id="btn-help" class="icon-btn" title="Come si gioca" aria-label="Come si gioca">?</button></div>
   <h1><svg class="logo" aria-hidden="true"><use href="#i-compass"/></svg>Travel <span>Maps</span></h1>
-  <button id="btn-stats" class="icon-btn" title="Statistiche" aria-label="Statistiche"><svg class="ic" aria-hidden="true"><use href="#i-stats"/></svg></button>
+  <div class="top-side end">
+    <button id="btn-sound" class="icon-btn" title="Disattiva i suoni" aria-label="Disattiva i suoni" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-sound"/></svg></button>
+    <button id="btn-stats" class="icon-btn" title="Statistiche" aria-label="Statistiche"><svg class="ic" aria-hidden="true"><use href="#i-stats"/></svg></button>
+  </div>
 </header>
 
 <main>
@@ -147,6 +152,7 @@
       <li>I tentativi sono limitati e dipendono dal percorso più breve possibile.</li>
       <li>Il punteggio è <b>Perfetto</b> se usi esattamente il numero minimo di <span data-u="many">province</span>, altrimenti <b>+N</b>.</li>
       <li>Il suggerimento mostra sulla mappa il contorno del prossimo passo utile, senza nome; un secondo aiuto ne rivela le iniziali. Ogni aiuto costa un tentativo.</li>
+      <li>Ogni scelta ha il suo suono, diverso per percorso ideale, piccola o grande deviazione; le scelte ideali di fila salgono di tono. Il pulsante con l'altoparlante in alto li spegne.</li>
       <li>Ingrandisci la mappa con due dita, la rotella o i pulsanti + e −, e spostala trascinandola.</li>
       <li>I colori indicano quanto ogni scelta ti allontana dal percorso ottimale:</li>
     </ul>
