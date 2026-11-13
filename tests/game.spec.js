@@ -573,6 +573,24 @@ test('Regioni: nomi locali, collegamenti fissi e isole senza confini', async ({ 
   expect((await state(page)).moves).toEqual(['guess:ITA-R15', 'guess:ITA-R17', 'guess:AUT-2329']);
 });
 
+// ---------- Percorso a fine partita ----------
+test('arrendendosi si vede tutto il percorso ideale, che segue le aree già indovinate', async ({ page }) => {
+  await open(page, CHALLENGE);
+  await expect(page.locator('#layer-route > *')).toHaveCount(0);     // nessun aiuto durante la partita
+  await guess(page, 'Latina');                                       // Caserta-Latina-Roma è ideale quanto Frosinone
+  await page.click('#btn-giveup');
+  await page.click('#btn-giveup');
+  await expect(page.locator('#result-modal')).toBeVisible();
+  const path = await page.evaluate(() => idealPath());
+  expect(path).toEqual(['CE', 'LT', 'RM', 'VT', 'SI', 'FI']);
+  await expect(page.locator('#result-path')).toContainText('Caserta › Latina › Roma › Viterbo › Siena › Firenze');
+  // sulla mappa: una tappa per area e una linea che le unisce
+  await expect(page.locator('#layer-route .stop')).toHaveCount(path.length);
+  expect((await page.locator('#layer-route .route').getAttribute('points')).split(' ')).toHaveLength(path.length);
+  // le aree del percorso non indovinate sono evidenziate
+  for (const s of ['RM', 'VT', 'SI']) await expect(page.locator(`#p-${s}`)).toHaveClass(/solution/);
+});
+
 // ---------- Suoni ----------
 test('ogni esito ha il suo suono e il pulsante li spegne', async ({ page }) => {
   await open(page, CHALLENGE);

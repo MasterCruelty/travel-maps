@@ -342,6 +342,31 @@ function shortestPath(a, b) {
   return path;
 }
 
+// Il percorso ideale da mostrare a fine partita: tra i più corti, quello che
+// passa per più aree già indovinate, così prosegue ciò che il giocatore ha fatto.
+function idealPath() {
+  const { distStart, distEnd, opt } = game;
+  const owned = ownedSet();
+  const best = { [game.start]: { score: 0, prev: null } };
+  let layer = [game.start];
+  for (let d = 1; d <= opt && layer.length; d++) {
+    const next = new Set();
+    for (const u of layer) {
+      for (const v of NB[u]) {
+        if (distStart[v] !== d || distEnd[v] !== opt - d) continue;
+        const score = best[u].score + (owned.has(v) ? 1 : 0);
+        if (!best[v] || score > best[v].score) best[v] = { score, prev: u };
+        next.add(v);
+      }
+    }
+    layer = [...next];
+  }
+  if (!best[game.end]) return shortestPath(game.start, game.end);
+  const path = [];
+  for (let c = game.end; c != null; c = best[c].prev) path.unshift(c);
+  return path;
+}
+
 function connected(a, b, allowed) {
   const seen = new Set([a]);
   const q = [a];
@@ -498,7 +523,7 @@ function ownedSet() {
 
 function revealedList() {
   const list = [game.start, game.end, ...game.moves.map(m => m.sigla)];
-  if (game.over) list.push(...shortestPath(game.start, game.end));
+  if (game.over) list.push(...idealPath());
   return [...new Set(list)];
 }
 
@@ -548,7 +573,8 @@ function hideTooltip() { $('tooltip').hidden = true; }
 const isFogged = () => game.mode === 'daily' && !game.over;
 
 function paintMap() {
-  const solution = game.over ? new Set(shortestPath(game.start, game.end)) : new Set();
+  const route = game.over ? idealPath() : [];
+  const solution = new Set(route);
   const fog = isFogged();
   const shown = new Set(revealedList());
   $('map').classList.toggle('fog', fog);
@@ -569,8 +595,14 @@ function paintMap() {
     if (solution.has(sig)) cls.push('path-hl');
     $('p-' + sig).setAttribute('class', cls.join(' '));
   }
-  // Ordine di priorità: partenza, arrivo, poi le mosse dalla più recente.
-  const order = [...new Set([game.start, game.end, ...game.moves.map(m => m.sigla).reverse(), ...shown])];
+  // A fine partita una linea tratteggiata unisce le aree del percorso ideale.
+  const pt = (s) => `${area(s).lx},${area(s).ly}`;
+  $('layer-route').innerHTML = route.length < 2 ? '' :
+    `<polyline class="route" points="${route.map(pt).join(' ')}"/>` +
+    route.map(s => `<path class="stop" d="M${pt(s)}h0"/>`).join('');
+  // Ordine di priorità: partenza, arrivo, a fine partita il percorso ideale,
+  // poi le mosse dalla più recente.
+  const order = [...new Set([game.start, game.end, ...route, ...game.moves.map(m => m.sigla).reverse(), ...shown])];
   $('layer-labels').innerHTML = order.map(s => {
     const p = area(s);
     return `<text class="label" x="${p.lx}" y="${p.ly}">${nameHidden(s) ? '?' : esc(shortName(s))}</text>`;
@@ -1039,7 +1071,7 @@ function showResult() {
   $('result-grid').innerHTML = game.moves.map(m =>
     `<i class="sq ${m.type === 'hint' ? 'hint' : m.color}"></i>`).join('') || '—';
 
-  const path = shortestPath(game.start, game.end);
+  const path = idealPath();
   $('result-path').innerHTML = `<b>Un percorso ideale (${game.needed} ${MAP.many}):</b><br>` +
     path.map(s => `<span class="step">${esc(area(s).name)}</span>`).join(' <span class="sep">›</span> ');
 
