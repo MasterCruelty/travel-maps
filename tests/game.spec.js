@@ -220,7 +220,7 @@ test('le iniziali mantengono spazi e apostrofi', async ({ page }) => {
 test('un suggerimento salvato dalla versione precedente vale come iniziali', async ({ page }) => {
   await open(page, '/');
   await page.evaluate(() => {
-    const sig = bestCompletion()[0];
+    const sig = bestCompletion()[0].sig;
     localStorage.setItem('pi_daily_' + game.id, JSON.stringify({
       start: game.start, end: game.end, moves: [{ sigla: sig, type: 'hint' }], over: false, won: false, gaveUp: false,
     }));
@@ -797,4 +797,232 @@ test('i file delle curiosità sono validi', async ({}, testInfo) => {
       for (const s of entry.sources) expect(s, `${map}/${id}`).toMatch(/^https?:\/\//);
     }
   }
+});
+
+// ---------- Tappa obbligata ----------
+test('con la tappa il percorso deve passare da lì', async ({ page }) => {
+  await open(page, '/?da=CE&a=FI&via=AQ');
+  await expect(page.locator('#via-box')).toBeVisible();
+  await expect(page.locator('#via-name')).toHaveText("L'Aquila");
+  await expect(page.locator('#p-AQ')).toHaveClass(/via/);
+  expect(await page.evaluate(() => [game.via, game.needed])).toEqual(['AQ', 4]);
+  await guess(page, "L'Aquila");
+  await expect(page.locator('#message')).toContainText('è già la tappa');
+  // Frosinone porta alla tappa; Roma sarebbe ideale senza tappa ma qui è comunque sul secondo tratto
+  await guess(page, 'Frosinone');
+  await guess(page, 'Rieti');
+  await guess(page, 'Perugia');
+  expect((await state(page)).over).toBe(false);
+  await guess(page, 'Arezzo');
+  await expect(page.locator('#result-title')).toHaveText('Perfetto!');
+  await expect(page.locator('#result-sub')).toContainText("Caserta → L'Aquila → Firenze");
+  await expect(page.locator('#result-path .step.via')).toHaveText("L'Aquila");
+  expect(await page.evaluate(() => gameUrl(true))).toContain('via=AQ');
+});
+
+test('una tappa non valida nel link viene ignorata', async ({ page }) => {
+  await open(page, '/?da=CE&a=FI&via=XX');
+  expect(await page.evaluate(() => game.via)).toBe(null);
+  await expect(page.locator('#via-box')).toBeHidden();
+  await open(page, '/?da=CE&a=FI&via=CE');
+  expect(await page.evaluate(() => game.via)).toBe(null);
+});
+
+// ---------- Durata dell'allenamento ----------
+test('in allenamento si sceglie la durata e la tappa', async ({ page }) => {
+  await open(page, '/');
+  await expect(page.locator('#practice-opts')).toBeHidden();
+  await page.click('#mode-practice');
+  await expect(page.locator('#practice-opts')).toBeVisible();
+  await expect(page.locator('#len-opts [data-len="any"]')).toHaveAttribute('aria-pressed', 'true');
+  for (const len of ['short', 'long']) {
+    await page.click(`#len-opts [data-len="${len}"]`);
+    await expect(page.locator(`#len-opts [data-len="${len}"]`)).toHaveAttribute('aria-pressed', 'true');
+    for (let i = 0; i < 4; i++) {
+      const [opt, band] = await page.evaluate(l => { newPractice(); return [game.opt, lengthBands()[l]]; }, len);
+      expect(opt).toBeGreaterThanOrEqual(band[0]);
+      expect(opt).toBeLessThanOrEqual(band[1]);
+    }
+  }
+  await page.click('#btn-via');
+  await expect(page.locator('#btn-via')).toHaveAttribute('aria-pressed', 'true');
+  for (let i = 0; i < 4; i++) {
+    const g = await page.evaluate(() => {
+      newPractice();
+      return { via: game.via, needed: game.needed, opt: game.opt,
+               valid: viaIsValid(game.start, game.end, game.via, game.distStart, game.distEnd, game.distVia) };
+    });
+    expect(g.via).toBeTruthy();
+    expect(g.valid).toBe(true);
+    expect(g.needed).toBe(g.opt - 2);
+  }
+  await expect(page.locator('#via-box')).toBeVisible();
+  // le preferenze restano dopo il ricaricamento
+  await page.reload();
+  await page.click('#mode-practice');
+  await expect(page.locator('#btn-via')).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('#len-opts [data-len="long"]')).toHaveAttribute('aria-pressed', 'true');
+});
+
+test('le durate esistono su tutte le mappe', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop', 'basta una volta');
+  await open(page, '/');
+  for (const key of ['italia', 'milano', 'germania', 'distretti', 'alpi', 'alpiprovince', 'mondo', 'regioni']) {
+    const bands = await page.evaluate(async k => { await loadData(k); return lengthBands(); }, key);
+    for (const l of ['short', 'mid', 'long']) {
+      expect(bands[l][0], `${key} ${l}`).toBeLessThanOrEqual(bands[l][1]);
+    }
+    expect(bands.short[1]).toBeLessThan(bands.mid[0]);
+    expect(bands.mid[1]).toBeLessThan(bands.long[0]);
+  }
+});
+
+// ---------- Direzione ----------
+test('la direzione è gratuita, indica il prossimo passo e si conta nel risultato', async ({ page }) => {
+  await open(page, CHALLENGE);
+  await page.click('#btn-compass');
+  await expect(page.locator('#message')).toContainText(/Il prossimo passo utile è a (nord|nord-ovest|ovest) di Caserta/);
+  await expect(page.locator('#layer-route .compass')).toHaveCount(1);
+  await page.click('#btn-compass');                       // stesso passo: non si conta due volte
+  expect(await page.evaluate(() => [game.compassUses, game.moves.length])).toEqual([1, 0]);
+  await guess(page, 'Frosinone');
+  await expect(page.locator('#layer-route .compass')).toHaveCount(0);
+  await page.click('#btn-compass');
+  await expect(page.locator('#message')).toContainText('di Frosinone');
+  for (const n of ['Roma', 'Viterbo', 'Siena']) await guess(page, n);
+  await expect(page.locator('#result-title')).toHaveText('Perfetto!');
+  await expect(page.locator('#result-sub')).toContainText('direzione ×2');
+  expect(await page.evaluate(() => shareText())).toContain('🟩🟩🟩🟩 (4/7) 🧭×2');
+});
+
+// ---------- Archivio ----------
+test("l'archivio rigioca i quotidiani passati e ne ricorda l'esito", async ({ page }) => {
+  await page.clock.setFixedTime(new Date('2026-03-10T10:00:00'));
+  await open(page, '/');
+  const past = await page.evaluate(() => ({ id: game.id, start: game.start, end: game.end }));
+  await page.clock.setFixedTime(new Date('2026-03-15T10:00:00'));
+  await open(page, `/?giorno=${past.id}`);
+  const s = await page.evaluate(() => ({ id: game.id, start: game.start, end: game.end, mode: game.mode }));
+  expect(s).toEqual({ ...past, mode: 'archive' });
+  await expect(page.locator('#puzzle-id')).toContainText(`#${past.id} · 10 mar 2026`);
+  await expect(page.locator('#mode-archive')).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('.prov:not(.hidden)')).toHaveCount(2);              // mappa nascosta come nel quotidiano
+  await page.click('#btn-giveup');
+  await page.click('#btn-giveup');
+  await expect(page.locator('#result-modal')).toBeVisible();
+  expect(await page.evaluate(() => shareText())).toContain(`giorno=${past.id}`);
+  await page.click('#result-modal .close');
+
+  await page.click('#mode-archive');
+  await expect(page.locator('#archive-modal')).toBeVisible();
+  await expect(page.locator('#archive-month')).toHaveText('marzo 2026');
+  await expect(page.locator(`#archive-grid [data-id="${past.id}"]`)).toHaveClass(/r-x/);
+  await expect(page.locator('#archive-grid .today')).toHaveText('15');
+  await expect(page.locator('#archive-grid button')).toHaveCount(15);           // dal primo al 15 marzo
+  await expect(page.locator('#archive-next')).toBeDisabled();
+  await page.click('#archive-prev');
+  await expect(page.locator('#archive-month')).toHaveText('febbraio 2026');
+  // i quotidiani passati non entrano nelle statistiche
+  expect(await page.evaluate(() => loadStats().played)).toBe(0);
+
+  await page.click('#archive-grid [data-id]:has-text("3")');
+  expect(await page.evaluate(() => [game.mode, dateOfId(game.id).getDate()])).toEqual(['archive', 3]);
+  expect(page.url()).toContain('giorno=');
+  await page.click('#mode-daily');
+  expect(await page.evaluate(() => game.mode)).toBe('daily');
+  expect(page.url()).not.toContain('giorno=');
+});
+
+test("l'esito dei vecchi quotidiani salvati passa nell'archivio", async ({ page }) => {
+  await open(page, '/');
+  await page.evaluate(() => {
+    const old = dailyId() - 20;
+    localStorage.setItem('pi_daily_' + old, JSON.stringify({ start: 'TO', end: 'BA', moves: [], over: true, won: true, gaveUp: false }));
+  });
+  await page.reload();
+  await page.waitForFunction(() => game !== null);
+  const r = await page.evaluate(() => [loadResults()[dailyId() - 20], localStorage.getItem('pi_daily_' + (dailyId() - 20))]);
+  expect(r).toEqual(['V', null]);
+});
+
+// ---------- Traguardi ----------
+test('vincere sblocca traguardi e colora le aree visitate', async ({ page }) => {
+  await open(page, CHALLENGE);
+  for (const n of ['Frosinone', 'Roma', 'Viterbo', 'Siena']) await guess(page, n);
+  await expect(page.locator('#result-badges')).toBeVisible();
+  await expect(page.locator('#result-badges')).toContainText('Prima tappa');
+  await expect(page.locator('#result-badges')).toContainText('Rotta perfetta');
+  await page.click('#result-modal .close');
+  await page.click('#btn-stats');
+  await expect(page.locator('#badges .badge.got')).toHaveCount(2);
+  await expect(page.locator('#badges-count')).toHaveText(/^2\/\d+$/);
+  await expect(page.locator('#explore-count')).toHaveText('6/110 province');
+  await expect(page.locator('#explore-map .xp')).toHaveCount(110);
+  await expect(page.locator('#explore-map .xp.seen')).toHaveCount(6);
+  // una seconda partita uguale non risblocca nulla
+  await page.click('#stats-modal .close');
+  await page.evaluate(() => startGame('practice', { fixed: { start: 'CE', end: 'FI' } }));
+  for (const n of ['Frosinone', 'Roma', 'Viterbo', 'Siena']) await guess(page, n);
+  await expect(page.locator('#result-modal')).toBeVisible();
+  await expect(page.locator('#result-badges')).toBeHidden();
+  expect(await page.evaluate(() => loadRecord().wins)).toBe(2);
+});
+
+// ---------- Link sfida ----------
+test('il link sfida funziona su tutte le mappe', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop', 'basta una volta');
+  await open(page, '/');
+  for (const key of ['italia', 'milano', 'germania', 'distretti', 'alpi', 'alpiprovince', 'mondo', 'regioni']) {
+    const pair = await page.evaluate(async k => {
+      await loadData(k);
+      const a = SIGLAS.find(s => NB[s].length > 1);
+      const d = bfs(a);
+      return [a, SIGLAS.find(s => d[s] === 3)];
+    }, key);
+    await open(page, `/?mappa=${key}&da=${encodeURIComponent(pair[0])}&a=${encodeURIComponent(pair[1])}`);
+    const g = await page.evaluate(() => [mapKey, game.mode, game.start, game.end, gameUrl(true)]);
+    expect(g.slice(0, 4)).toEqual([key, 'practice', ...pair]);
+    if (key !== 'italia') expect(g[4]).toContain(`mappa=${key}`);
+  }
+});
+
+test('il pulsante sfida copia un link con la stessa tratta', async ({ page, context }) => {
+  await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+  await open(page, '/?da=CE&a=FI&via=AQ');
+  await page.click('#btn-giveup');
+  await page.click('#btn-giveup');
+  await page.evaluate(() => { navigator.share = undefined; });
+  await page.click('#btn-challenge');
+  await expect(page.locator('#share-ok')).toContainText('Link della sfida copiato');
+  const text = await page.evaluate(() => navigator.clipboard.readText());
+  expect(text).toContain("Caserta → L'Aquila → Firenze");
+  expect(text).toMatch(/\?da=CE&a=FI&via=AQ$/);
+});
+
+// ---------- App installabile ----------
+test('manifest, icone e anteprima dei link sono pubblicati', async ({ page, request }) => {
+  await open(page, '/');
+  const manifest = await (await request.get('/manifest.webmanifest')).json();
+  expect(manifest.display).toBe('standalone');
+  for (const icon of manifest.icons) expect((await request.get('/' + icon.src)).ok()).toBe(true);
+  await expect(page.locator('link[rel="manifest"]')).toHaveCount(1);
+  const og = await page.locator('meta[property="og:image"]').getAttribute('content');
+  expect(og).toMatch(/\/og\.png$/);
+  expect((await request.get('/og.png')).ok()).toBe(true);
+  await expect(page.locator('meta[property="og:description"]')).toHaveAttribute('content', /Alpi/);
+});
+
+test('dopo la prima visita il gioco si apre anche senza rete', async ({ page, context }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop', 'basta una volta');
+  await open(page, '/');
+  await page.evaluate(async () => {
+    await navigator.serviceWorker.register('sw.js');
+    await navigator.serviceWorker.ready;
+  });
+  await page.waitForFunction(() => navigator.serviceWorker.controller !== null);
+  await context.setOffline(true);
+  await page.reload();
+  await page.waitForFunction(() => typeof game !== 'undefined' && game !== null);
+  await expect(page.locator('.prov')).toHaveCount(110);
+  await context.setOffline(false);
 });
