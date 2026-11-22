@@ -205,6 +205,8 @@ MAPS.regioni = {
   storagePrefix: 'pi_regioni_',
   seedOffset: 31337,
   minDist: 6, maxDist: 50,
+  // durate dell'allenamento: con quasi 3.000 aree le soglie generiche sarebbero troppo lunghe
+  lengths: { short: [6, 12], mid: [13, 25], long: [26, 50] },
   extraMin: 5, extraFactor: 0.6,
   codes: false,
   aliases: {},
@@ -234,6 +236,7 @@ let NAME_INDEX = {};           // testo normalizzato -> id (corrispondenze esatt
 let SEARCH_KEYS = [];          // [{sigla, key}] per l'autocompletamento
 const dataCache = {};
 const factsCache = {};
+const bandsCache = {};
 
 let game = null;
 let view = null;               // viewBox corrente [x, y, w, h]
@@ -243,6 +246,8 @@ let countdownTimer = null;
 const $ = (id) => document.getElementById(id);
 const statsKey = () => MAP.storagePrefix + 'stats_v1';
 const dailyPrefix = () => MAP.storagePrefix + 'daily_';
+const resultsKey = () => MAP.storagePrefix + 'results_v1';   // esito di ogni quotidiano giocato
+const recordKey = (m = MAP) => m.storagePrefix + 'record_v1'; // traguardi e aree visitate
 
 // ---------- Utilità ----------
 // Minuscolo, senza accenti né apostrofi: "L'Aquila" -> "laquila", "Forlì" -> "forli".
@@ -290,6 +295,11 @@ function dayNumber(d) {
 function dailyId() {
   return dayNumber(new Date()) - dayNumber(DAILY_EPOCH) + 1;
 }
+
+// Il giorno del puzzle numero id (il n. 1 è il primo gennaio 2024).
+const dateOfId = (id) => new Date(DAILY_EPOCH.getFullYear(), DAILY_EPOCH.getMonth(), DAILY_EPOCH.getDate() + id - 1);
+const idOfDate = (d) => dayNumber(d) - dayNumber(DAILY_EPOCH) + 1;
+const isDailyLike = () => game.mode === 'daily' || game.mode === 'archive';
 
 function area(sig) { return DATA.areas[sig]; }
 
@@ -342,18 +352,24 @@ function shortestPath(a, b) {
   return path;
 }
 
-// Il percorso ideale da mostrare a fine partita: tra i più corti, quello che
-// passa per più aree già indovinate, così prosegue ciò che il giocatore ha fatto.
-function idealPath() {
-  const { distStart, distEnd, opt } = game;
-  const owned = ownedSet();
-  const best = { [game.start]: { score: 0, prev: null } };
-  let layer = [game.start];
-  for (let d = 1; d <= opt && layer.length; d++) {
+// I tratti della partita: partenza → arrivo, oppure partenza → tappa → arrivo.
+function legs() {
+  const { start, end, via, distStart, distEnd, distVia } = game;
+  return via ? [[start, via, distStart, distVia], [via, end, distVia, distEnd]]
+             : [[start, end, distStart, distEnd]];
+}
+
+// Tra i percorsi più corti da a a b, quello che passa per più aree già
+// indovinate, così prosegue ciò che il giocatore ha fatto.
+function legPath(a, b, distA, distB, owned) {
+  const len = distA[b];
+  const best = { [a]: { score: 0, prev: null } };
+  let layer = [a];
+  for (let d = 1; d <= len && layer.length; d++) {
     const next = new Set();
     for (const u of layer) {
       for (const v of NB[u]) {
-        if (distStart[v] !== d || distEnd[v] !== opt - d) continue;
+        if (distA[v] !== d || distB[v] !== len - d) continue;
         const score = best[u].score + (owned.has(v) ? 1 : 0);
         if (!best[v] || score > best[v].score) best[v] = { score, prev: u };
         next.add(v);
@@ -361,9 +377,17 @@ function idealPath() {
     }
     layer = [...next];
   }
-  if (!best[game.end]) return shortestPath(game.start, game.end);
+  if (!best[b]) return shortestPath(a, b);
   const path = [];
-  for (let c = game.end; c != null; c = best[c].prev) path.unshift(c);
+  for (let c = b; c != null; c = best[c].prev) path.unshift(c);
+  return path;
+}
+
+// Il percorso ideale da mostrare a fine partita, tappa compresa.
+function idealPath() {
+  const owned = ownedSet();
+  const path = [];
+  for (const [a, b, da, db] of legs()) path.push(...legPath(a, b, da, db, owned).slice(path.length ? 1 : 0));
   return path;
 }
 
@@ -382,25 +406,65 @@ function connected(a, b, allowed) {
 // Il modo più economico per completare il percorso partendo da ciò che il
 // giocatore ha già inserito: attraversare un'area già nota costa 0,
 // qualsiasi altra costa 1 (BFS 0-1).
+// Con la tappa si completa un tratto alla volta.
+// Restituisce [{sig, from}]: le aree mancanti e l'area da cui ci si arriva.
 function bestCompletion() {
   const owned = ownedSet();
-  const cost = { [game.start]: 0 };
-  const prev = { [game.start]: null };
-  const dq = [game.start];
-  while (dq.length) {
-    const u = dq.shift();
-    for (const v of NB[u]) {
-      const w = owned.has(v) ? 0 : 1;
-      if (cost[v] === undefined || cost[u] + w < cost[v]) {
-        cost[v] = cost[u] + w;
-        prev[v] = u;
-        if (w) dq.push(v); else dq.unshift(v);
+  const out = [];
+  for (const [a, b] of legs()) {
+    const cost = { [a]: 0 };
+    const prev = { [a]: null };
+    const dq = [a];
+    while (dq.length) {
+      const u = dq.shift();
+      for (const v of NB[u]) {
+        const w = owned.has(v) ? 0 : 1;
+        if (cost[v] === undefined || cost[u] + w < cost[v]) {
+          cost[v] = cost[u] + w;
+          prev[v] = u;
+          if (w) dq.push(v); else dq.unshift(v);
+        }
       }
     }
+    const path = [];
+    for (let c = b; c != null; c = prev[c]) path.unshift(c);
+    path.forEach((s, i) => {
+      if (!owned.has(s)) { out.push({ sig: s, from: path[i - 1] }); owned.add(s); }
+    });
   }
-  const path = [];
-  for (let c = game.end; c != null; c = prev[c]) path.unshift(c);
-  return path.filter(s => !owned.has(s));
+  return out;
+}
+
+// Stima del diametro della mappa (il tragitto più lungo possibile) con
+// qualche doppia visita in ampiezza: basta per dividere le durate.
+function estimateDiameter() {
+  let best = 0;
+  for (let i = 0; i < 8; i++) {
+    let src = SIGLAS[Math.floor(i * SIGLAS.length / 8)];
+    for (let k = 0; k < 2; k++) {
+      const dist = bfs(src);
+      for (const s in dist) if (dist[s] > (dist[src] || 0)) src = s;
+      best = Math.max(best, dist[src]);
+    }
+  }
+  return best;
+}
+
+// Durate dell'allenamento: intervalli di distanza tra partenza e arrivo.
+function lengthBands() {
+  if (!bandsCache[mapKey]) {
+    let bands = MAP.lengths;
+    if (!bands) {
+      const diam = estimateDiameter();
+      const lo = MAP.minDist;
+      const hi = Math.max(lo + 2, isFinite(MAP.maxDist) ? Math.min(diam, Math.round(MAP.maxDist * 1.5)) : diam);
+      const d = hi - lo;
+      const b1 = lo + Math.floor(d / 3), b2 = lo + Math.floor(2 * d / 3);
+      bands = { short: [lo, b1], mid: [b1 + 1, b2], long: [b2 + 1, hi] };
+    }
+    bandsCache[mapKey] = { any: [MAP.minDist, MAP.maxDist], ...bands };
+  }
+  return bandsCache[mapKey];
 }
 
 // ---------- Dati ----------
@@ -439,46 +503,103 @@ async function loadData(key) {
 }
 
 // ---------- Puzzle ----------
-function pickPuzzle(rng) {
+function pickPuzzle(rng, [lo, hi] = [MAP.minDist, MAP.maxDist]) {
   for (let tries = 0; tries < 500; tries++) {
     const start = SIGLAS[Math.floor(rng() * SIGLAS.length)];
     const dist = bfs(start);
-    const candidates = SIGLAS.filter(s => dist[s] >= MAP.minDist && dist[s] <= MAP.maxDist);
+    const candidates = SIGLAS.filter(s => dist[s] >= lo && dist[s] <= hi);
     if (candidates.length) return { start, end: candidates[Math.floor(rng() * candidates.length)] };
   }
+  if (lo !== MAP.minDist || hi !== MAP.maxDist) return pickPuzzle(rng);
   throw new Error('nessun puzzle valido');
+}
+
+// Una tappa vale se il modo più breve di toccare partenza, tappa e arrivo
+// passa proprio dalla tappa: così i due tratti non si sovrappongono e il
+// minimo di aree da nominare è certo.
+function viaIsValid(start, end, via, dS, dE, dV) {
+  if (!NB[via] || via === start || via === end || dS[via] === undefined || dE[via] === undefined) return false;
+  const total = dS[via] + dE[via];
+  for (const c of SIGLAS) {
+    if (dS[c] !== undefined && dV[c] !== undefined && dE[c] !== undefined && dS[c] + dV[c] + dE[c] < total) return false;
+  }
+  return true;
+}
+
+// Una tappa che costringe a una deviazione vera, ma non enorme.
+function pickVia(start, end, rng, dS, dE) {
+  const dSE = dS[end];
+  const cands = SIGLAS.filter(v => v !== start && v !== end && dS[v] >= 2 && dE[v] >= 2 &&
+    dS[v] + dE[v] >= dSE + 2 && dS[v] + dE[v] <= dSE + Math.max(4, dSE));
+  for (let tries = 0; tries < 40 && cands.length; tries++) {
+    const v = cands.splice(Math.floor(rng() * cands.length), 1)[0];
+    const dV = bfs(v);
+    if (viaIsValid(start, end, v, dS, dE, dV)) return v;
+  }
+  return null;
 }
 
 function puzzleFromUrl() {
   const params = new URLSearchParams(location.search);
   const start = (params.get('da') || '').toUpperCase();
   const end = (params.get('a') || '').toUpperCase();
+  const via = (params.get('via') || '').toUpperCase();
   if (!NB[start] || !NB[end] || start === end || NB[start].includes(end)) return null;
+  if (NB[via] && viaIsValid(start, end, via, bfs(start), bfs(end), bfs(via))) return { start, end, via };
   return { start, end };
 }
 
-function makeGame(mode, fixed) {
-  let puzzle, id = null, label;
-  if (mode === 'daily') {
-    id = dailyId();
-    const dn = dayNumber(new Date());
+// Numero del puzzle dell'archivio indicato nell'indirizzo (?giorno=123).
+function dayFromUrl() {
+  const n = Number(new URLSearchParams(location.search).get('giorno'));
+  return Number.isInteger(n) && n >= 1 && n <= dailyId() ? n : null;
+}
+
+const fmtDay = (id) => dateOfId(id).toLocaleDateString('it-IT', { day: 'numeric', month: 'short', year: 'numeric' });
+
+// Preferenze dell'allenamento, comuni a tutte le mappe.
+const practicePrefs = () => ({ len: store.get('pi_len', 'any'), via: store.get('pi_via', false) });
+
+function randomPuzzle() {
+  const rng = mulberry32((Math.random() * 2 ** 32) >>> 0);
+  const { len, via } = practicePrefs();
+  const band = lengthBands()[len] || lengthBands().any;
+  for (let tries = 0; tries < 20; tries++) {
+    const p = pickPuzzle(rng, band);
+    if (!via) return p;
+    const v = pickVia(p.start, p.end, rng, bfs(p.start), bfs(p.end));
+    if (v) return { ...p, via: v };
+  }
+  return pickPuzzle(rng, band);
+}
+
+// mode: 'daily' (oggi), 'archive' (un giorno passato) o 'practice'.
+function makeGame(mode, { fixed = null, id = null } = {}) {
+  let puzzle, label;
+  if (mode === 'daily' || mode === 'archive') {
+    id = mode === 'daily' ? dailyId() : id;
+    const dn = dayNumber(DAILY_EPOCH) + id - 1;
     puzzle = pickPuzzle(mulberry32(dn * 2654435761 % 2147483647 + MAP.seedOffset));
-    label = 'Puzzle #' + id;
+    label = mode === 'daily' ? 'Puzzle #' + id : `Puzzle #${id} · ${fmtDay(id)}`;
   } else {
-    puzzle = fixed || pickPuzzle(mulberry32((Math.random() * 2 ** 32) >>> 0));
+    puzzle = fixed || randomPuzzle();
     label = fixed ? 'Sfida' : 'Allenamento';
   }
+  const via = puzzle.via || null;
   const distStart = bfs(puzzle.start);
   const distEnd = bfs(puzzle.end);
-  const opt = distStart[puzzle.end];
-  const needed = opt - 1;                       // aree intermedie minime
+  const distVia = via ? bfs(via) : null;
+  const opt = via ? distStart[via] + distVia[puzzle.end] : distStart[puzzle.end];
+  const needed = opt - (via ? 2 : 1);           // aree intermedie minime (la tappa è data)
   const extra = Math.max(MAP.extraMin, Math.round(needed * MAP.extraFactor));
   return {
     mode, id, label,
-    start: puzzle.start, end: puzzle.end, opt, needed,
+    start: puzzle.start, end: puzzle.end, via, opt, needed,
     maxGuesses: needed + extra,
-    distStart, distEnd,
+    distStart, distEnd, distVia,
     moves: [],              // [{sigla, type: 'guess'|'hint', color?}] in ordine cronologico
+    compass: null,          // direzione mostrata adesso: {from, to}
+    compassUses: 0,
     over: false, won: false, gaveUp: false,
   };
 }
@@ -515,23 +636,27 @@ function initialsHtml(sig) {
 const remaining = () => game.maxGuesses - game.moves.length;
 const overPar = () => game.moves.length - game.needed;
 
+const endpoints = () => [game.start, game.end, ...(game.via ? [game.via] : [])];
+const isEndpoint = (sig) => endpoints().includes(sig);
+
 function ownedSet() {
-  const set = new Set([game.start, game.end]);
+  const set = new Set(endpoints());
   for (const m of guesses()) set.add(m.sigla);
   return set;
 }
 
 function revealedList() {
-  const list = [game.start, game.end, ...game.moves.map(m => m.sigla)];
+  const list = [...endpoints(), ...game.moves.map(m => m.sigla)];
   if (game.over) list.push(...idealPath());
   return [...new Set(list)];
 }
 
 // Colore in base a quanto l'area allunga il percorso ottimale.
+// Con la tappa conta il tratto a cui l'area è più vicina.
 function colorFor(sig) {
   // Aree senza alcun collegamento con partenza e arrivo (isole nel mondo).
   if (game.distStart[sig] === undefined) return 'g-none';
-  const detour = game.distStart[sig] + game.distEnd[sig] - game.opt;
+  const detour = Math.min(...legs().map(([a, b, da, db]) => da[sig] + db[sig] - da[b]));
   if (detour <= 0) return 'g-ok';
   if (detour <= 2) return 'g-near';
   return 'g-far';
@@ -570,7 +695,7 @@ function hideTooltip() { $('tooltip').hidden = true; }
 
 // Nel quotidiano in corso la mappa è nascosta: si vedono solo le aree già
 // scoperte. A fine partita (e in allenamento) compare tutta la mappa.
-const isFogged = () => game.mode === 'daily' && !game.over;
+const isFogged = () => isDailyLike() && !game.over;
 
 function paintMap() {
   const route = game.over ? idealPath() : [];
@@ -586,6 +711,7 @@ function paintMap() {
     if (fog && !shown.has(sig)) cls.push('hidden');
     if (sig === game.start) cls.push('start');
     else if (sig === game.end) cls.push('end');
+    else if (sig === game.via) cls.push('via');
     else {
       const g = game.moves.find(m => m.sigla === sig && m.type === 'guess');
       if (g) cls.push(g.color);
@@ -597,17 +723,46 @@ function paintMap() {
   }
   // A fine partita una linea tratteggiata unisce le aree del percorso ideale.
   const pt = (s) => `${area(s).lx},${area(s).ly}`;
-  $('layer-route').innerHTML = route.length < 2 ? '' :
+  $('layer-route').innerHTML = (route.length < 2 ? '' :
     `<polyline class="route" points="${route.map(pt).join(' ')}"/>` +
-    route.map(s => `<path class="stop" d="M${pt(s)}h0"/>`).join('');
-  // Ordine di priorità: partenza, arrivo, a fine partita il percorso ideale,
-  // poi le mosse dalla più recente.
-  const order = [...new Set([game.start, game.end, ...route, ...game.moves.map(m => m.sigla).reverse(), ...shown])];
+    route.map(s => `<path class="stop" d="M${pt(s)}h0"/>`).join('')) + compassArrow();
+  // Ordine di priorità: partenza, arrivo, tappa, a fine partita il percorso
+  // ideale, poi le mosse dalla più recente.
+  const order = [...new Set([...endpoints(), ...route, ...game.moves.map(m => m.sigla).reverse(), ...shown])];
   $('layer-labels').innerHTML = order.map(s => {
     const p = area(s);
     return `<text class="label" x="${p.lx}" y="${p.ly}">${nameHidden(s) ? '?' : esc(shortName(s))}</text>`;
   }).join('');
   updateLabelSize();
+}
+
+// La freccia della direzione parte da un'area già nota e punta verso il
+// prossimo passo utile, fermandosi a metà strada per non rivelarlo.
+function compassArrow() {
+  if (!game.compass || game.over) return '';
+  const a = area(game.compass.from), b = area(game.compass.to);
+  const dx = b.lx - a.lx, dy = b.ly - a.ly;
+  const len = Math.hypot(dx, dy) || 1;
+  const ux = dx / len, uy = dy / len;
+  // misure in pixel dello schermo, così la freccia si vede a ogni ingrandimento
+  const upp = (view ? view[2] : DATA.viewBox[2]) / ($('map-wrap').clientWidth || 500);
+  const s0 = 16 * upp, L = 78 * upp;
+  const x0 = a.lx + ux * s0, y0 = a.ly + uy * s0;
+  const tx = a.lx + ux * L, ty = a.ly + uy * L;
+  const h = 20 * upp, w = 7.5 * upp;
+  const bx = tx - ux * h, by = ty - uy * h;
+  const n = (v) => v.toFixed(2);
+  const shaft = `x1="${n(x0)}" y1="${n(y0)}" x2="${n(bx)}" y2="${n(by)}"`;
+  return `<g class="compass"><line class="compass-halo" ${shaft}/><line class="compass-shaft" ${shaft}/>` +
+    `<polygon class="compass-head" points="${n(tx)},${n(ty)} ${n(bx - uy * w)},${n(by + ux * w)} ${n(bx + uy * w)},${n(by - ux * w)}"/></g>`;
+}
+
+// Punto cardinale da un'area a un'altra, sulla mappa (y verso il basso).
+function bearing(from, to) {
+  const a = area(from), b = area(to);
+  const ang = Math.atan2(a.ly - b.ly, b.lx - a.lx) * 180 / Math.PI;   // 0 = est, 90 = nord
+  const names = ['est', 'nord-est', 'nord', 'nord-ovest', 'ovest', 'sud-ovest', 'sud', 'sud-est'];
+  return names[((Math.round(ang / 45) % 8) + 8) % 8];
 }
 
 // Nasconde le etichette che si sovrappongono a una con priorità più alta.
@@ -821,10 +976,15 @@ function renderMapTexts() {
 function renderAll() {
   $('start-name').textContent = area(game.start).name;
   $('end-name').textContent = area(game.end).name;
+  $('via-box').hidden = !game.via;
+  $('via-arrow').hidden = !game.via;
+  $('via-name').textContent = game.via ? area(game.via).name : '';
   $('puzzle-id').textContent = game.label;
   $('mode-daily').setAttribute('aria-pressed', String(game.mode === 'daily'));
-  $('mode-practice').setAttribute('aria-pressed', String(game.mode !== 'daily'));
-  $('btn-new').innerHTML = ic('shuffle') + (game.mode === 'daily' ? ' Allenamento' : ' Nuova partita');
+  $('mode-practice').setAttribute('aria-pressed', String(game.mode === 'practice'));
+  $('mode-archive').setAttribute('aria-pressed', String(game.mode === 'archive'));
+  $('btn-new').innerHTML = ic('shuffle') + (game.mode === 'practice' ? ' Nuova partita' : ' Allenamento');
+  renderPracticeOptions();
 
   const playing = !game.over;
   $('guess-input').disabled = !playing;
@@ -837,6 +997,26 @@ function renderAll() {
   paintMap();
   renderStatus();
   renderMoves();
+}
+
+// Durata e tappa obbligata, visibili solo in allenamento.
+const LENGTHS = [['any', 'Qualsiasi'], ['short', 'Breve'], ['mid', 'Media'], ['long', 'Lunga']];
+
+function renderPracticeOptions() {
+  const box = $('practice-opts');
+  box.hidden = game.mode !== 'practice';
+  if (box.hidden) return;
+  const { len, via } = practicePrefs();
+  const bands = lengthBands();
+  const tip = (k) => k === 'any' ? 'Come nel quotidiano' : `Da ${bands[k][0]} a ${bands[k][1]} confini`;
+  $('len-opts').innerHTML = LENGTHS.map(([k, name]) =>
+    `<button class="level" data-len="${k}" aria-pressed="${k === len}" title="${tip(k)}">${name}</button>`).join('');
+  $('btn-via').setAttribute('aria-pressed', String(via));
+}
+
+function setPracticePref(key, value) {
+  store.set(key, value);
+  newPractice();
 }
 
 function renderStatus() {
@@ -966,11 +1146,15 @@ function submitGuess(sig) {
   if (game.over) return;
   if (!sig) { showMessage(MAP.unknown, 'err'); shake(); playSound('error'); return; }
   const name = area(sig).name;
-  if (sig === game.start || sig === game.end) { showMessage(`${name} è già la partenza o l'arrivo`, 'warn'); shake(); playSound('error'); return; }
+  if (isEndpoint(sig)) {
+    const role = sig === game.start ? 'la partenza' : sig === game.end ? "l'arrivo" : 'la tappa';
+    showMessage(`${name} è già ${role}`, 'warn'); shake(); playSound('error'); return;
+  }
   if (isGuessed(sig)) { showMessage(`${name} ${MAP.already}`, 'warn'); shake(); playSound('error'); return; }
 
   const color = colorFor(sig);
   game.moves.push({ sigla: sig, type: 'guess', color });
+  game.compass = null;
   clearMessage();
   playSound(color, Math.min(okStreak() - 1, 6));
   afterMove();
@@ -983,18 +1167,48 @@ function pendingHint() {
   return m ? m.sigla : null;
 }
 
+// Il prossimo passo utile e l'area già nota da cui ci si arriva.
+function nextStep() {
+  const pending = pendingHint();
+  if (pending) {
+    const owned = ownedSet();
+    const from = NB[pending].filter(n => owned.has(n))
+      .sort((a, b) => game.distStart[a] - game.distStart[b])[0];
+    return { sig: pending, from: from || game.start };
+  }
+  return bestCompletion()[0] || null;
+}
+
 function giveHint() {
   if (game.over) return;
-  const sig = pendingHint() || bestCompletion()[0];
-  if (!sig) return;
+  const step = nextStep();
+  if (!step) return;
+  const sig = step.sig;
   const level = hintLevel(sig);
   if (level >= 2) { showMessage(`Hai già tutti gli aiuti per questo passo: ${initialsHtml(sig)}`, 'info', true); return; }
   if (remaining() <= 1) { showMessage('Non hai abbastanza tentativi per un suggerimento', 'warn'); return; }
   game.moves.push({ sigla: sig, type: 'hint', level: level + 1 });
+  game.compass = null;
   playSound('hint');
   if (level === 0) showMessage('Il contorno del prossimo passo utile è sulla mappa', 'info');
   else showMessage(`Iniziali: ${initialsHtml(sig)}`, 'info', true);
   afterMove();
+}
+
+// La direzione è gratuita: una freccia sulla mappa e il punto cardinale del
+// prossimo passo utile, senza contorno né nome. Si conta nel risultato.
+function giveCompass() {
+  if (game.over) return;
+  const step = nextStep();
+  if (!step) return;
+  const fresh = !game.compass || game.compass.to !== step.sig;
+  game.compass = { from: step.from, to: step.sig };
+  if (fresh) game.compassUses++;
+  saveState();
+  paintMap();
+  playSound('hint');
+  const from = nameHidden(step.from) ? "l'area suggerita" : area(step.from).name;
+  showMessage(`Il prossimo passo utile è a ${bearing(step.from, step.sig)} di ${from}`, 'info');
 }
 
 function renderHintButton() {
@@ -1006,7 +1220,8 @@ function renderHintButton() {
 }
 
 function afterMove() {
-  if (connected(game.start, game.end, ownedSet())) {
+  const owned = ownedSet();
+  if (legs().every(([a, b]) => connected(a, b, owned))) {
     game.won = true;
     game.over = true;
   } else if (remaining() <= 0) {
@@ -1050,6 +1265,8 @@ function onGiveUpClick() {
 
 function finish() {
   recordStats();
+  recordResult();
+  game.unlocked = recordProgress();
   const shown = game;
   setTimeout(() => { if (game === shown) showResult(); }, REDUCED_MOTION ? 0 : 700);
 }
@@ -1060,22 +1277,31 @@ function scoreText() {
   return overPar() <= 0 ? 'Perfetto' : '+' + overPar();
 }
 
+const routeText = () => endpointsInOrder().map(s => area(s).name).join(' → ');
+const endpointsInOrder = () => game.via ? [game.start, game.via, game.end] : [game.start, game.end];
+
 function showResult() {
-  const route = `${area(game.start).name} → ${area(game.end).name}`;
+  const route = routeText();
   let title;
   if (game.won) title = overPar() <= 0 ? 'Perfetto!' : 'Completato!';
   else title = game.gaveUp ? 'Ti sei arreso' : 'Tentativi esauriti';
   $('result-title').textContent = title;
   $('result-title').className = game.won ? 'won' : 'lost';
-  $('result-sub').textContent = `${route} · ${scoreText()} (${game.moves.length}/${game.maxGuesses})`;
+  $('result-sub').textContent = `${route} · ${scoreText()} (${game.moves.length}/${game.maxGuesses})` +
+    (game.compassUses ? ` · direzione ×${game.compassUses}` : '');
   $('result-grid').innerHTML = game.moves.map(m =>
     `<i class="sq ${m.type === 'hint' ? 'hint' : m.color}"></i>`).join('') || '—';
 
   const path = idealPath();
-  $('result-path').innerHTML = `<b>Un percorso ideale (${game.needed} ${MAP.many}):</b><br>` +
-    path.map(s => `<span class="step">${esc(area(s).name)}</span>`).join(' <span class="sep">›</span> ');
+  $('result-path').innerHTML = `<b>Un percorso ideale (${game.needed} ${MAP.many}${game.via ? ' oltre alla tappa' : ''}):</b><br>` +
+    path.map(s => `<span class="step${s === game.via ? ' via' : ''}">${esc(area(s).name)}</span>`).join(' <span class="sep">›</span> ');
 
-  $('btn-practice').innerHTML = ic('shuffle') + (game.mode === 'daily' ? ' Allenamento' : ' Nuova partita');
+  const unlocked = (game.unlocked || []).map(id => ACHIEVEMENTS.find(a => a.id === id)).filter(Boolean);
+  $('result-badges').hidden = !unlocked.length;
+  $('result-badges').innerHTML = unlocked.length ? `<b>${unlocked.length > 1 ? 'Traguardi sbloccati' : 'Traguardo sbloccato'}</b>` +
+    unlocked.map(a => `<div class="badge got">${ic('medal')}<span><b>${esc(a.name)}</b><small>${esc(a.desc)}</small></span></div>`).join('') : '';
+
+  $('btn-practice').innerHTML = ic('shuffle') + (game.mode === 'practice' ? ' Nuova partita' : ' Allenamento');
   $('share-ok').hidden = true;
   renderFacts();
   openModal('result-modal');
@@ -1144,19 +1370,41 @@ function startCountdown() {
   countdownTimer = setInterval(tick, 1000);
 }
 
-function gameUrl() {
+// Il quotidiano si condivide con il suo numero, che resta giocabile
+// dall'archivio; le altre partite con partenza, arrivo e tappa.
+function gameUrl(challenge = false) {
   if (!/^https?:/.test(location.protocol)) return '';
-  const params = game.mode === 'daily' ? {} : { da: game.start, a: game.end };
+  const params = isDailyLike() && !challenge ? { giorno: game.id }
+    : { da: game.start, a: game.end, ...(game.via ? { via: game.via } : {}) };
   return location.origin + urlFor(params);
 }
 
 function shareText() {
-  const head = game.mode === 'daily'
+  const head = isDailyLike()
     ? `${GAME_TITLE} · ${MAP.title} #${game.id} · ${scoreText()}`
     : `${GAME_TITLE} · ${MAP.title} (${game.label.toLowerCase()}) · ${scoreText()}`;
-  const route = `${area(game.start).name} → ${area(game.end).name}`;
   const grid = game.moves.map(m => EMOJI[m.type === 'hint' ? 'hint' : m.color]).join('');
-  return [head, route, `${grid} (${game.moves.length}/${game.maxGuesses})`, gameUrl()].filter(Boolean).join('\n');
+  const compass = game.compassUses ? ` 🧭×${game.compassUses}` : '';
+  return [head, routeText(), `${grid} (${game.moves.length}/${game.maxGuesses})${compass}`, gameUrl()].filter(Boolean).join('\n');
+}
+
+// Un link per far giocare a un amico la stessa tratta, in allenamento.
+async function shareChallenge() {
+  const url = gameUrl(true);
+  if (!url) return;
+  const text = `Sfida su ${GAME_TITLE} · ${MAP.title}: ${routeText()}`;
+  const touch = matchMedia('(pointer: coarse)').matches;
+  if (navigator.share && touch) {
+    try { await navigator.share({ text, url }); return; }
+    catch (e) { if (e.name === 'AbortError') return; }
+  }
+  try {
+    await copyText(`${text}\n${url}`);
+    $('share-ok').textContent = 'Link della sfida copiato: chi lo apre gioca la stessa tratta.';
+  } catch {
+    $('share-ok').textContent = url;
+  }
+  $('share-ok').hidden = false;
 }
 
 async function copyText(text) {
@@ -1225,6 +1473,82 @@ function recordStats() {
   store.set(statsKey(), s);
 }
 
+// ---------- Archivio ----------
+// L'esito di ogni quotidiano, oggi o dall'archivio: 'P', '+N', 'X' (perso), 'A' (arreso).
+const loadResults = () => store.get(resultsKey(), {});
+const isWinCode = (c) => c === 'P' || c === 'V' || c[0] === '+';
+const resultCode = () => !game.won ? (game.gaveUp ? 'A' : 'X') : overPar() <= 0 ? 'P' : '+' + overPar();
+
+function recordResult() {
+  if (!isDailyLike()) return;
+  const r = loadResults();
+  if (r[game.id]) return;
+  r[game.id] = resultCode();
+  store.set(resultsKey(), r);
+}
+
+// ---------- Traguardi ----------
+// Contatori per mappa; le aree visitate sono partenze, arrivi, tappe e aree indovinate.
+function loadRecord(m = MAP) {
+  return Object.assign({ wins: 0, perfects: 0, cleanWins: 0, longest: 0, viaWins: 0, archiveWins: 0, visited: [], unlocked: [] },
+    store.get(recordKey(m), {}));
+}
+
+const ACHIEVEMENTS = [
+  { id: 'first', name: 'Prima tappa', desc: 'Completa una partita', test: r => r.wins >= 1 },
+  { id: 'wins10', name: 'Viaggiatore', desc: 'Completa 10 partite', test: r => r.wins >= 10 },
+  { id: 'wins50', name: 'Veterano', desc: 'Completa 50 partite', test: r => r.wins >= 50 },
+  { id: 'perfect', name: 'Rotta perfetta', desc: 'Una partita perfetta', test: r => r.perfects >= 1 },
+  { id: 'perfect10', name: 'Navigatore', desc: '10 partite perfette', test: r => r.perfects >= 10 },
+  { id: 'clean', name: 'A memoria', desc: 'Vinci senza aiuti un percorso di 6 confini o più', test: r => r.cleanWins >= 1 },
+  { id: 'long', name: 'Lungo viaggio', desc: "Completa un percorso di durata 'Lunga'", test: r => r.longest >= lengthBands().long[0] },
+  { id: 'via', name: 'Tappa obbligata', desc: 'Completa una partita con la tappa', test: r => r.viaWins >= 1 },
+  { id: 'streak7', name: 'Settimana piena', desc: 'Completa 7 quotidiani di fila', test: (r, s) => s.maxStreak >= 7 },
+  { id: 'archive10', name: 'Archivista', desc: "Completa 10 puzzle dell'archivio", test: r => r.archiveWins >= 10 },
+  { id: 'explore50', name: 'Esploratore', desc: 'Visita metà delle aree della mappa', test: r => r.visited.length * 2 >= SIGLAS.length },
+  { id: 'explore100', name: 'Cartografo', desc: 'Visita tutte le aree della mappa', test: r => r.visited.length >= SIGLAS.length },
+  { id: 'allmaps', name: 'Giramondo', desc: 'Vinci almeno una volta su ogni mappa', test: () => Object.values(MAPS).every(m => loadRecord(m).wins >= 1) },
+];
+
+const unlockedNow = (r) => { const s = loadStats(); return ACHIEVEMENTS.filter(a => a.test(r, s)).map(a => a.id); };
+
+// Aggiorna i contatori a fine partita e restituisce i traguardi appena sbloccati.
+function recordProgress() {
+  const r = loadRecord();
+  const visited = new Set(r.visited.filter(s => NB[s]));
+  for (const s of [...endpoints(), ...guesses().map(m => m.sigla)]) visited.add(s);
+  r.visited = [...visited];
+  if (game.won) {
+    r.wins++;
+    if (overPar() <= 0) r.perfects++;
+    if (!game.moves.some(m => m.type === 'hint') && !game.compassUses && game.opt >= 6) r.cleanWins++;
+    r.longest = Math.max(r.longest, game.opt);
+    if (game.via) r.viaWins++;
+    if (game.mode === 'archive') r.archiveWins++;
+  }
+  const before = new Set(r.unlocked);
+  // salvato prima del controllo, così 'Giramondo' vede anche questa vittoria
+  store.set(recordKey(), r);
+  r.unlocked = unlockedNow(r);
+  store.set(recordKey(), r);
+  return r.unlocked.filter(id => !before.has(id));
+}
+
+function renderBadges() {
+  const r = loadRecord();
+  const got = new Set(unlockedNow(r));
+  $('badges-count').textContent = `${got.size}/${ACHIEVEMENTS.length}`;
+  $('badges').innerHTML = ACHIEVEMENTS.map(a =>
+    `<div class="badge${got.has(a.id) ? ' got' : ''}">${ic('medal')}<span><b>${esc(a.name)}</b><small>${esc(a.desc)}</small></span></div>`).join('');
+  const visited = new Set(r.visited);
+  const n = SIGLAS.filter(s => visited.has(s)).length;
+  $('explore-count').textContent = `${n}/${SIGLAS.length} ${MAP.many}`;
+  const vb = DATA.viewBox.join(' ');
+  $('explore-map').setAttribute('viewBox', vb);
+  $('explore-map').innerHTML = (DATA.context ? `<path class="context" d="${DATA.context}"/>` : '') +
+    SIGLAS.map(s => `<path class="xp${visited.has(s) ? ' seen' : ''}" d="${area(s).path}"><title>${esc(area(s).name)}</title></path>`).join('');
+}
+
 function renderStats() {
   const s = loadStats();
   const streak = s.lastWonId != null && s.lastWonId >= dailyId() - 1 ? s.streak : 0;
@@ -1245,14 +1569,70 @@ function renderStats() {
       <div><div class="num">${s.maxStreak}</div><div class="lbl">Record</div></div>
     </div>
     <div class="dist"><b>Distribuzione punteggi</b>${bars}</div>`;
+  renderBadges();
+}
+
+// Calendario dei quotidiani: un mese alla volta, colorato con gli esiti.
+let archiveMonth = null;     // [anno, mese]
+
+function openArchive() {
+  const d = isDailyLike() ? dateOfId(game.id) : new Date();
+  archiveMonth = [d.getFullYear(), d.getMonth()];
+  renderArchive();
+  openModal('archive-modal');
+}
+
+function renderArchive() {
+  const [y, m] = archiveMonth;
+  const results = loadResults();
+  const today = dailyId();
+  const first = new Date(y, m, 1);
+  const days = new Date(y, m + 1, 0).getDate();
+  const offset = (first.getDay() + 6) % 7;          // la settimana parte da lunedì
+  const cls = (code) => !code ? '' : code === 'P' ? ' r-p' : isWinCode(code) ? ' r-w' : ' r-x';
+  let cells = '<span class="blank"></span>'.repeat(offset);
+  for (let day = 1; day <= days; day++) {
+    const id = idOfDate(new Date(y, m, day));
+    const code = results[id];
+    const open = !code && store.get(dailyPrefix() + id, null);
+    const playable = id >= 1 && id <= today;
+    const words = { P: 'perfetto', X: 'perso', A: 'arreso', V: 'completato' };
+    const label = code ? ` · ${words[code] || code}` : open ? ' · in corso' : '';
+    cells += playable
+      ? `<button class="day${cls(code)}${open ? ' r-open' : ''}${id === today ? ' today' : ''}${game.id === id && isDailyLike() ? ' current' : ''}" data-id="${id}" title="Puzzle #${id}${label}">${day}</button>`
+      : `<span class="day off">${day}</span>`;
+  }
+  $('archive-grid').innerHTML = cells;
+  $('archive-month').textContent = first.toLocaleDateString('it-IT', { month: 'long', year: 'numeric' });
+  $('archive-prev').disabled = new Date(y, m, 0) < DAILY_EPOCH;
+  $('archive-next').disabled = new Date(y, m + 1, 1) > new Date();
+  const ids = Object.keys(results);
+  const perfect = ids.filter(k => results[k] === 'P').length;
+  const won = ids.filter(k => isWinCode(results[k])).length;
+  $('archive-summary').textContent = `${ids.length} giocati su ${today} · ${won} completati · ${perfect} perfetti`;
+}
+
+function moveArchive(step) {
+  const [y, m] = archiveMonth;
+  const d = new Date(y, m + step, 1);
+  archiveMonth = [d.getFullYear(), d.getMonth()];
+  renderArchive();
+}
+
+function playDay(id) {
+  closeModals(false);
+  if (id === dailyId()) { syncUrl(); startGame('daily'); return; }
+  syncUrl({ giorno: id });
+  startGame('archive', { id });
 }
 
 // ---------- Salvataggio della partita quotidiana ----------
 function saveState() {
-  if (game.mode !== 'daily') return;
+  if (!isDailyLike()) return;
   store.set(dailyPrefix() + game.id, {
     start: game.start, end: game.end,
     moves: game.moves, over: game.over, won: game.won, gaveUp: game.gaveUp,
+    compassUses: game.compassUses, code: game.over ? resultCode() : null,
   });
 }
 
@@ -1264,16 +1644,30 @@ function restoreState() {
   game.over = !!saved.over;
   game.won = !!saved.won;
   game.gaveUp = !!saved.gaveUp;
+  game.compassUses = saved.compassUses || 0;
 }
 
+// Le partite salvate restano una settimana; il loro esito passa prima
+// nell'archivio, così il calendario le mostra anche dopo.
 function pruneOldStates() {
   const keep = dailyId() - 7;
   for (const map of Object.values(MAPS)) {
     const prefix = map.storagePrefix + 'daily_';
+    const rKey = map.storagePrefix + 'results_v1';
+    const results = store.get(rKey, {});
+    let changed = false;
     for (const k of store.keys()) {
       const n = k.startsWith(prefix) ? Number(k.slice(prefix.length)) : NaN;
-      if (Number.isInteger(n) && n < keep) store.remove(k);
+      if (!Number.isInteger(n)) continue;
+      const s = store.get(k, null);
+      // le partite salvate prima dell'archivio non hanno il punteggio: 'V' = vinta
+      if (s && s.over && !results[n]) {
+        results[n] = s.code || (s.won ? 'V' : s.gaveUp ? 'A' : 'X');
+        changed = true;
+      }
+      if (n < keep) store.remove(k);
     }
+    if (changed) store.set(rKey, results);
   }
 }
 
@@ -1370,12 +1764,10 @@ function closeModals(restoreFocus = true) {
 }
 
 // ---------- Avvio ----------
-function startGame(mode, fixed) {
-  game = makeGame(mode, fixed);
-  if (mode === 'daily') {
-    restoreState();
-    syncUrl();
-  }
+function startGame(mode, opts) {
+  game = makeGame(mode, opts);
+  if (mode === 'daily') syncUrl();
+  if (mode === 'daily' || mode === 'archive') restoreState();
   showAll = false;
   renderZoomButton();
   clearMessage();
@@ -1389,6 +1781,8 @@ function newPractice() {
   closeModals(false);
   syncUrl();
   startGame('practice');
+  // sulle mappe piccole non sempre esiste una tappa che allunghi davvero il percorso
+  if (practicePrefs().via && !game.via) showMessage('Per questa durata non c\'è una tappa adatta: partita senza tappa', 'info');
   $('guess-input').focus();
 }
 
@@ -1411,7 +1805,10 @@ function init() {
   renderMapTexts();
   pruneOldStates();
   const challenge = puzzleFromUrl();
-  startGame(challenge ? 'practice' : 'daily', challenge);
+  const day = dayFromUrl();
+  if (challenge) startGame('practice', { fixed: challenge });
+  else if (day && day !== dailyId()) startGame('archive', { id: day });
+  else startGame('daily');
 
   const svg = $('map');
   initMapGestures();
@@ -1449,14 +1846,28 @@ function init() {
     if (btn && btn.dataset.level !== mapKey) switchMap(btn.dataset.level).catch(showLoadError);
   });
   $('btn-hint').addEventListener('click', giveHint);
+  $('btn-compass').addEventListener('click', giveCompass);
+  $('len-opts').addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-len]');
+    if (btn) setPracticePref('pi_len', btn.dataset.len);
+  });
+  $('btn-via').addEventListener('click', () => setPracticePref('pi_via', !practicePrefs().via));
+  $('mode-archive').addEventListener('click', openArchive);
+  $('archive-prev').addEventListener('click', () => moveArchive(-1));
+  $('archive-next').addEventListener('click', () => moveArchive(1));
+  $('archive-grid').addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-id]');
+    if (btn) playDay(Number(btn.dataset.id));
+  });
+  $('btn-challenge').addEventListener('click', shareChallenge);
   $('btn-giveup').addEventListener('click', onGiveUpClick);
   $('btn-show-result').addEventListener('click', showResult);
   $('btn-new').addEventListener('click', newPractice);
   $('btn-practice').addEventListener('click', newPractice);
   $('btn-share').addEventListener('click', share);
   $('btn-zoom').addEventListener('click', toggleShowAll);
-  $('mode-daily').addEventListener('click', () => { if (game.mode !== 'daily') startGame('daily'); });
-  $('mode-practice').addEventListener('click', () => { if (game.mode === 'daily') newPractice(); });
+  $('mode-daily').addEventListener('click', () => { if (game.mode !== 'daily') { syncUrl(); startGame('daily'); } });
+  $('mode-practice').addEventListener('click', () => { if (game.mode !== 'practice') newPractice(); });
   $('btn-help').addEventListener('click', () => openModal('help-modal'));
   $('btn-sound').addEventListener('click', toggleSound);
   renderSoundButton();
@@ -1480,7 +1891,33 @@ function init() {
     openModal('help-modal');
     store.set('pi_seen_help', true);
   }
+
+  $('btn-install').addEventListener('click', async () => {
+    if (!installPrompt) return;
+    installPrompt.prompt();
+    await installPrompt.userChoice.catch(() => null);
+    installPrompt = null;
+    $('btn-install').hidden = true;
+  });
+  registerServiceWorker();
 }
+
+// ---------- App installabile e senza rete ----------
+// Il service worker conserva pagina, script e mappe già aperte: dopo la prima
+// visita il gioco si apre anche offline. Solo sul sito pubblicato (https).
+function registerServiceWorker() {
+  if (!('serviceWorker' in navigator) || location.protocol !== 'https:') return;
+  navigator.serviceWorker.register(versioned('sw.js')).catch(() => { /* senza copia offline */ });
+}
+
+// Chrome e Android offrono l'installazione: il pulsante compare nell'aiuto.
+let installPrompt = null;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  installPrompt = e;
+  const btn = document.getElementById('btn-install');
+  if (btn) btn.hidden = false;
+});
 
 function showLoadError(err) {
   document.querySelector('main').innerHTML =

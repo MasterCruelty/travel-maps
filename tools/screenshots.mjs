@@ -128,5 +128,39 @@ await page.click('#btn-help');
 await shot(page, 'regole');
 await page.context().close();
 
+// Allenamento con la tappa obbligata e la freccia della direzione
+page = await open({ width: 390, height: 844, url: `http://localhost:${PORT}/?da=CE&a=FI&via=AQ` });
+await guess(page, 'Frosinone');
+await page.click('#btn-compass');
+await page.evaluate(() => scrollTo(0, 0));
+await shot(page, 'tappa');
+await page.context().close();
+
+// Archivio dei quotidiani, con qualche esito già salvato
+page = await open({ width: 390, height: 844, url: `http://localhost:${PORT}/` });
+await page.evaluate(() => {
+  const r = {};
+  for (let i = 1; i <= 21; i++) r[dailyId() - i] = ['P', '+1', 'P', 'X', '+2', 'P', 'A'][i % 7];
+  localStorage.setItem('pi_results_v1', JSON.stringify(r));
+});
+await page.click('#mode-archive');
+await shot(page, 'archivio');
+await page.context().close();
+
+// Traguardi e mappa esplorata dopo qualche partita
+page = await open({ width: 390, height: 844 });
+for (const [a, b] of [['CE', 'FI'], ['TO', 'BA'], ['GO', 'LE'], ['AO', 'TS']]) {
+  await page.evaluate(([s, e]) => {
+    startGame('practice', { fixed: { start: s, end: e } });
+    for (const x of shortestPath(s, e).slice(1, -1)) submitGuess(x);
+  }, [a, b]);
+}
+await page.waitForTimeout(900);
+await page.keyboard.press('Escape');
+await page.click('#btn-stats');
+await page.evaluate(() => { const box = document.querySelector('#stats-modal .modal-box'); box.scrollTop = box.scrollHeight; });
+await shot(page, 'traguardi');
+await page.context().close();
+
 await browser.close();
 server.kill();

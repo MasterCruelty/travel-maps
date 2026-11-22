@@ -38,16 +38,19 @@ Si sceglie la mappa dalle linguette in alto. Ognuna ha il suo puzzle quotidiano,
   🟩 nessuna deviazione · 🟧 fino a 2 aree in più · 🟥 oltre · ⬛ nessun collegamento via terra (solo nelle mappe del mondo).
 - Il punteggio è **Perfetto** se usi esattamente il numero minimo di aree, altrimenti **+N**.
 - Il 💡 **suggerimento** funziona a livelli sul prossimo passo utile, calcolato a partire da ciò che hai già inserito: il primo aiuto ne mostra il contorno sulla mappa senza nome, il secondo le iniziali (es. `R_____ n___'E_____`). Ogni aiuto costa un tentativo; il nome compare solo quando lo indovini o a fine partita.
+- La 🧭 **direzione** è un aiuto gratuito: una freccia sulla mappa e un messaggio indicano il punto cardinale del prossimo passo utile rispetto a un'area già nota, senza mostrarne contorno o nome. Non costa tentativi, ma nel risultato e nella condivisione compare quante volte l'hai usata.
 - Per arrenderti premi 🏳️ due volte: la prima chiede conferma.
 - A partita vinta compare **Lo sapevi?**: una curiosità sulla località di partenza e una su quella di arrivo, ognuna con la sua fonte.
 - I collegamenti tratteggiati della tabella sopra contano come confini.
 - Ogni scelta ha il suo suono: due note che salgono per il percorso ideale (sempre più acute se le scelte ideali sono di fila), una nota per la piccola deviazione, due che scendono per la grande, un tonfo per le aree senza collegamento via terra, un ronzio per i nomi sbagliati, una fanfara a partita vinta. I suoni sono generati dal browser, senza file audio; sul telefono errori e fine partita vibrano. L'altoparlante in alto li spegne, e la scelta resta salvata.
 - La mappa si ingrandisce con due dita sul telefono, con la rotella sul computer o con i pulsanti **+** e **−**, e si sposta trascinandola. Ogni nuova mossa riporta la vista sulla partita; il pulsante con la bandiera mostra la mappa intera.
 
-### Quotidiano e allenamento
+### Quotidiano, allenamento e archivio
 
-- **Quotidiano**: lo stesso puzzle per tutti, cambia a mezzanotte (ora locale). La **mappa è nascosta**: all'inizio vedi solo partenza e arrivo, e ogni area che inserisci compare sulla cartina. La mappa intera, con i confini di regioni o province e i collegamenti tratteggiati, si svela a fine partita, che tu vinca, perda o ti arrenda. Le statistiche contano solo le partite quotidiane.
-- **Allenamento**: partite casuali illimitate con la mappa sempre completa. Il risultato include un **link sfida** per far giocare a un amico lo stesso percorso, ad esempio `?da=CE&a=FI` (Caserta → Firenze) o `?mappa=milano&da=MI01&a=108033` (Duomo → Monza).
+- **Quotidiano**: lo stesso puzzle per tutti, cambia a mezzanotte (ora locale). La **mappa è nascosta**: all'inizio vedi solo partenza e arrivo, e ogni area che inserisci compare sulla cartina. La mappa intera, con i confini di regioni o province e i collegamenti tratteggiati, si svela a fine partita, che tu vinca, perda o ti arrenda. Le statistiche contano solo le partite quotidiane del giorno.
+- **Allenamento**: partite casuali illimitate con la mappa sempre completa. Si sceglie la **durata** (Qualsiasi, Breve, Media, Lunga: tre fasce di distanza calcolate per ogni mappa) e si può aggiungere una **tappa obbligata**, un'area da cui il percorso deve passare. La tappa è scelta in modo che i due tratti non si sovrappongano e costringano a una deviazione vera; il minimo di aree da nominare non la conta.
+- **Archivio**: un calendario con tutti i quotidiani passati di ogni mappa, dal 1° gennaio 2024. Ogni giorno è colorato con il suo esito (perfetto, completato, perso, in corso) e si rigioca con la mappa nascosta come il giorno stesso; le partite d'archivio non entrano nella serie. Un puzzle si apre anche dall'indirizzo, ad esempio `?giorno=1000`, ed è il link che accompagna la condivisione del quotidiano.
+- **Link sfida**: il pulsante **Sfida un amico** nel risultato copia un link con la stessa tratta, su qualsiasi mappa e con l'eventuale tappa, ad esempio `?da=CE&a=FI` (Caserta → Firenze), `?da=CE&a=FI&via=AQ` (con tappa all'Aquila) o `?mappa=milano&da=MI01&a=108033` (Duomo → Monza). Chi lo apre gioca la stessa partita in allenamento.
 
 ## Funzionalità
 
@@ -55,6 +58,9 @@ Si sceglie la mappa dalle linguette in alto. Ognuna ha il suo puzzle quotidiano,
 - **Autocompletamento** tollerante: accenti, apostrofi, sigle (`RM`) e nomi alternativi (`Reggio Emilia`, `Olbia`, `Bozen`…). Con Invio la provincia viene scelta solo se il testo non è ambiguo: `reggio` chiede quale delle due.
 - **Risultato condivisibile** con griglia di emoji, conto alla rovescia al prossimo quotidiano e percorso ideale.
 - **Statistiche** salvate nel browser: partite, percentuale di vittorie, serie di giorni consecutivi e distribuzione dei punteggi.
+- **Traguardi** per ogni mappa (prima vittoria, partite perfette, vittorie senza aiuti, percorsi lunghi, tappe, serie di sette quotidiani, archivio, esplorazione, una vittoria su ogni mappa) e una **mappa esplorata** che colora le aree già toccate: partenze, arrivi, tappe e aree inserite. I traguardi appena sbloccati compaiono nel risultato.
+- **App installabile**: da telefono o computer si aggiunge alla schermata Home e si apre senza la barra del browser. Un service worker conserva pagina, script e mappe già aperte, così dopo la prima visita il gioco funziona anche senza rete; ogni pubblicazione usa una copia nuova e cancella la vecchia.
+- **Anteprima dei link**: condividendo l'indirizzo del gioco compare un'immagine con la mappa d'Italia e un percorso.
 - Partita quotidiana **salvata** automaticamente: puoi chiudere la pagina e riprendere.
 - **Tema scuro** automatico, layout per mobile, navigazione da tastiera.
 
@@ -65,6 +71,10 @@ Si sceglie la mappa dalle linguette in alto. Ognuna ha il suo puzzle quotidiano,
 | Regioni del mondo | Risultato | Curiosità | Tema scuro | Regole |
 | :---: | :---: | :---: | :---: | :---: |
 | ![Regioni del mondo dalla Lombardia alla Baviera](docs/screenshots/regioni.png) | ![Risultato](docs/screenshots/risultato.png) | ![Curiosità a fine partita](docs/screenshots/curiosita.png) | ![Tema scuro](docs/screenshots/tema-scuro.png) | ![Regole](docs/screenshots/regole.png) |
+
+| Tappa e direzione | Archivio | Traguardi |
+| :---: | :---: | :---: |
+| ![Allenamento con la tappa all'Aquila e la freccia della direzione](docs/screenshots/tappa.png) | ![Archivio dei quotidiani](docs/screenshots/archivio.png) | ![Traguardi e mappa esplorata](docs/screenshots/traguardi.png) |
 
 ## Avvio in locale
 
@@ -88,7 +98,7 @@ Avvia un piccolo server statico, senza dipendenze, su <http://localhost:8000>.
 
 ## Pubblicazione
 
-Il workflow `.github/workflows/pages.yml` pubblica il gioco su GitHub Pages a ogni push su `main`, copiando solo i file del gioco (`index.html`, `style.css`, `game.js`, `data/`).
+Il workflow `.github/workflows/pages.yml` pubblica il gioco su GitHub Pages a ogni push su `main`, copiando solo i file del gioco (`index.html`, `style.css`, `game.js`, `sw.js`, `manifest.webmanifest`, `og.png`, `icons/`, `data/`).
 
 ## Sviluppo
 
@@ -102,7 +112,7 @@ npx playwright install chromium
 npm test
 ```
 
-Coprono tutte le mappe e il passaggio tra le linguette, il puzzle quotidiano con la mappa nascosta, l'allenamento, i salvataggi, l'autocompletamento, il tocco sui suggerimenti, i colori, i suggerimenti, la sconfitta, la resa, le statistiche, i link sfida e lo zoom. La CI (`.github/workflows/ci.yml`) li esegue con Node.js 22 a ogni pull request e a ogni push su `main`.
+Coprono tutte le mappe e il passaggio tra le linguette, il puzzle quotidiano con la mappa nascosta, l'allenamento, i salvataggi, l'autocompletamento, il tocco sui suggerimenti, i colori, i suggerimenti, la direzione, la sconfitta, la resa, le statistiche, i traguardi, l'archivio, le durate e la tappa dell'allenamento, i link sfida su tutte le mappe, lo zoom e il funzionamento senza rete. La CI (`.github/workflows/ci.yml`) li esegue con Node.js 22 a ogni pull request e a ogni push su `main`.
 
 ### Screenshot
 
@@ -111,6 +121,12 @@ npm run screenshots
 ```
 
 Rigenera le immagini di questo README in `docs/screenshots/`. Usa sempre le stesse partite di allenamento (es. Caserta → Firenze, Duomo → Monza) e, per il quotidiano, una data fissa, così le immagini non cambiano da un giorno all'altro. Con `CHROMIUM_PATH` si può indicare un Chromium già installato.
+
+```bash
+npm run images
+```
+
+Rigenera le icone dell'app in `icons/` e l'anteprima dei link `og.png`. I PNG vengono riscritti senza metadati.
 
 ### Dati delle mappe
 
@@ -139,7 +155,7 @@ Le curiosità di fine partita sono in `data/facts/<mappa>.json`, una voce per ar
 { "FI": { "facts": ["...", "..."], "sources": ["https://..."] } }
 ```
 
-Sono scritte a mano, una o due per area, verificate su fonti indicate in `sources` (Wikipedia, siti istituzionali, cataloghi dei beni culturali). Le regole: al massimo 220 caratteri, solo fatti duraturi (niente popolazione, sindaci o cronaca), tradizioni e ipotesi presentate come tali. Oggi coprono tutte le 110 province, 186 dei 187 comuni di Milano e Brianza, 82 degli 88 quartieri di Milano, i 16 Länder, 398 dei 400 distretti tedeschi tutte le 199 nazioni e 562 delle 2980 regioni del mondo (Italia, Germania, Spagna, Francia, Regno Unito, Svizzera, Austria, Stati Uniti, Canada, Australia, Cina, Giappone, India, Brasile, Messico, Argentina, Russia, Turchia e Indonesia). Nelle mappe delle Alpi hanno curiosità tutte le 62 regioni e tutte le 394 province e distretti, in parte riprese dalle stesse aree delle altre mappe. Per le aree senza curiosità il gioco mostra solo l'altra località. Un test controlla che ogni voce corrisponda a un'area della mappa, abbia una fonte valida e rispetti la lunghezza massima.
+Sono scritte a mano, una o due per area, verificate su fonti indicate in `sources` (Wikipedia, siti istituzionali, cataloghi dei beni culturali). Le regole: al massimo 220 caratteri, solo fatti duraturi (niente popolazione, sindaci o cronaca), tradizioni e ipotesi presentate come tali. Oggi coprono tutte le 110 province, 186 dei 187 comuni di Milano e Brianza, 82 degli 88 quartieri di Milano, i 16 Länder, 398 dei 400 distretti tedeschi, tutte le 199 nazioni e 741 delle 2980 regioni del mondo (Italia, Germania, Spagna, Francia, Regno Unito, Svizzera, Austria, Stati Uniti, Canada, Australia, Cina, Giappone, India, Brasile, Messico, Argentina, Russia, Turchia, Indonesia, Thailandia e gran parte di Vietnam, Moldavia e Burkina Faso). Nelle mappe delle Alpi hanno curiosità tutte le 62 regioni e tutte le 394 province e distretti, in parte riprese dalle stesse aree delle altre mappe. Per le aree senza curiosità il gioco mostra solo l'altra località. Un test controlla che ogni voce corrisponda a un'area della mappa, abbia una fonte valida e rispetti la lunghezza massima.
 
 ### Aggiungere una mappa
 
@@ -151,12 +167,15 @@ Sono scritte a mano, una o due per area, verificate su fonti indicate in `source
 
 ```
 ├── index.html, style.css, game.js   il gioco
+├── sw.js, manifest.webmanifest      app installabile e copia offline
+├── icons/, og.png                   icone dell'app e anteprima dei link
 ├── data/<mappa>.json                aree, confini e disegno di ogni mappa (generati)
 ├── data/facts/                      curiosità di fine partita per ogni mappa
 ├── tools/
 │   ├── build_data.py                genera i dati delle mappe dai confini ufficiali
 │   ├── serve.mjs                    server statico per `npm start` e per i test
-│   └── screenshots.mjs              genera gli screenshot del README
+│   ├── screenshots.mjs              genera gli screenshot del README
+│   └── images.mjs                   genera icone e anteprima dei link
 ├── tests/game.spec.js               test end-to-end
 ├── playwright.config.js             configurazione dei test (desktop e mobile)
 ├── Dockerfile, docker-compose.yml, nginx.conf

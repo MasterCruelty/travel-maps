@@ -20,6 +20,7 @@
   --brass: #b07d2b;
   --start: #2463d6;
   --end: #8a3fd1;
+  --via: #0e8c86;
   --g-ok: #2fae5f;
   --g-near: #e89a1c;
   --g-far: #dc4a3d;
@@ -57,6 +58,7 @@
     --accent-soft: #2a2a22;
     --brass: #d2a54e;
     --solution: #2e6a46;
+    --via: #3cbdb4;
     --warn-bg: #3d3115; --warn-ink: #fcd34d;
     --err-bg: #3f1d1d; --err-ink: #fca5a5;
     --shadow: 0 10px 30px rgba(0, 0, 0, .5);
@@ -134,10 +136,17 @@ main { max-width: 560px; margin: 0 auto; padding: 10px 14px 48px; }
   background: var(--card); border: 1.5px solid var(--ink); border-radius: 10px;
 }
 .mode {
-  flex: 1; border: none; background: none; padding: 7px 8px; border-radius: 7px;
-  font-weight: 700; font-size: .88rem; color: var(--muted); cursor: pointer;
+  flex: 1; border: none; background: none; padding: 7px 4px; border-radius: 7px;
+  font-weight: 700; font-size: .88rem; color: var(--muted); cursor: pointer; white-space: nowrap;
 }
 .mode[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+
+/* Opzioni dell'allenamento: durata e tappa */
+.practice-opts { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 10px; margin: -4px 0 12px; }
+.practice-opts[hidden] { display: none; }
+.len-opts { display: flex; gap: 4px; }
+.len-opts .level, .via-toggle { padding: 3px 11px; font-size: .78rem; }
+.via-toggle[aria-pressed="true"] { border-color: var(--via); color: var(--via); }
 
 /* ---------- Partenza / arrivo ---------- */
 .prompt { display: flex; align-items: stretch; justify-content: center; gap: 10px; margin: 0 0 12px; }
@@ -149,6 +158,9 @@ main { max-width: 560px; margin: 0 auto; padding: 10px 14px 48px; }
 }
 .endpoint.start { border-top-color: var(--start); }
 .endpoint.end { border-top-color: var(--end); }
+.endpoint.via { border-top-color: var(--via); }
+.endpoint.via .lbl { color: var(--via); }
+.endpoint[hidden], .arrow[hidden] { display: none; }
 .endpoint .lbl { font-size: .64rem; text-transform: uppercase; letter-spacing: .14em; font-weight: 800; }
 .endpoint.start .lbl { color: var(--start); }
 .endpoint.end .lbl { color: var(--end); }
@@ -186,6 +198,7 @@ main { max-width: 560px; margin: 0 auto; padding: 10px 14px 48px; }
 #map.fog #layer-regions { display: none; }
 .prov.start { fill: var(--start); }
 .prov.end { fill: var(--end); }
+.prov.via { fill: var(--via); }
 .prov.g-ok { fill: var(--g-ok); }
 .prov.g-near { fill: var(--g-near); }
 .prov.g-far { fill: var(--g-far); }
@@ -201,6 +214,12 @@ main { max-width: 560px; margin: 0 auto; padding: 10px 14px 48px; }
   stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; opacity: .85;
 }
 .stop { stroke: var(--ink); stroke-width: 9; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+/* Freccia della direzione */
+.compass-halo { stroke: var(--card); stroke-width: 8; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.compass-shaft { stroke: var(--brass); stroke-width: 4; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.compass-head { fill: var(--brass); stroke: var(--card); stroke-width: 1.5; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.compass { animation: compass-in .45s ease-out; }
+@keyframes compass-in { from { opacity: 0; } }
 
 /* terre fuori dal gioco: nascoste nel quotidiano, dove la mappa è segreta */
 .context { fill: var(--land-out); stroke: none; pointer-events: none; }
@@ -307,7 +326,8 @@ main { max-width: 560px; margin: 0 auto; padding: 10px 14px 48px; }
 .message.warn { background: var(--warn-bg); color: var(--warn-ink); }
 .message.err { background: var(--err-bg); color: var(--err-ink); }
 
-.actions { display: flex; gap: 10px; margin: 12px 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+.actions .ghost, .actions .primary { flex: 1 1 140px; }
 .actions[hidden] { display: none; }
 .ghost {
   flex: 1; padding: 10px; border-radius: 8px; cursor: pointer;
@@ -425,6 +445,8 @@ main { max-width: 560px; margin: 0 auto; padding: 10px 14px 48px; }
 @media (max-width: 420px) {
   .topbar h1 { font-size: 1.35rem; }
   .map-tab { font-size: .68rem; letter-spacing: .06em; }
+  .mode { font-size: .8rem; }
+  .mode .ic { margin-right: -1px; }
   .endpoint .name { font-size: 1.02rem; }
   #map-wrap { height: min(58vh, 520px); }
 }
@@ -446,3 +468,52 @@ main { max-width: 560px; margin: 0 auto; padding: 10px 14px 48px; }
 .fact-place { font-family: var(--serif); font-weight: 700; font-size: 1rem; }
 .fact p { margin: 2px 0; line-height: 1.45; }
 .fact a { font-size: .78rem; color: var(--muted); }
+
+/* ---------- Traguardi ed esplorazione ---------- */
+.stats-section { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); }
+.stats-section h3 { font-family: var(--serif); font-size: 1.05rem; margin: 0 0 8px; }
+.stats-section h3 .muted { font-family: var(--sans); font-size: .85rem; margin-left: 4px; }
+.badges { display: grid; grid-template-columns: repeat(auto-fill, minmax(145px, 1fr)); gap: 6px; }
+.badge {
+  display: flex; align-items: center; gap: 8px; padding: 7px 9px;
+  border: 1px dashed var(--line); border-radius: 8px; color: var(--muted); opacity: .75;
+}
+.badge .ic { width: 1.6em; height: 1.6em; }
+.badge span { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.badge b { font-size: .86rem; }
+.badge small { font-size: .74rem; }
+.badge.got { border: 1.5px solid var(--brass); color: var(--ink); opacity: 1; background: var(--bg); }
+.badge.got .ic { color: var(--brass); }
+.result-badges { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
+.result-badges[hidden] { display: none; }
+.explore-map {
+  display: block; width: 100%; height: 220px; background: var(--sea); border: 1px solid var(--line); border-radius: 6px;
+}
+.xp { fill: var(--land); stroke: var(--land-stroke); stroke-width: .5; vector-effect: non-scaling-stroke; }
+.xp.seen { fill: var(--g-ok); }
+.result-path .step.via { color: var(--via); }
+
+/* ---------- Archivio ---------- */
+.archive-nav { display: flex; align-items: center; justify-content: space-between; margin: 10px 0 8px; }
+.archive-nav b { font-family: var(--serif); font-size: 1.1rem; text-transform: capitalize; }
+.archive-nav .icon-btn:disabled { opacity: .3; cursor: default; background: none; color: var(--ink); }
+.archive-week, .archive-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; }
+.archive-week { font-size: .7rem; font-weight: 800; color: var(--muted); margin-bottom: 4px; }
+.day {
+  aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+  border-radius: 6px; font-weight: 700; font-size: .88rem;
+  border: 1.5px solid var(--line); background: var(--card); cursor: pointer; padding: 0;
+}
+.day:hover { border-color: var(--ink); }
+.day.off { border: none; background: none; color: var(--line); cursor: default; }
+.day.r-p { background: var(--g-ok); border-color: var(--g-ok); color: #fff; }
+.day.r-w { background: var(--solution); border-color: var(--g-ok); }
+.day.r-x { background: var(--g-far); border-color: var(--g-far); color: #fff; }
+.day.r-open { border-style: dashed; border-color: var(--brass); }
+.day.today { box-shadow: 0 0 0 2px var(--bg), 0 0 0 3.5px var(--brass); }
+.day.current { outline: 2px solid var(--ink); outline-offset: -5px; }
+.sw.r-w { background: var(--solution); border: 1.5px solid var(--g-ok); }
+.sw.r-open { border: 1.5px dashed var(--brass); }
+.install-note { margin-top: 8px; }
+#btn-install { width: 100%; margin-top: 4px; }
+#btn-install[hidden] { display: none; }
